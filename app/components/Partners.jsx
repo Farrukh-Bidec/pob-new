@@ -69,7 +69,7 @@ const Partners = ({ middleCarouselImages }) => {
 
   return (
     <div className="w-full mt-[25px] h-auto my-8 py-10 pt-30">
-      <h2 className="text-3xl md:text-3xl text-center mb-8 font-Amaranth text-black">
+      <h2 className="text-3xl md:text-5xl text-center mb-8 font-Amaranth text-black">
         POB Partners in Projects
       </h2>
 

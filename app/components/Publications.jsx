@@ -58,14 +58,14 @@ const Publications = () => {
   };
 
   return (
-    <div className=" pt-0 sm:pt-20 sm:overflow-hidden overflow-auto" >
+    <div className=" pt-0 sm:pt-20 sm:overflow-hidden overflow-auto md:ml-10" >
       {/* Header */}
-      <div className=" py-10 px-5 sm:px-15 items-center">
+      <div className=" flex justify-between items-center py-10 px-5 sm:px-15 items-center">
         <div>
-          <h4 className="text-[#C30001] text-xl uppercase text-sm sm:text-left text-center">
+          <h4 className="text-[#C30001] text-xl uppercase sm:text-sm sm:text-left text-center">
             News
           </h4>
-          <h2 className="text-black text-3xl sm:text-6xl   sm:text-left text-center">
+          <h2 className="text-black text-3xl sm:text-5xl   sm:text-left text-center">
             News & Publications
           </h2>
         </div>

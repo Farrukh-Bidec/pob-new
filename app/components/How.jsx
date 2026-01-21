@@ -3,7 +3,7 @@ import Link from "next/link"
 const How = () => {
     return (
        <div className='text-black text-center md:text-left md:pb-12 md:pt-10 mx-auto'>
-    <h4 className='uppercase text-[#C30001] text-xl mb-2 text-center'>donation</h4>
+    <h4 className='uppercase text-[#C30001] text-sm mb-2 text-center'>donation</h4>
     <h2 className='text-3xl sm:text-5xl pb-10 text-center'>How You Can Help & Donate</h2>
 
     <div className='flex justify-center flex-wrap mx-auto gap-10'>

@@ -49,14 +49,14 @@ const Help = () => {
         <>
             {/* ==================== Hepatitis Statistics Cards ==================== */}
             <div className="text-black text-center py-16 pb-0 px-4 sm:px-6 lg:px-8">
-                <h4 className="uppercase text-[#C30001] text-lg sm:text-xl tracking-wide">
+                <h4 className="uppercase text-[#C30001] text-xl sm:text-sm tracking-wide">
                     Current
                 </h4>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl  pb-10 pt-3">
+                <h2 className="text-3xl sm:text-5xl lg:text-5xl  pb-10 pt-3">
                     Situation on Hepatitis in Pakistan
                 </h2>
                 
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-4 max-w-5xl mx-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-4 max-w-5xl mx-auto pb-20 ">
                     {cards.map((card, index) => (
                         <div
                             key={index}
@@ -73,10 +73,10 @@ const Help = () => {
 
                             {/* Content */}
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-3xl md:text-6xl text-gray-400 mb-4 text-left line-clamp-2">
+                                <h3 className="text-3xl md:text-5xl text-gray-400 mb-4 text-left line-clamp-2">
                                     {card.ratio}
                                 </h3>
-                                <p className="text-gray-500 text-left text-sm leading-relaxed md:text-lg ">
+                                <p className="text-gray-500 text-left text-sm leading-relaxed md:text-base ">
                                     {card.text}
                                 </p>
                             </div>

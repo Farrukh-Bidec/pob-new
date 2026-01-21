@@ -82,8 +82,8 @@ const Commitment = () => {
         {/* Header */}
         <div className="flex sm:justify-between flex-wrap pt-10 px-10 justify-center ">
           <div>
-            <h4 className="text-[#C30001] text-xl uppercase mb-4 sm:text-left text-center">Commitment</h4>
-            <h2 className="sm:text-3xl text-3xl mb-4 text-black  sm:text-left text-center">
+            <h4 className="text-[#C30001] text-sm uppercase mb-4 sm:text-left text-center">Commitment</h4>
+            <h2 className="sm:text-5xl text-3xl mb-4 text-black  sm:text-left text-center">
               Our Commitment at <br /> POB Trust
             </h2>
           </div>
@@ -140,15 +140,15 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-      <div className="relative bg-[url('/section4.png')] bg-no-repeat bg-cover py-25 px-10 md:text-right text-center overflow-hidden sm:my-10">
+      <div className="relative bg-[url('/section4.png')] bg-no-repeat bg-cover py-25 px-10 md:text-right text-center overflow-hidden sm:my-10 md:mb-20">
         {/* Bluish Overlay */}
         <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
         {/* Content */}
         <div className="relative md:pr-20 pt-5 flex flex-col items-center md:items-end text-center md:text-left ">
-          <h3 className="text-4xl md:text-6xl pb-2 text-white mt-17">
+          <h3 className="text-4xl md:text-6xl pb-2 text-white mt-17 sm:mt-0">
             Rs. 2 Billion Disbursed
           </h3>
-          <p className="text-white md:pr-55">
+          <p className="text-white md:pr-58">
             POB Helped Create PKR 10B Worth of Impact
           </p>
         </div>

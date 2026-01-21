@@ -4,7 +4,7 @@ import React from "react";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center  sm:px-4   px-10 pb-20 ">
+    <div className="flex flex-col md:flex-row justify-center items-center  sm:px-4 px-10 pb-20 ">
       
       {/* Image Section */}
       <div className="w-full md:w-[45%] mx-auto">
@@ -20,7 +20,7 @@ const Aboutus = () => {
 
       {/* Content Section */}
       <div className="w-full md:w-[55%] text-black py-10 text-center sm:text-left ">
-        <h4 className="text-xl  mb-1 text-[#C30001] mt-5 uppercase">
+        <h4 className="text-sm  mb-1 text-[#C30001] mt-5 uppercase">
           About Us
         </h4>
 

@@ -59,10 +59,10 @@ const SurgeryPricing = () => {
   return (
     <section className="py-12 md:py-16 bg-[#373895] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="uppercase text-smongo text-xl sm:text-lg tracking-wider text-center">
+        <h2 className="uppercase text-smongo text-sm sm:text-sm tracking-wider text-center">
           HELP US
         </h2>
-        <h3 className="text-xl sm:text-3xl  font-Amaranth mt-3 mb-4 text-center leading-tight">
+        <h3 className="text-xl sm:text-5xl  font-Amaranth mt-3 mb-4 text-center leading-tight">
           HELP THEM WITH YOUR ZAKAT/DONATIONS
         </h3>
         <p className='text-xs  text-center'>

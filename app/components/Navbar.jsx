@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       {/* ─── Top Bar (Desktop only) ─── */}
-      <section className="hidden lg:block bg-[#C30001] text-white w-290  mx-auto rounded-b-lg">
+      <section className="hidden lg:block bg-[#C30001] text-white w-300 2xl:w-320  mx-auto rounded-b-lg">
         <div className="pl-4 w-[96%] py-1.5">
           <div className="flex flex-wrap justify-between items-center text-xs">
             <div className="flex flex-wrap items-center ">
@@ -155,7 +155,7 @@ const Navbar = () => {
             <Link
               href=""
               onClick={scrollToDonate}
-              className="flex items-center gap-2 bg-[#373895] text-white pl-2 pr-4 py-1 rounded-full font-semibold hover:bg-[#2f316f] transition-colors text-sm "
+              className="flex items-center gap-2 bg-[#373895] text-white pl-2 pr-4 py-1 rounded-full font-semibold hover:bg-[#2f316f] transition-colors text-sm mr-3 "
             >
               <div className="bg-white rounded-full p-1">
                 <NextImage
