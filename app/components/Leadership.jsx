@@ -29,9 +29,9 @@ const LeaderShip = () => {
   return (
     <div className="relative flex flex-col items-center justify-center text-center pt-12">
       {/* Header */}
-      <div className="md:w-5/12 w-[90%] font-inter items-center text-center mb-4 flex flex-col gap-2">
+      <div className="w-[90%] font-inter items-center text-center mb-4 flex flex-col gap-2">
         <h4 className="uppercase text-[#C30001] text-sm">Media Gallery</h4>
-        <h2 className="text-3xl sm:text-5xl pb- pt-2 text-black">Capturing Moments, Sharing Stories</h2>
+        <h2 className="text-3xl sm:text-5xl pb- pt-2 text-black w-full">Capturing Moments, Sharing Stories</h2>
         <p className="text-[#777777] text-center text-[14px] pb-5">
           Explore impactful visuals that tell the reel stories behind the similar
         </p>

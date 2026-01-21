@@ -21,7 +21,7 @@ const scrollToDonate = () => {
 
 const Hero = () => {
   return (
-    <div className="relative w-full overflow-hidden h-[535px] md:h-[140vh] ">
+    <div className="relative w-full overflow-hidden h-[535px] md:h-[98vh] ">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image

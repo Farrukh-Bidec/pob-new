@@ -7,7 +7,7 @@ const Random = () => {
 
     }
     return (
-        <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-6 max-w-7xl mx-auto px-4 py-8 xl:pt-20">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-6 max-w-7xl mx-auto px-4 py-8 xl:pt-35 2xl:pb-20">
             {/* Text Section */}
             <div className="w-full md:w-1/2 text-center md:text-left">
                 <h4 className="uppercase text-[#C30001] text-xl md:text-sm ">Donate now</h4>

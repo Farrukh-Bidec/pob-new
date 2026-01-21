@@ -163,7 +163,7 @@ const Testimonials = () => {
         className="hidden md:block mx-auto py-10"
       /> */}
       <div className="max-w-7xl mx-auto">
-        <div className="flex gap-20 justify-center pt-20">
+        <div className="flex gap-20 justify-center pt-20 2xl:pb-20">
           {allCards.slice(0, 3).map((card, index) => (
             <div
               key={index}

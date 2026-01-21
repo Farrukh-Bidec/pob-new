@@ -78,7 +78,7 @@ const Commitment = () => {
 
   return (
     <>
-      <div className="md:ml-30 ">
+      <div className="md:ml-30 pt-10">
         {/* Header */}
         <div className="flex sm:justify-between flex-wrap pt-10 px-10 justify-center ">
           <div>
@@ -140,7 +140,7 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-      <div className="relative bg-[url('/section4.png')] bg-no-repeat bg-cover py-25 px-10 md:text-right text-center overflow-hidden sm:my-10 md:mb-20">
+      <div className="relative bg-[url('/section4.png')] bg-no-repeat bg-cover py-25 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
         {/* Bluish Overlay */}
         <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
         {/* Content */}

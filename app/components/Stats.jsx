@@ -34,7 +34,7 @@ const Stats = () => {
                     <img
                       src="circle.png"
                       alt="labels"
-                      className="absolute  left-10 sm:-left-4 size-8 sm:size-10"
+                      className="absolute  left-10 sm:left-4 size-8 sm:size-10"
                     />
                     {stat.number}
                   </div>
@@ -68,17 +68,17 @@ const Stats = () => {
           </div>
 
           {/* Right side - Image with controlled aspect ratio */}
-          <div className="w-full lg:w-8/12 max-w-md lg:max-w-[700px] 2xl:w-[500px] mt-2 hidden lg:block">
-  <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-    <Image
-      src="/blindWomen.png"
-      alt="Prevention of Blindness - Woman with eye care"
-      fill
-      className="object-cover"
-      priority={false}
-    />
-  </div>
-</div>
+          <div className="w-full lg:w-8/12 max-w-md lg:max-w-[700px] 2xl:w-[500px] mt-2 hidden lg:block ">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+              <Image
+                src="/blindWomen.png"
+                alt="Prevention of Blindness - Woman with eye care"
+                fill
+                className="object-cover"
+                priority={false}
+              />
+            </div>
+          </div>
 
 
         </div>
