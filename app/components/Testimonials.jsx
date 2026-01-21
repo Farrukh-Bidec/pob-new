@@ -1,12 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { useRouter } from 'next/navigation';
+
+
 
 const Testimonials = () => {
   const cards = [
@@ -55,10 +58,11 @@ const Testimonials = () => {
 
   const [swiperRef, setSwiperRef] = useState(null);
   const allCards = [...donationCards, ...donationCards];
+  const router = useRouter()
 
 
   return (
-    <section className="bg-[#e7e5e51a] h-auto  px-4 md:px-0">
+    <section className="bg-[#e7e5e51a] h-auto px-4 md:px-0">
 
 
       {/* Heading */}
@@ -159,7 +163,7 @@ const Testimonials = () => {
         className="hidden md:block mx-auto py-10"
       /> */}
       <div className="max-w-7xl mx-auto">
-        <div className="flex gap-10 justify-center pt-20">
+        <div className="flex gap-20 justify-center pt-20">
           {allCards.slice(0, 3).map((card, index) => (
             <div
               key={index}

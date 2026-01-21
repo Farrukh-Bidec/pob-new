@@ -58,7 +58,7 @@ const Publications = () => {
   };
 
   return (
-    <div className=" pt-0 sm:pt-20 sm:overflow-hidden overflow-auto md:ml-10" >
+    <div className=" pt-0 sm:pt-20 sm:overflow-hidden overflow-auto md:ml-[44px]" >
       {/* Header */}
       <div className=" flex justify-between items-center py-10 px-5 sm:px-15 items-center">
         <div>

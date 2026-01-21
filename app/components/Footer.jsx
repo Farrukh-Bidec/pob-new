@@ -664,7 +664,7 @@ const Footer = () => {
             </div>
 
             <div
-                className="h-[42rem] hidden  bg-[#373895] md:flex justify-end items-center  flex-col bg-cover bg-no-repeat  relative"
+                className="h-[42rem] 2xl:h-[53rem] hidden  bg-[#373895] md:flex justify-end items-center  flex-col bg-cover bg-no-repeat  relative"
                 // style={{
                 //     backgroundImage: "url('/footer-bg.webp')",
                 // }}
