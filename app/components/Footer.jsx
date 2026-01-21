@@ -910,7 +910,7 @@ const Footer = () => {
 
             {/* Mobile Footer  */}
             <div
-                className="md:bg-[#222222] min-h-[95rem] block md:hidden"
+                className="md:bg-[#222222] min-h-[60rem] block md:hidden"
             >
 
                 <div

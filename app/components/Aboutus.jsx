@@ -4,7 +4,7 @@ import React from "react";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center  sm:px-4 px-10 pb-20 ">
+    <div className="flex flex-col md:flex-row justify-center items-center  sm:px-4 px-10 pb-5 sm:pb-20  ">
       
       {/* Image Section */}
       <div className="w-full md:w-[45%] mx-auto">
@@ -13,7 +13,7 @@ const Aboutus = () => {
           alt="About Us"
           width={800}
           height={800}
-          className="w-full sm:w-[80%] h-[200px] md:h-[668px] object-cover rounded-lg mx-auto my-4"
+          className="w-full sm:w-[80%] h-[400px] md:h-[668px] object-cover rounded-lg mx-auto my-4"
           priority
         />
       </div>

@@ -76,57 +76,48 @@ const Testimonials = () => {
           </h2>
 
         </div>
-
-        {/* Mobile Arrows – above slider, under heading */}
-        {/* <div className="hidden flex gap-2 mt-4 justify-center">
-          <button
-            onClick={() => swiperRef?.slidePrev()}
-            className="rounded-full text-black border bg-white p-2 flex items-center justify-center size-10"
-          >
-            <MdArrowBackIos />
-          </button>
-          <button
-            onClick={() => swiperRef?.slideNext()}
-            className="rounded-full bg-[#373895] text-white p-2 flex items-center justify-center size-10"
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div> */}
-
-
-
-      </div>
+</div>
 
       {/* Mobile Slider */}
-      <div className="md:hidden mt-10 overflow-x-auto w-full">
-        <div className="flex gap-5 px-4">
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              className="min-w-[80%] bg-white rounded-lg shadow-lg p-4"
-            >
-              <img
-                src={`/${card.image}`}
-                alt={card.title}
-                className="w-full rounded-md"
-              />
-              <h3 className="py-4 text-xl line-clamp-1 text-black">
-                {card.title}
-              </h3>
-              <p className="text-gray-600 text-sm">
-                {card.description.length < 200
-                  ? card.description
-                  : `${card.description.slice(0, 200)}...`}
-              </p>
-              <Link href="/feedback">
-                <button className="bg-[#373895] text-white rounded-full px-4 py-2 mt-4 w-full">
-                  Read More
-                </button>
-              </Link>
-            </div>
-          ))}
+     <div className="md:hidden mt-10 overflow-x-auto w-full">
+  <div className="flex gap-5 px-4">
+    {allCards.map((card, index) => (
+      <div
+        key={index}
+        className="min-w-[80%] bg-white rounded-[20px] overflow-hidden shadow-sm flex flex-col border border-gray-100"
+      >
+        <div className="h-60 overflow-hidden">
+          <iframe
+            className="w-full h-full object-cover"
+            src={card.videoUrl.replace("watch?v=", "embed/")}
+            title={card.title}
+            allowFullScreen
+          ></iframe>
+        </div>
+
+        <div className="p-6 flex flex-col h-[250px]">
+          <h3 className="text-[#333333] text-lg font-bold mb-3 font-sans">
+            {card.title}
+          </h3>
+
+          <p className="text-gray-500 text-sm leading-snug mb-6 overflow-hidden">
+            {card.description.length < 200
+              ? card.description
+              : `${card.description.slice(0, 200)}...`}
+          </p>
+
+          <button
+            onClick={() => router.push(`/feedback/${card.id}`)}
+            className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 rounded-full font-medium transition-colors duration-300 text-sm"
+          >
+            Read More
+          </button>
         </div>
       </div>
+    ))}
+  </div>
+</div>
+
 
 
 
@@ -162,12 +153,11 @@ const Testimonials = () => {
         alt="sliderIcon"
         className="hidden md:block mx-auto py-10"
       /> */}
-      <div className="max-w-7xl mx-auto">
+      {/* <div className="max-w-7xl mx-auto">
         <div className="flex gap-20 justify-center pt-20 2xl:pb-20">
           {allCards.slice(0, 3).map((card, index) => (
             <div
               key={index}
-              // 'h-full' hata diya hai taake height content ke mutabiq adjust ho jaye
               className="bg-white rounded-[20px] overflow-hidden shadow-sm flex flex-col border border-gray-100 max-w-[300px] "
             >
 
@@ -182,14 +172,13 @@ const Testimonials = () => {
 
               </div>
 
-              {/* Content Container ki padding p-6 kar di hai */}
-              <div className="p-6 flex flex-col h-[250px]"> {/* yahan height fix ki hai */}
+              <div className="p-6 flex flex-col h-[250px]"> 
                 <h3 className="text-[#333333] text-lg font-bold mb-3 font-sans">
                   {card.title}
                 </h3>
 
                 <p className="text-gray-500 text-sm leading-snug mb-6 overflow-hidden">
-                  {card.description}
+                 
                 </p>
 
                 <button onClick={() => router.push(`/feedback/${card.id}`)} className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 rounded-full font-medium transition-colors duration-300 text-sm">
@@ -200,7 +189,7 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

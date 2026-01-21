@@ -60,7 +60,7 @@ const Publications = () => {
   return (
     <div className=" pt-0 2xl:pt-30 sm:overflow-hidden overflow-auto md:ml-[44px]" >
       {/* Header */}
-      <div className=" flex justify-between items-center py-10 px-5 sm:px-15 items-center">
+      <div className="  items-center py-10 px-5 sm:px-15 items-center">
         <div>
           <h4 className="text-[#C30001] text-xl uppercase sm:text-sm sm:text-left text-center">
             News
