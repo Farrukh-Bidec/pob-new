@@ -20,7 +20,7 @@ const Stats = () => {
       <div className="mx-auto lg:pl-8 2xl:pl-0"> {/* ← added reasonable container */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {/* Left side - Stats */}
-          <div className="flex-1 px-4 sm:px-6 lg:pl-30 text-center sm:text-left">
+          <div className="flex-1 px-4 sm:px-6 lg:pl-12 2xl:pl-30 text-center sm:text-left">
             <h2 className="text-3xl md:text-5xl 2xl:text-6xl mb-8">
               Prevention Of Blindness Impact
             </h2>
@@ -30,7 +30,7 @@ const Stats = () => {
             <div className="flex flex-wrap gap-5 2xl:gap-20 mb-8 justify-center lg:justify-start lg:w-170">
               {statsData.map((stat, index) => (
                 <div key={index} className="flex flex-col w-40 md:w-40 relative">
-                  <div className="text-2xl md:text-[60px]   font-antonio font-[550] pt-6">
+                  <div className="text-2xl md:text-4xl 2xl:text-[60px]   font-antonio font-[550] pt-6">
                     <img
                       src="circle.png"
                       alt="labels"
