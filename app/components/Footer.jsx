@@ -829,12 +829,13 @@ const Footer = () => {
                                 <p className="ml-6">Sunday: Closed</p>
                             </div>
                         </div>
+
                         {/* Services */}
                         <div className="ml-14">
                             <h4 className="text-lg text-white font-poppins ">Services</h4>
                             {/* Diseases 1 */}
                             <div className="text-[#FFFFFF] flex items-center flex-col items-start gap-2 mt-2 text-sm">
-                                <strong className=" font-inter ">Treatments & Specialties</strong>
+                                <h3 className="">Treatments & Specialties</h3>
                                 {servicesLinks.map((link) => (
                                     <Link key={link.name} href={link.url}>
                                         <div>
@@ -844,12 +845,13 @@ const Footer = () => {
                                 ))}
                             </div>
                         </div>
+                        
 
                         {/* Support , Resource , Contact */}
-                        <div className="ml-14">
+                        <div className="ml-14 mt-8">
                             {/* Diseases 2 */}
                             <div className="text-[#FFFFFF] flex items-center flex-col items-start gap-2 mt-2 text-sm">
-                                <strong className=" font-inter ">Conditions & Diagnostics </strong>
+                                <h3 className=" font-inter ">Conditions & Diagnostics </h3>
                                 {servicesLinks2.map((link) => (
                                     <Link key={link.name} href={link.url}>
                                         <div>
@@ -862,7 +864,7 @@ const Footer = () => {
                         </div>
                         {/* Contact  */}
                         <div className="ml-14">
-                            <h4 className="text-[17px] text-white font-poppins mt-2">Contact / Legal</h4>
+                            <h4 className=" text-white font-poppins mt-2">Contact / Legal</h4>
                             <div className="text-[#FFFFFF] flex items-center flex-col items-start gap-2 mt-2 text-sm">
                                 {contactLinks.map((link) => (
                                     <Link key={link.name} href={link.url}>
@@ -1035,7 +1037,7 @@ const Footer = () => {
                                 className="flex justify-between   items-center py-3 cursor-pointer"
                                 onClick={() => setisContactOpen(!isContactOpen)}
                             >
-                                <p className="text-[16px] ">Contact US</p>
+                                <p className="text-lg text-white font-poppins ">Contact US</p>
                                 {isContactOpen ? (
                                     <MdOutlineExpandLess size={24} />
                                 ) : (
@@ -1114,6 +1116,8 @@ const Footer = () => {
                                             </Link>
                                         ))}
                                     </div>
+
+                                    
                                     {/* Conditions & Diagnostics */}
                                     <div className="text-[#FFFFFF] flex flex-col gap-2 text-sm">
                                         <strong className="font-inter">Conditions & Diagnostics</strong>

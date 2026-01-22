@@ -11,34 +11,38 @@ const Stats = () => {
     { number: '161,858', label: 'Diagnostic services' },
   ]
 
-  const additionalStats = [
-    // { number: '74,077', label: ' Other ophthalmic procedures' },
-  ]
-
   return (
     <div className="w-full bg-white text-black sm:mb-0 md:pb-0 ">
-      <div className="mx-auto lg:pl-8 2xl:pl-0"> {/* ← added reasonable container */}
+      <div className="mx-auto lg:pl-8 2xl:pl-0">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
+          
           {/* Left side - Stats */}
           <div className="flex-1 px-4 sm:px-6 lg:pl-12 2xl:pl-30 text-center sm:text-left">
-            <h2 className="text-3xl md:text-5xl 2xl:text-6xl mb-8">
+            
+            {/* Heading: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
+            <h2 className="text-3xl md:text-5xl 2xl:text-6xl mb-6 md:mb-16 lg:mb-8 font-bold leading-tight">
               Prevention Of Blindness Impact
             </h2>
-            <p className="text-gray-600 mb-8 text-sm md:text-base">
-              POB’s legacy of charitable eye care in Karachi continues to grow, bringing hope  and sight <br />to communities across Sindh through its outreach programs.
+
+            {/* Paragraph: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
+            <p className="text-gray-600 mb-8 md:mb-16 lg:mb-8 text-sm md:text-base leading-relaxed">
+              POB’s legacy of charitable eye care in Karachi continues to grow, bringing hope and sight <br className="hidden md:block" />
+              to communities across Sindh through its outreach programs.
             </p>
+
+            {/* Stats Grid: Gap is managed to be consistent */}
             <div className="flex flex-wrap gap-5 2xl:gap-20 mb-8 justify-center lg:justify-start lg:w-170">
               {statsData.map((stat, index) => (
-                <div key={index} className="flex flex-col w-40 md:w-40 relative">
-                  <div className="text-2xl md:text-4xl 2xl:text-[60px]   font-antonio font-[550] pt-6">
+                <div key={index} className="flex flex-col w-40 md:w-40 relative group">
+                  <div className="text-2xl md:text-4xl 2xl:text-[60px] font-antonio font-[550] pt-6">
                     <img
                       src="circle.png"
                       alt="labels"
-                      className="absolute  left-10 sm:left-4 size-8 sm:size-10"
+                      className="absolute left-10 sm:left-4 size-8 sm:size-10"
                     />
                     {stat.number}
                   </div>
-                  <div className="text-xs md:text-sm text-gray-700 mt-1  ">
+                  <div className="text-xs md:text-sm text-gray-700 mt-1">
                     {stat.label.split(" ").map((word, i) => (
                       <span key={i}>
                         {word}
@@ -50,25 +54,10 @@ const Stats = () => {
                 </div>
               ))}
             </div>
-
-            {/* <div className="flex flex-wrap gap-8 ">
-              {additionalStats.map((stat, index) => (
-                <div key={index} className="flex flex-col w-40 md:w-48 relative">
-                  <div className="text-2xl md:text-4xl mb-2 font-antonio font-[550]">
-                    <img src="circle.png" alt="labels" className='absolute bottom-5 -left-[8px] sm:bottom-6 sm:-left-[15px] size-8 sm:size-10' />
-                    {stat.number}
-                  </div>
-                  <div className="text-xs md:text-sm text-gray-700  ">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div> */}
-
           </div>
 
-          {/* Right side - Image with controlled aspect ratio */}
-          <div className="w-full lg:w-8/12 max-w-md lg:max-w-[700px] 2xl:w-[500px] mt-2 hidden lg:block ">
+          {/* Right side - Image (UNTOUCHED as per request) */}
+          <div className="w-full lg:w-8/12 max-w-md lg:max-w-[700px] 2xl:w-[500px] mt-2 hidden lg:block">
             <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
               <Image
                 src="/blindWomen.png"
@@ -79,7 +68,6 @@ const Stats = () => {
               />
             </div>
           </div>
-
 
         </div>
       </div>
