@@ -37,7 +37,7 @@ const Testimonials = () => {
     <section className="py-12 px-4 md:px-8 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10">
       <div className="text-center mb-12">
         <h4 className="uppercase text-[#C30001] text-[22px] ">Testimonials</h4>
-        <h2 className="text-2xl sm:text-4xl font-bold text-black">
+        <h2 className="text-[48px] sm:text-4xl font-bold text-black">
           From Darkness to Light
         </h2>
       </div>
@@ -84,7 +84,7 @@ const Testimonials = () => {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {cards.map((card) => (
           <div
             key={card.id}

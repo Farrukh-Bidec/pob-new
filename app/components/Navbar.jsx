@@ -66,7 +66,7 @@ const Navbar = () => {
                 </a>
                 <span>|</span>
                 <a href="mailto:hr@pobtrust.org" className="hover:underline">
-                  hr@pobtrust.org
+                  hr@pobkarachi.org
                 </a>
               </div>
             </div>
