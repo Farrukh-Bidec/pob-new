@@ -62,7 +62,7 @@ const SurgeryPricing = () => {
         <h2 className="uppercase text-smongo text-sm sm:text-[22px] tracking-wider text-center">
           HELP US
         </h2>
-        <h3 className="text-xl sm:text-5xl  font-Amaranth mt-3 mb-4 text-center leading-tight">
+        <h3 className="text-[20px] sm:text-5xl  font-Amaranth mt-3 mb-4 text-center leading-tight">
           HELP THEM WITH YOUR ZAKAT/DONATIONS
         </h3>
         <p className='text-xs  text-center'>

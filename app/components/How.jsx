@@ -9,7 +9,7 @@ const How = () => {
     <div className='flex justify-center flex-wrap gap-6 md:gap-4 items-center max-w-7xl mx-auto'>
         
         {/* Card 1 */}
-        <div className="bg-[url('/bg.png')] bg-cover bg-no-repeat h-[500px] w-full max-w-[350px] flex flex-col justify-center rounded-xl md:mt-36">
+        <div className="bg-[url('/bg.png')] bg-cover bg-no-repeat h-[500px] w-full max-w-[350px] flex flex-col rounded-xl md:mt-36">
             <div className="m-5 size-14 bg-white rounded-full flex items-center justify-center">
                 <img src="/hand2.png" alt="image" className='p-2 object-contain'/>
             </div>
@@ -25,7 +25,7 @@ const How = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-[url('/bg2.png')] bg-cover bg-no-repeat h-[500px] w-full max-w-[350px] flex flex-col justify-center rounded-xl">
+        <div className="bg-[url('/bg2.png')] bg-cover bg-no-repeat h-[500px] w-full max-w-[350px] flex flex-col  rounded-xl">
             <div className="m-5 size-14 bg-white rounded-full flex items-center justify-center">
                 <img src="/mand.png" alt="image" className='p-2 object-contain'/>
             </div>
@@ -41,7 +41,7 @@ const How = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-[url('/bg3.png')] bg-cover bg-no-repeat h-[500px] w-full max-w-[350px] flex flex-col justify-center rounded-xl md:mt-36">
+        <div className="bg-[url('/bg3.png')] bg-cover bg-no-repeat h-[500px] w-full max-w-[350px] flex flex-col  rounded-xl md:mt-36">
             <div className="m-5 size-14 bg-white rounded-full flex items-center justify-center">
                 <img src="/sand.png" alt="image" className='p-2 object-contain'/>
             </div>
