@@ -47,7 +47,10 @@ const Hero = () => {
             {slide.description}
           </p>
 
-          <Link href="" className="mt-6 inline-block">
+          <Link href="" className="mt-6 inline-block"   
+            onClick={scrollToDonate}
+          
+          >
             <button className="flex items-center gap-3 px-[8px] pl-4 sm:px-8 py-[2px] text-[12px] sm:py-3 my-2 bg-white text-black rounded-full shadow-lg hover:bg-gray-100 active:scale-95 transition">
               Donate Now
               <span className="flex items-center justify-center w-6 h-6 bg-black text-white rounded-full text-xl">
