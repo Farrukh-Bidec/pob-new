@@ -68,15 +68,17 @@ const Publications = () => {
       {/* Header */}
       <div className="py-10 px-5 sm:px-15 flex items-center justify-between">
   
-  {/* Left content */}
-<div className="text-center md:text-center lg:text-center xl:text-center">
-  <h4 className="text-[#C30001] text-xl uppercase sm:text-lg">
-    News
-  </h4>
-  <h2 className="text-black text-3xl sm:text-5xl">
-    News & Publications
-  </h2>
+<div className="w-full flex justify-center">
+  <div>
+    <h4 className="text-[#C30001] text-xl uppercase sm:text-lg text-center">
+      News
+    </h4>
+    <h2 className="text-black text-3xl sm:text-5xl text-center">
+      News & Publications
+    </h2>
+  </div>
 </div>
+
 
 
   {/* Right buttons */}
