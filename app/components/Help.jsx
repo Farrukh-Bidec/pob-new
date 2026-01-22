@@ -49,7 +49,7 @@ const Help = () => {
         <>
             {/* ==================== Hepatitis Statistics Cards ==================== */}
             <div className="text-black text-center py-16 pb-0 px-4 sm:px-6 lg:px-8">
-                <h4 className="uppercase text-[#C30001] text-xl sm:text-sm tracking-wide">
+                <h4 className="uppercase text-[#C30001] text-xl sm:text-lg tracking-wide">
                     Current
                 </h4>
                 <h2 className="text-3xl sm:text-5xl lg:text-5xl  pb-10 pt-3">
@@ -105,7 +105,7 @@ const Help = () => {
                     <div className='w-full ml-0 sm:ml-7 mx-auto h-auto flex sm:flex-row flex-col justify-center flex-wrap px-10 '>
                 <div className='lg:w-[30%] w-full text-black pt-10 sm:pt-30'>
                     <picture>
-                        <source media="(min-width: 768px)" srcSet="/3section.png" />
+                        <source media="(min-width: 768px)" srcSet="/33section.png" />
                         <img src="/3sectionResponsive.png" alt="help" className='mx-auto w-25 xl:w-40' />
                     </picture>
                     <h3 className='text-2xl sm:text-xl leading-tight text-center'>Loss of independence</h3>

@@ -23,6 +23,12 @@ const Publications = () => {
       description:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
+     {
+      image: "/publications.jpg",
+      text: "Day 1 Highlights from the Healthcare Expo 2025!",
+      description:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    },
   ];
 
   const CARD_WIDTH = 520; // 500px card + 20px gap
@@ -60,36 +66,38 @@ const Publications = () => {
   return (
     <div className=" pt-0 2xl:pt-30 sm:overflow-hidden overflow-auto md:ml-[44px]" >
       {/* Header */}
-      <div className="  items-center py-10 px-5 sm:px-15 items-center">
-        <div>
-          <h4 className="text-[#C30001] text-xl uppercase sm:text-sm sm:text-left text-center">
-            News
-          </h4>
-          <h2 className="text-black text-3xl sm:text-5xl   sm:text-left text-center">
-            News & Publications
-          </h2>
-        </div>
+      <div className="py-10 px-5 sm:px-15 flex items-center justify-between">
+  
+  {/* Left content */}
+  <div>
+    <h4 className="text-[#C30001] text-xl uppercase sm:text-lg sm:text-left text-center">
+      News
+    </h4>
+    <h2 className="text-black text-3xl sm:text-5xl sm:text-left text-center">
+      News & Publications
+    </h2>
+  </div>
 
+  {/* Right buttons */}
+  <div className="flex gap-2">
+    <button
+      onClick={handlePrev}
+      disabled={currentIndex === 0}
+      className="lg:flex hidden rounded-full text-black border bg-white size-10 items-center justify-center"
+    >
+      <MdArrowBackIos />
+    </button>
 
-        {/* Buttons */}
-        <div className="flex gap-2 ">
-          <button
-            onClick={handlePrev}
-            disabled={currentIndex === 0}
-            className="lg:flex hidden rounded-full text-black border bg-white size-10 items-center justify-center "
-          >
-            <MdArrowBackIos />
-          </button>
+    <button
+      onClick={handleNext}
+      disabled={currentIndex >= cards.length - visibleCards}
+      className="lg:flex hidden rounded-full bg-[#373895] text-white size-10 items-center justify-center disabled:opacity-40"
+    >
+      <MdArrowForwardIos />
+    </button>
+  </div>
 
-          <button
-            onClick={handleNext}
-            disabled={currentIndex >= cards.length - visibleCards}
-            className="lg:flex hidden rounded-full bg-[#373895] text-white size-10 items-center justify-center disabled:opacity-40"
-          >
-            <MdArrowForwardIos />
-          </button>
-        </div>
-      </div>
+</div>
 
       {/* Slider */}
       <div className="overflow-auto sm:overflow-hidden px-10 pb-40 sm:pb-0" ref={sliderRef}>

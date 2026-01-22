@@ -82,7 +82,7 @@ const Commitment = () => {
         {/* Header */}
         <div className="flex sm:justify-between flex-wrap pt-10 px-10 justify-center ">
           <div>
-            <h4 className="text-[#C30001] text-sm uppercase mb-4 sm:text-left text-center">Commitment</h4>
+            <h4 className="text-[#C30001] text-lg uppercase mb-4 sm:text-left text-center">Commitment</h4>
             <h2 className="sm:text-5xl text-3xl mb-4 text-black  sm:text-left text-center">
               Our Commitment at <br /> POB Trust
             </h2>

@@ -69,7 +69,7 @@ const Testimonials = () => {
       {/* comment */}
       <div className="text-center pt-10 md:pt-30 gap-10  ">
         <div>
-          <h4 className="uppercase text-[#C30001] text-xl md:text-sm">Testimonials</h4>
+          <h4 className="uppercase text-[#C30001] text-xl md:text-lg">Testimonials</h4>
           <h2 className="text-3xl md:text-5xl pt-2 text-black">
             From Darkness to Light:
             <span className="block md:inline"> Patient Stories</span>
@@ -145,15 +145,15 @@ const Testimonials = () => {
             </Link>
           </div>
         ))}
-      </div>
+      </div> */}
 
     
-      <img
+      {/* <img
         src="/testimonial5.png"
         alt="sliderIcon"
         className="hidden md:block mx-auto py-10"
       /> */}
-      {/* <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex gap-20 justify-center pt-20 2xl:pb-20">
           {allCards.slice(0, 3).map((card, index) => (
             <div
@@ -178,7 +178,7 @@ const Testimonials = () => {
                 </h3>
 
                 <p className="text-gray-500 text-sm leading-snug mb-6 overflow-hidden">
-                 
+                 {card.description}
                 </p>
 
                 <button onClick={() => router.push(`/feedback/${card.id}`)} className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 rounded-full font-medium transition-colors duration-300 text-sm">
@@ -189,7 +189,7 @@ const Testimonials = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

@@ -38,7 +38,7 @@ const Hero = () => {
     autoplay={{ delay: 5500, disableOnInteraction: false }}
     pagination={{ clickable: true }}
     modules={[Autoplay, Pagination, EffectFade]}
-    className="w-full h-[460px] md:h-[95vh] lg:h-[140vh]"
+    className="w-full h-[460px] md:h-[95vh] lg:h-[130vh]"
   >
     {slides.map((slide) => (
       <SwiperSlide key={slide.id} className="relative">
