@@ -37,7 +37,7 @@ const Testimonials = () => {
     <section className="py-12 px-4 md:px-8 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10">
       <div className="text-center mb-12">
         <h4 className="uppercase text-[#C30001] text-[22px] ">Testimonials</h4>
-        <h2 className="text-[48px] sm:text-[48px]  text-black">
+        <h2 className="text-[22px] sm:text-[48px]  text-black">
           From Darkness to Light
         </h2>
       </div>
