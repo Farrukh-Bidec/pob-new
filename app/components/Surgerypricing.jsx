@@ -68,7 +68,7 @@ const SurgeryPricing = () => {
         <p className='text-xs  text-center'>
           Through your Zakat and Sadaqah, you can support timely treatment and protect the gift of sight for those who cannot afford care.
         </p>
-        <p className='text-xs text-center mb-14 mt-9'>
+        <p className='text-xs text-center mb-14 '>
           In Pakistan, over 40 million people are affected by eye diseases, with cataracts responsible for nearly half <br />
           of all blindness, followed by glaucoma and diabetic retinopathy.
         </p>
