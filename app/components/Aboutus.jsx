@@ -4,7 +4,7 @@ import React from "react";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center -mt-35
+    <div className="flex flex-col md:flex-row justify-center items-center -mt-15 relative
 px-10 sm:px-4 
 pt-4 lg:pt-2 2xl:pb-15 
 pb-5 sm:pb-20">
