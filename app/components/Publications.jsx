@@ -70,7 +70,7 @@ const Publications = () => {
   
 <div className="w-full flex justify-center">
   <div>
-    <h4 className="text-[#C30001] text-xl uppercase sm:text-lg text-center">
+    <h4 className="text-[#C30001] text-[22px] uppercase sm:text-[22px] text-center">
       News
     </h4>
     <h2 className="text-black text-3xl sm:text-5xl text-center">

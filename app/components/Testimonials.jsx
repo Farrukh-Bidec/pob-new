@@ -2,10 +2,7 @@
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import "swiper/css"; // Swiper styles
 import { useRouter } from "next/navigation";
 
 const Testimonials = () => {
@@ -37,103 +34,91 @@ const Testimonials = () => {
   ];
 
   return (
-  <section className="bg-[#e7e5e51a] px-4 py-10">
-  {/* ================= HEADING + ARROWS ================= */}
-  <div className="relative flex items-center justify-center mb-6">
-    {/* Heading */}
-    <div className="w-full flex justify-center items-center flex-col">
-  <h4 className="uppercase text-[#C30001] text-lg text-center">
-    Testimonials
-  </h4>
-  <h2 className="text-2xl sm:text-4xl text-black text-center">
-    From Darkness to Light
-  </h2>
-</div>
+    <section className="py-12 px-4 md:px-8 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10">
+      <div className="text-center mb-12">
+        <h4 className="uppercase text-[#C30001] text-[22px] ">Testimonials</h4>
+        <h2 className="text-2xl sm:text-4xl font-bold text-black">
+          From Darkness to Light
+        </h2>
+      </div>
 
+      {/* Mobile Slider */}
+      <div className="md:hidden">
+        <Swiper
+          onSwiper={setSwiperRef}
+          spaceBetween={16}
+          slidesPerView={1.1} // Slight peek for next slide
+        >
+          {cards.map((card) => (
+            <SwiperSlide key={card.id}>
+              <div className="bg-white rounded-[20px] overflow-hidden shadow-sm flex flex-col border border-gray-100 max-w-[400px] mx-auto">
+                <div className="h-60 overflow-hidden">
+                  <iframe
+                    className="w-full h-full object-cover"
+                    src={card.videoUrl.replace("watch?v=", "embed/")}
+                    title={card.title}
+                    allowFullScreen
+                  />
+                </div>
 
-    {/* Arrows (absolute to heading div, horizontally centered with flex gap) */}
-    <div className="absolute right-0 flex gap-2 md:hidden">
-      <button
-        onClick={() => swiperRef?.slidePrev()}
-        className="size-9 rounded-full border flex items-center justify-center bg-white"
-      >
-        <MdArrowBackIos size={14} />
-      </button>
+                <div className="p-6 flex flex-col h-[250px]">
+                  <h3 className="text-[#333333] text-lg font-bold mb-3 font-sans">
+                    {card.title}
+                  </h3>
 
-      <button
-        onClick={() => swiperRef?.slideNext()}
-        className="size-9 rounded-full border flex items-center justify-center bg-[#3F4095] text-white"
-      >
-        <MdArrowForwardIos size={14} />
-      </button>
-    </div>
-  </div>
+                  <p className="text-gray-500 text-sm leading-snug mb-6 overflow-hidden">
+                    {card.description}
+                  </p>
 
-  {/* ================= MOBILE SLIDER ================= */}
-  <div className="md:hidden">
-    <Swiper
-      onSwiper={setSwiperRef}
-      modules={[Navigation]}
-      spaceBetween={16}
-      slidesPerView={1}
-    >
-      {cards.map((card) => (
-        <SwiperSlide key={card.id}>
-          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border">
-            <div className="h-56">
+                  <button
+                    onClick={() => router.push(`/feedback/${card.id}`)}
+                    className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 rounded-full font-medium text-sm transition-colors duration-300"
+                  >
+                    Read More
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Desktop Grid */}
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {cards.map((card) => (
+          <div
+            key={card.id}
+            className="bg-white rounded-[20px] overflow-hidden shadow-sm flex flex-col border border-gray-100 max-w-[400px] mx-auto"
+          >
+            <div className="h-60 overflow-hidden">
               <iframe
-                className="w-full h-full"
+                className="w-full h-full object-cover"
                 src={card.videoUrl.replace("watch?v=", "embed/")}
                 title={card.title}
                 allowFullScreen
               />
             </div>
-            <div className="p-5 flex flex-col">
-              <h3 className="font-bold text-lg mb-2 text-black">{card.title}</h3>
-              <p className="text-gray-500 text-sm mb-4">{card.description}</p>
+
+            <div className="p-6 flex flex-col h-[250px]">
+              <h3 className="text-[#333333] text-lg font-bold mb-3 font-sans">
+                {card.title}
+              </h3>
+
+              <p className="text-gray-500 text-sm leading-snug mb-6 overflow-hidden">
+                {card.description}
+              </p>
+
               <button
                 onClick={() => router.push(`/feedback/${card.id}`)}
-                className="mt-auto bg-[#3F4095] text-white py-2 rounded-full"
+                className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 rounded-full font-medium text-sm transition-colors duration-300"
               >
                 Read More
               </button>
             </div>
           </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  </div>
-
-  {/* ================= DESKTOP GRID ================= */}
-  <div className="hidden md:flex justify-center gap-10 max-w-7xl mx-auto">
-    {cards.map((card) => (
-      <div
-        key={card.id}
-        className="bg-white rounded-2xl overflow-hidden shadow-sm border max-w-[300px]"
-      >
-        <div className="h-56">
-          <iframe
-            className="w-full h-full"
-            src={card.videoUrl.replace("watch?v=", "embed/")}
-            title={card.title}
-            allowFullScreen
-          />
-        </div>
-        <div className="p-6 flex flex-col h-[260px]">
-          <h3 className="font-bold text-lg mb-2 text-black">{card.title}</h3>
-          <p className="text-gray-500 text-sm mb-6">{card.description}</p>
-          <button
-            onClick={() => router.push(`/feedback/${card.id}`)}
-            className="mt-auto bg-[#3F4095] text-white py-2 rounded-full"
-          >
-            Read More
-          </button>
-        </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
-
+    </section>
   );
 };
 

@@ -82,8 +82,8 @@ const News = () => {
   return (
     <div>
   {/* Heading */}
-  <div className="text-center pt-12 md:pt-70 xl:pt-30">
-    <h4 className="uppercase text-[#C30001] text-xl md:text-lg">Own Blogs</h4>
+  <div className="text-center pt-12 md:pt-70 xl:pt-30 px-10">
+    <h4 className="uppercase text-[#C30001] text-[22px] md:text-[22px] -mt-20">Own Blogs</h4>
     <h2 className="text-3xl md:text-5xl pb-4 md:pb-6 pt-2 text-black ">
       Our Latest News and Articles
     </h2>
