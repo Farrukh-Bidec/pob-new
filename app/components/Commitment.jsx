@@ -78,7 +78,7 @@ const Commitment = () => {
 
   return (
     <>
-      <div className="md:ml-30 pt-10">
+      <div className="md:ml-10 pt-10">
         {/* Header */}
         <div className="flex sm:justify-between flex-wrap pt-10 px-10 justify-center ">
           <div>
