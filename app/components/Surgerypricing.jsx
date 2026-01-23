@@ -59,16 +59,16 @@ const SurgeryPricing = () => {
   return (
     <section className="py-12 md:py-16 bg-[#373895] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="uppercase text-smongo text-[22px] sm:text-[22px] tracking-wider text-center">
+        <h2 className="uppercase text-sm sm:font-norma text-center">
           HELP US
         </h2>
         <h3 className="text-[20px] sm:text-5xl  font-Amaranth mt-3 mb-4 text-center leading-tight">
           HELP THEM WITH YOUR ZAKAT/DONATIONS
         </h3>
-        <p className='text-xs  text-center'>
+        <p className='text-xs   text-center'>
           Through your Zakat and Sadaqah, you can support timely treatment and protect the gift of sight for those who cannot afford care.
         </p>
-        <p className='text-xs text-center mb-14 '>
+        <p className='text-xs text-center my-10 '>
           In Pakistan, over 40 million people are affected by eye diseases, with cataracts responsible for nearly half <br />
           of all blindness, followed by glaucoma and diabetic retinopathy.
         </p>
@@ -98,18 +98,19 @@ const SurgeryPricing = () => {
                   />
                 </div>
 
-                <div className=" flex flex-col flex-grow">
-                  <h4 className="text-base sm:text-lg mb-3 line-clamp-2">
-                    {(() => {
+                <div className=" flex flex-col grow">
+                  <h4 className="text-base sm:text-2xl mb-3 line-clamp-2 ">
+                    {/* {(() => {
                       const words = item.title.split(" ");
                       const lastIndex = words.length - 1;
 
                       return words.map((word, i) => (
                         <React.Fragment key={i}>
-                          {i === lastIndex ? <><br />{word}</> : word + " "}
+                          {i === lastIndex ? <><br /></> : word + " "}
                         </React.Fragment>
                       ));
-                    })()}
+                    })()} */}
+                    {item.title}
                   </h4>
 
 
@@ -119,7 +120,7 @@ const SurgeryPricing = () => {
                   <p className="text-xl sm:text-2xl font-inter font-extralight mb-5">{item.price}</p>
                   <button
                     onClick={handleDonateClick}
-                    className="mt-auto bg-white text-black px-8 sm:py-3 py-1 rounded-full sm:text-base transition shadow-md w-fit text-sm"
+                    className="mt-auto bg-white text-black px-14 sm:py-3 py-1 rounded-full sm:text-base transition shadow-md w-fit text-sm"
                   >
                     Donate
                   </button>

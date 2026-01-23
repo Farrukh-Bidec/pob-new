@@ -603,13 +603,13 @@ const Footer = () => {
                                     type="text"
                                     placeholder="First Name *"
                                     ref={firstNameRef}
-                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-non py-5"
+                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-non py-4"
                                 />
                                 <input
                                     type="text"
                                     placeholder="Last Name *"
                                     ref={lastNameRef}
-                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-none py-5"
+                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-none py-4"
                                 />
                             </div>
 
@@ -618,11 +618,11 @@ const Footer = () => {
                                     type="email"
                                     placeholder="Email"
                                     ref={emailRef}
-                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-none py-5"
+                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-none py-4"
                                 />
                                 <select
                                     ref={countryRef}
-                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-none py-5"
+                                    className="w-full border text-xs  border-black p-3 rounded-[18px] outline-none py-4"
                                     onChange={handleCountryChange}
                                 >
                                     <option value="">PKR</option>

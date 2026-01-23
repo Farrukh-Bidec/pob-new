@@ -1,101 +1,80 @@
-"use client";
-
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import Link from "next/link";
-import Image from "next/image";
-
-const slide = {
-  id: 1,
-  image: "/slide1.jpg",
-  alt_text: "Prevent Blindness - POB Trust",
-  title: "WELCOME TO POB TRUST\nPREVENTATION OF BLINDNESS",
-  headline: "Leading Free Eye Care Hospital in Karachi: Restoring Vision with Compassion",
-  description:
-    "Bringing hope and clarity to lives with free eye care, restoring vision with love and compassion in Karachi.",
-};
-
-const scrollToDonate = () => {
-  const footer = document.getElementById("footer_elem");
-  footer.scrollIntoView({ behavior: "smooth" });
-};
+"use client"
+import { Link } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
+import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 
 const Hero = () => {
+  const slides = [
+    "/slide.webp",
+    "/slide2.webp",
+    "/slide3.webp",
+    "/slide4.webp",
+  ];
+  const [current, setCurrent] = useState(0)
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrent((prev) => (prev + 1) % slides.length)
+  //   }, 4000) // change slide every 4 sec
+
+  //   return () => clearInterval(interval)
+  // }, [])
+
+  const scrollToDonate = () => {
+    const footer = document.getElementById('footer_elem')
+    footer.scrollIntoView({ behavior: "smooth" })
+
+  }
   return (
-    <div className="relative w-full overflow-hidden h-[535px] md:h-[130vh] ">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src={slide.image}
-          alt={slide.alt_text}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover h-full"
-        />
-      </div>
+    <div
+      className="relative text-white  bg-cover bg-center bg-no-repeat h-[600px] md:h-[90vh] 2xl:h-[80vh] my-23 sm:my-30 flex items-center text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
+      style={{ backgroundImage: `url(${slides[current]})` }}
+    >
+      {(current === 2 || current === 3) && (
+        <div className="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
+      )}
 
-      {/* ─── Mobile Content (centered) ─── */}
-      <div className="absolute inset-0 z-20 flex md:hidden items-center justify-center px-5">
-        <div className="text-center max-w-lg text-white">
-          <p className="text-[10px] text-shadow uppercase font-light">
-            {slide.title.replace("\\n", " ")}
-          </p>
-          <h1 className="mt-3 text-lg sm:text-2xl leading-tight text-shadow">
-            {slide.headline.replace("\\n", " ")}
-          </h1>
-          <p className="mt-6 text-[10px] sm:text-base line-clamp-3 text-shadow">
-            {slide.description}
-          </p>
+      <div className="w-180 2xl:w-200 sm:pl-30 z-20">
+        <p className="text-xl lg:text-base  ">
+          WELCOME TO POB TRUST PREVENTATION OF BLINDNESS
+        </p>
+        <h1 className="mt-4 lg:mt-6 text-4xl lg:text-5xl xl:text-4xl leading-tight ">
+          Leading Free Eye Care Hospital in Karachi:Restoring Vision with Compassion
+        </h1>
+        <p className="mt-5 lg:mt-7 text-base lg:text-base ">
+          Bringing hope and clarity to lives with free eye care, restoring vision<br /> with love and compassion in Karachi.
+        </p>
 
-          <Link href="" className="mt-6 inline-block"   
-            onClick={scrollToDonate}
-          
-          >
-            <button className="flex items-center gap-3 px-[8px] pl-4 sm:px-8 py-[2px] text-[12px] sm:py-3 my-2 bg-white text-black rounded-full shadow-lg hover:bg-gray-100 active:scale-95 transition">
-              Donate Now
-              <span className="flex items-center justify-center w-6 h-6 bg-black text-white rounded-full text-xl">
-                <MdKeyboardDoubleArrowRight />
-              </span>
-            </button>
-          </Link>
+        <div className="mt-8 lg:mt-10 flex justify-center sm:justify-start " onClick={scrollToDonate}>
+          <button className="flex items-center gap-3 px-2 py-1 sm:py-1 bg-white text-black rounded-full shadow-xl hover:bg-gray-100 transition text-base pl-4">
+            Donate Now
+            <span className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full text-2xl">
+              <MdKeyboardDoubleArrowRight />
+            </span>
+          </button>
         </div>
       </div>
 
-      {/* ─── Desktop / Tablet Content (left aligned) ─── */}
-      <div className="hidden md:flex absolute inset-0 z-20 items-center pl-6 lg:pl-12 xl:pl-24 pr-6">
-        <div className="max-w-2xl lg:max-w-3xl text-white">
-          <p className="text-xl lg:text-base">{slide.title.replace("\\n", " ")}</p>
-          <h1 className="mt-4 lg:mt-6 text-4xl lg:text-5xl xl:text-4xl leading-tight">
-            {slide.headline}
-          </h1>
-          <p className="mt-5 lg:mt-7 text-base lg:text-base">
-            Bringing hope and clarity to lives with free eye care, restoring vision
-            <br /> with love and compassion in Karachi.
-          </p>
-
-          <Link
-            href=""
-            className="mt-8 lg:mt-10 inline-block"
-            onClick={scrollToDonate}
+      {/* Slider buttons */}
+      <div className="sm:pr-20 flex sm:flex-col flex-row gap-3 z-20 mx-auto sm:mx-0">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`flex items-center justify-center rounded-full border-2 transition-all duration-300
+        ${current === i ? "border-white size-4" : "border-white/70 size-2"}
+      `}
           >
-            <button className="flex items-center gap-3 px-2 py-4 sm:py-1 bg-white text-black rounded-full shadow-xl hover:bg-gray-100 transition text-base pl-4">
-              Donate Now
-              <span className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full text-2xl">
-                <MdKeyboardDoubleArrowRight />
-              </span>
-            </button>
-          </Link>
-        </div>
+            {/* Inner dot (only active) */}
+            {current === i && (
+              <span className="bg-white rounded-full size-[1px] p-1"></span>
+            )}
+          </button>
+        ))}
       </div>
 
-      {/* ─── Text Shadow Styling ─── */}
-      <style jsx global>{`
-        .text-shadow {
-          text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-        }
-      `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

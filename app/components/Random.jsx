@@ -36,7 +36,7 @@ const Random = () => {
                 <img
                     src="/new.webp"
                     alt="Random"
-                    className="object-cover h-100 rounded-b-full"
+                    className="object-cover h-140 rounded-b-full"
                 />
             </div>
         </div>

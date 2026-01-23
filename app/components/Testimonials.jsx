@@ -51,7 +51,7 @@ const Testimonials = () => {
         >
           {cards.map((card) => (
             <SwiperSlide key={card.id}>
-              <div className="bg-white rounded-[20px] overflow-hidden shadow-sm flex flex-col border border-gray-100 max-w-[400px] mx-auto">
+              <div className="bg-white rounded-[20px] overflow-hidden  flex flex-col border border-gray-100 max-w-[400px] mx-auto">
                 <div className="h-60 overflow-hidden">
                   <iframe
                     className="w-full h-full object-cover"
@@ -88,7 +88,7 @@ const Testimonials = () => {
         {cards.map((card) => (
           <div
             key={card.id}
-            className="bg-white rounded-[20px] overflow-hidden shadow-sm flex flex-col border border-gray-100 max-w-[400px] mx-auto"
+            className="bg-white rounded-[20px] overflow-hidden  flex flex-col border border-gray-100 max-w-[400px] mx-auto"
           >
             <div className="h-60 overflow-hidden">
               <iframe

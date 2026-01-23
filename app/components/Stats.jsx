@@ -38,7 +38,7 @@ const Stats = () => {
                     <img
                       src="circle.png"
                       alt="labels"
-                      className="absolute left-10 sm:left-4 size-8 sm:size-10"
+                      className="absolute left-10 sm:-left-4 size-8 sm:size-10"
                     />
                     {stat.number}
                   </div>

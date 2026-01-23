@@ -82,7 +82,7 @@ const News = () => {
   return (
     <div>
   {/* Heading */}
-  <div className="text-center pt-12 md:pt-70 xl:pt-30 px-10">
+  <div className="text-center pt-12 md:pt-70 xl:pt-10 px-10">
     <h4 className="uppercase text-[#C30001] text-[22px] md:text-[22px] -mt-20">Own Blogs</h4>
     <h2 className="text-3xl md:text-5xl pb-4 md:pb-6 pt-2 text-black ">
       Our Latest News and Articles
@@ -95,7 +95,7 @@ const News = () => {
       {/* Left Button */}
       <button
         onClick={scrollLeft}
-        className="lg:absolute hidden absolute -left-2 md:-left-14 top-1/2 transform -translate-y-1/2 z-10  text-black p-3 rounded-full shadow-md hover:bg-gray-800 transition"
+        className="hidden md:block   absolute -left-2 md:-left-14 top-1/2 transform -translate-y-1/2 z-10  text-black p-3 rounded-full shadow-md hover:bg-gray-800 transition"
       >
         <FaChevronLeft />
       </button>
@@ -103,7 +103,7 @@ const News = () => {
       {/* Cards */}
       <div
         ref={sliderRef}
-        className="flex overflow-x-auto gap-4 scroll-smooth no-scrollbar"
+        className="flex overflow-auto sm:overflow-hidden gap-4 scroll-smooth no-scrollbar"
       >
         {cards.map((card, index) => (
           <div
@@ -142,7 +142,7 @@ const News = () => {
       {/* Right Button */}
       <button
         onClick={scrollRight}
-        className="lg:absolute hidden -right-2 md:-right-14 top-1/2 transform -translate-y-1/2 z-10 bg-[#373895] text-white p-3 rounded-full shadow-md hover:bg-gray-800 transition"
+        className="hidden md:block absolute  -right-2 md:-right-14 top-1/2 transform -translate-y-1/2 z-10 bg-[#373895] text-white p-3 rounded-full shadow-md hover:bg-gray-800 transition"
       >
         <FaChevronRight />
       </button>

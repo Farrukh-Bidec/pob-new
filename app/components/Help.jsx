@@ -73,7 +73,7 @@ const Help = () => {
 
                             {/* Content */}
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-3xl md:text-5xl text-gray-400 mb-4 text-left line-clamp-2">
+                                <h3 className="text-3xl md:text-5xl text-[#CBCBE3] mb-4 text-left line-clamp-2">
                                     {card.ratio}
                                 </h3>
                                 <p className="text-gray-500 text-left text-sm leading-relaxed md:text-base ">

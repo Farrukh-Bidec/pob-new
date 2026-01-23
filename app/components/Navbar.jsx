@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiPhone } from "react-icons/hi2";
 import {
@@ -14,6 +14,14 @@ import NextImage from "next/image";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMobileMenuOpen]);
 
   const navItems = [
     { name: "Home", link: "/" },
@@ -121,7 +129,7 @@ const Navbar = () => {
                 {item.submenu ? (
                   <>
                     <button className="hover:text-[#C30001] transition-colors flex items-center gap-1">
-                      {item.name} <span className="text-xs">▼</span>
+                      <p className="text-[12px]">  {item.name} <span className="text-xs">▼</span></p>
                     </button>
                     <div className="absolute top-full left-0 pt-2 hidden group-hover:block min-w-[220px] z-50">
                       <div className="bg-white shadow-xl rounded-md border border-gray-100 py-2">
@@ -129,7 +137,7 @@ const Navbar = () => {
                           <Link
                             key={si}
                             href={sub.link}
-                            className="block px-5  py-2.5 text-sm text-gray-800 hover:bg-[#C30001] hover:text-white transition-colors"
+                            className="block px-5 font- py-2.5 text-sm text-gray-800 hover:bg-[#C30001] hover:text-white transition-colors"
                           >
                             {sub.name}
                           </Link>
@@ -142,7 +150,7 @@ const Navbar = () => {
                     href={item.link}
                     className="hover:text-[#C30001] transition-colors text-black"
                   >
-                    {item.name}
+                    <p className="text-[12px]">{item.name}</p>
                   </Link>
                 )}
               </div>
@@ -155,7 +163,7 @@ const Navbar = () => {
             <Link
               href=""
               onClick={scrollToDonate}
-              className="flex items-center gap-2 bg-[#373895] text-white pl-2 pr-4 py-1 rounded-full font-semibold hover:bg-[#2f316f] transition-colors text-sm mr-3 "
+              className="flex items-center gap-2 bg-[#373895] text-white pl-2 pr-4 py-1 rounded-full  hover:bg-[#2f316f] transition-colors text-sm mr-3 "
             >
               <div className="bg-white rounded-full p-1">
                 <NextImage
@@ -241,7 +249,7 @@ const Navbar = () => {
                     className="block py-3 px-4 rounded-lg hover:bg-gray-100 font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {item.name}
+                    <p className='font-poppins'> {item.name}</p>
                   </Link>
                 )}
               </div>
