@@ -11,7 +11,7 @@ const donationData = [
     title: "Donate for Diabetic Retinopathy Treatment",
     price: "Contact for details",
     description: "Supports laser treatment and medical care to prevent vision loss caused by diabetes",
-    image: "/RETINA.jpg"
+    image: "/RETINA.webp"
   },
   {
     title: "Donate a Cataract Surgery (Adult)",

@@ -12,7 +12,7 @@ pb-5 sm:pb-20">
       {/* Image Section */}
       <div className="w-full md:w-[45%] mx-auto">
         <Image
-          src="/aboutus.jpg"
+          src="/aboutus.webp"
           alt="About Us"
           width={800}
           height={800}
