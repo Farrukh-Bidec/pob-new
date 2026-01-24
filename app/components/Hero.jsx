@@ -5,9 +5,9 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 
 const Hero = () => {
   const slides = [
+    "/slide4.webp",
     "/slide2.webp",
     "/slide3.webp",
-    "/slide4.webp",
     "/slide.png",
   ];
   const [current, setCurrent] = useState(0)
@@ -34,26 +34,54 @@ const Hero = () => {
         <div className="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
       )}
 
-      <div className="w-180 2xl:w-200 sm:pl-30 z-20">
-        <p className="text-xl lg:text-base  ">
-          WELCOME TO POB TRUST PREVENTATION OF BLINDNESS
-        </p>
-        <h1 className="mt-4 lg:mt-6 text-4xl lg:text-5xl xl:text-4xl leading-tight ">
-          Leading Free Eye Care Hospital in Karachi:Restoring Vision with Compassion
-        </h1>
-        <p className="mt-5 lg:mt-7 text-base lg:text-base ">
-          Bringing hope and clarity to lives with free eye care, restoring vision<br /> with love and compassion in Karachi.
-        </p>
+    <div className="
+  w-full max-w-[720px]
+  mt-20 sm:mt-0
+  px-5 sm:px-0
+  2xl:w-200 sm:pl-30
+  z-20
+">
 
-        <div className="mt-8 lg:mt-10 flex justify-center sm:justify-start " onClick={scrollToDonate}>
-          <button className="flex items-center gap-3 px-2 py-1 sm:py-1 bg-white text-black rounded-full shadow-xl hover:bg-gray-100 transition text-base pl-4">
-            Donate Now
-            <span className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full text-2xl">
-              <MdKeyboardDoubleArrowRight />
-            </span>
-          </button>
-        </div>
-      </div>
+ <p className="text-[13px] sm:text-[15px] md:text-base lg:text-sm tracking-wider uppercase">
+  WELCOME TO POB TRUST PREVENTATION OF BLINDNESS
+</p>
+
+<h1
+  className="
+    mt-3 sm:mt-4 lg:mt-2
+    text-[24px] sm:text-[32px] md:text-4xl lg:text-5xl xl:text-4xl
+    
+  "
+>
+  Leading Free Eye Care Hospital in Karachi:
+  <span className="block">Restoring Vision with Compassion</span>
+</h1>
+
+<p className="mt-4 sm:mt-5 lg:mt-7 text-[14px] sm:text-[15px] md:text-base leading-relaxed">
+  Bringing hope and clarity to lives with free eye care, restoring vision
+  <br className="hidden sm:block" />
+  with love and compassion in Karachi.
+</p>
+
+  <div
+    className="mt-6 sm:mt-8 lg:mt-10 flex justify-center sm:justify-start"
+    onClick={scrollToDonate}
+  >
+    <button className="
+      flex items-center gap-3
+      px-3 py-2 sm:px-2 sm:py-1
+      bg-white text-black rounded-full shadow-xl
+      hover:bg-gray-100 transition text-sm sm:text-base pl-4
+    ">
+      Donate Now
+      <span className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-black text-white rounded-full text-xl sm:text-2xl">
+        <MdKeyboardDoubleArrowRight />
+      </span>
+    </button>
+  </div>
+
+</div>
+
 
       {/* Slider buttons */}
       <div className="sm:pr-20 flex sm:flex-col flex-row gap-3 z-20 mx-auto sm:mx-0">

@@ -2,11 +2,11 @@ import Link from "next/link"
 
 const How = () => {
     return (
-     <div className='text-center text-black py-10 md:pb-12 md:pt-10 px-4 mx-auto -mt-5 '>
+     <div className='text-center text-black py-10 md:pb-12 md:pt-10 px-4 mx-auto -mt-15'>
     <h4 className='uppercase text-[#C30001] text-[22px] mb-2'>donation</h4>
     <h2 className='text-3xl md:text-5xl pb-10 text-black font-bold'>How You Can Help & Donate</h2>
     
-    <div className='flex justify-center flex-wrap gap-6 md:gap-9 items-center max-w-7xl mx-auto'>
+    <div className='flex justify-center flex-wrap gap-6 md:gap-9 items-center max-w-7xl mx-auto  -mt-5 '>
         
         {/* Card 1 */}
         <div className="bg-[url('/bg.webp')] bg-cover bg-no-repeat h-[500px] w-full max-w-[350px] flex flex-col rounded-xl md:mt-36">

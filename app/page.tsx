@@ -89,7 +89,7 @@ const Home = async () => {
     <Random />
     <Testimonials />
     <News />
-    <Publications />
+    {/* <Publications /> */}
     <Footer />
     <ToastContainer />
     </div>

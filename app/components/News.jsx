@@ -80,17 +80,17 @@ const News = () => {
   };
 
   return (
-    <div>
+    <div className='-mt-8 md:mt-10'>
   {/* Heading */}
   <div className="text-center pt-12 md:pt-70 xl:pt-10 px-10">
-    <h4 className="uppercase text-[#C30001] text-[22px] md:text-[22px] -mt-20">Own Blogs</h4>
-    <h2 className="text-3xl md:text-5xl pb-4 md:pb-6 pt-2 text-black ">
+    <h4 className="uppercase text-[#C30001] text-[20px] md:text-[22px] -mt-20">Own Blogs</h4>
+    <h2 className="text-xl md:text-5xl pb-4 md:pb-6 pt-2 text-black ">
       Our Latest News and Articles
     </h2>
   </div>
 
   {/* Slider */}
-  <div className="relative w-full py-10">
+  <div className="relative w-full py-10 -mt-10">
     <div className="relative w-[95%] md:w-[85%] mx-auto">
       {/* Left Button */}
       <button

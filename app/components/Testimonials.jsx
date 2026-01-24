@@ -37,21 +37,22 @@ const Testimonials = () => {
     <section className="py-12 px-4 md:px-8 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10">
       <div className="text-center mb-12">
         <h4 className="uppercase text-[#C30001] text-[22px] ">Testimonials</h4>
-        <h2 className="text-3xl md:text-5xl  text-black">
+        <h2 className="text-xl md:text-5xl  text-black">
           From Darkness to Light
         </h2>
       </div>
 
       {/* Mobile Slider */}
-      <div className="md:hidden">
+      <div className="md:hidden mt-5">
         <Swiper
           onSwiper={setSwiperRef}
           spaceBetween={16}
           slidesPerView={1.1} // Slight peek for next slide
+          className="mt-5"
         >
           {cards.map((card) => (
             <SwiperSlide key={card.id}>
-              <div className="bg-white rounded-[20px] overflow-hidden  flex flex-col border border-gray-100 max-w-[400px] mx-auto">
+              <div className="bg-white rounded-[20px] overflow-hidden - flex flex-col border border-gray-100 max-w-[400px] mx-auto">
                 <div className="h-60 overflow-hidden">
                   <iframe
                     className="w-full h-full object-cover"

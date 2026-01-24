@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 
 const Help = () => {
@@ -29,13 +30,13 @@ const Help = () => {
             image: "/3section.png",
             title: "Loss of independence",
             text: "Mobility, making daily activities like walking, cooking, or self-care difficult or impossible, and increased isolation and loneliness",
-            align: "end"   // self-end
+            align: "end"
         },
         {
             image: "/3section2.png",
             title: "Increased mental health issues",
             text: "Increased risk of depression, isolation, and loss of dignity due to sudden dependence on others",
-            align: "start" // self-start
+            align: "start"
         },
         {
             image: "/3section3.png",
@@ -48,46 +49,51 @@ const Help = () => {
     return (
         <>
             {/* ==================== Hepatitis Statistics Cards ==================== */}
-            <div className="text-black text-center py-16 pb-0 px-4 sm:px-6 lg:px-8">
-                <h4 className="uppercase text-[#C30001] text-xl sm:text-[22px] tracking-wide">
-                    Current
-                </h4>
-                <h2 className="text-3xl sm:text-5xl lg:text-5xl  pb-10 pt-3">
-                    Situation on Hepatitis in Pakistan
-                </h2>
-                
-                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-4 max-w-5xl mx-auto pb-20 ">
-                    {cards.map((card, index) => (
-                        <div
-                            key={index}
-                            className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-80"
-                        >
-                            {/* Image aligned top-left */}
-                            <div className="flex-none w-full">
-                                <img
-                                    src={card.image}
-                                    alt={card.text}
-                                    className="size-30 object-cover rounded-tl-xl"
-                                />
-                            </div>
+            <div className="relative w-full bg-white pt-16">
+                <div className="text-black text-center relative z-10 px-4 sm:px-6 lg:px-8">
+                    <h4 className="uppercase text-[#C30001] text-xl sm:text-[22px] tracking-wide font-bold">
+                        Current
+                    </h4>
+                    <h2 className="text-xl sm:text-5xl lg:text-5xl pb-10 pt-3 font-bold">
+                        Situation on Hepatitis in Pakistan
+                    </h2>
 
-                            {/* Content */}
-                            <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-3xl md:text-5xl text-[#CBCBE3] mb-4 text-left line-clamp-2">
-                                    {card.ratio}
-                                </h3>
-                                <p className="text-gray-500 text-left text-sm leading-relaxed md:text-base ">
-                                    {card.text}
-                                </p>
+                    {/* Grid Cards Container */}
+                    <div className="flex  flex-wrap justify-center md:grid md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto ">
+                        {cards.map((card, index) => (
+                            <div
+                                key={index}
+                                className="min-w-[250px] bg-white rounded-xl overflow-hidden hover:shadow-xl  duration-300 flex flex-col h-80 relative"
+                            >
+                                {/* Image aligned top-left */}
+                                <div className="flex-none w-full flex justify-start items-start">
+                                    <img
+                                        src={card.image}
+                                        alt={card.text}
+                                        className="w-28 h-28 object-contain rounded-tl-xl rounded-br-[45px]"
+                                    />
+                                </div>
+
+                                {/* Text Content */}
+                                <div className="p-4 sm:p-6 flex flex-col flex-grow text-left">
+                                    <h3 className="text-3xl md:text-5xl text-[#CBCBE3] mb-4 font-bold">
+                                        {card.ratio}
+                                    </h3>
+                                    <p className="text-gray-500 text-sm sm:text-base leading-relaxed font-medium">
+                                        {card.text}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
+                {/* Half Gray Background Bar */}
+                <div className="absolute bottom-0 left-0 w-full h-[180px] bg-gray-50 z-0 "></div>
             </div>
 
             {/* ==================== Impact Blocks Section ==================== */}
-            <div className="text-center text-black py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 pb-20 -mt-15">
+            <div className="text-center text-black py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 pb-20 ">
                 <h4 className="uppercase text-[#C30001] text-[22px] sm:text-[22px] tracking-wide">
                     Every Eye
                 </h4>
