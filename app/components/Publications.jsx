@@ -105,7 +105,7 @@ const Publications = () => {
       {/* Slider */}
       <div className="overflow-auto sm:overflow-hidden px-10 pb-40 sm:pb-0" ref={sliderRef}>
         <div
-          className="flex gap-5 transition-transform duration-500 ease-in-out"
+          className="flex  transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * CARD_WIDTH}px)`,
           }}

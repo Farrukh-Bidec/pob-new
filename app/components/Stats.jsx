@@ -14,10 +14,10 @@ const Stats = () => {
   return (
     <div className="w-full bg-white text-black sm:mb-0 md:pb-0 ">
       <div className="mx-auto lg:pl-8 2xl:pl-0">
-        <div className="flex flex-col lg:flex-row gap-12 items-center">
+        <div className="flex flex-col lg:flex-row gap-10  items-center">
           
           {/* Left side - Stats */}
-          <div className="flex-1 px-4 sm:px-6 lg:pl-12 2xl:pl-30 text-center sm:text-left">
+          <div className="flex-1 px-4 sm:px-16 lg:pl-20 2xl:pl-30 text-center sm:text-left">
             
             {/* Heading: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
             <h2 className="text-3xl md:text-5xl 2xl:text-6xl mb-6 md:mb-16 lg:mb-8 font-bold leading-tight">

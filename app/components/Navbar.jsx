@@ -50,9 +50,9 @@ const Navbar = () => {
   }
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white ">
       {/* ─── Top Bar (Desktop only) ─── */}
-      <section className="hidden lg:block bg-[#C30001] text-white w-300 2xl:w-320  mx-auto rounded-b-lg">
+      <section className="hidden lg:block bg-[#C30001] text-white w-270 2xl:w-320 mr-19  mx-auto rounded-b-lg">
         <div className="pl-4 w-[96%] py-1.5">
           <div className="flex flex-wrap justify-between items-center text-xs">
             <div className="flex flex-wrap items-center ">
@@ -106,8 +106,8 @@ const Navbar = () => {
 
 
       {/* ─── Main Nav Bar ─── */}
-      <nav className="bg-white ">
-        <div className="mx-auto w-[90%] max-w-7xl flex items-center justify-between py-3 md:py-">
+      <nav className="">
+        <div className="mx-auto w-[90%] max-w-7xl flex items-center justify-between py-2 md:py-">
           {/* Logo - always visible */}
           <Link href="/">
             <div className="flex items-center">

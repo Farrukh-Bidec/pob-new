@@ -5,10 +5,10 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 
 const Hero = () => {
   const slides = [
-    "/slide.webp",
     "/slide2.webp",
     "/slide3.webp",
     "/slide4.webp",
+    "/slide.png",
   ];
   const [current, setCurrent] = useState(0)
 
@@ -27,7 +27,7 @@ const Hero = () => {
   }
   return (
     <div
-      className="relative text-white  bg-cover bg-center bg-no-repeat h-[600px] md:h-[90vh] 2xl:h-[80vh] my-23 sm:my-30 flex items-center text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
+ className="relative text-white bg-cover bg-center bg-no-repeat h-[600px] md:h-[90vh] 2xl:h-[80vh] my-23 sm:my-30 flex items-center text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
       style={{ backgroundImage: `url(${slides[current]})` }}
     >
       {(current === 2 || current === 3) && (
@@ -67,7 +67,7 @@ const Hero = () => {
           >
             {/* Inner dot (only active) */}
             {current === i && (
-              <span className="bg-white rounded-full size-[1px] p-1"></span>
+              <span className="bg-white rounded-full size-[1px] "></span>
             )}
           </button>
         ))}

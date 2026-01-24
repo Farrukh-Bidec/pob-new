@@ -11,7 +11,7 @@ const donationData = [
     title: "Donate for Diabetic Retinopathy Treatment",
     price: "Contact for details",
     description: "Supports laser treatment and medical care to prevent vision loss caused by diabetes",
-    image: "/RETINA.webp"
+    image: "/RETINA.jpg"
   },
   {
     title: "Donate a Cataract Surgery (Adult)",
@@ -57,18 +57,18 @@ const SurgeryPricing = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 bg-[#373895] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="uppercase text-sm sm:font-norma text-center">
+    <section className="py-12 bg-[#373895] text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15">
+        <h2 className="uppercase text-smongo text-[22px] sm:text-[22px] tracking-wider text-center">
           HELP US
         </h2>
-        <h3 className="text-[20px] sm:text-5xl  font-Amaranth mt-3 mb-4 text-center leading-tight">
+        <h3 className="text-[20px] sm:text-[48px]  font-Amaranth mt-3 mb-4 text-center leading-tight">
           HELP THEM WITH YOUR ZAKAT/DONATIONS
         </h3>
-        <p className='text-xs   text-center'>
+        <p className='text-xs  text-center'>
           Through your Zakat and Sadaqah, you can support timely treatment and protect the gift of sight for those who cannot afford care.
         </p>
-        <p className='text-xs text-center my-10 '>
+        <p className='text-xs text-center mb-14 '>
           In Pakistan, over 40 million people are affected by eye diseases, with cataracts responsible for nearly half <br />
           of all blindness, followed by glaucoma and diabetic retinopathy.
         </p>
@@ -88,7 +88,7 @@ const SurgeryPricing = () => {
         >
           {donationData.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="h-full flex flex-col rounded-xl overflow-hidden transition-transform hover:scale-[1.02] gap-8 w-70 mx-auto">
+              <div className="h-full flex flex-col rounded-xl overflow-hidden transition-transform hover:scale-[1.02] gap-6 translate-x-2 w-66  mx-auto">
                 <div className="relative h-56 sm:h-64 md:h-80 overflow-hidden">
                   <img
                     src={item.image}
@@ -98,19 +98,18 @@ const SurgeryPricing = () => {
                   />
                 </div>
 
-                <div className=" flex flex-col grow">
-                  <h4 className="text-base sm:text-2xl mb-3 line-clamp-2 ">
-                    {/* {(() => {
+                <div className=" flex flex-col flex-grow">
+                  <h4 className="text-base sm:text-lg mb-3 line-clamp-2">
+                    {(() => {
                       const words = item.title.split(" ");
                       const lastIndex = words.length - 1;
 
                       return words.map((word, i) => (
                         <React.Fragment key={i}>
-                          {i === lastIndex ? <><br /></> : word + " "}
+                          {i === lastIndex ? <><br />{word}</> : word + " "}
                         </React.Fragment>
                       ));
-                    })()} */}
-                    {item.title}
+                    })()}
                   </h4>
 
 
@@ -120,7 +119,7 @@ const SurgeryPricing = () => {
                   <p className="text-xl sm:text-2xl font-inter font-extralight mb-5">{item.price}</p>
                   <button
                     onClick={handleDonateClick}
-                    className="mt-auto bg-white text-black px-14 sm:py-3 py-1 rounded-full sm:text-base transition shadow-md w-fit text-sm"
+                    className="mt-auto bg-white text-black px-8 sm:py-3 py-1 rounded-full sm:text-base transition shadow-md w-fit text-sm"
                   >
                     Donate
                   </button>

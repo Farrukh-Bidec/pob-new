@@ -83,7 +83,7 @@ const LeaderShip = () => {
       </div>
 
       {/* Leadership Slider */}
-      <div className="w-full overflow-x-auto remove-scroll">
+      <div className="w-full overflow-x-auto remove-scroll px:10">
         <div className="flex gap-6 min-w-max px-4 justify-center">
           {filteredImages.length > 0 ? (
             filteredImages.map((item, index) => (
