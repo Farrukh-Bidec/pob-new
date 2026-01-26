@@ -85,7 +85,7 @@ const Home = async () => {
       <Commitment />
       <Leadership />
       <Partners middleCarouselImages={home?.middleCarouselImages} />
-      <How />
+      <How   />
       <Random />
       <Testimonials />
       <News />

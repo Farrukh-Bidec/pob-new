@@ -50,7 +50,7 @@ const SurgeryPricing = () => {
     const footer = document.getElementById("footer_elem");
     console.log(document.getElementById("footer_elem"));
 
-    
+
     if (footer) {
       footer.scrollIntoView({ behavior: "smooth" });
     }
@@ -58,8 +58,8 @@ const SurgeryPricing = () => {
 
   return (
     <section className="py-12 bg-[#373895] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-15">
-        <h2 className="uppercase text-smongo text-[22px] sm:text-[22px] tracking-wider text-center">
+      <div className="max-w-7xl mac:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-15 mac:px-20">
+        <h2 className="uppercase text-smongo text-[10px] sm:text-[22px] tracking-wider text-center">
           HELP US
         </h2>
         <h3 className="text-[20px] sm:text-[48px]  font-Amaranth mt-3 mb-4 text-center leading-tight">
@@ -83,12 +83,13 @@ const SurgeryPricing = () => {
             640: { slidesPerView: 2, spaceBetween: 20 },
             1024: { slidesPerView: 3, spaceBetween: 24 },
             1280: { slidesPerView: 4, spaceBetween: 30 },
+            1512: { slidesPerView: 4, spaceBetween: 50 },
           }}
           className="!pb-12 md:!pb-16"
         >
           {donationData.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="h-full flex flex-col rounded-xl overflow-hidden transition-transform hover:scale-[1.02] gap-6 translate-x-2 w-66  mx-auto">
+              <div className="h-full flex flex-col rounded-xl overflow-hidden transition-transform hover:scale-[1.02] gap-6 translate-x-2 w-66 mac:w-85  mx-auto">
                 <div className="relative h-56 sm:h-64 md:h-80 overflow-hidden">
                   <img
                     src={item.image}

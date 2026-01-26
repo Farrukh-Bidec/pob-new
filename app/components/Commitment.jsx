@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const Commitment = () => {
   const cards = [
@@ -47,7 +48,7 @@ const Commitment = () => {
       if (!sliderRef.current || !cardRef.current) return;
       const sliderWidth = sliderRef.current.offsetWidth;
       const cardRect = cardRef.current.getBoundingClientRect();
-      const gap = window.innerWidth < 768 ? 24 : 40; 
+      const gap = window.innerWidth >= 1512 ? 40 : (window.innerWidth < 768 ? 24 : 40);
       const fullCardWidth = cardRect.width + gap;
       setCardWidth(fullCardWidth);
       setVisibleCards(Math.max(1, Math.floor(sliderWidth / fullCardWidth)));
@@ -59,6 +60,18 @@ const Commitment = () => {
   }, []);
 
   const totalDots = cards.length - (visibleCards - 1);
+
+  const nextSlide = () => {
+    if (currentIndex < totalDots - 1) {
+      setCurrentIndex((prev) => prev + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
+  };
 
   // Swipe Handling Functions
   const minSwipeDistance = 50;
@@ -86,22 +99,46 @@ const Commitment = () => {
 
   return (
     <>
-      <div className="md:ml-10 pt-4 overflow-hidden">
+      <div className="md:ml-10 pt-4 overflow-hidden mac:max-w-[1600px] mac:px-20 mac:mx-auto">
         {/* Header */}
-        <div className="flex sm:justify-between flex-wrap pt-10 px-6 md:px-10 justify-center">
+        <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
-            <h4 className="text-[#C30001] text-lg md:text-[22px] uppercase mb-2 md:mb-4 sm:text-left text-center font-semibold">
+            <h4 className="text-[#C30001] text-lg md:text-[22px] mac:text-[32px] uppercase mb-2 md:mb-4 sm:text-left text-center font-semibold">
               Commitment
             </h4>
-            <h2 className="text-3xl md:text-[48px] mb-4 text-black sm:text-left text-center leading-tight">
+            <h2 className="text-3xl md:text-[48px] mac:text-7xl mb-4 text-black sm:text-left text-center leading-tight">
               Our Commitment at <br className="hidden md:block" /> POB Trust
             </h2>
+          </div>
+
+          {/* Navigation Arrows */}
+          <div className="md:flex hidden gap-3 mb-14">
+            <button
+              onClick={prevSlide}
+              disabled={currentIndex === 0}
+              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${currentIndex === 0
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-[#373895] text-white hover:bg-[#2c2d7a]"
+                }`}
+            >
+              <FaChevronLeft size={14} />
+            </button>
+            <button
+              onClick={nextSlide}
+              disabled={currentIndex >= totalDots - 1}
+              className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${currentIndex >= totalDots - 1
+                ? "border-gray-200 text-gray-300 cursor-not-allowed"
+                : "border-gray-800 text-black hover:bg-gray-50"
+                }`}
+            >
+              <FaChevronRight size={14} />
+            </button>
           </div>
         </div>
 
         {/* Slider Container with Touch Events */}
-        <div 
-          className="overflow-hidden px-6 md:px-10" 
+        <div
+          className="overflow-hidden px-6 md:px-10"
           ref={sliderRef}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
@@ -117,17 +154,17 @@ const Commitment = () => {
               <div
                 key={index}
                 ref={index === 0 ? cardRef : null}
-                className="min-w-[85%] md:min-w-[490px]"
+                className="min-w-[85%] md:min-w-[490px] mac:min-w-[650px]"
               >
                 <img
                   src={card.image}
                   alt={card.text}
-                  className="h-60 md:h-90 w-full object-cover rounded-2xl"
+                  className="h-60 md:h-90 mac:h-[500px] w-full object-cover rounded-2xl"
                 />
-                <h3 className="text-xl md:text-2xl mt-4 text-black py-2 md:py-3 font-medium">
+                <h3 className="text-xl md:text-2xl mac:text-4xl mt-4 text-black py-2 md:py-3 font-medium">
                   {card.text}
                 </h3>
-                <p className="text-gray-600 text-sm md:text-base mt-2 mb-8">
+                <p className="text-gray-600 text-sm md:text-base mac:text-xl mt-2 mb-8">
                   {card.description}
                 </p>
               </div>
@@ -159,11 +196,12 @@ const Commitment = () => {
       {/* Impact Section */}
       <div className="relative bg-[url('/section4.png')] bg-no-repeat bg-cover py-25 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
         <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
-        <div className="relative md:pr-20 pt-5 flex flex-col items-center md:items-end text-center md:text-left">
-          <h3 className="text-4xl md:text-6xl pb-2 text-white mt-17 sm:mt-0 font-bold">
+        <div className="relative mac:-ml-10 md:pr-20 mac:pr-20 pt-5 flex flex-col items-center md:items-end text-center md:text-left">
+          <h3 className="text-4xl mac:text-right md:pr-2 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white mt-17 sm:mt-0 font-bold">
             Rs. 2 Billion Disbursed
           </h3>
-          <p className="text-white md:pr-48 text-lg">
+
+          <p className="text-white md:pr-48 mac:-mr-4 text-lg mac:text-3xl mac:text-right">
             POB Helped Create PKR 10B Worth of Impact
           </p>
         </div>

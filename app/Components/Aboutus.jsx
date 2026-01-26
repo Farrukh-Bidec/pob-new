@@ -6,7 +6,7 @@ import { Image_Url } from "./axios";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row py-6 md:-mt-24 sm:py-10 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40">
+    <div className="flex flex-col md:flex-row py-6 md:-mt-24 sm:py-10 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40 mac:max-w-[1600px] mac:px-20 mx-auto">
 
       {/* Image Section */}
       <div className="w-full md:w-[50%] lg:w-[55%] mx-auto">
@@ -30,7 +30,7 @@ const Aboutus = () => {
           Absolutely Free Eye Care
         </h2>
 
-        <p className="text-sm sm:text-base md:text-[16px] mb-4 text-gray-500 leading-relaxed">
+        <p className="text-sm mac:mt-10 mac:text-[40px] sm:text-base md:text-[16px] mb-4 text-gray-500 leading-relaxed">
           Prevention of Blindness (POB) Trust was established in 2007
           <span className="hidden sm:inline"><br /></span>
           with a singular mission: to eliminate preventable blindness by providing

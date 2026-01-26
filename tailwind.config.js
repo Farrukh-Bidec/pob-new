@@ -19,6 +19,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        mac: "1512px",
+      },
       fontFamily: {
         antonio: ["Antonio", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
