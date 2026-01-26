@@ -10,6 +10,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --breakpoint-mac: 1728px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,6 +35,7 @@ body {
   font-family: 'Inter';
   src: url('/fontcopy/Inter/Inter-Regular.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Poppins';
   src: url('/fontcopy/poppins/Poppins-Regular.ttf') format('truetype');
@@ -43,22 +45,34 @@ body {
   font-family: 'Antonio';
   src: url('/fontcopy/Antonio/Antonio-Regular.ttf') format('truetype');
 }
+
 .font-poppins {
   font-family: 'Poppins', sans-serif;
 }
+
 .font-antonio {
   font-family: 'Antonio', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Amaranth', sans-serif;
   font-weight: 200;
 }
 
-p, .description, .desc, .lead, .paragraph {
+p,
+.description,
+.desc,
+.lead,
+.paragraph {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
+
 /* Pagination container */
 .surgery-swiper .swiper-pagination {
   bottom: 20px !important;
@@ -81,9 +95,11 @@ p, .description, .desc, .lead, .paragraph {
 /* Active dot */
 .surgery-swiper .swiper-pagination-bullet-active {
   width: 28px;
-  background-color: #f39c12; /* your Donate button color */
+  background-color: #f39c12;
+  /* your Donate button color */
   opacity: 1;
 }
-.remove-scroll{
+
+.remove-scroll {
   scrollbar-width: none;
 }

@@ -14,22 +14,22 @@ import Partners from './components/Partners'
 import Testimonials from './components/Testimonials'
 import News from './components/News'
 import Publications from './components/Publications'
-import  fetchData  from "./components/fetchData";
+import fetchData from "./components/fetchData";
 import { ToastContainer } from 'react-toastify'
+import { Image_Url } from './components/axios';
 
 
 const getHomeData = async () => {
   return await fetchData({ url: "home-page/show-data", slug: "home/" });
 };
 export async function generateMetadata() {
-  const Image_Url = "https://pob.datainovate.com/backend/"
   const home = await getHomeData();
   const CANONICAL = "https://pob-delta.vercel.app";
   const BASE_URL = process.env.NEXT_PUBLIC_URL || CANONICAL;
 
   const featuredImage = home?.pagesSeoDetail?.meta_image
-      ? `${Image_Url}/${home.pagesSeoDetail.meta_image}`
-      : `${BASE_URL}/default-og-image.jpg`; 
+    ? `${Image_Url}/${home.pagesSeoDetail.meta_image}`
+    : `${BASE_URL}/default-og-image.jpg`;
   return {
     title: home?.pagesSeoDetail?.meta_title || "POB Trust",
     description:
@@ -40,14 +40,14 @@ export async function generateMetadata() {
         BASE_URL + home?.pagesSeoDetail?.canonical_url || CANONICAL,
     },
 
-     openGraph: {
+    openGraph: {
       title: home?.pagesSeoDetail?.meta_title || "Default Title",
       description:
         home?.pagesSeoDetail?.meta_description || "Default description",
       url: BASE_URL + home?.pagesSeoDetail?.canonical_url || CANONICAL,
 
-      
-      type: "website", 
+
+      type: "website",
       images: [
         {
           url: featuredImage,
@@ -60,13 +60,13 @@ export async function generateMetadata() {
 
     twitter: {
       card: "summary_large_image",
-      site: "@pob-eye-hospital", 
+      site: "@pob-eye-hospital",
       title: home?.pagesSeoDetail?.meta_title || "Default Title",
       description:
         home?.pagesSeoDetail?.meta_description || "Default description",
-      images: [featuredImage], 
+      images: [featuredImage],
     },
-  
+
   };
 }
 
@@ -76,22 +76,22 @@ const Home = async () => {
 
   return (
     <div className='bg-white '>
-    <Navbar />
-    <Hero />
-    <Aboutus />
-    <Stats />
-    <Surgerypricing />
-    <Help />
-    <Commitment />
-    <Leadership />
-    <Partners middleCarouselImages={home?.middleCarouselImages} />  
-    <How />
-    <Random />
-    <Testimonials />
-    <News />
-    {/* <Publications /> */}
-    <Footer />
-    <ToastContainer />
+      {/* <Navbar /> */}
+      <Hero />
+      <Aboutus />
+      <Stats />
+      <Surgerypricing />
+      <Help />
+      <Commitment />
+      <Leadership />
+      <Partners middleCarouselImages={home?.middleCarouselImages} />
+      <How />
+      <Random />
+      <Testimonials />
+      <News />
+      {/* <Publications /> */}
+      {/* <Footer />
+    <ToastContainer /> */}
     </div>
   )
 }

@@ -62,9 +62,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import SwiperCore from "swiper";
+import { Image_Url } from "./axios";
 
 const Partners = ({ middleCarouselImages }) => {
-  const Image_Url = "https://pob.datainovate.com/backend/"
   SwiperCore.use([Autoplay]);
 
   return (

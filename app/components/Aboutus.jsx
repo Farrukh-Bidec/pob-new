@@ -5,7 +5,7 @@ import React from "react";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row py-6 -mt-24 sm:py-10 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40">
+    <div className="flex flex-col md:flex-row py-6 md:-mt-24 sm:py-10 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40">
 
       {/* Image Section */}
       <div className="w-full md:w-[50%] lg:w-[55%] mx-auto">
