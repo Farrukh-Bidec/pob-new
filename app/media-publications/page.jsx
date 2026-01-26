@@ -12,7 +12,9 @@ import fetchData from "../Components/fetchData"
 // Optional: revalidate every request (fresh data)
 
 
-const Mediapublications = () => {
+import { Suspense } from "react";
+
+const MediapublicationsContent = () => {
   const searchParams = useSearchParams();
   const selectedCategoryState = searchParams.get("selectedCategory") || "";
   const [showFilter, setShowFilter] = useState(false);
@@ -126,4 +128,10 @@ const Mediapublications = () => {
   );
 };
 
-export default Mediapublications;
+export default function Mediapublications() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MediapublicationsContent />
+    </Suspense>
+  );
+}

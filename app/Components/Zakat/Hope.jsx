@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import Image from "next/image";
 import { Image_Url } from "../../../Utils/const";
 

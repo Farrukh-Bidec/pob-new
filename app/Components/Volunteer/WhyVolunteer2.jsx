@@ -1,24 +1,24 @@
 import React from "react";
 import { Image_Url } from "../../../Utils/const";
-// import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 import BlogBody from "../../Components/BlogBody";
 
-const 
-WhyVolunteer2 = ({ section_4 }) => {
-  if (!section_4) return null;
+const
+  WhyVolunteer2 = ({ section_4 }) => {
+    if (!section_4) return null;
 
-  const {
-    why_volunteer_second_section_heading,
-    why_volunteer_second_section_description,
-    why_volunteer_second_section_image
-  } = section_4;
-  return (
-    <div className="flex flex-col md:flex-row   gap-8 items-center mb-10 justify-around ">
-      <div className="  md:w-4/12 w-[90%] font-inter items-center  md:items-start text-center md:text-start flex flex-col gap-4 ">
-        <h2 className=" text-4xl  max-w-2xl font-Amaranth  text-center md:text-start ">
-         {why_volunteer_second_section_heading}
-        </h2>
-        {/* <p className="   text-center md:text-start  md:max-w-lg ">
+    const {
+      why_volunteer_second_section_heading,
+      why_volunteer_second_section_description,
+      why_volunteer_second_section_image
+    } = section_4;
+    return (
+      <div className="flex flex-col md:flex-row   gap-8 items-center mb-10 justify-around ">
+        <div className="  md:w-4/12 w-[90%] font-inter items-center  md:items-start text-center md:text-start flex flex-col gap-4 ">
+          <h2 className=" text-4xl  max-w-2xl font-Amaranth  text-center md:text-start ">
+            {why_volunteer_second_section_heading}
+          </h2>
+          {/* <p className="   text-center md:text-start  md:max-w-lg ">
           Volunteering is more than just giving time—its about creating change.
           Whether youre helping individuals, supporting a cause, or working on
           community projects, your contribution has a meaningful impact.
@@ -36,17 +36,17 @@ WhyVolunteer2 = ({ section_4 }) => {
             <li>Offer your expertise in professional fields</li>
           </ul>
         </div> */}
-     {/* <div
+          {/* <div
           className="text-sm text-[#777777] mt-4"
           dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(why_volunteer_second_section_description) }}
         ></div> */}
-        <BlogBody body={why_volunteer_second_section_description} />
+          <BlogBody body={why_volunteer_second_section_description} />
+        </div>
+        <div className=" px-4 md:px-0 ">
+          <img src={`${Image_Url}/${why_volunteer_second_section_image}`} className="h-2/3 rounded-b-full" alt="A group of people gathered around a man speaking and explaining something, possibly in a community or healthcare setting." />
+        </div>
       </div>
-      <div className=" px-4 md:px-0 ">
-        <img src={`${Image_Url}/${why_volunteer_second_section_image}`} className="h-2/3 rounded-b-full" alt="A group of people gathered around a man speaking and explaining something, possibly in a community or healthcare setting." />
-      </div>
-    </div>
-  );
-};
+    );
+  };
 
 export default WhyVolunteer2;

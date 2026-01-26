@@ -1,7 +1,7 @@
 "use client"; // client component for interactivity
 
 import React from "react";
-import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 const DonationSection = ({ yellowHead, head, pageName, img, des }) => {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 
 const Vision2 = ({ section_2 }) => {

@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import sanitizeHtml from "sanitize-html";
+import * as DOMPurify from "isomorphic-dompurify";
 
 const AboutUs = ({ img, yellowHead, head, pageName, btnName, des }) => {
   // Sanitize description for server-side rendering
-  const sanitizedDescription = des ? sanitizeHtml(des) : "";
+  const sanitizedDescription = des ? DOMPurify.sanitize(des) : "";
 
   return (
     <section className="flex flex-col md:flex-row items-center justify-center gap-10 px-6 md:px-10 md:py-16 mb-6 md:mb-0 bg-white md:w-[95%]">
@@ -39,7 +39,7 @@ const AboutUs = ({ img, yellowHead, head, pageName, btnName, des }) => {
           </div>
         )}
 
-        <Link  href="https://www.pobtrust.com/about-us/" title="Learn more about POB Trust and our mission">
+        <Link href="https://www.pobtrust.com/about-us/" title="Learn more about POB Trust and our mission">
           <button className="mt-6 px-6 py-3 bg-green-500 text-white rounded-full text-[12px] font-bold hover:bg-green-600 transition duration-300 shadow-sm">
             {btnName}
           </button>

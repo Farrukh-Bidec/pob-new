@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import DOMPurify from "isomorphic-dompurify"; // SSR-safe DOMPurify
+import * as DOMPurify from "isomorphic-dompurify"; // SSR-safe DOMPurify
 import { Image_Url } from "../../../Utils/const";
 
 const Pillar = ({ section_4 }) => {

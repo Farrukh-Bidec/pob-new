@@ -1,7 +1,7 @@
 "use client"; // ❗ Client-side component
 
 import React, { useState } from "react";
-import DOMPurify from "isomorphic-dompurify";
+import * as DOMPurify from "isomorphic-dompurify";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Faqs = ({ faqs }) => {

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import DOMPurify from "isomorphic-dompurify";
+import * as DOMPurify from "isomorphic-dompurify";
 import Link from "next/link";
 
 
@@ -24,9 +24,9 @@ const ContactSection = ({ heading, para, button }) => {
               dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(para) }}
             ></div>
 
-              <span onClick={handleDonate} className="mt-6 px-6 py-3 text-[12px] bg-white text-black rounded-full transition duration-300 inline-block cursor-pointer">
-                {button}
-              </span>
+            <span onClick={handleDonate} className="mt-6 px-6 py-3 text-[12px] bg-white text-black rounded-full transition duration-300 inline-block cursor-pointer">
+              {button}
+            </span>
           </div>
         </div>
       </div>

@@ -3,11 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-let DOMPurify;
-
-if (typeof window !== "undefined") {
-  DOMPurify = require("dompurify")(window);
-}
+import * as DOMPurify from "isomorphic-dompurify";
 
 const LaserTreatment = ({
   title,
@@ -48,7 +44,7 @@ const LaserTreatment = ({
             }}
           ></div>
         )}
-        <Link  href="https://www.pobtrust.com/contact-us/" title=" POB Trust for eye care support and donations">
+        <Link href="https://www.pobtrust.com/contact-us/" title=" POB Trust for eye care support and donations">
           <button className="mt-2 px-4 py-2 bg-green-500 text-white text-[12px] font-bold rounded-full hover:bg-green-600 transition shadow-sm">
             {buttonText}
           </button>

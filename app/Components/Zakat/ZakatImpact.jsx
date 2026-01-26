@@ -1,5 +1,5 @@
 // import React from "react";
-// import DOMPurify from "isomorphic-dompurify"; // SSR-safe
+// import * as DOMPurify from "isomorphic-dompurify"; // SSR-safe
 // import { Image_Url } from "../../../Utils/const";
 // import BlogBody from "../BlogBody";
 
@@ -44,7 +44,7 @@
 // export default ZakatImpact;
 import React from "react";
 import { Image_Url } from "../../../Utils/const";
-import DOMPurify from "isomorphic-dompurify";
+import * as DOMPurify from "isomorphic-dompurify";
 
 const ImpactSection = ({ section_2 }) => {
     if (!section_2) return null;

@@ -1,5 +1,5 @@
 import React from "react";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 
 const DonationSection = ({ section_6 }) => {
@@ -16,7 +16,7 @@ const DonationSection = ({ section_6 }) => {
       {/* Left Side: Text Content */}
       <div className="md:w-1/2">
         <h2 className="text-5xl text-center md:text-start font-Amaranth text-black leading-tight">
-        {how_to_give_kaffara_title}
+          {how_to_give_kaffara_title}
         </h2>
         {/* <p className="text-gray-600 mt-4">
         It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum

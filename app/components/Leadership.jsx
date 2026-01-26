@@ -44,6 +44,7 @@ const LeaderShip = () => {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(288 + 24); // Default w-72 (288) + gap-6 (24)
+  const [visibleCount, setVisibleCount] = useState(1); // Default to 1
   const sliderRef = useRef(null);
 
   // Swipe logic states
@@ -54,8 +55,10 @@ const LeaderShip = () => {
     const updateSize = () => {
       if (window.innerWidth >= 1512) {
         setCardWidth(420 + 16); // Mac: w-[420px] + gap-4 (16)
+        setVisibleCount(4);
       } else {
         setCardWidth(288 + 24); // Default: w-72 (288) + gap-6 (24)
+        setVisibleCount(1);
       }
     };
     updateSize();
@@ -73,7 +76,6 @@ const LeaderShip = () => {
 
   const handleNext = () => {
     // On Mac, we show 4 cards, so we can't scroll past the point where 4 cards are visible
-    const visibleCount = window.innerWidth >= 1512 ? 4 : 1;
     const maxIndex = Math.max(0, filteredImages.length - visibleCount);
     setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : prev));
   };
@@ -192,7 +194,7 @@ const LeaderShip = () => {
         {/* Right Arrow - Hidden on Mobile, Shown on MD+ */}
         <button
           onClick={handleNext}
-          disabled={currentIndex >= filteredImages.length - (window.innerWidth >= 1512 ? 4 : 1)}
+          disabled={currentIndex >= filteredImages.length - visibleCount}
           className="hidden md:block absolute right-2 md:right-10 z-10 p-2 bg-white border border-gray-200 rounded-full shadow-md disabled:opacity-30 hover:bg-gray-50 transition-all mac:scale-150"
         >
           <MdArrowForwardIos className="text-gray-600 text-lg" />

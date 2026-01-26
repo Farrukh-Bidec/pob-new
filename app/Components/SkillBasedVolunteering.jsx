@@ -1,5 +1,5 @@
 import React from "react";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../Utils/const";
 
 const SkillBasedVolunteering = ({ section_7 }) => {
@@ -30,7 +30,7 @@ const SkillBasedVolunteering = ({ section_7 }) => {
           uncover many web sites still in their infancy. Various versions have
           evolved over the years,he like.
         </p> */}
-         <div
+        <div
           className="text-sm text-[#777777] mt-4 font-inter"
           dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(skill_based_description) }}
         ></div>

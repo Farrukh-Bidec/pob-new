@@ -2,6 +2,8 @@ import Banner from "../Components/Banner/Banner";
 import CustomSeo from "../Components/CustomSeo";
 import BlogsClient from "./BlogsClient";
 
+export const dynamic = 'force-dynamic';
+
 const BASE_URL =
   process.env.NEXT_PUBLIC_API_ENV === "production"
     ? process.env.NEXT_PUBLIC_API_URL_LIVE

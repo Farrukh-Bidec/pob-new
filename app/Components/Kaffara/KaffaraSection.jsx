@@ -1,19 +1,19 @@
 "use client"; // ❗ Client component for handleDonateClick
 
 import React from "react";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 
 const KaffaraSection = ({ section_2 }) => {
-      const handleDonateClick = () => {
-  const footer = document.getElementById("footer-section");
-  if (footer) {
-    footer.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  const handleDonateClick = () => {
+    const footer = document.getElementById("footer-section");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   if (!section_2) return null;
-  
+
 
   const { concept_heading, concept_description, concept_image1 } = section_2;
 

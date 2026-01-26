@@ -1,7 +1,7 @@
 "use client"; // ensure client-side
 
 import React from "react";
-import DOMPurify from "isomorphic-dompurify";  // import factory
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 
 const OurImpact = ({ donationPageOurImpact }) => {

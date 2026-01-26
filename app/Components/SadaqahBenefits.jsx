@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../Utils/const";
 
 const SadaqahBenefits = ({ section_6 }) => {

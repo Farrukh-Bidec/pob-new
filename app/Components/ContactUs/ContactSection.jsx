@@ -4,16 +4,16 @@ import { HiPhone } from "react-icons/hi2";
 import { IoLocationSharp } from "react-icons/io5";
 import { TiArrowRight } from "react-icons/ti";
 
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import { useState } from "react";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css"; 
+import "react-phone-input-2/lib/style.css";
 import axios from "axios";
 import { toast } from "react-toastify";
 
 const ContactSection = ({ contactUsHeading, hospitalLocation }) => {
   const [formData, setFormData] = useState({
-    first_name: "", 
+    first_name: "",
     last_name: "",
     email: "",
     contact: "",
@@ -41,7 +41,7 @@ const ContactSection = ({ contactUsHeading, hospitalLocation }) => {
     if (!formData.contact) return toast.error("Please enter phone number");
 
     try {
-      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL_LIVE}contact-us-page/save-contact-details`,formData);
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL_LIVE}contact-us-page/save-contact-details`, formData);
 
       toast.success(res?.data?.message);
 
@@ -54,7 +54,7 @@ const ContactSection = ({ contactUsHeading, hospitalLocation }) => {
       });
     } catch (err) {
       console.error("Error:", err);
-      toast.error("Something went wrong!" , err);
+      toast.error("Something went wrong!", err);
     }
   };
 
@@ -180,9 +180,9 @@ const ContactSection = ({ contactUsHeading, hospitalLocation }) => {
                   <h3>{location.location}</h3>
 
                   <a href={location?.direct} target="_blank">
-                  <p className="text-gray-600 hover:text-[#28A745]" >
-                    {location.full_address}
-                  </p>
+                    <p className="text-gray-600 hover:text-[#28A745]" >
+                      {location.full_address}
+                    </p>
                   </a>
 
                   <p className="text-gray-600 flex items-center space-x-2">
@@ -191,7 +191,7 @@ const ContactSection = ({ contactUsHeading, hospitalLocation }) => {
                     )}
                     <a href={`tel:${location.contact_no}`} title={location.location} className="hover:text-[#28A745]"><span>{location.contact_no}</span></a>
                   </p>
-{/* 
+                  {/* 
                   <a href={location?.direct} target="_blank">
                     <button className="flex items-center text-black text-[12px] py-1 px-2">
                       <TiArrowRight className="mr-1 text-xl" /> Get directions

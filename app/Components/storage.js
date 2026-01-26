@@ -2,6 +2,7 @@ const TOKEN_KEY = 'access_token';
 const AGENT_KEY = 'agent_data';
 
 const setAccessToken = (token) => {
+  if (typeof window === "undefined") return;
   try {
     if (token !== null) {
       localStorage.setItem(TOKEN_KEY, token);
@@ -15,15 +16,8 @@ const setAccessToken = (token) => {
   }
 };
 
-// const getAccessToken = () => {
-//   try {
-//     return localStorage.getItem(TOKEN_KEY);
-//   } catch (e) {
-//     console.error('Error retrieving access token:', e);
-//     return null;
-//   }
-// };
 const getAccessToken = () => {
+  if (typeof window === "undefined") return null;
   try {
     return localStorage.getItem(TOKEN_KEY); // Return the token
   } catch (e) {
@@ -34,6 +28,7 @@ const getAccessToken = () => {
 
 
 const setAgentData = (agent) => {
+  if (typeof window === "undefined") return;
   try {
     if (agent !== null) {
       localStorage.setItem(AGENT_KEY, JSON.stringify(agent));
@@ -48,6 +43,7 @@ const setAgentData = (agent) => {
 };
 
 const getAgentData = () => {
+  if (typeof window === "undefined") return null;
   try {
     const agentData = localStorage.getItem(AGENT_KEY);
     return agentData ? JSON.parse(agentData) : null;
@@ -58,6 +54,7 @@ const getAgentData = () => {
 };
 
 const removeAccessToken = () => {
+  if (typeof window === "undefined") return;
   try {
     localStorage.removeItem(TOKEN_KEY);
     ('Access token removed successfully');
@@ -67,6 +64,7 @@ const removeAccessToken = () => {
 };
 
 const removeAgentData = () => {
+  if (typeof window === "undefined") return;
   try {
     localStorage.removeItem(AGENT_KEY);
     ('Agent data removed successfully');

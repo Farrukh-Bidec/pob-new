@@ -1,5 +1,5 @@
 import React from "react";
-import DOMPurify from "isomorphic-dompurify";
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../Utils/const";
 import BlogBody from "../Components/BlogBody";
 

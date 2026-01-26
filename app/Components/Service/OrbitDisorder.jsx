@@ -1,7 +1,7 @@
 "use client"; // client component for interactivity
 
 import React from "react";
-import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 
 const OrbitDisorder = ({
@@ -12,14 +12,14 @@ const OrbitDisorder = ({
   section_8_main_heading,
   section_8_sub_heading,
   section_8_cards,
-  
+
 }) => {
-     const handleDonateClick = () => {
-  const footer = document.getElementById("footer-section");
-  if (footer) {
-    footer.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  const handleDonateClick = () => {
+    const footer = document.getElementById("footer-section");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="w-full text-white flex justify-center items-center bg-[#28A745] md:my-32">

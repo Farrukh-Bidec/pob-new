@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import parse from "html-react-parser";
 import Image from "next/image";
 

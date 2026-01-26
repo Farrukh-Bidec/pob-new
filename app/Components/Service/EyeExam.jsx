@@ -1,7 +1,7 @@
 "use client"; // ✅ Client component for interactivity
 
 import React from "react";
-import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 const EyeExams = ({
   section_2_main_heading,
@@ -10,12 +10,12 @@ const EyeExams = ({
   section_2_image,
   // pass from parent
 }) => {
-   const handleDonateClick = () => {
-  const footer = document.getElementById("footer-section");
-  if (footer) {
-    footer.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  const handleDonateClick = () => {
+    const footer = document.getElementById("footer-section");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="flex flex-col md:flex-row pt-12 gap-4 items-center justify-center">

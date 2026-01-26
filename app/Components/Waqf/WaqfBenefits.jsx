@@ -1,7 +1,7 @@
 import React from "react";
 import { TbPointFilled } from "react-icons/tb";
 import { Image_Url } from "../../../Utils/const";
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 
 const WaqfBenefits = ({ section_6 }) => {
   if (!section_6) return null;

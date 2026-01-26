@@ -1,5 +1,5 @@
-    import React from "react";
-    import DOMPurify from "isomorphic-dompurify"; 
+import React from "react";
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 
 const ImpactSection = ({ section_4 }) => {

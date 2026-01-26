@@ -45,6 +45,7 @@ protectedApi.interceptors.request.use(
 
 // CSRF Function
 const getCsrfToken = () => {
+  if (typeof document === "undefined") return "";
   const name = "XSRF-TOKEN=";
   const cookies = document.cookie.split(";");
   for (let cookie of cookies) {

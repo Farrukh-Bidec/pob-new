@@ -1,10 +1,10 @@
 import React from "react";
-import DOMPurify from "isomorphic-dompurify";
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 import BlogBody from "../../Components/BlogBody";
 
 const Efforts = ({ section_3 }) => {
-  
+
   if (!section_3) return null;
 
   const {

@@ -1,6 +1,6 @@
 "use client";
 
-import DOMPurify from "isomorphic-dompurify"; 
+import * as DOMPurify from "isomorphic-dompurify";
 import { Image_Url } from "../../../Utils/const";
 
 const WaqfSection = ({ section_3 }) => {
@@ -10,11 +10,11 @@ const WaqfSection = ({ section_3 }) => {
 
   // fallback function if prop not passed
   const handleDonateClick = () => {
-  const footer = document.getElementById("footer-section");
-  if (footer) {
-    footer.scrollIntoView({ behavior: "smooth" });
-  }
-};
+    const footer = document.getElementById("footer-section");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="bg-green-600 py-16 px-6 md:px-20 my-6 flex flex-col md:flex-row items-center">

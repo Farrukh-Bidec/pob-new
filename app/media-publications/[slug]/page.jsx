@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import { BlogBanner } from "../../Components/BlogBanner";
 import { RxCross2 } from "react-icons/rx";
 
-import JoditEditor from "jodit-react";
+import dynamic from "next/dynamic";
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
@@ -14,7 +15,7 @@ import axios from "../../../Utils/axios";
 
 import { Image_Url } from "../../../Utils/const";
 import CustomSeo from "../../Components/CustomSeo";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const MediaPublicationDetails = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

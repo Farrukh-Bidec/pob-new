@@ -1,7 +1,7 @@
 "use client"; // ✅ Client component for interactivity
 
 import React from "react";
-import DOMPurify from "dompurify";
+import DOMPurify from "isomorphic-dompurify";
 
 const RetinaExcellence = ({
   section_5_main_heading,
@@ -10,12 +10,12 @@ const RetinaExcellence = ({
   section_5_image,
   // parent se pass karo
 }) => {
-    const handleDonateClick = () => {
-  const footer = document.getElementById("footer-section");
-  if (footer) {
-    footer.scrollIntoView({ behavior: "smooth" });
-  }
-};
+  const handleDonateClick = () => {
+    const footer = document.getElementById("footer-section");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section className="flex flex-col-reverse md:flex-row items-center gap-10 px-6 md:px-16 py-12">
@@ -31,7 +31,7 @@ const RetinaExcellence = ({
       </div>
 
       {/* Content Section */}
-        <div className="md:w-1/2 text-center md:text-start">
+      <div className="md:w-1/2 text-center md:text-start">
         <h3 className="text-[#F39C12] font-Amaranth  uppercase text-lg tracking-wide">
           {section_5_main_heading}
         </h3>

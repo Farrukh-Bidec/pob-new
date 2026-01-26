@@ -1,7 +1,7 @@
 "use client"; // ❗ Client-side component
 
 import React, { useState } from "react";
-import DOMPurify from "isomorphic-dompurify";
+import * as DOMPurify from "isomorphic-dompurify";
 import axios from "axios";
 import { toast } from "react-toastify";
 
