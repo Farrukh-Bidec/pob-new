@@ -100,7 +100,7 @@ const Help = () => {
                     Every Eye
                 </h2>
 
-                <h2 className="text-5xl sm:text-4xl mac:text-7xl pt-2 pb-6">
+                <h2 className="md:text-5xl text-3xl sm:text-4xl mac:text-7xl pt-2 pb-6">
                     Deserves a Chance to See
                 </h2>
 
