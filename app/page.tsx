@@ -1,20 +1,19 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Aboutus from './components/Aboutus'
-import Stats from './components/Stats'
-import Surgerypricing from './components/Surgerypricing'
-import Commitment from './components/Commitment'
-import Help from './components/Help'
-import Leadership from './components/Leadership'
-import How from './components/How'
-import Random from './components/Random'
-import Fools from './components/Fools'
-import Footer from './components/Footer'
-import Partners from './components/Partners'
-import Testimonials from './components/Testimonials'
-import News from './components/News'
-import Publications from './components/Publications'
-import  fetchData  from "./components/fetchData";
+import Navbar from './new_components/Navbar'
+import Hero from './new_components/Hero'
+import Aboutus from './new_components/Aboutus'
+import Stats from './new_components/Stats'
+import Surgerypricing from './new_components/Surgerypricing'
+import Commitment from './new_components/Commitment'
+import Help from './new_components/Help'
+import Leadership from './new_components/Leadership'
+import How from './new_components/How'
+import Random from './new_components/Random'
+import Footer from './new_components/Footer'
+import Partners from './new_components/Partners'
+import Testimonials from './new_components/Testimonials'
+import News from './new_components/News'
+import Publications from './new_components/Publications'
+import  fetchData  from "./new_components/fetchData";
 import { ToastContainer } from 'react-toastify'
 
 
@@ -24,7 +23,7 @@ const getHomeData = async () => {
 export async function generateMetadata() {
   const Image_Url = "https://pob.datainovate.com/backend/"
   const home = await getHomeData();
-  const CANONICAL = "https://pob-delta.vercel.app";
+  const CANONICAL = "https://pobtrust.com";
   const BASE_URL = process.env.NEXT_PUBLIC_URL || CANONICAL;
 
   const featuredImage = home?.pagesSeoDetail?.meta_image
@@ -76,7 +75,7 @@ const Home = async () => {
 
   return (
     <div className='bg-white '>
-    <Navbar />
+    {/* <Navbar /> */}
     <Hero />
     <Aboutus />
     <Stats />
@@ -89,8 +88,8 @@ const Home = async () => {
     <Random />
     <Testimonials />
     <News />
-    {/* <Publications /> */}
-    <Footer />
+    <Publications />
+    {/* <Footer /> */}
     <ToastContainer />
     </div>
   )
