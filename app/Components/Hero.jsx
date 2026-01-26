@@ -5,10 +5,10 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 
 const Hero = () => {
   const slides = [
-    "/slide4.webp",
-    "/slide2.webp",
-    "/slide3.webp",
-    "/slide.png",
+    "/slide1.jpg",
+    "/slide1.jpg",
+    "/slide1.jpg",
+    "/slide1.jpg",
   ];
   const [current, setCurrent] = useState(0)
 
@@ -27,19 +27,19 @@ const Hero = () => {
   }
   return (
     <div
-      className="relative text-white bg-cover mt-30 pt-[120px] bg-center bg-no-repeat h-[600px] md:h-[90vh] 2xl:h-[80vh] my- sm:mb-30  flex items-center text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
+      className="relative text-white bg-cover mt-30 pt-[120px] bg-center bg-no-repeat h-[600px] md:h-[130vh] 2xl:h-[80vh] my- sm:mb-30  flex items-center text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
       style={{ backgroundImage: `url(${slides[current]})` }}
     >
-      {(current === 2 || current === 3 || current === 0) && (
+      {/* {(current === 2 || current === 3 || current === 0) && (
         <div className="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
-      )}
+      )} */}
 
       <div className="
-  w-full max-w-[720px]
-  mt-20 sm:mt-0
+  w-full md:max-w-[1200px]
+  mt20 sm:mt-0
   px-5 sm:px-0
   2xl:w-200 sm:pl-30
-  z-20
+  z-10 -mt-40
 ">
 
         <p className="text-[13px] sm:text-[15px] md:text-base lg:text-sm tracking-wider uppercase">
@@ -71,7 +71,7 @@ const Hero = () => {
       flex items-center gap-3
       px-3 py-2 sm:px-2 sm:py-1
       bg-white text-black rounded-full shadow-xl
-      hover:bg-gray-100 transition text-sm sm:text-base pl-4
+      hover:bg-gray-100 transition text-sm sm:text-base pl-4 
     ">
             Donate Now
             <span className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 bg-black text-white rounded-full text-xl sm:text-2xl">

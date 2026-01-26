@@ -6,7 +6,7 @@ import { Image_Url } from "./axios";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row py-6 md:-mt-24 sm:py-10 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40 mac:max-w-[1600px] mac:px-20 mx-auto">
+    <div className="flex flex-col md:flex-row py-4 mt-10 md:-mt-24 sm:py-6 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40 mac:max-w-[1600px] mac:px-20 mx-auto">
 
       {/* Image Section */}
       <div className="w-full md:w-[50%] lg:w-[55%] mx-auto">
@@ -15,51 +15,51 @@ const Aboutus = () => {
           alt="About Us"
           width={800}
           height={800}
-          className="w-full sm:w-[85%] md:w-full min-h-[300px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[640px] object-cover rounded-2xl mx-auto"
+          className="w-full sm:w-[85%] md:w-full min-h-[300px] sm:min-h-[350px] md:min-h-[550px] lg:min-h-[580px] object-cover rounded-2xl mx-auto"
           priority
         />
       </div>
 
       {/* Content Section */}
-      <div className="w-full md:w-[50%] lg:w-[55%] text-black py-6 sm:py-10 text-center sm:text-left">
-        <h4 className="text-[22px] sm:text-[24px] mb-2 text-[#C30001] uppercase font-semibold">
+      <div className="w-full md:w-[50%] lg:w-[55%] text-black py-4 sm:py-6 text-center sm:text-left">
+        <h4 className="text-[12px] sm:text-[14px] mb-1 text-[#C30001] uppercase font-semibold">
           About Us
         </h4>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold py-2">
+        <h2 className="text-2xl sm:text-2xl md:text-5xl font-bold py-1">
           Absolutely Free Eye Care
         </h2>
 
-        <p className="text-sm mac:mt-10 mac:text-[40px] sm:text-base md:text-[16px] mb-4 text-gray-500 leading-relaxed">
+        <p className="text-sm mac:mt-10 mac:text-[40px] mt-2 sm:text-base md:text-[16px] mb-4 text-gray-500 leading-relaxed">
           Prevention of Blindness (POB) Trust was established in 2007
-          <span className="hidden sm:inline"><br /></span>
+        
           with a singular mission: to eliminate preventable blindness by providing
-          <span className="hidden sm:inline"><br /></span>
+        
           free, quality eye care to those in need. Operating under the patronage
-          <span className="hidden sm:inline"><br /></span>
+        
           of the Pakistan Islamic Medical Association (PIMA), POB Trust is
-          <span className="hidden sm:inline"><br /></span>
+        
           committed to serving underserved communities with compassion
-          <span className="hidden sm:inline"><br /></span>
+          
           and excellence.
         </p>
 
         <p className="text-sm sm:text-base md:text-[16px] mb-4 text-gray-500 leading-relaxed">
           Through our flagship POB Eye Hospital in Gulistan-e-Johar and
-          <span className="hidden sm:inline"><br /></span> four campuses across Karachi, we deliver comprehensive eye care
-          <span className="hidden sm:inline"><br /></span> services completely free of cost.
+          four campuses across Karachi, we deliver comprehensive eye care
+          services completely free of cost.
         </p>
 
         <p className="text-sm sm:text-base md:text-[16px] text-gray-500 leading-relaxed">
           What began as a small cataract initiative has grown into a state-of-the-art
-          <span className="hidden sm:inline"><br /></span> charitable tertiary eye care center, offering advanced treatments including
-          <span className="hidden sm:inline"><br /></span> corneal transplants, vitreoretinal services, glaucoma care, and squint
-          <span className="hidden sm:inline"><br /></span> surgeries, restoring sight and transforming lives every day.
+          charitable tertiary eye care center, offering advanced treatments including
+          corneal transplants, vitreoretinal services, glaucoma care, and squint
+          surgeries, restoring sight and transforming lives every day.
         </p>
 
         <div className="mt-6 sm:mt-8">
           <Link href="https://pob-delta.vercel.app/about-us">
-            <button className="bg-[#373895] text-white px-6 py-3 rounded-full hover:bg-[#2c2f6e] transition-colors">
+            <button className="bg-[#373895] font-[400px]  text-[#FFFFFF] px-8 py-2 rounded-full hover:bg-[#2c2f6e] transition-colors">
               Read more
             </button>
           </Link>

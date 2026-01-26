@@ -59,16 +59,16 @@ const SurgeryPricing = () => {
   return (
     <section className="py-12 bg-[#373895] text-white">
       <div className="max-w-7xl mac:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-15 mac:px-20">
-        <h2 className="uppercase text-smongo text-[10px] sm:text-[22px] tracking-wider text-center">
+        <h2 className="uppercase text-smongo text-[14px] sm:text-[22px] tracking-wider text-center">
           HELP US
         </h2>
-        <h3 className="text-[20px] sm:text-[48px]  font-Amaranth mt-3 mb-4 text-center leading-tight">
+        <h3 className="text-[20px] sm:text-[48px]  font-Amaranth mt-3 mb-2 text-center leading-tight">
           HELP THEM WITH YOUR ZAKAT/DONATIONS
         </h3>
-        <p className='text-xs  text-center'>
+        <p className='text-[15px] mb-2  text-center'>
           Through your Zakat and Sadaqah, you can support timely treatment and protect the gift of sight for those who cannot afford care.
         </p>
-        <p className='text-xs text-center mb-14 '>
+        <p className='text-[15px] text-center mb-14 '>
           In Pakistan, over 40 million people are affected by eye diseases, with cataracts responsible for nearly half <br />
           of all blindness, followed by glaucoma and diabetic retinopathy.
         </p>
@@ -85,11 +85,11 @@ const SurgeryPricing = () => {
             1280: { slidesPerView: 4, spaceBetween: 30 },
             1512: { slidesPerView: 4, spaceBetween: 50 },
           }}
-          className="!pb-12 md:!pb-16"
+          className="surgery-swiper !pb-12 md:!pb-16"
         >
           {donationData.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <div className="h-full flex flex-col rounded-xl overflow-hidden transition-transform hover:scale-[1.02] gap-6 translate-x-2 w-66 mac:w-85  mx-auto">
+              <div className="h-full flex flex-col rounded-xl overflow-hidden transition-transform hover:scale-[1.02] gap-6 translate-x-2 w-64 mac:w-[340px]  mx-auto">
                 <div className="relative h-56 sm:h-64 md:h-80 overflow-hidden">
                   <img
                     src={item.image}
@@ -120,7 +120,7 @@ const SurgeryPricing = () => {
                   <p className="text-xl sm:text-2xl font-inter font-extralight mb-5">{item.price}</p>
                   <button
                     onClick={handleDonateClick}
-                    className="mt-auto bg-white text-black px-8 sm:py-3 py-1 rounded-full sm:text-base transition shadow-md w-fit text-sm"
+                    className="mt-auto bg-white text-black px-10 sm:py-2 py-2 rounded-full sm:text-base transition shadow-md w-fit text-sm"
                   >
                     Donate
                   </button>

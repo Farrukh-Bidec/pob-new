@@ -86,10 +86,10 @@ const News = () => {
   };
 
   return (
-    <div className='mt-8 md:mt-10 py-10 mac:max-w-[1728px] mx-auto mac:px-0'>
+    <div className='mt-8 md:mt-20 py-10 md:py-10 mac:max-w-[1728px] mx-auto mac:px-0'>
       {/* Heading */}
       <div className="text-center pt-12 md:pt-70 xl:pt-10 px-10">
-        <h4 className="uppercase text-[#C30001] text-[20px] md:text-[22px] mac:text-[32px] -mt-20">Own Blogs</h4>
+        <h4 className="uppercase text-[#C30001] text[20px] md:text-[14px] mac:text-[32px] -mt-20">Own Blogs</h4>
         <h2 className="text-xl md:text-5xl mac:text-7xl pb-4 md:pb-6 mac:pb-12 pt-2 text-black font-bold">
           Our Latest News and Articles
         </h2>
@@ -101,7 +101,7 @@ const News = () => {
           {/* Left Button */}
           <button
             onClick={scrollLeft}
-            className="hidden md:block absolute -left-2 md:-left-14 mac:scale-150 top-1/2 transform -translate-y-1/2 z-10 text-black p-3 rounded-full shadow-md hover:bg-gray-800 transition"
+            className="hidden md:flex absolute -left-2 md:-left-14 mac:scale-150 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-black text-black p-3 rounded-full shadow-md hover:bg-gray-50 transition items-center justify-center"
           >
             <FaChevronLeft />
           </button>
@@ -128,10 +128,11 @@ const News = () => {
                 {/* Content */}
                 <div className="flex-1 text-black border border-t-0 p-4 mac:p-8 rounded-b-lg flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl md:text-2xl mac:text-4xl font-bold line-clamp-2">
+                    <h2 className="text-xl md:text-2xl mac:text-4xl font-black line-clamp-2">
                       {card.title}
-                    </h3>
-                    <p className="text-sm md:text-base mt-2 mac:text-2xl line-clamp-3 text-gray-600 leading-relaxed">
+                    </h2>
+
+                    <p className="text-sm md:text-[14px] mt-2 mac:text-2xl line-clamp-3 text-gray-600 leading-relaxed">
                       {card.description}
                     </p>
                   </div>
@@ -148,7 +149,7 @@ const News = () => {
           {/* Right Button */}
           <button
             onClick={scrollRight}
-            className="hidden md:block absolute -right-2 md:-right-14 mac:scale-150 top-1/2 transform -translate-y-1/2 z-10 bg-[#373895] text-white p-3 rounded-full shadow-md hover:bg-gray-800 transition"
+            className="hidden md:flex absolute -right-2 md:-right-14 mac:scale-150 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-black text-black p-3 rounded-full shadow-md hover:bg-gray-50 transition items-center justify-center"
           >
             <FaChevronRight />
           </button>

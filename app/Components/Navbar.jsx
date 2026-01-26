@@ -77,7 +77,7 @@ const Navbar = () => {
   const toggleShowNavbar = () => setShowNav(!showNav);
 
   return (
-    <div className="flex flex-col items-center gap-2 fixed top-0 left-0 w-full z-50 h-[115px] md:h-[120px] bg-white">
+    <div className="flex flex-col items-center gap-0 fixed top-0 left-0 w-full z-50 h-[100px] md:h-[110px] bg-white">
       {/* Top Nav */}
       <section className="hidden md:block relative w-[90%] py-1 px-4 rounded-b-[10px] bg-[#C30001] text-white">
         <div className="flex justify-between items-center w-full">
@@ -144,23 +144,23 @@ const Navbar = () => {
             <Image
               src="/poblogo.png"
               alt="logo"
-              width={112}
-              height={112}
-              className="w-10 md:w-28 object-cover"
+              width={160}
+              height={160}
+              className="w-10 md:w-36 h-16 md:h-24 object-contain"
             />
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex w-full max-w-[1300px] mx-auto justify-center items-center gap-6 px-3">
+          <div className="hidden lg:flex w-full max-w-[1300px] mx-auto justify-center items-center gap-8 px-3">
             {desktopNavItems.map((item, index) => {
               const normalizePath = (path) => (path || "").replace(/\/$/, "");
-              const isActive = normalizePath(pathname) === normalizePath(item.link || "");
+              const isActive = item.link ? normalizePath(pathname) === normalizePath(item.link) : false;
 
               return (
-                <div key={index} className="relative cursor-pointer font-inter text-[15px] group">
+                <div key={index} className="relative cursor-pointer font-inter text-[14px] group">
                   {item.name === "Services" ? (
                     <div
-                      className="relative"
+                      className="relative h-full flex items-center"
                       onMouseEnter={() => {
                         clearTimeout(hideMenuTimeout.current);
                         setShowMegaMenu(true);
@@ -171,20 +171,20 @@ const Navbar = () => {
                     >
                       <Link
                         href={item.link || "#"}
-                        className={`text-black hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black flex items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
-                        {item.name}
+                        {item.name} <FaChevronDown size={10} className="mt-1" />
                       </Link>
                     </div>
                   ) : item.submenu ? (
-                    <div>
+                    <div className="h-full flex items-center">
                       <Link
                         href={item.link || "#"}
-                        className={`text-black hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black flex items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
-                        {item.name}
+                        {item.name} <FaChevronDown size={10} className="mt-1" />
                       </Link>
-                      <div className="absolute bg-white shadow-lg rounded-md hidden group-hover:block z-50 w-56">
+                      <div className="absolute bg-white shadow-lg rounded-md hidden group-hover:block z-50 w-56 top-full">
                         {item.submenu.map((subItem, subIndex) => (
                           <Link
                             key={subIndex}
@@ -197,12 +197,14 @@ const Navbar = () => {
                       </div>
                     </div>
                   ) : (
-                    <Link
-                      href={item.link || "#"}
-                      className={`text-black hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
-                    >
-                      {item.name}
-                    </Link>
+                    <div className="h-full flex items-center">
+                      <Link
+                        href={item.link || "#"}
+                        className={`text-black flex items-center pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                      >
+                        {item.name}
+                      </Link>
+                    </div>
                   )}
                 </div>
               );
@@ -284,11 +286,11 @@ const Navbar = () => {
           {/* Donate Button */}
           <div className="flex gap-2">
             <Link href="/donation/">
-              <div className="w-[145px] cursor-pointer text-white bg-[#373895] px-2 py-1 gap-1 flex items-center justify-center border-2 border-transparent rounded-full">
-                <div className="bg-white px-1 py-1 rounded-[50%]">
+              <div className="w-[160px] cursor-pointer text-white bg-[#373895] px-1 py-1 gap-1 flex items-center justify-start border-2 border-transparent rounded-full">
+                <div className="bg-white px-2 py-2 rounded-[50%]">
                   <Image src="/hand.png" alt="" width={24} height={24} className="w-6" />
                 </div>
-                <p className="mx-1 font-inter text-[14px]">Donate Now</p>
+                <p className="mx-1 font-inter text-[14px]">Donation Now</p>
               </div>
             </Link>
           </div>

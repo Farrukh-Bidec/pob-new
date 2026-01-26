@@ -75,31 +75,65 @@ p,
 
 /* Pagination container */
 .surgery-swiper .swiper-pagination {
-  bottom: 20px !important;
+  bottom: 0px !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 30px;
 }
 
 /* Default dot */
 .surgery-swiper .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background-color: #ffffff;
-  opacity: 0.4;
+  opacity: 0.6;
   margin: 0 6px !important;
-  border-radius: 999px;
-  transition: all 0.35s ease;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-/* Active dot */
+/* Active dot - Ring effect */
 .surgery-swiper .swiper-pagination-bullet-active {
-  width: 28px;
-  background-color: #f39c12;
-  /* your Donate button color */
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  background-clip: content-box;
+  padding: 3px;
+  border: 1.5px solid #ffffff;
   opacity: 1;
 }
 
 .remove-scroll {
   scrollbar-width: none;
+}
+/* Generic POB Dots for Custom Sliders */
+.pob-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+}
+
+.pob-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #373895;
+  opacity: 0.5;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.pob-dot-active {
+  width: 16px;
+  height: 16px;
+  background-color: #373895;
+  background-clip: content-box;
+  padding: 3px;
+  border: 1.5px solid #373895;
+  opacity: 1;
 }

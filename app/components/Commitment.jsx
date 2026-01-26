@@ -103,10 +103,10 @@ const Commitment = () => {
         {/* Header */}
         <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
-            <h4 className="text-[#C30001] text-lg md:text-[22px] mac:text-[32px] uppercase mb-2 md:mb-4 sm:text-left text-center font-semibold">
+            <h4 className="text-[#C30001] text-lg text-[14px] mac:text-[32px] uppercase mb-2 md:mb-4 sm:text-left text-center font-semibold">
               Commitment
             </h4>
-            <h2 className="text-3xl md:text-[48px] mac:text-7xl mb-4 text-black sm:text-left text-center leading-tight">
+            <h2 className="text-3xl md:text-[48px] mac:text-7xl mb-4 text-black sm:text-left text-center leading-none">
               Our Commitment at <br className="hidden md:block" /> POB Trust
             </h2>
           </div>
@@ -116,20 +116,14 @@ const Commitment = () => {
             <button
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${currentIndex === 0
-                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                : "bg-[#373895] text-white hover:bg-[#2c2d7a]"
-                }`}
+              className="w-10 h-10 rounded-full flex items-center justify-center border border-black bg-white text-black transition-all disabled:opacity-30 hover:bg-gray-50 shadow-sm"
             >
               <FaChevronLeft size={14} />
             </button>
             <button
               onClick={nextSlide}
               disabled={currentIndex >= totalDots - 1}
-              className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all ${currentIndex >= totalDots - 1
-                ? "border-gray-200 text-gray-300 cursor-not-allowed"
-                : "border-gray-800 text-black hover:bg-gray-50"
-                }`}
+              className="w-10 h-10 rounded-full flex items-center justify-center border border-black bg-white text-black transition-all disabled:opacity-30 hover:bg-gray-50 shadow-sm"
             >
               <FaChevronRight size={14} />
             </button>
@@ -154,17 +148,17 @@ const Commitment = () => {
               <div
                 key={index}
                 ref={index === 0 ? cardRef : null}
-                className="min-w-[85%] md:min-w-[490px] mac:min-w-[650px]"
+                className="min-w-[55%] md:min-w-[410px] mac:min-w-[650px]"
               >
                 <img
                   src={card.image}
                   alt={card.text}
-                  className="h-60 md:h-90 mac:h-[500px] w-full object-cover rounded-2xl"
+                  className="h-60 md:h-[260px] mac:h-[500px] w-full object-cover rounded-[8px]"
                 />
-                <h3 className="text-xl md:text-2xl mac:text-4xl mt-4 text-black py-2 md:py-3 font-medium">
+                <h3 className="text-xl md:text-2xl mac:text-4xl mt-4 text-black py-2 md:py-2 font-medium">
                   {card.text}
                 </h3>
-                <p className="text-gray-600 text-sm md:text-base mac:text-xl mt-2 mb-8">
+                <p className="text-gray-600 text-[14px] md:text-[16px] mac:text-xl mt-2 mb-8">
                   {card.description}
                 </p>
               </div>
@@ -173,7 +167,7 @@ const Commitment = () => {
         </div>
 
         {/* Dots - Hidden on mobile (hidden), shown on desktop (md:flex) */}
-        <div className="hidden md:flex justify-center gap-4 pb-10">
+        {/* <div className="hidden md:flex justify-center gap-4 pb-10">
           {Array.from({ length: totalDots > 0 ? totalDots : 0 }).map((_, idx) => (
             <button
               key={idx}
@@ -190,14 +184,14 @@ const Commitment = () => {
               )}
             </button>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Impact Section */}
-      <div className="relative bg-[url('/section4.png')] bg-no-repeat bg-cover py-25 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
+      <div className="relative md:mt-0 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-10 md:py-25 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
         <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
-        <div className="relative mac:-ml-10 md:pr-20 mac:pr-20 pt-5 flex flex-col items-center md:items-end text-center md:text-left">
-          <h3 className="text-4xl mac:text-right md:pr-2 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white mt-17 sm:mt-0 font-bold">
+        <div className="relative mac:-ml-10 md:pr-2 mac:pr-24 md:pt-5 flex flex-col items-center md:items-end text-center md:text-left">
+          <h3 className="text-4xl mac:text-right ml-10 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white md:mt-17 sm:mt-0 font-bold">
             Rs. 2 Billion Disbursed
           </h3>
 

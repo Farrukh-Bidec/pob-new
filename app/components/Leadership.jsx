@@ -80,6 +80,8 @@ const LeaderShip = () => {
     setCurrentIndex((prev) => (prev < maxIndex ? prev + 1 : prev));
   };
 
+  const totalDots = Math.max(0, filteredImages.length - (visibleCount - 1));
+
   // Swipe handlers
   const onTouchStart = (e) => {
     setTouchEnd(null);
@@ -103,19 +105,19 @@ const LeaderShip = () => {
   }, [activeCategory]);
 
   return (
-    <div className="relative flex flex-col items-center justify-center text-center pt-12 mac:max-w-[1728px] mac:mx-auto">
+    <div className="relative flex flex-col items-center justify-center text-center pt10 mac:max-w-[1728px] mac:mx-auto">
       {/* Header */}
       <div className="w-[90%] font-inter items-center text-center mb-4 flex flex-col gap-2">
-        <h4 className="uppercase text-[#C30001] text-[22px] mac:text-[32px]">Media Gallery</h4>
+        <h4 className="uppercase text-[#C30001] md:mt-0 mt-10 text-[14px] mac:text-[32px]">Media Gallery</h4>
         <h2 className="text-3xl sm:text-5xl mac:text-7xl pb- pt-2 text-black w-full">Capturing Moments, Sharing Stories</h2>
-        <p className="text-[#777777] text-center text-[14px] mac:text-xl pb-5">
+        <p className="text-black font-bold text-center text-[14px] mac:text-xl pb-5">
           Explore impactful visuals that tell the real stories behind the scenes
         </p>
       </div>
 
       {/* Category Buttons */}
-      <div className="w-full flex justify-center mb-6 px-2">
-        <div className="flex overflow-x-auto whitespace-nowrap gap-2 md:gap-4 mac:gap-8 snap-x snap-mandatory py-2 px-2 md:px-4 mac:px-10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
+      <div className="w-full flex justify-center mb-6 px2">
+        <div className="flex overflow-x-auto whitespace-nowrap gap-2 md:gap-2 mac:gap-8 snap-x snap-mandatory py-1 px-1 md:px4 mac:px-10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category}
@@ -138,11 +140,10 @@ const LeaderShip = () => {
         <button
           onClick={handlePrev}
           disabled={currentIndex === 0}
-          className="hidden md:flex absolute left-2 md:left-10 z-10 p-2 bg-white border border-gray-200 rounded-full shadow-md disabled:opacity-30 hover:bg-gray-50 transition-all mac:scale-150"
+          className="hidden md:flex absolute left-4 z-10 p-2 bg-white border border-black rounded-full shadow-md disabled:opacity-30 hover:bg-gray-50 transition-all mac:scale-150 items-center justify-center"
         >
-          <MdArrowBackIos className="text-gray-600 text-lg ml-1" />
+          <MdArrowBackIos className="text-black text-xl ml-1" />
         </button>
-
         {/* Slider Viewport with Swipe Events / Mobile Grid */}
         <div
           className="w-full overflow-hidden"
@@ -170,14 +171,14 @@ const LeaderShip = () => {
 
           {/* Desktop Slider (hidden on mobile) */}
           <div
-            className="hidden md:flex gap-6 mac:gap-2 transition-transform duration-500 ease-in-out"
+            className="hidden ml-6 md:flex gap-1 mac:gap-2 transition-transform duration-500 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * cardWidth}px)`,
             }}
           >
             {filteredImages.length > 0 ? (
               filteredImages.map((item, index) => (
-                <div key={index} className="shrink-0 w-72 mac:w-[390px] flex flex-col items-center">
+                <div key={index} className="shrink-0  w-[274px] mac:w-[390px] flex flex-col items-center">
                   <img
                     src={item.src}
                     alt={item.category}
@@ -195,10 +196,21 @@ const LeaderShip = () => {
         <button
           onClick={handleNext}
           disabled={currentIndex >= filteredImages.length - visibleCount}
-          className="hidden md:block absolute right-2 md:right-10 z-10 p-2 bg-white border border-gray-200 rounded-full shadow-md disabled:opacity-30 hover:bg-gray-50 transition-all mac:scale-150"
+          className="hidden md:flex absolute right-4 z-10 p-2 bg-white border border-black rounded-full shadow-md disabled:opacity-30 hover:bg-gray-50 transition-all mac:scale-150 items-center justify-center"
         >
-          <MdArrowForwardIos className="text-gray-600 text-lg" />
+          <MdArrowForwardIos className="text-black text-xl" />
         </button>
+      </div>
+
+      {/* Pagination Dots */}
+      <div className="pob-dots-container mt-4">
+        {Array.from({ length: totalDots }).map((_, idx) => (
+          <div
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`pob-dot ${currentIndex === idx ? "pob-dot-active" : ""}`}
+          />
+        ))}
       </div>
     </div>
   );

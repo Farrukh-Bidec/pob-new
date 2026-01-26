@@ -12,7 +12,7 @@ const Stats = () => {
   ]
 
   return (
-    <div className="w-full bg-white text-black sm:mb-0 md:pb-0 ">
+    <div className="w-full mt-10 bg-white text-black sm:mb-0 md:pb-0 ">
       <div className="mx-auto lg:pl-8 2xl:pl-0">
         <div className="flex flex-col lg:flex-row gap-10  items-center">
           
@@ -20,12 +20,12 @@ const Stats = () => {
           <div className="flex-1 px-4 sm:px-16 lg:pl-20 2xl:pl-30 text-center sm:text-left">
             
             {/* Heading: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
-            <h2 className="text-3xl md:text-5xl 2xl:text-6xl mb-6 md:mb-16 lg:mb-8 font-bold leading-tight">
+            <h2 className="text-3xl md:text-5xl 2xl:text-6xl mb6 md:mb16 lg:mb-3 font-bold leading-tight">
               Prevention Of Blindness Impact
             </h2>
 
             {/* Paragraph: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
-            <p className="text-gray-600 mb-8 md:mb-16 lg:mb-8 text-sm md:text-base leading-relaxed">
+            <p className="text-gray-600 mb-8 md:mb16 lg:mb8 text-sm md:text-base leading-relaxed">
               POB’s legacy of charitable eye care in Karachi continues to grow, bringing hope and sight <br className="hidden md:block" />
               to communities across Sindh through its outreach programs.
             </p>
@@ -42,7 +42,7 @@ const Stats = () => {
                     />
                     {stat.number}
                   </div>
-                  <div className="text-xs md:text-sm text-gray-700 mt-1">
+                  <div className="text-xs md:text-[16px] text-gray-700 mt-4">
                     {stat.label.split(" ").map((word, i) => (
                       <span key={i}>
                         {word}
