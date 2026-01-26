@@ -4,7 +4,7 @@ import CustomSeo from '../Components/CustomSeo';
 import Banner from '../Components/Banner/Banner';
 import MediaGallery from '../Components/Gallerypage/MediaGallery';
 import VideoSection from '../Components/Gallerypage/VideoSection';
-import { Image_Url } from '../../Utils/const';
+import { Image_Url } from '../components/axios';
 import fetchData from '../Components/fetchData';
 
 const getGalleryData = async () => {
@@ -17,14 +17,17 @@ const getGalleryData = async () => {
 const GalleryClient = () => {
     const [gallery, setGallery] = useState(null);
 
-    useEffect(async () => {
-        const galleryData = await getGalleryData();
-        setGallery(galleryData);
+    useEffect(() => {
+        const fetchGallery = async () => {
+            const galleryData = await getGalleryData();
+            setGallery(galleryData);
+        };
+        fetchGallery();
     }, []);
 
     const formattedGalleryImages =
         gallery?.gallery_images?.images?.map((img, index) => ({
-            image: `${Image_Url}${img.images}`,
+            image: `${Image_Url}/${img.images}`,
             alt_text: img.alt_name || img.atl_text || "Gallery Image",
             id: index,
         })) || [];

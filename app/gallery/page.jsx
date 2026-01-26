@@ -4,7 +4,7 @@ import Banner from "../Components/Banner/Banner";
 import MediaGallery from "../Components/Gallerypage/MediaGallery";
 import VideoSection from "../Components/Gallerypage/VideoSection";
 import CustomSeo from "../Components/CustomSeo";
-import { Image_Url } from "../../Utils/const";
+import { Image_Url } from "../components/axios";
 import fetchData from "../Components/fetchData";
 import GalleryClient from "./GalleryClient";
 
@@ -77,7 +77,7 @@ export default async function GalleryPage() {
 
   const formattedGalleryImages =
     gallery?.gallery_images?.images?.map((img, index) => ({
-      image: `${Image_Url}${img.images}`,
+      image: `${Image_Url}/${img.images}`,
       alt_text: img.alt_name || img.atl_text || "Gallery Image",
       id: index,
     })) || [];

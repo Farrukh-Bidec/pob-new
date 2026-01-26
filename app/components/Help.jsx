@@ -59,7 +59,7 @@ const Help = () => {
                     </h2>
 
                     {/* Grid Cards Container */}
-                    <div className="flex  flex-wrap justify-center md:grid md:grid-cols-4 gap-4 md:gap-6  mac:w-[1700px] max-w-5xl mx-auto ">
+                    <div className="flex  flex-wrap justify-center md:grid md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto ">
                         {cards.map((card, index) => (
                             <div
                                 key={index}

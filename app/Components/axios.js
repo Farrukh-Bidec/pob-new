@@ -20,6 +20,9 @@ export const publicApi = axios.create({
   },
 });
 
+export const IMAGE_URL = "https://pob.datainovate.com/backend";
+export const Image_Url = IMAGE_URL;
+
 // Protected Instance
 const protectedApi = axios.create({
   baseURL: API_URL,
