@@ -16,7 +16,7 @@ import News from './components/News'
 import Publications from './components/Publications'
 import fetchData from "./components/fetchData";
 import { ToastContainer } from 'react-toastify'
-import { Image_Url } from './components/axios';
+import { Image_Url } from './components/axios'
 
 
 const getHomeData = async () => {
@@ -24,11 +24,11 @@ const getHomeData = async () => {
 };
 export async function generateMetadata() {
   const home = await getHomeData();
-  const CANONICAL = "https://pob-delta.vercel.app";
+  const CANONICAL = "https://pobtrust.com";
   const BASE_URL = process.env.NEXT_PUBLIC_URL || CANONICAL;
 
   const featuredImage = home?.pagesSeoDetail?.meta_image
-    ? `${Image_Url}/${home.pagesSeoDetail.meta_image}`
+    ? `${Image_Url}${home.pagesSeoDetail.meta_image}`
     : `${BASE_URL}/default-og-image.jpg`;
   return {
     title: home?.pagesSeoDetail?.meta_title || "POB Trust",
