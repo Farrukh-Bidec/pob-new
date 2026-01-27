@@ -105,7 +105,7 @@ const LeaderShip = () => {
   }, [activeCategory]);
 
   return (
-    <div className="relative flex flex-col items-center justify-center text-center pt10 mac:max-w-[1728px] mac:mx-auto">
+    <div className="relative mt-14 md:mt-0 flex flex-col items-center justify-center text-center pt10 mac:max-w-[1728px] mac:mx-auto">
       {/* Header */}
       <div className="w-[90%] font-inter items-center text-center mb-4 flex flex-col gap-2">
         <h4 className="uppercase text-[#C30001] md:mt-0 mt-10 text-[14px] mac:text-[32px]">Media Gallery</h4>
@@ -117,12 +117,12 @@ const LeaderShip = () => {
 
       {/* Category Buttons */}
       <div className="w-full flex justify-center mb-6 px2">
-        <div className="flex overflow-x-auto whitespace-nowrap gap-2 md:gap-2 mac:gap-8 snap-x snap-mandatory py-1 px-1 md:px4 mac:px-10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
+        <div className="flex overflow-x-auto whitespace-nowrap gap-2 md:gap-2 mac:gap-8 snap-x snap-mandatory py-1 px-1 md:px4 mac:px10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`flex-shrink-0 cursor-pointer px-4 py-2 text-[13px] mac:text-xl rounded-full transition-colors duration-200 snap-start ${activeCategory === category
+              className={`flex-shrink-0 cursor-pointer px-2 py-2 text-[13px] mac:text-xl rounded-full transition-colors duration-200 snap-start ${activeCategory === category
                 ? "bg-white text-black font-semibold"
                 : "bg-transparent text-white"
                 }`}

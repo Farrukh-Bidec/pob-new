@@ -64,20 +64,20 @@ const Footer = () => {
 
             {/* About us */}
             <div className="space-y-6">
-              <h4 className="text-2xl font-bold">About us</h4>
+              <p className="text-2xl !font-bold">About us</p>
               <p className="text-[#E0E0E0] text-[15px] leading-relaxed">
                 A registered charity focused on preventing avoidable blindness in deprived and marginalized communities.
               </p>
               <div className="mt-8">
-                <h4 className="text-2xl font-bold mb-4">Scan to Donate</h4>
+                <p className="text-2xl !font-bold mb-4">Scan to Donate</p>
 
               </div>
             </div>
 
             {/* Quick Links */}
             <div className="space-y-6 md:ml-10">
-              <h4 className="text-2xl font-bold">Quick Links</h4>
-              <ul className="space-y-3 text-[15px] text-[#E0E0E0]">
+              <p className="text-2xl !font-bold">Quick Links</p>
+              <ul className="space-y-2 text-[15px] text-[#E0E0E0]">
                 {["Home", "Core Values & Strategy", "Vision & Mission", "Brief profile", "Board of trustees", "Philosophy", "About Us", "Partners", "Donate Now", "Contact Us"].map((link) => (
                   <li key={link} className="hover:text-white cursor-pointer transition-colors">{link}</li>
                 ))}
@@ -86,7 +86,7 @@ const Footer = () => {
 
             {/* Location Section with New Icons */}
             <div className="space-y-6">
-              <h4 className="text-2xl font-bold">Location</h4>
+              <p className="text-2xl !font-bold">Location</p>
               <div className="space-y-5 text-[15px] text-[#E0E0E0]">
                 <div className="flex gap-3">
                   <HiOutlineLocationMarker className="text-white text-2xl shrink-0 mt-0.5" />
@@ -99,7 +99,7 @@ const Footer = () => {
               </div>
 
               <div className="mt-8">
-                <h4 className="text-2xl font-bold mb-4">Social Links</h4>
+                <p className="text-2xl !font-bold mb-4">Social Links</p>
                 <div className="flex gap-3">
                   {[FaFacebookF, FaWhatsapp, FaInstagram, FaXTwitter].map((Icon, idx) => (
                     <div
@@ -116,7 +116,7 @@ const Footer = () => {
 
             {/* Contact Us */}
             <div className="space-y-8">
-              <h4 className="text-2xl font-bold">Contact Us</h4>
+              <p className="text-2xl !font-bold">Contact Us</p>
               <div className="space-y-6 text-[15px] text-[#E0E0E0]">
                 <div>
                   <p className="font-bold text-white mb-2 underline underline-offset-4 decoration-white/20 uppercase tracking-wide">Karachi UAN</p>

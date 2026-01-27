@@ -125,7 +125,7 @@ const Partners = ({ middleCarouselImages = [] }) => {
       : middleCarouselImages;
 
   return (
-    <div className="w-full mt-[25px] h-auto my-8 pb-14 pt-1 md:pt-15">
+    <div className="w-full mt-14 md:mt-[25px] h-auto my-8 pb-14 pt-1 md:pt-24">
       <h2 className="text-3xl md:text-4xl mb-6 text-center mb-20 font-Amaranth text-black">
         POB Partners in Projects
       </h2>

@@ -86,7 +86,7 @@ const News = () => {
   };
 
   return (
-    <div className='mt-8 md:mt-20 py-10 md:py-10 mac:max-w-[1728px] mx-auto mac:px-0'>
+    <div className='mt-14 md:mt-20 py-10 md:py-10 mac:max-w-[1728px] mx-auto mac:px-0'>
       {/* Heading */}
       <div className="text-center pt-12 md:pt-70 xl:pt-10 px-10">
         <h4 className="uppercase text-[#C30001] text[20px] md:text-[14px] mac:text-[32px] -mt-20">Own Blogs</h4>

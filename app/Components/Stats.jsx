@@ -12,7 +12,7 @@ const Stats = () => {
   ]
 
   return (
-    <div className="w-full mt-10 bg-white text-black sm:mb-0 md:pb-0 ">
+    <div className="w-full mt-14 bg-white text-black sm:mb-0 md:pb-0 ">
       <div className="mx-auto lg:pl-8 2xl:pl-0">
         <div className="flex flex-col lg:flex-row gap-10  items-center">
           

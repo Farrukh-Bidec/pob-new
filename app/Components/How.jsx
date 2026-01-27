@@ -38,7 +38,7 @@ const howData = [
 
 const How = () => {
     return (
-        <div className='text-center text-black py-10 md:mt-14  md:pb-12 md:pt-10 px-4 mx-auto -mt-15 mac:max-w-[1728px] mac:px-20'>
+        <div className='text-center mt-6 text-black py-10 md:mt-14  md:pb-12 md:pt-10 px-4 mx-auto -mt-15 mac:max-w-[1728px] mac:px-20'>
             <h2 className='uppercase text-[#C30001] text-[14px] mac:text-[32px] mb-2'>donation</h2>
             <h2 className='text-3xl md:text-5xl mac:text-7xl pb-10 text-black font-bold'>How You Can Help & Donate</h2>
 

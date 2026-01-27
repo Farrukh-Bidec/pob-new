@@ -105,7 +105,7 @@ const Testimonials = () => {
                 {card.title}
               </h3>
 
-              <p className="text-gray-500 text-sm mac:text-xl leading-snug mb-6 overflow-hidden">
+              <p className="text-gray-500 w-[200px] text-sm mac:text-xl leading-snug mb-6 overflow-hidden">
                 {card.description}
               </p>
 

@@ -99,7 +99,7 @@ const Commitment = () => {
 
   return (
     <>
-      <div className="md:ml-10 pt-4  overflow-hidden mac:max-w-[1600px] mac:px-20 mac:mx-auto">
+      <div className="md:ml-10 pt-10  overflow-hidden mac:max-w-[1600px] mac:px-20 mac:mx-auto">
         {/* Header */}
         <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
@@ -155,7 +155,7 @@ const Commitment = () => {
                   alt={card.text}
                   className="h-60 md:h-[260px] mac:h-[500px] w-full object-cover rounded-[8px]"
                 />
-                <h3 className="text-xl md:text-2xl mac:text-4xl mt-4 text-black py-2 md:py-2 font-medium">
+                <h3 className="text-xl h-16 md:text-2xl mac:text-4xl mt-4 text-black py-2 md:py-2 font-medium">
                   {card.text}
                 </h3>
                 <p className="text-gray-600 text-[14px] md:text-[16px] mac:text-xl mt-2 mb-8">
@@ -188,10 +188,10 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-      <div className="relative md:mt-20 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-10 md:py-20 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
+      <div className="relative md:mt-20 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-14 md:py-20 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
         <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
-        <div className="relative -mt-16 mac:-ml-10 md:pr-2 mac:pr-24 md:pt5 flex flex-col items-center md:items-end text-center md:text-left">
-          <h3 className="text-4xl mac:text-right ml-10 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white md:mt-17 sm:mt-0 font-bold">
+        <div className="relative md:-mt-16 mac:-ml-10 md:pr-2 mac:pr-24 md:pt5 flex flex-col items-center md:items-end text-left md:text-left">
+          <h3 className="text-4xl mac:text-right md:ml-10 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white md:mt-17 sm:mt-0 font-bold">
             Rs. 2 Billion Disbursed
           </h3>
 

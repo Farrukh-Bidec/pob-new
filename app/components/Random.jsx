@@ -14,7 +14,7 @@ const Random = () => {
                 <h2 className="text-xl md:text-5xl mac:text-7xl pb-4 md:pb-7 mac:pb-14 text-black font-bold">
                     Make a Difference <br />with Your Donation
                 </h2>
-                <p className="text-gray-500 text-md md:text-[14px] mac:text-2xl leading-relaxed">
+                <p className="text-gray-500 md:w-[470px] text-md md:text-[14px] mac:text-2xl leading-relaxed">
                     Each day, many children, adults, and elderly individuals live with vision loss that is
                     preventable or treatable but remains unaddressed due to financial hardship. Basic eye care,
                     timely diagnosis, and simple treatments can change lives, yet access is often out of reach for
