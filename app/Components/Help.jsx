@@ -156,57 +156,57 @@ const Help = () => {
 
                 </div>
                 {/* MOBILE VERSION */}
-<div className="block md:hidden px-6 space-y-16">
+                <div className="block md:hidden px-6 space-y-16">
 
-  {/* Item 1 */}
-  <div className="text-center">
-    <img
-      src="./vector.png"
-      alt="Loss of independence"
-      className="mx-auto w-24 mb-6"
-    />
-    <h3 className="text-xl font-semibold mb-3">
-      Loss of independence
-    </h3>
-    <p className="text-gray-600 leading-relaxed">
-      Mobility, making daily activities like walking, cooking, or self-care difficult
-      or impossible, and increased isolation and loneliness.
-    </p>
-  </div>
+                    {/* Item 1 */}
+                    <div className="text-center">
+                        <img
+                            src="./vector.png"
+                            alt="Loss of independence"
+                            className="mx-auto w-24 mb-6"
+                        />
+                        <h3 className="text-xl font-semibold mb-3">
+                            Loss of independence
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Mobility, making daily activities like walking, cooking, or self-care difficult
+                            or impossible, and increased isolation and loneliness.
+                        </p>
+                    </div>
 
-  {/* Item 2 */}
-  <div className="text-center">
-    <img
-      src="./vector1.png"
-      alt="Mental health issues"
-      className="mx-auto w-24 mb-6"
-    />
-    <h3 className="text-xl font-semibold mb-3">
-      Increased mental health issues
-    </h3>
-    <p className="text-gray-600 leading-relaxed">
-      Increased risk of depression, isolation, and loss of dignity due to sudden
-      dependence on others.
-    </p>
-  </div>
+                    {/* Item 2 */}
+                    <div className="text-center">
+                        <img
+                            src="./vector1.png"
+                            alt="Mental health issues"
+                            className="mx-auto w-24 mb-6"
+                        />
+                        <h3 className="text-xl font-semibold mb-3">
+                            Increased mental health issues
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Increased risk of depression, isolation, and loss of dignity due to sudden
+                            dependence on others.
+                        </p>
+                    </div>
 
-  {/* Item 3 */}
-  <div className="text-center">
-    <img
-      src="./vector1.png"
-      alt="Economical Burden"
-      className="mx-auto w-24 mb-6"
-    />
-    <h3 className="text-xl font-semibold mb-3">
-      Economical Burden
-    </h3>
-    <p className="text-gray-600 leading-relaxed">
-      Inability to work or earn a livelihood, leaving families financially vulnerable.
-      Greater exposure to poverty as medical needs rise while income declines.
-    </p>
-  </div>
+                    {/* Item 3 */}
+                    <div className="text-center">
+                        <img
+                            src="./vector1.png"
+                            alt="Economical Burden"
+                            className="mx-auto w-24 mb-6"
+                        />
+                        <h3 className="text-xl font-semibold mb-3">
+                            Economical Burden
+                        </h3>
+                        <p className="text-gray-600 leading-relaxed">
+                            Inability to work or earn a livelihood, leaving families financially vulnerable.
+                            Greater exposure to poverty as medical needs rise while income declines.
+                        </p>
+                    </div>
 
-</div>
+                </div>
 
 
             </div>
