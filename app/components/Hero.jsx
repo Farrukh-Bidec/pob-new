@@ -84,7 +84,7 @@ const Hero = () => {
 
 
       {/* Slider buttons */}
-      <div className="sm:pr-20 flex sm:flex-col flex-row gap-3 z-20 mx-auto sm:mx-0">
+      {/* <div className="sm:pr-20 flex sm:flex-col flex-row gap-3 z-20 mx-auto sm:mx-0">
         {slides.map((_, i) => (
           <button
             key={i}
@@ -93,13 +93,12 @@ const Hero = () => {
         ${current === i ? "border-white size-4" : "border-white/70 size-2"}
       `}
           >
-            {/* Inner dot (only active) */}
-            {/* {current === i && (
+            {current === i && (
               <span className="bg-white rounded-full size-[1px] "></span>
-            )} */}
+            )}
           </button>
         ))}
-      </div>
+      </div> */}
 
     </div>
   )
