@@ -94,9 +94,9 @@ const Hero = () => {
       `}
           >
             {/* Inner dot (only active) */}
-            {current === i && (
+            {/* {current === i && (
               <span className="bg-white rounded-full size-[1px] "></span>
-            )}
+            )} */}
           </button>
         ))}
       </div>
