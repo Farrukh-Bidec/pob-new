@@ -27,7 +27,7 @@ const Hero = () => {
   }
   return (
     <div
-      className="relative text-white bg-cover mt-30 pt-[120px] md:pt-[120px] bg-center bg-no-repeat h-[600px] md:h-[130vh] 2xl:h-[80vh] my- sm:mb-30  flex items-start text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
+      className="relative text-white bg-cover mt-0 md:mt-[120px] pt-[120px] md:pt-[120px] bg-center bg-no-repeat h-[600px] md:h-[130vh] 2xl:h-[80vh] my- sm:mb-30  flex items-start text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
       style={{ backgroundImage: `url(${slides[current]})` }}
     >
       {/* {(current === 2 || current === 3 || current === 0) && (
@@ -36,7 +36,7 @@ const Hero = () => {
 
       <div className="
   w-full md:max-w-[1200px]
-  mt-10 sm:mt-0
+  mt-4 sm:mt-0
   px-5 sm:px-0
   2xl:w-200 sm:pl-30
   z-10
@@ -49,7 +49,7 @@ const Hero = () => {
         <h1
           className="
     mt-3 sm:mt-4 lg:mt-2
-    text-[24px] sm:text-[32px] md:text-4xl lg:text-5xl xl:text-4xl
+    md:text-[24px] sm:text-[32px] md:text-4xl lg:text-5xl xl:text-4xl
     
   "
         >

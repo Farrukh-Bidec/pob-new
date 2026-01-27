@@ -31,7 +31,12 @@ const Stats = () => {
             </p>
 
             {/* Stats Grid: Gap is managed to be consistent */}
-            <div className="flex flex-wrap gap-5 2xl:gap-20 mb-8 justify-center lg:justify-start lg:w-170">
+<div className="
+  grid grid-cols-2 gap-x-6 gap-y-10 mb-10
+  sm:grid-cols-2
+  lg:flex lg:flex-wrap lg:gap-5 lg:justify-start lg:w-170
+  2xl:gap-20
+">
               {statsData.map((stat, index) => (
                 <div key={index} className="flex flex-col md:grid-cols-2 w-40 md:w-40 relative group">
                   <div className="text-2xl md:text-4xl 2xl:text-[60px] font-antonio font-[550] pt-6">
