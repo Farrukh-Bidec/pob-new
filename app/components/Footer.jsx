@@ -24,11 +24,11 @@ const Footer = () => {
             {/* Vertical Divider */}
             {/* <div className="hidden md:block w-[1px] bg-black h-36 self-center"></div> */}
 
-<img
-  src="./line.png"
-  alt="divider"
-  className="hidden md:block h-72 w-auto self-center"
-/>
+            <img
+              src="./line.png"
+              alt="divider"
+              className="hidden md:block h-72 w-auto self-center"
+            />
 
 
             {/* Right Form */}
@@ -102,10 +102,14 @@ const Footer = () => {
                 <h4 className="text-2xl font-bold mb-4">Social Links</h4>
                 <div className="flex gap-3">
                   {[FaFacebookF, FaWhatsapp, FaInstagram, FaXTwitter].map((Icon, idx) => (
-                    <div key={idx} className="bg-white text-[#373895] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
-                      <Icon size={18} />
+                    <div
+                      key={idx}
+                      className="bg-white text-red-600 p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm"
+                    >
+                      <Icon size={22} />
                     </div>
                   ))}
+
                 </div>
               </div>
             </div>

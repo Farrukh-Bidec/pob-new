@@ -6,7 +6,7 @@ import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 const Hero = () => {
   const slides = [
     "/slide1.jpg",
-    "/slide1.jpg",
+    "/slide3.webp",
     "/slide1.jpg",
     "/slide1.jpg",
   ];
@@ -27,19 +27,19 @@ const Hero = () => {
   }
   return (
     <div
-      className="relative text-white bg-cover mt-30 pt-[120px] bg-center bg-no-repeat h-[600px] md:h-[130vh] 2xl:h-[80vh] my- sm:mb-30  flex items-center text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
+      className="relative text-white bg-cover mt-30 pt-[120px] md:pt-[120px] bg-center bg-no-repeat h-[600px] md:h-[130vh] 2xl:h-[80vh] my- sm:mb-30  flex items-start text-center sm:text-left flex-wrap sm:justify-between transition-all duration-700"
       style={{ backgroundImage: `url(${slides[current]})` }}
     >
       {/* {(current === 2 || current === 3 || current === 0) && (
-        <div className="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
-      )} */}
+          <div className="absolute inset-0 bg-linear-to-r from-black/70 to-transparent"></div>
+        )} */}
 
       <div className="
   w-full md:max-w-[1200px]
-  mt20 sm:mt-0
+  mt-10 sm:mt-0
   px-5 sm:px-0
   2xl:w-200 sm:pl-30
-  z-10 -mt-40
+  z-10
 ">
 
         <p className="text-[13px] sm:text-[15px] md:text-base lg:text-sm tracking-wider uppercase">
