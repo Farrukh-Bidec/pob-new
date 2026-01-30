@@ -75,7 +75,7 @@ const Home = async () => {
   const home = await getHomeData();
 
   return (
-    <div className='bg-white '>
+    <div className='bg-white  '>
       {/* <Navbar /> */}
       <Hero />
       <Aboutus />

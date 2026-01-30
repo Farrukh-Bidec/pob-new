@@ -6,7 +6,7 @@ import { Image_Url } from "./axios";
 
 const Aboutus = () => {
   return (
-    <div className="flex flex-col md:flex-row py-4 mt-10 md:-mt-24 sm:py-6 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40 mac:max-w-[1600px] mac:px-20 mx-auto">
+    <div className="flex flex-col  md:flex-row py-4 mt-10 md:-mt-24 sm:py-6 gap-6 md:gap-10 items-center relative px-4 sm:px-10 lg:px-16 xl:px-24 2xl:px-40 mac:max-w-[1600px] mac:px-20 mx-auto">
 
       {/* Image Section */}
       <div className="w-full md:w-[50%] lg:w-[55%] mx-auto">
@@ -22,7 +22,7 @@ const Aboutus = () => {
 
       {/* Content Section */}
       <div className="w-full md:w-[50%] lg:w-[55%] text-black py-4 sm:py-6 text-center sm:text-left">
-        <h4 className="text-[12px] sm:text-[14px] mb-1 text-[#C30001] uppercase font-semibold">
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
           About Us
         </h4>
 

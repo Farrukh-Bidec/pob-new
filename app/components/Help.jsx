@@ -51,7 +51,7 @@ const Help = () => {
             {/* ==================== Hepatitis Statistics Cards ==================== */}
             <div className="relative w-full bg-white pt-16">
                 <div className="text-black text-center relative z-10 px-4 sm:px-6 lg:px-8">
-                    <h4 className="uppercase text-[#C30001] text-[12px] sm:text-[12px] tracking-wide font-bold">
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
                         Current
                     </h4>
                     <h2 className="text-xl sm:text-5xl lg:text-5xl pb-10 pt-3 font-bold">
@@ -96,9 +96,9 @@ const Help = () => {
             <div className="text-center bg-gray-50 py-20 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
-                <h2 className="uppercase text-[#C30001] text-[12px] mac:text-[30px] tracking-wide">
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
                     Every Eye
-                </h2>
+                </h4>
 
                 <h2 className="md:text-5xl text-3xl sm:text-4xl mac:text-7xl pt-2 pb-6">
                     Deserves a Chance to See

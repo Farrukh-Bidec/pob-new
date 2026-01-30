@@ -10,7 +10,9 @@ const Random = () => {
         <div className="flex flex-col-reverse md:flex-row pb-10 items-center justify-center gap-20 max-w-7xl mac:max-w-[1728px] mx-auto px-10 md:px-24 mac:px-0 pt-16 md:pt-8 xl:pt-35 mac:pt-48 2xl:pb-20 mac:pb-40">
             {/* Text Section */}
             <div className="w-full md:w-1/2 text-center md:text-left">
-                <h4 className="uppercase text-[#C30001] text-[22px] md:text-[14px] mac:text-[32px] -mt-10 ">Donation now</h4>
+                <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+                    Donation now
+                </h4>
                 <h2 className="text-xl md:text-5xl mac:text-7xl pb-4 md:pb-7 mac:pb-14 text-black font-bold">
                     Make a Difference <br />with Your Donation
                 </h2>

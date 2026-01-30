@@ -89,7 +89,9 @@ const News = () => {
     <div className='mt-14 md:mt-20 py-10 md:py-10 mac:max-w-[1728px] mx-auto mac:px-0'>
       {/* Heading */}
       <div className="text-center pt-12 md:pt-70 xl:pt-10 px-10">
-        <h4 className="uppercase text-[#C30001] text[20px] md:text-[14px] mac:text-[32px] -mt-20">Own Blogs</h4>
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+          Own Blogs
+        </h4>
         <h2 className="text-xl md:text-5xl mac:text-7xl pb-4 md:pb-6 mac:pb-12 pt-2 text-black font-bold">
           Our Latest News and Articles
         </h2>

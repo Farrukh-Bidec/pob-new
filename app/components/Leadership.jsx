@@ -108,7 +108,9 @@ const LeaderShip = () => {
     <div className="relative mt-14 md:mt-0 flex flex-col items-center justify-center text-center pt10 mac:max-w-[1728px] mac:mx-auto">
       {/* Header */}
       <div className="w-[90%] font-inter items-center text-center mb-4 flex flex-col gap-2">
-        <h4 className="uppercase text-[#C30001] md:mt-0 mt-10 text-[14px] mac:text-[32px]">Media Gallery</h4>
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+          Media Gallery
+        </h4>
         <h2 className="text-3xl sm:text-5xl mac:text-7xl pb- pt-2 text-black w-full">Capturing Moments, Sharing Stories</h2>
         <p className="text-black font-bold text-center text-[14px] mac:text-xl pb-5">
           Explore impactful visuals that tell the real stories behind the scenes

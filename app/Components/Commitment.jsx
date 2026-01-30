@@ -103,7 +103,7 @@ const Commitment = () => {
         {/* Header */}
         <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
-            <h4 className="text-[#C30001] text-lg text-[14px] mac:text-[32px] uppercase mb-2 md:mb-4 sm:text-left text-center font-semibold">
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
               Commitment
             </h4>
             <h2 className="text-3xl md:text-[48px] mac:text-7xl mb-4 text-black sm:text-left text-center leading-none">
@@ -188,7 +188,7 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-      <div className="relative md:mt-20 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-14 md:py-20 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
+      <div className="relative md:mt-20 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-14 md:py-24 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
         <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
         <div className="relative md:-mt-16 mac:-ml-10 md:pr-2 mac:pr-24 md:pt5 flex flex-col items-center md:items-end text-left md:text-left">
           <h3 className="text-4xl mac:text-right md:ml-10 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white md:mt-17 sm:mt-0 font-bold">

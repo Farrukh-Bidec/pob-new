@@ -70,7 +70,7 @@ const Hero = () => {
           <button className="
       flex items-center gap-3
       px-3 py-2 sm:px-2 sm:py-1
-      bg-white text-black rounded-full shadow-xl
+      bg-white text-black !font-semibold rounded-full shadow-xl
       hover:bg-gray-100 transition text-sm sm:text-base pl-4 
     ">
             Donate Now

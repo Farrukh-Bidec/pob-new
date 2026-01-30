@@ -36,7 +36,9 @@ const Testimonials = () => {
   return (
     <section className="md:py-12 px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
       <div className="text-center pt-10 md:pt-20 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
-        <h4 className="uppercase text-[#C30001] text-[14px] mac:text-[32px]">Testimonials</h4>
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+          Testimonials
+        </h4>
         <h2 className="text-xl md:text-5xl mac:text-7xl pb- pt-2 text-black font-bold">
           From Darkness to Light
         </h2>
