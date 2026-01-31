@@ -81,45 +81,45 @@ const Navbar = () => {
       {/* Top Nav */}
       <section className="hidden md:block relative w-[90%] py-1 px-4 rounded-b-[10px] bg-[#C30001] text-white">
         <div className="flex justify-between items-center w-full">
-          <div className="flex items-center gap-3">
-            <p className="flex gap-[2px] text-[11px]">
-              <HiPhone className="mt-[1px] text-[14px]" />
+          <div className="flex items-center justify-center gap-3">
+            <p className="flex gap-[2px] text-[9.07px] py-auto font-semibold">
+              <HiPhone className="mt-[1px] text-[10.3px]" />
               Karachi :
-              <a href="tel:+9221111762544" className="hover:text-[#C30001]">
+              <a href="tel:+9221111762544" className="">
                 {" "}
                 UAN +92-21-111-762-544
               </a>{" "}
               :
-              <a href="tel:+922134156597" className="hover:text-[#C30001]">
+              <a href="tel:+922134156597" className="">
                 +92-21-34156597
               </a>
             </p>
-            <p className="flex gap-1 text-[11px]">
-              <IoMdMail className="mt-[1px] text-[14px]" />
+            <p className="flex gap-1 text-[9.07px] font-semibold">
+              <IoMdMail className="mt-[1px] text-[10.3px]" />
               <a
                 href="mailto:info@pobkarachi.org"
-                className="hover:text-[#C30001]"
+                className=""
               >
                 info@pobkarachi.org
               </a>{" "}
               :
-              <a href="mailto:careers@pobkarachi.org" className="hover:text-[#C30001]">
+              <a href="mailto:careers@pobkarachi.org" className="">
                 careers@pobkarachi.org
               </a>
             </p>
           </div>
           <div className="flex space-x-4 text-white">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF size={12} />
+              <FaFacebookF size={13} />
             </a>
             <a href="https://wa.me/923479997772" target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp size={12} />
+              <FaWhatsapp size={13} />
             </a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <FaInstagram size={12} />
+              <FaInstagram size={13} />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={12} />
+              <FaLinkedin size={13} />
             </a>
           </div>
         </div>
@@ -157,7 +157,7 @@ const Navbar = () => {
               const isActive = item.link ? normalizePath(pathname) === normalizePath(item.link) : false;
 
               return (
-                <div key={index} className="relative cursor-pointer font-inter text-[14px] group">
+                <div key={index} className="relative cursor-pointer font-inter font-normal text-[13px] group">
                   {item.name === "Services" ? (
                     <div
                       className="relative h-full flex items-center"
@@ -171,7 +171,7 @@ const Navbar = () => {
                     >
                       <Link
                         href={item.link || "#"}
-                        className={`text-black flex items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black font-inter flex items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
                         {item.name} <FaChevronDown size={10} className="mt-1" />
                       </Link>
@@ -180,7 +180,7 @@ const Navbar = () => {
                     <div className="h-full flex items-center">
                       <Link
                         href={item.link || "#"}
-                        className={`text-black flex items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black flex font-inter items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
                         {item.name} <FaChevronDown size={10} className="mt-1" />
                       </Link>
@@ -200,7 +200,7 @@ const Navbar = () => {
                     <div className="h-full flex items-center">
                       <Link
                         href={item.link || "#"}
-                        className={`text-black flex items-center pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black font-inter flex items-center pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
                         {item.name}
                       </Link>
@@ -290,7 +290,7 @@ const Navbar = () => {
                 <div className="bg-white px-2 py-2 rounded-[50%]">
                   <Image src="/hand.png" alt="" width={24} height={24} className="w-6" />
                 </div>
-                <p className="mx-1 font-inter text-[14px]">Donation Now</p>
+                <p className="mx-1 font-inter font-normal text-[13px]">Donation Now</p>
               </div>
             </Link>
           </div>
