@@ -60,24 +60,46 @@ const Footer = () => {
 
         {/* Main Blue Footer */}
         <div className="bg-[#373895] text-white pt-40 pb-8 px-6 md:px-20">
-          <div className="max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
 
             {/* About us */}
             <div className="space-y-6">
-              <p className="text-2xl !font-bold">About us</p>
-              <p className="text-[#E0E0E0] text-[15px] leading-relaxed">
+              <p
+                className="text-[27.26px] !font-semibold"
+                style={{ fontFamily: "Poppins" }}
+              >
+                About us
+              </p>              {/* <p className="text-white font-regular font text-[16.35px] leading-relaxed">
+                A registered charity focused on preventing avoidable blindness in deprived and marginalized communities.
+              </p> */}
+              <p
+                className="text-white font-normal w-[310px]"
+                style={{
+                  fontFamily: "Poppins",
+                  fontSize: "16.35px",
+                  lineHeight: "162%",
+                  letterSpacing: "0%",
+                }}
+              >
                 A registered charity focused on preventing avoidable blindness in deprived and marginalized communities.
               </p>
               <div className="mt-8">
-                <p className="text-2xl !font-bold mb-4">Scan to Donate</p>
+                <p className="text-[27.26px] !font-semibold mb-4" style={{ fontFamily: "Poppins" }}
+                >Scan to Donate</p>
 
               </div>
             </div>
 
             {/* Quick Links */}
             <div className="space-y-6 md:ml-10">
-              <p className="text-2xl !font-bold">Quick Links</p>
-              <ul className="space-y-2 text-[15px] text-[#E0E0E0]">
+              {/* <p className="text-2xl !font-bold">Quick Links</p> */}
+               <p
+                className="text-[27.26px] !font-semibold"
+                style={{ fontFamily: "Poppins" }}
+              >
+                 Quick Links
+              </p>    
+              <ul className="space-y-2 text-[16.35px] text[#E0E0E0]">
                 {["Home", "Core Values & Strategy", "Vision & Mission", "Brief profile", "Board of trustees", "Philosophy", "About Us", "Partners", "Donate Now", "Contact Us"].map((link) => (
                   <li key={link} className="hover:text-white cursor-pointer transition-colors">{link}</li>
                 ))}
@@ -85,9 +107,13 @@ const Footer = () => {
             </div>
 
             {/* Location Section with New Icons */}
-            <div className="space-y-6">
-              <p className="text-2xl !font-bold">Location</p>
-              <div className="space-y-5 text-[15px] text-[#E0E0E0]">
+            {/* <div className="space-y-6">
+ <p
+                className="text-[27.26px] !font-semibold"
+                style={{ fontFamily: "Poppins" }}
+              >
+                 Location
+              </p>                 <div className="space-y-5 text-[15px] text-[#E0E0E0]">
                 <div className="flex gap-3">
                   <HiOutlineLocationMarker className="text-white text-2xl shrink-0 mt-0.5" />
                   <p><span className="font-semibold block text-white">Head Office Lahore:</span> 720 Kamran Block, Allama Iqbal Town.</p>
@@ -112,12 +138,132 @@ const Footer = () => {
 
                 </div>
               </div>
-            </div>
+            </div> */}
+  {/* <div className="space-y-6">
+ <p
+                className="text-[27.26px] !font-semibold"
+                style={{ fontFamily: "Poppins" }}
+              >
+                 Location
+              </p>                 <div className="space-y-5 text-[15px] text-[#E0E0E0]">
+                <div className="flex gap-3">
+                  <HiOutlineLocationMarker className="text-white text-2xl shrink-0 mt-0.5" />
+                  <p><span className="font-semibold block text-white">Head Office Lahore:</span> 720 Kamran Block, Allama Iqbal Town.</p>
+                </div>
+                <div className="flex gap-3">
+                  <HiOutlineLocationMarker className="text-white text-2xl shrink-0 mt-0.5" />
+                  <p><span className="font-semibold block text-white">Karachi:</span> C-15, Block 12, Gulistan e Johar,</p>
+                </div>
+              </div>
 
+              <div className="mt-8">
+                <p className="text-2xl !font-bold mb-4">Social Links</p>
+                <div className="flex gap-3">
+                  {[FaFacebookF, FaWhatsapp, FaInstagram, FaXTwitter].map((Icon, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white text-red-600 p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm"
+                    >
+                      <Icon size={22} />
+                    </div>
+                  ))}
+
+                </div>
+              </div>
+            </div> */}
+            <div className="space-y-4">
+  <p
+    className="text-[27.26px] !font-semibold"
+    style={{ fontFamily: "Poppins" }}
+  >
+    Location
+  </p>
+
+  <div className="space-y-5 text-[15px] text-[#E0E0E0]">
+    <div className="flex gap-3 items-start">
+      <img
+        src="/loc.png"
+        alt="Location"
+        className="w-5 h-5 shrink-0 mt-1"
+      />
+      <p>
+        <span className="!font-medium text-[17px] block text-white"   style={{ fontFamily: "Poppins" }}>
+          Head Office Lahore:
+        </span>
+        {/* <span>
+        720 Kamran Block, Allama Iqbal Town.
+        </span> */}
+        <span className="font-poppins mt-2 font-medium text-[17px] leading-[1.92]">
+  720 Kamran Block, Allama Iqbal Town.
+</span>
+      </p>
+    </div>
+
+    <div className="flex gap-3 items-start">
+       <img
+        src="/loc.png"
+        alt="Location"
+        className="w-5 h-5 shrink-0 mt-1"
+      />
+      <p>
+        <span className="!font-medium text-[17px] block text-white"   style={{ fontFamily: "Poppins" }}>
+          Karachi:
+        </span>
+         <span className="font-poppins mt-2 font-medium text-[17px] leading-[1.92]">
+C-15, Block 12, Gulistan e Johar
+
+</span>
+      </p>
+    </div>
+  </div>
+
+  <div className="mt-1">
+    {/* <p className="text-2xl font-bold mb-4">Social Links</p> */}
+  <p
+    className="text-[27.26px] !font-semibold"
+    style={{ fontFamily: "Poppins" }}
+  >
+    Social Links
+  </p>
+    {/* <div className="flex gap-3">
+      {[FaFacebookF, FaWhatsapp, FaInstagram, FaXTwitter].map((Icon, idx) => (
+        <div
+          key={idx}
+          className="bg-white text-red-600 p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm"
+        >
+          <Icon size={22} />
+        </div>
+      ))}
+    </div> */}
+    <div className="flex gap-3 mt-3">
+    {[
+      { src: "/fac.png", alt: "Facebook" },
+      { src: "/whats.png", alt: "WhatsApp" },
+      { src: "/inst.png", alt: "Instagram" },
+      { src: "/twitt.png", alt: "Twitter" },
+    ].map((item, idx) => (
+      <div
+        key={idx}
+        className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm"
+      >
+        <img
+          src={item.src}
+          alt={item.alt}
+         className="w-[24.2px] h-[24.2px]"
+        />
+      </div>
+    ))}
+  </div>
+  </div>
+</div>
             {/* Contact Us */}
             <div className="space-y-8">
-              <p className="text-2xl !font-bold">Contact Us</p>
-              <div className="space-y-6 text-[15px] text-[#E0E0E0]">
+ <p
+                className="text-[27.26px] !font-semibold"
+                style={{ fontFamily: "Poppins" }}
+              >
+                Contact us
+              </p>                 <div className="space-y-6 text-[15px] text-[#E0E0E0]">
                 <div>
                   <p className="font-bold text-white mb-2 underline underline-offset-4 decoration-white/20 uppercase tracking-wide">Karachi UAN</p>
                   <p className="mb-1">• +92-21-111-762-544</p>
