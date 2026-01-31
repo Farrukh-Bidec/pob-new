@@ -43,14 +43,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         < Navbar />
+        < Navbar />
         {children}
         <Footer />
-    <ToastContainer />
+        <ToastContainer />
       </body>
     </html>
   );

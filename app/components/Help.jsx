@@ -49,23 +49,21 @@ const Help = () => {
     return (
         <>
             {/* ==================== Hepatitis Statistics Cards ==================== */}
-            <div className="relative w-full bg-white pt-16">
+            {/* <div className="relative w-full bg-white pt-16">
                 <div className="text-black text-center relative z-10 px-4 sm:px-6 lg:px-8">
-        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+                    <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
                         Current
                     </h4>
                     <h2 className="text-xl sm:text-5xl lg:text-5xl pb-10 pt-3 font-bold">
                         Situation on Hepatitis in Pakistan
                     </h2>
 
-                    {/* Grid Cards Container */}
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-5xl mac:max-w-[1400px] mx-auto px-2 sm:px-0">
                         {cards.map((card, index) => (
                             <div
                                 key={index}
                                 className="w-full bg-white rounded-xl overflow-hidden hover:shadow-xl duration-300 flex flex-col h-64 sm:h-80 mac:h-[420px] relative"
                             >
-                                {/* Image aligned top-left */}
                                 <div className="flex-none w-40  w-full flex justify-start items-start">
                                     <img
                                         src={card.image}
@@ -74,7 +72,6 @@ const Help = () => {
                                     />
                                 </div>
 
-                                {/* Text Content */}
                                 <div className="p-3 ml-6 md:ml-0 sm:p-6 mac:p-10 flex flex-col flex-grow text-left">
                                     <h3 className="text-2xl sm:text-5xl mac:text-8xl text-[#CBCBE3] mb-2 sm:mb-4 font-bold">
                                         {card.ratio}
@@ -88,15 +85,87 @@ const Help = () => {
                     </div>
                 </div>
 
-                {/* Half Gray Background Bar */}
                 <div className="absolute bottom-0 left-0 w-full h-[180px] mac:h-[250px] bg-gray-50 z-0 "></div>
+            </div> */}
+            <section className="relative w-full bg-white pt-16">
+      {/* Content */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <h4 className="text-[12px] sm:text-[13px] tracking-widest text-[#C30001] uppercase font-semibold">
+          CURRENT
+        </h4>
+
+        <h2 className="mt-3 text-[26px] sm:text-[40px] lg:text-[44px] font-bold">
+          Situation on Hepatitis in Pakistan
+        </h2>
+
+        {/* Cards */}
+        <div
+          className="
+            mt-10
+            mx-auto
+            grid grid-cols-2 lg:grid-cols-4
+            gap-4 sm:gap-6 lg:gap-7
+            max-w-6xl
+          "
+        >
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="
+                bg-white rounded-2xl
+                transition
+                overflow-hidden
+                h-[400px] sm:h-[220px] W-[265.96px] lg:h-[308.64px]
+                flex flex-col
+              "
+            >
+              {/* TOP ICON AREA (BIGGER ICONS) */}
+              <div className="relative h-[72px] sm:h-[82px] lg:h-[92px]">
+                {/* red corner like screenshot */}
+                {/* <div className="absolute left-0 top-0 h-full w-[90px] sm:w-[100px] lg:w-[110px] bg-[#C30001] rounded-br-[48px]" /> */}
+
+                {/* icon (bigger) */}
+                <img
+                  src={card.image}
+                  alt=""
+                  className="
+                    absolute -left-10 -top-10
+                    w-[167.74px] h-[167.74px]
+                    sm-[52px] s[52px]
+                    [58px] l-[58px]
+                    objectcontain
+                  "
+                />
+              </div>
+
+              {/* CONTENT */}
+              <div className="px-5  mt-10 sm:px-6 pt-3 pb-5 text-left flex-1">
+                {/* ratio (fixed height so cards stay equal) */}
+                <div className="min-h-[44px] sm:min-h-[52px]">
+                  <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-bold text-[#CBCCE4] leading-none">
+                    {card.ratio}
+                  </h3>
+                </div>
+
+                {/* text (fixed height + clamp) */}
+                <p className="mt-2 text-[18px] !font-normal font-family: 'inter', sm:text-[18px] lg:text-[18px] text-[#777777] leading-snug line-clamp-3 minh[42px]">
+                  {card.text}
+                </p>
+              </div>
             </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Grey bottom bar like screenshot */}
+      <div className="absolute bottom-0 left-0 w-full h-[120px] sm:h-[140px] lg:h-[160px] bg-gray-50 z-0" />
+    </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
             <div className="text-center bg-gray-50 py-20 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
-        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+                <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
                     Every Eye
                 </h4>
 

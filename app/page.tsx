@@ -75,11 +75,11 @@ const Home = async () => {
   const home = await getHomeData();
 
   return (
-    <div className='bg-white  '>
+    <div className='bg-white  pb10 '>
       {/* <Navbar /> */}
       <Hero />
-      <Aboutus />
-      <Stats />
+   <Aboutus />
+     <Stats />
       <Surgerypricing />
       <Help />
       <Commitment />
@@ -88,7 +88,7 @@ const Home = async () => {
       <How   />
       <Random />
       <Testimonials />
-      <News />
+      <News /> 
       {/* <Publications /> */}
       {/* <Footer />
     <ToastContainer /> */}

@@ -103,7 +103,7 @@ const Commitment = () => {
         {/* Header */}
         <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
-        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+            <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
               Commitment
             </h4>
             <h2 className="text-3xl md:text-[48px] mac:text-7xl mb-4 text-black sm:text-left text-center leading-none">
