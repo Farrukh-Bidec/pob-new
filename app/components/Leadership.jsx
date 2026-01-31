@@ -105,7 +105,7 @@ const LeaderShip = () => {
   }, [activeCategory]);
 
   return (
-    <div className="relative mt-14 md:mt-0 flex flex-col items-center justify-center text-center pt10 mac:max-w-[1728px] mac:mx-auto">
+    <div className="relative max-w-6xl mx-auto mt-14 md:mt-0 flex flex-col items-center justify-center text-center pt10 mac:max-w-[1728px] mac:mx-auto">
       {/* Header */}
       <div className="w-[90%] font-inter items-center text-center mb-4 flex flex-col gap-2">
         <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
@@ -118,7 +118,7 @@ const LeaderShip = () => {
       </div>
 
       {/* Category Buttons */}
-      <div className="w-full flex justify-center mb-6 px2">
+      <div className="w-full flex justify-center  mb-6 px2">
         <div className="flex overflow-x-auto whitespace-nowrap gap-2 md:gap-2 mac:gap-8 snap-x snap-mandatory py-1 px-1 md:px4 mac:px10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
           {categories.map((category) => (
             <button

@@ -99,11 +99,11 @@ const Commitment = () => {
 
   return (
     <>
-      <div className="md:ml-10 pt-10  overflow-hidden mac:max-w-[1600px] mac:px-20 mac:mx-auto">
+      <div className="md:ml10 pt-10 max-w-6xl mx-auto  overflow-hidden mac:max-w-[1600px] mac:px-20 mac:mx-auto">
         {/* Header */}
         <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
-            <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
               Commitment
             </h4>
             <h2 className="text-3xl md:text-[48px] mac:text-7xl mb-4 text-black sm:text-left text-center leading-none">
@@ -112,22 +112,53 @@ const Commitment = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <div className="md:flex hidden gap-3 mb-14">
-            <button
-              onClick={prevSlide}
-              disabled={currentIndex === 0}
-              className="w-10 h-10 rounded-full flex items-center justify-center border border-black bg-white text-black transition-all disabled:opacity-30 hover:bg-gray-50 shadow-sm"
-            >
-              <FaChevronLeft size={14} />
-            </button>
-            <button
-              onClick={nextSlide}
-              disabled={currentIndex >= totalDots - 1}
-              className="w-10 h-10 rounded-full flex items-center justify-center border border-black bg-white text-black transition-all disabled:opacity-30 hover:bg-gray-50 shadow-sm"
-            >
-              <FaChevronRight size={14} />
-            </button>
-          </div>
+            {/* <div className="md:flex hidden gap-3 mb-14">
+              <button
+                onClick={prevSlide}
+                disabled={currentIndex === 0}
+                className="w-10 h-10 rounded-full flex items-center justify-center border border-black bg-white text-black transition-all disabled:opacity-30 hover:bg-gray-50 shadow-sm"
+              >
+                <FaChevronLeft size={14} />
+              </button>
+              <button
+                onClick={nextSlide}
+                disabled={currentIndex >= totalDots - 1}
+                className="w-10 h-10 rounded-full bg-blue flex items-center justify-center border border-black bg-white text-black transition-all disabled:opacity-30 hover:bg-gray-50 shadow-sm"
+              >
+                <FaChevronRight size={14} />
+              </button>
+            </div> */}
+            <div className="md:flex hidden gap-3 mb-14">
+  {/* Prev Button */}
+  <button
+    onClick={prevSlide}
+    disabled={currentIndex === 0}
+    className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all shadow-sm
+      ${
+        currentIndex === 0
+          ? "bg-white text-black opacity-30 cursor-not-allowed"
+          : "bg-blue text-white hover:bg-blue-600"
+      }
+    `}
+  >
+    <FaChevronLeft size={14} />
+  </button>
+
+  {/* Next Button */}
+  <button
+    onClick={nextSlide}
+    disabled={currentIndex >= totalDots - 1}
+    className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all shadow-sm
+      ${
+        currentIndex >= totalDots - 1
+          ? "bg-white text-black opacity-30 cursor-not-allowed"
+          : "bg-blue text-white hover:bg-blue-600"
+      }
+    `}
+  >
+    <FaChevronRight size={14} />
+  </button>
+</div>
         </div>
 
         {/* Slider Container with Touch Events */}
@@ -153,7 +184,7 @@ const Commitment = () => {
                 <img
                   src={card.image}
                   alt={card.text}
-                  className="h-60 md:h-[260px] mac:h-[500px] w-full object-cover rounded-[8px]"
+                  className="h-60 md:h-[303.51px] md:w-[442px] mac:h-[500px] w-full object-cover rounded-[8px]"
                 />
                 <h3 className="text-xl h-16 md:text-2xl mac:text-4xl mt-4 text-black py-2 md:py-2 font-medium">
                   {card.text}
@@ -188,14 +219,14 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-      <div className="relative md:mt-20 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-14 md:py-24 px-10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
+      <div className="relative max-w-6xl mx-auto md:mt-20 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-14 md:py-24 px10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
         <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
-        <div className="relative md:-mt-16 mac:-ml-10 md:pr-2 mac:pr-24 md:pt5 flex flex-col items-center md:items-end text-left md:text-left">
-          <h3 className="text-4xl mac:text-right md:ml-10 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white md:mt-17 sm:mt-0 font-bold">
+        <div className="relative px-10 md:-mt-16 mam10 md:pr-2 mac:pr24 md:pt5 flex flex-col items-center md:items-end text-left md:text-left">
+          <h3 className="text-4xl px-1 mac:text-right md:ml6 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white md:mt-17 sm:mt-0 font-bold">
             Rs. 2 Billion Disbursed
           </h3>
 
-          <p className="text-white md:pr-48 mac:-mr-4 text-lg mac:text-3xl mac:text-right">
+          <p className="text-white px-6 md:pr-48 mac:-mr-4 text-lg mac:text-3xl mac:text-right">
             POB Helped Create PKR 10B Worth of Impact
           </p>
         </div>
