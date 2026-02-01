@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Floating Donate Card - Half on white, half on blue */}
         <div className="md:max-w-6xl w-full mx-auto p6 relative z-20 -mb-24">
           <div className=
-          "bg-white rounded-b-[20px] rounded-t-none shadow2xl p-8 md:p-14 flex flex-col md:flex-row gap-12 items-start">
+          "bg-white rounded-b-[20px] h rounded-t-none shadow2xl p-8 md:p-14 flex flex-col md:flex-row gap-12 items-start">
 
             {/* Left Content */}
             <div className="hidden md:block md:w-1/2">
@@ -75,7 +75,7 @@ const Footer = () => {
 
 
         <div className="bg-[#373895] text-white pt-40 pb-8 px-6 md:px20">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-3">
 
             {/* About us */}
             <div className="space-y-6">
@@ -287,19 +287,19 @@ const Footer = () => {
                 </div> */}
                 <div className="flex gap-3 mt-3">
   <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
-    <img src="/fac.png" alt="Facebook" className="w-[15.49px] h-[27.62px]" />
+    <img src="/fac.png" alt="Facebook" className="w-[15.49px] object-cover h-[27.62px]" />
   </div>
 
   <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
-    <img src="/chats.png" alt="WhatsApp" className="w-[25.76px] h-[25.76px]" />
+    <img src="/chats.png" alt="WhatsApp" className="w-[25.76px] object-contain h-[25.76px]" />
   </div>
 
   <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
-    <img src="/intaa.png" alt="Instagram" className="w-[24px] h-[24px]" />
+    <img src="/intaa.png" alt="Instagram" className="w-[24px] object-contain h-[24px]" />
   </div>
 
   <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
-    <img src="/twitt.png" alt="Twitter" className="w-[24.2px] h-[24.2px]" />
+    <img src="/twitt.png" alt="Twitter" className="w-[24.2px] object-contain h-[24.2px]" />
   </div>
 </div>
               </div>

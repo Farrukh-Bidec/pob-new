@@ -24,7 +24,8 @@ const Help = () => {
             image: "Secondcard4.png",
             text: "More than 100,000 new cases annually in Pakistan",
             ratio: "100,000"
-        }
+        },
+        
     ];
 
     const impactBlocks = [
@@ -49,7 +50,7 @@ const Help = () => {
 
     ];
     const totalCards = cards.length;
-
+const showArrows = totalCards > 4;
     return (
         <>
             {/* ==================== Hepatitis Statistics Cards ==================== */}
@@ -106,11 +107,18 @@ const Help = () => {
                     <div className="mt-10 md:flex hidden  items-center justify-center gap-6">
 
                         {/* LEFT ARROW */}
-                        <ArrowButton
+                        {/* <ArrowButton
                             direction="left"
                             disabled={currentIndex === 0}
                             onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
-                        />
+                        /> */}
+                        {showArrows && (
+  <ArrowButton
+    direction="left"
+    disabled={currentIndex === 0}
+    onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
+  />
+)}
 
                         {/* CARDS */}
                         <div className="overflow-hidden maxw6xl">
@@ -163,13 +171,22 @@ const Help = () => {
                         </div>
 
                         {/* RIGHT ARROW */}
-                        <ArrowButton
+                        {/* <ArrowButton
                             direction="right"
                             disabled={currentIndex === totalCards - 1}
                             onClick={() =>
                                 setCurrentIndex((prev) => Math.min(prev + 1, totalCards - 1))
                             }
-                        />
+                        /> */}
+                        {showArrows && (
+  <ArrowButton
+    direction="right"
+    disabled={currentIndex === totalCards - 1}
+    onClick={() =>
+      setCurrentIndex((prev) => Math.min(prev + 1, totalCards - 1))
+    }
+  />
+)}
 
                     </div>
 
