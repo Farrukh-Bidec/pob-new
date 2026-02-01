@@ -329,84 +329,96 @@ const Footer = () => {
    {/* ================= MOBILE FOOTER ================= */}
 <footer className="block md:hidden w-full bg-[#373895] text-white px-6 pt-12 pb-8">
 
-  {/* About */}
-  <div className="mb-10">
-    <p className="text-[22px] font-semibold font-poppins mb-4">About Us</p>
-    <p className="text-[15px] leading-[1.7] text-[#E0E0E0]">
-      A registered charity focused on preventing avoidable blindness in deprived
-      and marginalized communities.
+  {/* Mobile Donate Form */}
+  <div className="bg-white rounded-[20px] p-6 mx-2 mb-8 shadow-xl">
+    <h3 className="text-[22px] font-bold text-[#030A2E] mb-2">Donate Online</h3>
+    <p className="text-[14px] text-gray-600 mb-6">
+      Help Us Help Them with Your Zakat / Donations / Sadqah
+    </p>
+    <div className="space-y-4">
+      <input type="text" placeholder="First Name*" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
+      <input type="text" placeholder="Last Name*" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
+      <input type="email" placeholder="Email" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
+      <div className="flex gap-3">
+        <select className="w-1/2 h-[50px] border border-black rounded-[14px] px-4">
+          <option>PKR</option>
+        </select>
+        <select className="w-1/2 h-[50px] border border-black rounded-[14px] px-4">
+          <option>Zakat</option>
+        </select>
+      </div>
+      <input type="text" placeholder="Amount (Minimum 50)" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
+      <button className="w-full h-[45px] rounded-full bg-[#373895] text-white mt-4">
+        Donate Now
+      </button>
+    </div>
+  </div>
+
+  {/* About Us */}
+  <div className="mb-6">
+    <p className="text-[20px] font-semibold font-poppins mb-2">About Us</p>
+    <p className="text-[14px] text-[#E0E0E0] leading-[1.7]">
+      A registered charity focused on preventing avoidable blindness in deprived and marginalized communities.
     </p>
   </div>
 
-  {/* Donate QR */}
-  <div className="mb-10 text-center">
-    <p className="text-[22px] font-semibold font-poppins mb-4">Scan to Donate</p>
+  {/* QR Code */}
+  <div className="mb-6 text-center">
+    <p className="text-[20px] font-semibold font-poppins mb-2">Scan to Donate</p>
     <div className="inline-block bg-white p-3 rounded-xl">
-      <img
-        src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=DonateNow"
-        alt="Donate QR"
-        className="w-[160px] h-[160px]"
-      />
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=DonateNow" alt="Donate QR" className="w-[160px] h-[160px]" />
     </div>
   </div>
 
   {/* Location */}
-  <div className="mb-10">
-    <p className="text-[22px] font-semibold font-poppins mb-4">Location</p>
-
-    <div className="space-y-5 text-[15px] text-[#E0E0E0]">
-      <div className="flex gap-3">
+  <div className="mb-6">
+    <p className="text-[20px] font-semibold font-poppins mb-2">Location</p>
+    <div className="space-y-3 text-[14px]">
+      <div className="flex gap-2 items-start">
         <img src="/loc.png" className="w-5 h-5 mt-1" />
-        <p>
-          <span className="block text-white font-medium">Head Office Lahore</span>
+        <div>
+          <span className="block text-white font-medium">Head Office Lahore:</span>
           720 Kamran Block, Allama Iqbal Town
-        </p>
+        </div>
       </div>
-
-      <div className="flex gap-3">
+      <div className="flex gap-2 items-start">
         <img src="/loc.png" className="w-5 h-5 mt-1" />
-        <p>
-          <span className="block text-white font-medium">Karachi</span>
+        <div>
+          <span className="block text-white font-medium">Karachi:</span>
           C-15, Block 12, Gulistan-e-Johar
-        </p>
+        </div>
       </div>
     </div>
   </div>
 
   {/* Contact */}
-  <div className="mb-10">
-    <p className="text-[22px] font-semibold font-poppins mb-4">Contact Us</p>
-
-    <div className="text-[15px] text-[#E0E0E0] space-y-4">
+  <div className="mb-6">
+    <p className="text-[20px] font-semibold font-poppins mb-2">Contact Us</p>
+    <div className="space-y-3 text-[14px]">
       <div>
         <p className="text-white font-medium mb-1">Karachi UAN</p>
-        <p>+92-21-111-762-544</p>
-        <p>+92-21-34156597</p>
+        <p>• +92-21-111-762-544</p>
+        <p>• +92-21-34156597</p>
       </div>
-
       <div>
         <p className="text-white font-medium mb-1">Lahore</p>
-        <p>+92-42-354-14720</p>
-        <p>+92-347-999-77720</p>
+        <p>• +92 042 354 14 720</p>
+        <p>• +92 347 999 777 20</p>
       </div>
-
       <div>
         <p className="text-white font-medium mb-1">Email</p>
-        <p>info@pobtrust.org</p>
-        <p>gs@pobtrust.org</p>
+        <p>• info@pobtrust.org</p>
+        <p>• gs@pobtrust.org</p>
       </div>
     </div>
   </div>
 
-  {/* Social Icons */}
-  <div className="mb-8">
-    <p className="text-[22px] font-semibold font-poppins mb-4">Social Links</p>
-    <div className="flex gap-4">
-      {["/fac.png", "/whats.png", "/inst.png", "/twitt.png"].map((icon, i) => (
-        <div
-          key={i}
-          className="bg-white w-[42px] h-[42px] flex items-center justify-center rounded-lg"
-        >
+  {/* Social Links */}
+  <div className="mb-6">
+    <p className="text-[20px] font-semibold font-poppins mb-2">Social Links</p>
+    <div className="flex gap-3">
+      {["/fac.png","/whats.png","/inst.png","/twitt.png"].map((icon,i)=>(
+        <div key={i} className="bg-white w-[38px] h-[38px] flex items-center justify-center rounded-lg cursor-pointer shadow-sm">
           <img src={icon} className="w-[22px] h-[22px]" />
         </div>
       ))}
@@ -414,13 +426,14 @@ const Footer = () => {
   </div>
 
   {/* Bottom */}
-  <div className="border-t border-white/20 pt-6 text-center text-[13px] text-[#CCCCCC]">
+  <div className="border-t border-white/20 pt-4 text-center text-[12px] text-[#CCCCCC]">
     <p>© Copyright 2024 @ POB TRUST</p>
-    <div className="flex justify-center gap-6 mt-3">
-      <span>Terms</span>
-      <span>Privacy</span>
+    <div className="flex justify-center gap-4 mt-2">
+      <span>Terms & Conditions</span>
+      <span>Privacy Policy</span>
     </div>
   </div>
+
 </footer>
     </>
   );
