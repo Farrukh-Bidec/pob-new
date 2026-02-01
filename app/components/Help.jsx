@@ -103,7 +103,7 @@ const totalCards = cards.length;
         </h2>
 
         {/* Cards */}
-        <div className="mt-10 flex  items-center justify-center gap-6">
+        <div className="mt-10 md:flex hidden  items-center justify-center gap-6">
 
   {/* LEFT ARROW */}
   <ArrowButton
@@ -172,6 +172,49 @@ const totalCards = cards.length;
   />
 
 </div>
+
+
+{/* ================= MOBILE ONLY ================= */}
+<div className="md:hidden mt-6 px-4">
+  <div className="flex gap-4 overflow-x-auto pb-4">
+    {cards.map((card, index) => (
+      <div
+        key={index}
+        className="
+          relative
+          min-w-[260px]
+          bg-white rounded-2xl
+          overflow-hidden
+          flex flex-col
+        "
+      >
+        {/* TOP ICON */}
+        <div className="relative h-[72px]">
+          <img
+            src={card.image}
+            alt=""
+            className="absolute -left-8 -top-8 w-[120px] h-[120px] object-contain"
+          />
+        </div>
+
+        {/* CONTENT */}
+        <div className="px-4 pt-6 pb-5 text-left flex-1">
+          {/* RATIO */}
+          <h3 className="text-[42px] font-amaranth text-[#CBCCE4] leading-none">
+            {card.ratio}
+          </h3>
+
+          {/* TEXT */}
+          <p className="mt-4 text-[14px] text-[#777777] leading-snug line-clamp-3">
+            {card.text}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+{/* ================= MOBILE ONLY END ================= */}
+
       </div>
 
       {/* Grey bottom bar like screenshot */}

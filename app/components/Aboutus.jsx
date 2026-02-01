@@ -111,7 +111,7 @@ const Aboutus = () => {
       >
         {/* IMAGE */}
         <div className="w-full md:w-1/2 relative">
-          <div className="relative h-full  md:w-[554px] md:h-[618.87px] min-h-[320px] sm:min-h-[420px] md:min[520px] rounded-2xl overflow-hidden">
+          <div className="relative h-full  md:w-[554px] md:h-[618.87px] min[320px] sm:min[420px] md:min[520px] rounded-2xl overflow-hidden">
             <img
               src="/aboutus.webp"
               alt="About Us"

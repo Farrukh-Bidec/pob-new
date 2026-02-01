@@ -317,7 +317,7 @@ const Footer = () => {
 
           {/* Bottom Bar */}
           <div className="max-w-6xl mx-auto mt-8 flex flex-col md:flex-row justify-between items-center text-[13px] text-[#CCCCCC]">
-            <p>© Copyright 2024 @ POB TRUST</p>
+            <p>© Copyright 2026 @ POB TRUST</p>
             <div className="mt-4 md:mt-0 flex gap-6">
               <span className="hover:text-white cursor-pointer">Terms & Conditions</span>
               <span className="hover:text-white cursor-pointer">Privacy Policy</span>
@@ -427,7 +427,7 @@ const Footer = () => {
 
   {/* Bottom */}
   <div className="border-t border-white/20 pt-4 text-center text-[12px] text-[#CCCCCC]">
-    <p>© Copyright 2024 @ POB TRUST</p>
+    <p>© Copyright 2026 @ POB TRUST</p>
     <div className="flex justify-center gap-4 mt-2">
       <span>Terms & Conditions</span>
       <span>Privacy Policy</span>
