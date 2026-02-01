@@ -137,7 +137,7 @@ const Commitment = () => {
       ${
         currentIndex === 0
           ? "bg-white text-black opacity30 cursor-not-allowed"
-          : "bg-blue textwhite hover:bg-blue-600"
+          : "bg-[#373895] text-white border-[#373895] hover:bg-[#373895]/80"
       }
     `}
   >
@@ -152,7 +152,7 @@ const Commitment = () => {
       ${
         currentIndex >= totalDots - 1
           ? "bg-white text-black opacity30 cursor-not-allowed"
-          : "bg-blue textwhite hover:bg-blue-600"
+          : "bg-[#373895] text-white border-[#373895] hover:bg-[#373895]/80"
       }
     `}
   >
@@ -163,7 +163,7 @@ const Commitment = () => {
 
         {/* Slider Container with Touch Events */}
         <div
-          className="overflow-hidden px-6 md:px-10"
+          className="overflow-hidden px-6 md:px-10 mt-10"
           ref={sliderRef}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
