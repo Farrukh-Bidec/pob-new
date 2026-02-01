@@ -130,7 +130,7 @@ const Aboutus = () => {
           </p>
 
           <h2
-      className={`m-0 !font-amaranth text-[32px] md:text-[50px] text-black font-normal leading-[1.1]`}
+      className={`m-0 !font-amaranth w-[600px] mb-6 text-[32px] md:text-[50px] text-black font-normal leading-[1.1]`}
     >
       Absolutely Free Eye Care
     </h2>

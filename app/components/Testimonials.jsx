@@ -5,10 +5,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Swiper styles
 import { useRouter } from "next/navigation";
 import { SectionHeading, SectionLabel } from "./News";
+import Scrol from "./Scrol";
 
  const Testimonials = () => {
   const router = useRouter();
   const [swiperRef, setSwiperRef] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const cards = [
     {
@@ -131,6 +133,12 @@ import { SectionHeading, SectionLabel } from "./News";
             </div>
           ))}
         </div>
+        {/* <Scrol/> */}
+          {/* <Scrol
+              total={cards.length}
+              current={currentSlide}
+              setCurrent={setCurrentSlide}
+            /> */}
       </div>
     </section>
     </div>
