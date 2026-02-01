@@ -40,8 +40,16 @@ import Scrol from "./Scrol";
     // <section className="md:py-12 max-w-6xl mx-auto px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
    <div className="mt-20">
    {/* <section className="w-full bg-[#F4F4F4]"> */}
-  <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#F7F8FC] via-[#F2F4FA] to-[#EEF1F8]">
-  
+   <section
+  className="
+    w-full
+    bg-gradient-to-b
+    from-[#F7F8FC]
+    via-[#F2F4FA]
+    to-[#FFFFFF]
+  "
+>
+
       <div className="max-w-6xl mx-auto px4 md:px-8 lg:px20 py-10 md:py-0">
 
         <div className="text-center pt10 md:pt-16 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
@@ -68,7 +76,7 @@ import Scrol from "./Scrol";
           >
             {cards.map((card) => (
               <SwiperSlide key={card.id}>
-                <div className="bg-white rounded-[20px] overflow-hidden flex flex-col border border-gray-50 shadow-lg max-w-[400px] mx-auto">
+                <div className="bg-white shadow-2xl rounded-[20px] overflow-hidden flex flex-col border border-gray-50 shadow-lg max-w-[400px] mx-auto">
                   <div className="h-60 overflow-hidden">
                     <iframe
                       className="w-full h-full object-cover"
