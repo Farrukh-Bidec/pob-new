@@ -347,29 +347,90 @@ const Footer = () => {
 <footer className="block md:hidden w-full bg-[#373895] text-white px-6 pt-12 pb-8">
 
   {/* Mobile Donate Form */}
-  <div className="bg-white rounded-[20px] p-6 mx-2 mb-8 shadow-xl">
-    <h3 className="text-[22px] font-bold text-[#030A2E] mb-2">Donate Online</h3>
-    <p className="text-[14px] text-gray-600 mb-6">
-      Help Us Help Them with Your Zakat / Donations / Sadqah
-    </p>
-    <div className="space-y-4">
-      <input type="text" placeholder="First Name*" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
-      <input type="text" placeholder="Last Name*" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
-      <input type="email" placeholder="Email" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
-      <div className="flex gap-3">
-        <select className="w-1/2 h-[50px] border border-black rounded-[14px] px-4">
+ {/* Mobile Donate Form */}
+<div className="bg-white rounded-[20px] p-6 mx-2 mb-8 shadow-xl">
+  <h3 className="text-[22px] font-bold text-[#030A2E] mb-2">
+    Donate Online
+  </h3>
+  <p className="text-[14px] text-gray-600 mb-6">
+    Help Us Help Them with Your Zakat / Donations / Sadqah
+  </p>
+
+  <div className="space-y-4">
+
+    {/* First Name */}
+    <div>
+      <label className="block text-[14px] font-medium text-[#030A2E] mb-1">
+        First Name *
+      </label>
+      <input
+        type="text"
+        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+      />
+    </div>
+
+    {/* Last Name */}
+    <div>
+      <label className="block text-[14px] font-medium text-[#030A2E] mb-1">
+        Last Name *
+      </label>
+      <input
+        type="text"
+        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+      />
+    </div>
+
+    {/* Email */}
+    <div>
+      <label className="block text-[14px] font-medium text-[#030A2E] mb-1">
+        Email
+      </label>
+      <input
+        type="email"
+        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+      />
+    </div>
+
+    {/* Currency & Donation Type */}
+    <div className="flex gap-3">
+      <div className="w-1/2">
+        <label className="block text-[14px] font-medium text-[#030A2E] mb-1">
+          Currency
+        </label>
+        <select className="w-full h-[50px] border border-black rounded-[14px] px-4 text-gray-500 focus:outline-none">
           <option>PKR</option>
         </select>
-        <select className="w-1/2 h-[50px] border border-black rounded-[14px] px-4">
+      </div>
+
+      <div className="w-1/2">
+        <label className="block text-[14px] font-medium text-[#030A2E] mb-1">
+          Donation Type
+        </label>
+        <select className="w-full h-[50px] border border-black rounded-[14px] px-4 text-gray-500 focus:outline-none">
           <option>Zakat</option>
+          <option>Sadqah</option>
+          <option>Donation</option>
         </select>
       </div>
-      <input type="text" placeholder="Amount (Minimum 50)" className="w-full h-[50px] border border-black rounded-[14px] px-4" />
-      <button className="w-full h-[45px] rounded-full bg-[#373895] text-white mt-4">
-        Donate Now
-      </button>
     </div>
+
+    {/* Amount */}
+    <div>
+      <label className="block text-[14px] font-medium text-[#030A2E] mb-1">
+        Amount (Minimum 50)
+      </label>
+      <input
+        type="number"
+        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+      />
+    </div>
+
+    {/* Button */}
+    <button className="w-full h-[45px] rounded-full bg-[#373895] text-white mt-4">
+      Donate Now
+    </button>
   </div>
+</div>
 
   {/* About Us */}
   <div className="mb-6">
