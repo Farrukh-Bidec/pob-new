@@ -1,5 +1,5 @@
 "use client"
-import { Link } from 'lucide-react'
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 
@@ -555,7 +555,7 @@ const Hero = () => {
   </p>
 
   <div className="mt-5 mb-20">
-    <button
+   <Link href="/donation/"
       className="
         inline-flex items-center gap-3
         pl-5 pr-2 py-2
@@ -577,7 +577,7 @@ const Hero = () => {
       >
         <MdKeyboardDoubleArrowRight />
       </span>
-    </button>
+    </Link>
   </div>
 </div>
 

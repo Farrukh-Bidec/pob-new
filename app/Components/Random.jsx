@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 const Random = () => {
     const scrollToDonate = () => {
         const footer = document.getElementById('footer_elem')
@@ -28,9 +30,13 @@ const Random = () => {
                     </span>
                 </p>
 
-                <button className="py-2 px-6 mac:py-4 mac:px-10 bg-[#373895] mt-5 mac:mt-10 rounded-full text-white mac:text-xl hover:bg-[#2b2e70] transition-colors" onClick={scrollToDonate}>
-                    Donate Now
-                </button>
+                <Link
+  href="/donation/"
+  onClick={scrollToDonate}
+  className="inline-flex items-center justify-center py-2 px-6 mac:py-4 mac:px-10 bg-[#373895] mt-5 mac:mt-10 rounded-full text-white mac:text-xl hover:bg-[#2b2e70] transition-colors"
+>
+  Donate Now
+</Link>
             </div>
 
             {/* Image Section */}

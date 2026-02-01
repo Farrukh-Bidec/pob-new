@@ -280,6 +280,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Link from "next/link";
 
 const donationData = [
   {
@@ -398,12 +399,12 @@ const SurgeryPricing = () => {
                     </p>
 
                     {/* button: pill centered */}
-                    <button
-                      onClick={handleDonateClick}
-                      className="mt-4 w-[128.07px] h-[34.85px] rounded-full bg-white text-black py-[6px] text-[12px] font-inter hover:bg-white/90"
-                    >
-                      Donate
-                    </button>
+                    <Link
+  href="/donation/"
+  className="mt-4 w-[128.07px] h-[34.85px] rounded-full bg-white text-black py-[6px] text-[12px] font-inter hover:bg-white/90 flex items-center justify-center"
+>
+  Donate
+</Link>
                   </div>
                 </div>
               </SwiperSlide>
