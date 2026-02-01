@@ -5,19 +5,20 @@ import { HiOutlineLocationMarker } from "react-icons/hi"; // Location Icon
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white pt20">
+    <>
+    <footer className="md:block hidden w-full bg-white pt20">
       <div className="relative">
         {/* Floating Donate Card - Half on white, half on blue */}
-        <div className="max-w-6xl mx-auto p6 relative z-20 -mb-24">
+        <div className="md:max-w-6xl w-full mx-auto p6 relative z-20 -mb-24">
           <div className=
           "bg-white rounded-b-[20px] rounded-t-none shadow2xl p-8 md:p-14 flex flex-col md:flex-row gap-12 items-start">
 
             {/* Left Content */}
-            <div className="md:w-1/2">
+            <div className="hidden md:block md:w-1/2">
               <h2 className="text-[32px] md:text-[45px] w-[430px] font-bold text-[#00153D] leading-[1.1] mb-6">
                 Together, We Can Bring Smiles to Those in Need.
               </h2>
-              <p className="text-[#000000] font-poppins text-[18px] !font-medium leading-relaxed max-w-[400px]">
+              <p className="text-[#000000] font-poppins text-[18px] !font-medium leading-relaxed md:max-w-[400px]">
                 Your Generosity Fuels Our Mission: Providing   
                  Aid, Hope, and Love to Communities in Need.
               </p>
@@ -34,15 +35,15 @@ const Footer = () => {
 
 
             {/* Right Form */}
-            <div className="md:w-1/2 w-full">
+            <div className="hidden md:block md:w-1/2 w-full">
               <div className="mb-6">
                 <h3 className="text-[36.78px] -mt-20 font-bold text-[#030A2E]">Donate Online</h3>
                 <p className="text-[16.55px] !font-medium text-[#000000] !font-poppins mt-1">Help Us Help Them with Your Zakat/Donations/Sadqah</p>
               </div>
 
-<div className="grid grid-cols-1 w-[440px] ml-4 md:grid-cols-2 gap-x-12 gap-y-6">                <input type="text" placeholder="First Name*" className="w-[214.78px]  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                <input type="text" placeholder="Last Name*" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                <input type="email" placeholder="Email" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+<div className="grid grid-cols-2 md:w-[440px] ml-4 md:grid-cols-2 gap-x-12 gap-y-6">                <input type="text" placeholder="First Name*" className="w-[214.78px]  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                <input type="text" placeholder="Last Name*" className="md:w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                <input type="email" placeholder="Email" className="md:w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
                 {/* <select className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] text-gray-400 focus:outline-none">
                   <option>PKR</option>
                 </select>
@@ -63,7 +64,7 @@ const Footer = () => {
                 <input type="text" placeholder="(Minimum 50 )" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg#FCFCFC] focus:outline-none focus:border-[#373895]" />
               </div>
 
-              <button className="w-[455.07px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#373895] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
+              <button className="md:w-[455.07px] w-[214.78px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#373895] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
                 Donation Now
               </button>
             </div>
@@ -325,6 +326,103 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+   {/* ================= MOBILE FOOTER ================= */}
+<footer className="block md:hidden w-full bg-[#373895] text-white px-6 pt-12 pb-8">
+
+  {/* About */}
+  <div className="mb-10">
+    <p className="text-[22px] font-semibold font-poppins mb-4">About Us</p>
+    <p className="text-[15px] leading-[1.7] text-[#E0E0E0]">
+      A registered charity focused on preventing avoidable blindness in deprived
+      and marginalized communities.
+    </p>
+  </div>
+
+  {/* Donate QR */}
+  <div className="mb-10 text-center">
+    <p className="text-[22px] font-semibold font-poppins mb-4">Scan to Donate</p>
+    <div className="inline-block bg-white p-3 rounded-xl">
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=DonateNow"
+        alt="Donate QR"
+        className="w-[160px] h-[160px]"
+      />
+    </div>
+  </div>
+
+  {/* Location */}
+  <div className="mb-10">
+    <p className="text-[22px] font-semibold font-poppins mb-4">Location</p>
+
+    <div className="space-y-5 text-[15px] text-[#E0E0E0]">
+      <div className="flex gap-3">
+        <img src="/loc.png" className="w-5 h-5 mt-1" />
+        <p>
+          <span className="block text-white font-medium">Head Office Lahore</span>
+          720 Kamran Block, Allama Iqbal Town
+        </p>
+      </div>
+
+      <div className="flex gap-3">
+        <img src="/loc.png" className="w-5 h-5 mt-1" />
+        <p>
+          <span className="block text-white font-medium">Karachi</span>
+          C-15, Block 12, Gulistan-e-Johar
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Contact */}
+  <div className="mb-10">
+    <p className="text-[22px] font-semibold font-poppins mb-4">Contact Us</p>
+
+    <div className="text-[15px] text-[#E0E0E0] space-y-4">
+      <div>
+        <p className="text-white font-medium mb-1">Karachi UAN</p>
+        <p>+92-21-111-762-544</p>
+        <p>+92-21-34156597</p>
+      </div>
+
+      <div>
+        <p className="text-white font-medium mb-1">Lahore</p>
+        <p>+92-42-354-14720</p>
+        <p>+92-347-999-77720</p>
+      </div>
+
+      <div>
+        <p className="text-white font-medium mb-1">Email</p>
+        <p>info@pobtrust.org</p>
+        <p>gs@pobtrust.org</p>
+      </div>
+    </div>
+  </div>
+
+  {/* Social Icons */}
+  <div className="mb-8">
+    <p className="text-[22px] font-semibold font-poppins mb-4">Social Links</p>
+    <div className="flex gap-4">
+      {["/fac.png", "/whats.png", "/inst.png", "/twitt.png"].map((icon, i) => (
+        <div
+          key={i}
+          className="bg-white w-[42px] h-[42px] flex items-center justify-center rounded-lg"
+        >
+          <img src={icon} className="w-[22px] h-[22px]" />
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Bottom */}
+  <div className="border-t border-white/20 pt-6 text-center text-[13px] text-[#CCCCCC]">
+    <p>© Copyright 2024 @ POB TRUST</p>
+    <div className="flex justify-center gap-6 mt-3">
+      <span>Terms</span>
+      <span>Privacy</span>
+    </div>
+  </div>
+</footer>
+    </>
   );
 };
 
