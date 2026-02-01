@@ -96,6 +96,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { SectionHeading, SectionLabel } from "./News";
 
 const Aboutus = () => {
   return (
@@ -124,13 +125,19 @@ const Aboutus = () => {
 
         {/* CONTENT */}
         <div className="w-full md:w-1/2 h-full flex flex-col justify-center">
-          <p className="text-xs sm:text-sm uppercase font-semibold tracking-wider text-[#C30001]">
+          <p className={`m-0 !font-amaranth text-[15px] text-[#C30001] uppercase font-normal leading-none`}>
             About Us
           </p>
 
-          <h2 className="mt-3 text-[28px] sm:text-[32px] lg:text-[44px] font-bold leading-tight">
-            Absolutely Free Eye Care
-          </h2>
+          <h2
+      className={`m-0 !font-amaranth text-[32px] md:text-[50px] text-black font-normal leading-[1.1]`}
+    >
+      Absolutely Free Eye Care
+    </h2>
+          {/* <SectionHeading
+            text="Absolutely Free Eye Care"
+            className="mb-0 mt-1 sm:mt-2 lg:mt-3"
+          /> */}
 
           <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
             Prevention of Blindness (POB) Trust was established in 2007 with a
@@ -155,8 +162,8 @@ const Aboutus = () => {
           </p>
 
           <div className="mt-8">
-            <Link href="https://pob-delta.vercel.app/about-us">
-              <button className="bg-[#373895] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-[#2c2f6e] transition">
+            <Link href="/about-us">
+              <button className="bg-[#373895] text-white px-8 py-3 rounded-full text-[13px] font-inter hover:bg-[#2c2f6e] transition">
                 Read more
               </button>
             </Link>
