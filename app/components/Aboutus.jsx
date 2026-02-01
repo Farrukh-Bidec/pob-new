@@ -100,7 +100,7 @@ import { SectionHeading, SectionLabel } from "./News";
 
 const Aboutus = () => {
   return (
-    <section className="mx-auto md:max-w-6xl px-4 sm:px-6 lg:px-8 md:py16 sm:py20 lg:py24">
+    <section className="mx-auto md:max-w-6xl pb-10 px-4 sm:px-6 lg:px-8 md:py16 sm:py20 lg:py24">
       <div
         className="
           flex flex-col
@@ -111,26 +111,25 @@ const Aboutus = () => {
       >
         {/* IMAGE */}
         <div className="w-full md:w-1/2 relative">
-          <div className="relative h-full min-h-[320px] sm:min-h-[420px] md:min-h-[520px] rounded-2xl overflow-hidden">
-            <Image
+          <div className="relative h-full  md:w-[554px] md:h-[618.87px] min-h-[320px] sm:min-h-[420px] md:min[520px] rounded-2xl overflow-hidden">
+            <img
               src="/aboutus.webp"
               alt="About Us"
               fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover md:w-[554px] md:h-[618.87px]"
               priority
             />
           </div>
         </div>
 
         {/* CONTENT */}
-        <div className="w-full md:w-1/2 h-full flex flex-col justify-center">
-          <p className={`m-0 !font-amaranth text-[15px] text-[#C30001] uppercase font-normal leading-none`}>
+        <div className="w-full mt-10 md:w-1/2 h-full flex flex-col justify-center">
+          <p className={`m-0 mb-2 !font-amaranth text-[15px] text-[#C30001] uppercase fontnormal leading-none`}>
             About Us
           </p>
 
           <h2
-      className={`m-0 !font-amaranth w-[600px] mb-6 text-[32px] md:text-[50px] text-black font-normal leading-[1.1]`}
+      className={`m !font-amaranth md:w-[600px] mb-3 text-[32px] md:text-[50px] text-black font-normal leading-[1.1]`}
     >
       Absolutely Free Eye Care
     </h2>

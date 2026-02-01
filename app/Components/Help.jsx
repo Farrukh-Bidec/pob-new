@@ -132,7 +132,7 @@ const totalCards = cards.length;
           bg-white rounded-2xl
           transition
           overflow-hidden
-          h-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
+          mdh-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
           flex flex-col
         "
       >
@@ -179,14 +179,14 @@ const totalCards = cards.length;
     </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
-            <div className="text-center bg-gray-50 py-20 mac:py-40 px-4 mac:px-20">
+            <div className="text-center bg-gray-50 py-28 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
-                <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
+                <h4 className={`m-0 !font-amaranth pb-2 text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
                     Every Eye
                 </h4>
 
-                <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
+                <h2 className={`m-0 !font-amaranth pb-6 text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
                     Deserves a Chance to See
                 </h2>
 

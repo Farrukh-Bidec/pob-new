@@ -369,7 +369,7 @@ const SurgeryPricing = () => {
             {donationData.map((item, idx) => (
               <SwiperSlide key={idx} className="h-auto">
                 {/* Card: FIXED width + FIXED height => zoom stable */}
-                <div className="mx-auto w-[240px] sm:w-[273px] h-[460px] flex flex-col">
+                <div className="mx-auto w-[240px] sm:w-[273px] h-[540px] flex flex-col">
                   {/* image */}
                   <div className="relative h-[550px] max-h-[550px] rounded-[9px] overflow-hidden">
                     <img
@@ -400,7 +400,7 @@ const SurgeryPricing = () => {
                     {/* button: pill centered */}
                     <button
                       onClick={handleDonateClick}
-                      className="mt-4 w-[78px] rounded-full bg-white text-black py-[6px] text-[12px] font-inter hover:bg-white/90"
+                      className="mt-4 w-[128.07px] h-[34.85px] rounded-full bg-white text-black py-[6px] text-[12px] font-inter hover:bg-white/90"
                     >
                       Donate
                     </button>
