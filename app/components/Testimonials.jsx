@@ -40,11 +40,9 @@ import Scrol from "./Scrol";
     // <section className="md:py-12 max-w-6xl mx-auto px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
    <div className="mt-20">
    {/* <section className="w-full bg-[#F4F4F4]"> */}
-   <section
-  className="w-full bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: "url('./ch.png')" }}
->
-      <div className="max-w-6xl mx-auto px4 md:px-8 lg:px20 py-10 md:py-20">
+  <section className="relative w-full overflow-hidden bg-gradient-to-b from-[#F7F8FC] via-[#F2F4FA] to-[#EEF1F8]">
+  
+      <div className="max-w-6xl mx-auto px4 md:px-8 lg:px20 py-10 md:py-0">
 
         <div className="text-center pt10 md:pt-16 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
           {/* <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">

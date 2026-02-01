@@ -12,12 +12,12 @@ const Stats = () => {
   ]
 
   return (
-    <div className="wfull max-w-6xl mx-auto mt-14 bg-white text-black sm:mb-0 md:pb-0 ">
+    <div className="wfull mx-auto mt-14 bg-white text-black sm:mb-0 md:pb-0 ">
       <div className="mx-auto lg:pl-8 2xl:pl-0">
         <div className="flex flex-col lg:flex-row gap-10  items-center">
 
           {/* Left side - Stats */}
-          <div className="flex-1 px-4 text-center sm:text-left">
+          <div className="flex-1 md:pl-20 2xl:pl-60 text-center sm:text-left">
 
             {/* Heading: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
             <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
@@ -31,64 +31,74 @@ const Stats = () => {
             </p>
 
             {/* Stats Grid: Gap is managed to be consistent */}
-            <div className="
-  grid grid-cols-2 gap-x-6 gap-y-10 mb-10
-  sm:grid-cols-2
-  lg:flex lg:flex-wrap lg:gap-5 lg:justify-start lg:w-170
-  2xl:gap-x-20 2xl:gap-y-6
-">
+           <div
+  className="
+    grid grid-cols-2 gap-x-6 gap-y-10 mb-10
+    sm:grid-cols-2
+    lg:grid-cols-4 lg:gap-x-10 lg:gap-y-8
+    2xl:gap-x-20 2xl:gap-y-6
+  "
+>
+
               {statsData.map((stat, index) => (
-                // <div key={index} className="flex flex-col md:grid-cols-2 w-40 md:w-40 relative group">
-                //   <div className="text-2xl md:text-4xl 2xl:text-[60px] font-antonio font-[550] pt-6">
-                //     <img
-                //       src="circle.png"
-                //       alt="labels"
-                //       className="absolute mt3   left-4 sm:-left-4 size-12  sm:s10"
-                //     />
-                //     {stat.number}
-                //   </div>
-                //   <div className="text-xs md:text-[16px] text-gray-700 mt-4">
-                //     {stat.label.split(" ").map((word, i) => (
-                //       <span key={i}>
-                //         {word}
-                //         {i === 0 && <br />}
-                //         {i !== 0 && " "}
-                //       </span>
-                //     ))}
-                //   </div>
-                // </div>
-                <div key={index} className="flex flex-col w-40 md:w-40 relative group">
-  <div className="text-2xl md:text-4xl 2xl:text-[46px] font-antonio font-[550] pt-6 relative">
-    <img
-      src="circle.png"
-      alt="labels"
-      className="absolute 2xl:-ml-6 md:-ml-4 op  2xl:mt-2  left2 sm:left-0 w-6 h-6 md:w-[45.1px] md:h-[45.1px] 2xl:w-[45.1px] 2xl:h-[45.1px]"
-    />
-    {stat.number}
+//                 <div key={index} className="flex flex-col w-40 md:w-40 relative group">
+//   <div className="text-2xl md:text-4xl 2xl:text-[46px] font-antonio font-[550] pt-6 relative">
+//     <img
+//       src="circle.png"
+//       alt="labels"
+//       className="absolute 2xl:-ml-6 md:-ml-4 op  2xl:mt-2  left2 sm:left-0 w-6 h-6 md:w-[45.1px] md:h-[45.1px] 2xl:w-[45.1px] 2xl:h-[45.1px]"
+//     />
+//     {stat.number}
+//   </div>
+//   <div className="text-xs md:text-[17px] font-amiko text-gray-700 mt-4">
+//     {stat.label.split(" ").map((word, i) => (
+//       <span key={i}>
+//         {word}
+//         {i === 0 && <br />}
+//         {i !== 0 && " "}
+//       </span>
+//     ))}
+//   </div>
+// </div>
+// {statsData.map((stat, index) => (
+  <div
+    key={index}
+    className={`
+      flex flex-col w-40 relative group
+      ${index >= 4 ? "lg:justify-self-start" : ""}
+    `}
+  >
+    <div className="text-2xl md:text-4xl 2xl:text-[46px] font-antonio font-[550] pt-6 relative">
+      <img
+        src="circle.png"
+        alt="labels"
+        className="absolute md:-ml-4 2xl:-ml-6 2xl:mt-2 w-[45.1px] h-[45.1px]"
+      />
+      {stat.number}
+    </div>
+
+    <div className="text-xs md:text-[17px] font-amiko text-gray-700 mt-4">
+      {stat.label.split(" ").map((word, i) => (
+        <span key={i}>
+          {word}
+          {i === 0 && <br />}
+          {i !== 0 && " "}
+        </span>
+      ))}
+    </div>
   </div>
-  <div className="text-xs md:text-[17px] font-amiko text-gray-700 mt-4">
-    {stat.label.split(" ").map((word, i) => (
-      <span key={i}>
-        {word}
-        {i === 0 && <br />}
-        {i !== 0 && " "}
-      </span>
-    ))}
-  </div>
-</div>
-              ))}
+))}
+
             </div>
           </div>
 
           {/* Right side - Image (UNTOUCHED as per request) */}
-          <div className="w-full lg:w-8/12 max-w-md lg:max-w-[700px] 2xl:w-[500px] mt-2 hidden lg:block">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-              <Image
+          <div className="w-full lg:w-8/12 max-w-md lg:max-w-[500px] 2xl:w-[500px] mt-2 hidden lg:block">
+            <div className="relative aspect[3/4] overflow-hidden rounded-lg">
+              <img
                 src="/blindWomen.png"
                 alt="Prevention of Blindness - Woman with eye care"
-                fill
-                className="object-cover"
-                priority={false}
+                className="w-[700px] h-[570px]"
               />
             </div>
           </div>
