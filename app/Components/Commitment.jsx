@@ -221,7 +221,7 @@ const Commitment = () => {
       {/* Impact Section */}
 <div className="relative maxw6xl md:w-[1,352.22px] md:h-[308.71px] mx-auto my-10 md:my-20 overflow-hidden roundedlg">
 
-  <div className="absolute inset-0  w-[1,652.22px] h-[308.71px] bg-[url('/section4.png')] bg-cover bg-center" />
+  <div className="absolute inset-0  w-[1,352.22px] h-[308.71px] bg-[url('/section4.png')] bg-cover bg-center" />
 
   <div className="relative z-10 flex justify-end px-6 md:px-24 2xl:px-[250px] py-12 md:py-20">
     
