@@ -39,7 +39,11 @@ import Scrol from "./Scrol";
   return (
     // <section className="md:py-12 max-w-6xl mx-auto px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
    <div className="mt-20">
-   <section className="w-full bg-[#F4F4F4]">
+   {/* <section className="w-full bg-[#F4F4F4]"> */}
+   <section
+  className="w-full bg-cover bg-center bg-no-repeat"
+  style={{ backgroundImage: "url('./ch.png')" }}
+>
       <div className="max-w-6xl mx-auto px4 md:px-8 lg:px20 py-10 md:py-20">
 
         <div className="text-center pt10 md:pt-16 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
@@ -114,7 +118,7 @@ import Scrol from "./Scrol";
                 />
               </div>
 
-              <div className="p-7 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
+              {/* <div className="p-7 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
                 <h3 className="text[#333333] text-[22px] mactext-3xl font-bold mb-3 font-sans">
                   {card.title}
                 </h3>
@@ -129,7 +133,30 @@ import Scrol from "./Scrol";
                 >
                   Read More
                 </button>
-              </div>
+              </div> */}
+              <div className="relative p-7 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
+  
+  {/* soft background effect */}
+  <div className="absolute inset-0 rounded-[20px]
+    bg-gradient-to-br from-[#F2F3F7] via-[#ECEEF6] to-[#E6E9F5]
+    blur-[2px] -z-10">
+  </div>
+
+  <h3 className="text-[#333333] text-[22px] mac:text-3xl font-bold mb-3 font-sans">
+    {card.title}
+  </h3>
+
+  <p className="text-[#777777] font-Inter w-[300px] text-sm mac:text-xl leading-snug mb-6 overflow-hidden">
+    {card.description}
+  </p>
+
+  <button
+    onClick={() => router.push(`/feedback/${card.id}`)}
+    className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 mac:py-4 mac:px-10 rounded-full font-medium text-sm mac:text-xl transition-colors duration-300"
+  >
+    Read More
+  </button>
+</div>
             </div>
           ))}
         </div>
