@@ -243,7 +243,7 @@ const Help = () => {
                     <img
                         src="/merged.png"
                         alt="Impact of Vision Loss"
-                        className="w-full max-w-3xl"
+                        className="w-full max-w-4xl"
                     />
                 </div>
 
@@ -251,11 +251,11 @@ const Help = () => {
                 <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-12 mac:gap-20 max-w-7xl mx-auto">
 
                     {/* Left */}
-                    <div className="-mt-20 ml-36 text-center">
+                    <div className="-mt-20 ml-28 text-center">
                         <h3 className="text-xl md:text-[22px] font-amaranth mb-3">
                             Loss of independence
                         </h3>
-                        <p className="text-gray-600 text-center -ml-6 w-[280px] md:text-[14.5px] font-inter leading-relaxed">
+                        <p className="text-gray-600 text-center -ml6 w-[280px] md:text-[14.5px] font-inter leading-relaxed">
                             Mobility, making daily activities like walking, cooking, or self-care difficult
                             or impossible, and increased isolation and loneliness.
                         </p>
@@ -273,11 +273,11 @@ const Help = () => {
                     </div>
 
                     {/* Right */}
-                    <div className="text-center -ml-36 -mt-20">
-                        <h3 className="text-xl md:text-[22px] font-amaranth mb-3">
+                    <div className="text-center -ml-40 -mt-20">
+                        <h3 className="text-xl md:text-[22px] font-amaranth mb-3 ml-10">
                             Economical Burden
                         </h3>
-                        <p className="text-gray-600 ml-20 w-[350px] md:text-[14.5px] font-inter leading-relaxed">
+                        <p className="text-gray-600 ml-32 w-[350px] md:text-[14.5px] font-inter leading-relaxed">
                             Inability to work or earn a livelihood, leaving families financially vulnerable.
                             Greater exposure to poverty as medical needs rise while income declines.
                         </p>
