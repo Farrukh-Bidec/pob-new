@@ -87,7 +87,7 @@ const News = () => {
 
 
   return (
-    <div className='mt-14 md:max-w-6xl   md:mx-auto md:mt-20 py-10 md:py-10 [1728px] mx-auto macpx-0'>
+    <div className='mt-14 pb-20 mb-20 md:max-w-6xl   md:mx-auto md:mt-20 py-10 md:py-10 [1728px] mx-auto macpx-0'>
       {/* Heading */}
       <div className="text-center pt12 md:pt70 xl:pt-10 px10">
         {/* <h4 className="text-[15px] mt-2 text[14px] mb1 text-[#C30001] uppercase !font-medium">
