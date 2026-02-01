@@ -90,11 +90,11 @@ const Help = () => {
             <section className="relative w-full bg-white pt-16">
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <h4 className="text-[12px] sm:text-[13px] tracking-widest text-[#C30001] uppercase font-semibold">
+        <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
           CURRENT
         </h4>
 
-        <h2 className="mt-3 text-[26px] sm:text-[40px] lg:text-[44px] font-bold">
+        <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
           Situation on Hepatitis in Pakistan
         </h2>
 
@@ -142,13 +142,13 @@ const Help = () => {
               <div className="px-5  mt-10 sm:px-6 pt-3 pb-5 text-left flex-1">
                 {/* ratio (fixed height so cards stay equal) */}
                 <div className="min-h-[44px] sm:min-h-[52px]">
-                  <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-bold text-[#CBCCE4] leading-none">
+                  <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-amaranth text-[#CBCCE4] leading-none">
                     {card.ratio}
                   </h3>
                 </div>
 
                 {/* text (fixed height + clamp) */}
-                <p className="mt-2 text-[18px] !font-normal font-family: 'inter', sm:text-[18px] lg:text-[18px] text-[#777777] leading-snug line-clamp-3 minh[42px]">
+                <p className="mt-2 text-[18px] font-mediumfont-inter sm:text-[18px] lg:text-[18px] text-[#777777] leading-snug line-clamp-3 minh[42px]">
                   {card.text}
                 </p>
               </div>
@@ -165,15 +165,15 @@ const Help = () => {
             <div className="text-center bg-gray-50 py-20 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
-                <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+                <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
                     Every Eye
                 </h4>
 
-                <h2 className="md:text-5xl text-3xl sm:text-4xl mac:text-7xl pt-2 pb-6">
+                <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
                     Deserves a Chance to See
                 </h2>
 
-                <p className="max-w-3xl mx-auto text-base sm:text-lg mac:text-2xl text-gray-700 leading-relaxed mb-20">
+                <p className="max-w-3xl mx-auto text-base sm:text-lg md:text-[15px] font-inter leading-relaxed mb-20">
                     At POB Trust, we stand by the belief that no man, woman, or child should suffer
                     the heartbreak of blindness just because they can't afford treatment.
                 </p>
@@ -192,10 +192,10 @@ const Help = () => {
 
                     {/* Left */}
                     <div className="-mt-20 ml-36 text-center">
-                        <h3 className="text-xl mac:text-3xl font-semibold mb-3">
+                        <h3 className="text-xl md:text-[22px] font-amaranth mb-3">
                             Loss of independence
                         </h3>
-                        <p className="text-gray-600 text-center -ml-6 w-[280px] mac:text-2xl leading-relaxed">
+                        <p className="text-gray-600 text-center -ml-6 w-[280px] md:text-[14.5px] font-inter leading-relaxed">
                             Mobility, making daily activities like walking, cooking, or self-care difficult
                             or impossible, and increased isolation and loneliness.
                         </p>
@@ -203,10 +203,10 @@ const Help = () => {
 
                     {/* Middle (raised) */}
                     <div className="text-center ml-10 lg:-mt-56">
-                        <h3 className="text-xl mac:text-3xl font-semibold mb-3">
+                        <h3 className="text-xl md:text-[22px] font-amaranth mb-3">
                             Increased mental health issues
                         </h3>
-                        <p className="text-gray-600 mac:text-2xl leading-relaxed">
+                        <p className="text-gray-600 md:text-[14.5px] font-inter leading-relaxed">
                             Increased risk of depression, isolation, and loss of dignity due to sudden
                             dependence on others.
                         </p>
@@ -214,10 +214,10 @@ const Help = () => {
 
                     {/* Right */}
                     <div className="text-center -ml-36 -mt-20">
-                        <h3 className="text-xl mac:text-3xl font-semibold mb-3">
+                        <h3 className="text-xl md:text-[22px] font-amaranth mb-3">
                             Economical Burden
                         </h3>
-                        <p className="text-gray-600 ml-20 w-[350px] mac:text-2xl leading-relaxed">
+                        <p className="text-gray-600 ml-20 w-[350px] md:text-[14.5px] font-inter leading-relaxed">
                             Inability to work or earn a livelihood, leaving families financially vulnerable.
                             Greater exposure to poverty as medical needs rise while income declines.
                         </p>

@@ -103,10 +103,10 @@ const Commitment = () => {
         {/* Header */}
         <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
-        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+        <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
               Commitment
             </h4>
-            <h2 className="text-3xl md:text-[48px] mac:text-7xl mb-4 text-black sm:text-left text-center leading-none">
+            <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
               Our Commitment at <br className="hidden md:block" /> POB Trust
             </h2>
           </div>
@@ -133,11 +133,11 @@ const Commitment = () => {
   <button
     onClick={prevSlide}
     disabled={currentIndex === 0}
-    className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all shadow-sm
+    className={`w-10 h-10 rounded-full flex items-center text-black justify-center border transition-all shadow-sm
       ${
         currentIndex === 0
-          ? "bg-white text-black opacity-30 cursor-not-allowed"
-          : "bg-blue text-white hover:bg-blue-600"
+          ? "bg-white text-black opacity30 cursor-not-allowed"
+          : "bg-blue textwhite hover:bg-blue-600"
       }
     `}
   >
@@ -148,11 +148,11 @@ const Commitment = () => {
   <button
     onClick={nextSlide}
     disabled={currentIndex >= totalDots - 1}
-    className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all shadow-sm
+    className={`w-10 h-10 rounded-full flex items-center text-black justify-center border transition-all shadow-sm
       ${
         currentIndex >= totalDots - 1
-          ? "bg-white text-black opacity-30 cursor-not-allowed"
-          : "bg-blue text-white hover:bg-blue-600"
+          ? "bg-white text-black opacity30 cursor-not-allowed"
+          : "bg-blue textwhite hover:bg-blue-600"
       }
     `}
   >
@@ -186,10 +186,10 @@ const Commitment = () => {
                   alt={card.text}
                   className="h-60 md:h-[303.51px] md:w-[442px] mac:h-[500px] w-full object-cover rounded-[8px]"
                 />
-                <h3 className="text-xl h-16 md:text-2xl mac:text-4xl mt-4 text-black py-2 md:py-2 font-medium">
+                <h3 className="text-xl h-10 md:text-[22px] mt-4 text-black py-2 md:py-2 font-inter">
                   {card.text}
                 </h3>
-                <p className="text-gray-600 text-[14px] md:text-[16px] mac:text-xl mt-2 mb-8">
+                <p className="text-gray-600 text-[14px] md:text-[14.5px] font-inter mt-2 mb-8">
                   {card.description}
                 </p>
               </div>
@@ -219,18 +219,31 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-      <div className="relative max-w-6xl mx-auto md:mt-20 mt-10 bg-[url('/section4.png')] bg-no-repeat bg-cover py-14 md:py-24 px10 md:text-right text-center overflow-hidden sm:my-14 md:mb-20">
-        <div className="sm:hidden absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/80 via-[#1e3a8a]/50 to-transparent"></div>
-        <div className="relative px-10 md:-mt-16 mam10 md:pr-2 mac:pr24 md:pt5 flex flex-col items-center md:items-end text-left md:text-left">
-          <h3 className="text-4xl px-1 mac:text-right md:ml6 mac:mr-56 mac:text-[72px] md:text-6xl pb-2 text-white md:mt-17 sm:mt-0 font-bold">
-            Rs. 2 Billion Disbursed
-          </h3>
+<div className="relative max-w-6xl mx-auto my-10 md:my-20 overflow-hidden rounded-lg">
 
-          <p className="text-white px-6 md:pr-48 mac:-mr-4 text-lg mac:text-3xl mac:text-right">
-            POB Helped Create PKR 10B Worth of Impact
-          </p>
-        </div>
-      </div>
+  {/* Background */}
+  <div className="absolute inset-0 bg-[url('/section4.png')] bg-cover bg-center" />
+  <div className="absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/70 via-[#1e3a8a]/50 to-transparent" />
+
+  {/* Content */}
+  <div className="relative z-10 flex justify-end px-6 md:px-16 py-16 md:py-24">
+    
+    {/* Text Block */}
+    <div className="max-w-xl text-right">
+      
+      <h3 className="text-white font-amaranth text-4xl md:text-[60px] leading-tight">
+        Rs. 2 Billion Disbursed
+      </h3>
+
+      <p className="mt-3 text-white text-base md:text-[17px] text-left">
+        POB Helped Create PKR 10B Worth of Impact
+      </p>
+
+    </div>
+
+  </div>
+</div>
+
     </>
   );
 };

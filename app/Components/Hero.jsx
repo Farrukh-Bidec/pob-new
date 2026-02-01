@@ -514,7 +514,7 @@ const Hero = () => {
       mx-auto
       px-4 sm:px-0
       pt-[clamp(4rem,12vh,8rem)]
-      flex flex-col justify-center pb-72
+      flex flex-col justify-center pb-10 md:pb-72
     "
       >
         <p
