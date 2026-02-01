@@ -266,7 +266,7 @@ const Footer = () => {
         </div>
       ))}
     </div> */}
-                <div className="flex gap-3 mt-3">
+                {/* <div className="flex gap-3 mt-3">
                   {[
                     { src: "/fac.png", alt: "Facebook" },
                     { src: "/chats.png", alt: "WhatsApp" },
@@ -284,7 +284,24 @@ const Footer = () => {
                       />
                     </div>
                   ))}
-                </div>
+                </div> */}
+                <div className="flex gap-3 mt-3">
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/fac.png" alt="Facebook" className="w-[15.49px] h-[27.62px]" />
+  </div>
+
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/chats.png" alt="WhatsApp" className="w-[25.76px] h-[25.76px]" />
+  </div>
+
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/intaa.png" alt="Instagram" className="w-[24px] h-[24px]" />
+  </div>
+
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/twitt.png" alt="Twitter" className="w-[24.2px] h-[24.2px]" />
+  </div>
+</div>
               </div>
             </div>
             {/* Contact Us */}
