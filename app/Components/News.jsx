@@ -85,62 +85,64 @@ const News = () => {
     sliderRef.current.scrollBy({ left: sliderRef.current.offsetWidth / 3, behavior: 'smooth' });
   };
 
+
   return (
-    <div className='mt-14 max-w-6xl mx-auto md:mt-20 py-10 md:py-10 mac:max-w-[1728px] mx-auto mac:px-0'>
+    <div className='mt-14 md:max-w-6xl   md:mx-auto md:mt-20 py-10 md:py-10 [1728px] mx-auto macpx-0'>
       {/* Heading */}
-      <div className="text-center pt-12 md:pt-70 xl:pt-10 px-10">
-        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+      <div className="text-center pt12 md:pt70 xl:pt-10 px10">
+        {/* <h4 className="text-[15px] mt-2 text[14px] mb1 text-[#C30001] uppercase !font-medium">
           Own Blogs
         </h4>
-        <h2 className="text-xl md:text-5xl mac:text-7xl pb-4 md:pb-6 mac:pb-12 pt-2 text-black font-bold">
+        <h2 className="textxl md:text-[50px]  pb-4 md:pb-6 macpb-12 pt2 text-black font-bold">
           Our Latest News and Articles
-        </h2>
+        </h2> */}
+        <SectionLabel text="Own Blogs" />
+        <SectionHeading text="Our Latest News and Articles" />
       </div>
 
       {/* Slider */}
       <div className="relative w-full py-10 -mt-10">
-        <div className="relative w-[95%] md:w-[85%] mac:w-full mx-auto">
+        <div className="relative w[95%] md:w[85%] mac:w-full mx-auto">
           {/* Left Button */}
-          <button
+          {/* <button
             onClick={scrollLeft}
             className="hidden md:flex absolute -left-2 md:-left-14 mac:scale-150 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-black text-black p-3 rounded-full shadow-md hover:bg-gray-50 transition items-center justify-center"
           >
             <FaChevronLeft />
-          </button>
+          </button> */}
 
           {/* Cards */}
           <div
             ref={sliderRef}
-            className="flex overflow-auto sm:overflow-hidden gap-4 mac:gap-6 scroll-smooth no-scrollbar px-2 mac:px-0"
+            className="flex overflow-auto sm:overflow-hidden gap-6 md:gap-12 macgap-6 scroll-smooth no-scrollbar px-2 mac:px-0"
           >
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[100%] sm:w-[230px] md:w-[32%] mac:w-[800px] p-2 flex flex-col"
+                className="flex-shrink-0  sm:w[230px] md:w-[348.28px] mac[800px] p2 flex flex-col"
               >
                 {/* Image */}
-                <div className="overflow-hidden rounded-t-lg h-48 md:h-60 mac:h-56">
+                <div className="overflow-hidden w-[348.28px] h-[309.24px] rounded-t-lg h- mdh-60 mach-56">
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-full h-full object-cover"
+                    className="w-[348.28px] h-[309.24px] objectcover"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 text-black border border-t-0 p-4 mac:p-8 rounded-b-lg flex flex-col justify-between">
-                  <div>
-                    <h2 className="text-xl md:text-2xl mac:text-4xl font-black line-clamp-2">
-                      {card.title}
-                    </h2>
+                <div className="flex1 md:p-6 text-black w-[348.27px] md:h-[248.12px] border-[1px] border-black border-t-0 p-4 mac:p-8 rounded-b-[18px] flex flex-col justify-between">                  <div>
+                  <h2 className="text-xl w-[260px] !font-semibold !font-poppins md:text-[24px] mactext-4xl font-black line-clamp-3">
+                    {card.title}
+                  </h2>
 
-                    <p className="text-sm md:text-[14px] mt-2 mac:text-2xl line-clamp-3 text-gray-600 leading-relaxed">
-                      {card.description}
-                    </p>
-                  </div>
+                  <p className="text-sm md:text-[13px] line-clamp-3 !font-poppins mt-2 mactext-2xl line-clamp-3 font-light leading-relaxed">
+                    {card.description}
+                  </p>
+                </div>
                   <Link href={`/blog/${card.slug}`}>
-                    <button className="mt-4 mac:mt-8 text-blue-600 mac:text-2xl flex items-center gap-2 font-medium">
-                      Continue Reading <GoArrowRight />
+                    <button className="mt-3 mb3 macmt-8 font-inter font-light 600 mac:text-2xl flex items-center gap-2 fontmedium">
+                      Read full article <GoArrowRight />
                     </button>
                   </Link>
                 </div>
@@ -149,12 +151,12 @@ const News = () => {
           </div>
 
           {/* Right Button */}
-          <button
+          {/* <button
             onClick={scrollRight}
             className="hidden md:flex absolute -right-2 md:-right-14 mac:scale-150 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-black text-black p-3 rounded-full shadow-md hover:bg-gray-50 transition items-center justify-center"
           >
             <FaChevronRight />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
@@ -163,3 +165,31 @@ const News = () => {
 };
 
 export default News;
+
+
+
+export const SectionLabel = ({ text }) => {
+  return (
+    // <h4 className="text-[14px] mb-1 text-[#C30001] uppercase font-medium">
+    //   {text}
+    // </h4>
+      <p className="m-0 !font-amaranth text-[15px] text-[#C30001] uppercase font-medium leading-none">
+      {text}
+    </p>
+  );
+};
+
+export const SectionHeading = ({ text }) => {
+  return (
+    // <h2 className="text-[32px] md:text-[50px] pt-1 pb-3 md:pb-4 text-black font-bold leading-tight">
+    //   {text}
+    // </h2>
+      <div className="m-0 !font-amaranth mb-14 text-[32px] md:text-[50px] text-black fontbold leading-[1.1]">
+      {text}
+    </div>
+  );
+};
+
+// export default SectionHeading;
+
+// export default SectionLabel;

@@ -34,8 +34,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="md:py-12 max-w-6xl mx-auto px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
-      <div className="text-center pt-10 md:pt-20 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
+    // <section className="md:py-12 max-w-6xl mx-auto px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
+    <section className="w-full bg-[#F4F4F4]">
+  <div className="max-w-6xl mx-auto px4 md:px-8 lg:px20 py-10 md:py-20">
+
+    <div className="text-center pt-10 md:pt-20 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
         <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
           Testimonials
         </h4>
@@ -87,27 +90,27 @@ const Testimonials = () => {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-14 mac:gap-12 mac:max-w-[1728px] mx-auto mac:px-0">
+      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-24 mac:gap-12 macmax-[1728px] mx-auto mac:px-0">
         {cards.map((card) => (
           <div
             key={card.id}
-            className="bg-white rounded-[20px] overflow-hidden flex flex-col border border-gray-50 shadowlg max-w-[400px] mac:max-w-[520px] mx-auto"
+            className="bg-white   w-[345.12px] h-[517.49px] rounded-[20px] overflow-hidden flex flex-col border border-gray-50 shadowlg max-w-[400px] mac:max-w-[520px] mx-auto"
           >
             <div className="h-60 mac:h-96 overflow-hidden">
               <iframe
-                className="w-full h-full object-cover"
+                className="w-[345.12px] h-[225.86px] hfull object-cover"
                 src={card.videoUrl.replace("watch?v=", "embed/")}
                 title={card.title}
                 allowFullScreen
               />
             </div>
 
-            <div className="p-6 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
-              <h3 className="text-[#333333] text-lg mac:text-3xl font-bold mb-3 font-sans">
+            <div className="p-7 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
+              <h3 className="text[#333333] text-[22px] mactext-3xl font-bold mb-3 font-sans">
                 {card.title}
               </h3>
 
-              <p className="text-gray-500 w-[200px] text-sm mac:text-xl leading-snug mb-6 overflow-hidden">
+              <p className="text-[#777777] !font-Inter w-[300px] text-sm mac:text-xl leading-snug mb-6 overflow-hidden">
                 {card.description}
               </p>
 
@@ -120,6 +123,7 @@ const Testimonials = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
