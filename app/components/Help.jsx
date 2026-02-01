@@ -1,7 +1,9 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 
 const Help = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
     const cards = [
         {
             image: "Secondcard.png",
@@ -44,7 +46,9 @@ const Help = () => {
             text: "Inability to work or earn a livelihood, leaving families financially vulnerable. Greater exposure to poverty, as medical needs rise while income declines",
             align: "end"
         }
+        
     ];
+const totalCards = cards.length;
 
     return (
         <>
@@ -89,7 +93,7 @@ const Help = () => {
             </div> */}
             <section className="relative w-full bg-white pt-16">
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl px4 sm:px6 lg:px8 text-center">
         <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
           CURRENT
         </h4>
@@ -99,62 +103,75 @@ const Help = () => {
         </h2>
 
         {/* Cards */}
-        <div
-          className="
-            mt-10
-            mx-auto
-            grid grid-cols-2 lg:grid-cols-4
-            gap-4 sm:gap-6 lg:gap-7
-            max-w-6xl
-          "
-        >
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className="
-                bg-white rounded-2xl
-                transition
-                overflow-hidden
-                h-[400px] sm:h-[220px] W-[265.96px] lg:h-[308.64px]
-                flex flex-col
-              "
-            >
-              {/* TOP ICON AREA (BIGGER ICONS) */}
-              <div className="relative h-[72px] sm:h-[82px] lg:h-[92px]">
-                {/* red corner like screenshot */}
-                {/* <div className="absolute left-0 top-0 h-full w-[90px] sm:w-[100px] lg:w-[110px] bg-[#C30001] rounded-br-[48px]" /> */}
+        <div className="mt-10 flex  items-center justify-center gap-6">
 
-                {/* icon (bigger) */}
-                <img
-                  src={card.image}
-                  alt=""
-                  className="
-                    absolute -left-10 -top-10
-                    w-[167.74px] h-[167.74px]
-                    sm-[52px] s[52px]
-                    [58px] l-[58px]
-                    objectcontain
-                  "
-                />
-              </div>
+  {/* LEFT ARROW */}
+  <ArrowButton
+    direction="left"
+    disabled={currentIndex === 0}
+    onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
+  />
 
-              {/* CONTENT */}
-              <div className="px-5  mt-10 sm:px-6 pt-3 pb-5 text-left flex-1">
-                {/* ratio (fixed height so cards stay equal) */}
-                <div className="min-h-[44px] sm:min-h-[52px]">
-                  <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-amaranth text-[#CBCCE4] leading-none">
-                    {card.ratio}
-                  </h3>
-                </div>
+  {/* CARDS */}
+  <div className="overflow-hidden maxw6xl">
 
-                {/* text (fixed height + clamp) */}
-                <p className="mt-2 text-[18px] font-mediumfont-inter sm:text-[18px] lg:text-[18px] text-[#777777] leading-snug line-clamp-3 minh[42px]">
-                  {card.text}
-                </p>
-              </div>
-            </div>
-          ))}
+  <div
+    className="
+      flex gap-6 transition-transform duration-500
+      gap-4 sm:gap-2 lg:gap-4
+      
+    "
+    style={{
+      transform: `translateX(-${currentIndex * 390}px)`
+    }}
+  >
+    {cards.map((card, index) => (
+      <div
+        key={index}
+        className="
+          bg-white rounded-2xl
+          transition
+          overflow-hidden
+          h-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
+          flex flex-col
+        "
+      >
+        {/* TOP ICON */}
+        <div className="relative h-[72px] sm:h-[82px] lg:h-[92px]">
+          <img
+            src={card.image}
+            alt=""
+            className="absolute -left-10 -top-10 w-[167.74px] h-[167.74px] object-contain"
+          />
         </div>
+
+        {/* CONTENT */}
+        <div className="px-5 mt-10 px-2 pt-3 pb-5 text-left flex-1">
+          <div className="min-h-[44px] sm:min-h-[52px]">
+            <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-amaranth text-[#CBCCE4] leading-none">
+              {card.ratio}
+            </h3>
+          </div>
+
+          <p className="mt-6 text-[18px]  sm:text-[18px] lg:text-[18px] text-[#777777] leading-snug line-clamp-3">
+            {card.text}
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+  </div>
+
+  {/* RIGHT ARROW */}
+  <ArrowButton
+    direction="right"
+    disabled={currentIndex === totalCards - 1}
+    onClick={() =>
+      setCurrentIndex((prev) => Math.min(prev + 1, totalCards - 1))
+    }
+  />
+
+</div>
       </div>
 
       {/* Grey bottom bar like screenshot */}
@@ -285,3 +302,37 @@ const Help = () => {
 };
 
 export default Help;
+
+const ArrowButton = ({ disabled, direction, onClick }) => {
+  const isDisabled = disabled;
+
+  return (
+    <button
+      onClick={onClick}
+      disabled={isDisabled}
+      className={`
+        w-[40px] h-[40px] mt-2  rounded-full  itemscenter justifycenter
+        transition-all duration-300
+        ${
+          isDisabled
+            ? "bg-white border border-black"
+            : "bg-[#373895]"
+        }
+      `}
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke={isDisabled ? "black" : "white"}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={direction === "left" ? "" : "rotate-180"}
+      >
+        <polyline points="15 18 9 12 15 6" />
+      </svg>
+    </button>
+  );
+};
