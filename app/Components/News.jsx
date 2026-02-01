@@ -168,23 +168,23 @@ export default News;
 
 
 
-export const SectionLabel = ({ text }) => {
+export const SectionLabel = ({ text, className = "" }) => {
   return (
-    // <h4 className="text-[14px] mb-1 text-[#C30001] uppercase font-medium">
-    //   {text}
-    // </h4>
-      <p className="m-0 !font-amaranth text-[15px] text-[#C30001] uppercase font-medium leading-none">
+    <p
+      className={`m-0 !font-amaranth text-[15px] text-[#C30001] uppercase font-medium leading-none ${className}`}
+    >
       {text}
     </p>
   );
 };
 
-export const SectionHeading = ({ text }) => {
+export const SectionHeading = ({ text, className = "" }) => {
   return (
-    // <h2 className="text-[32px] md:text-[50px] pt-1 pb-3 md:pb-4 text-black font-bold leading-tight">
-    //   {text}
-    // </h2>
-      <div className="m-0 !font-amaranth mb-14 text-[32px] md:text-[50px] text-black fontbold leading-[1.1]">
+    <div
+      role="heading"
+      aria-level="2"
+      className={`m-0 !font-amaranth mb-14 text-[32px] md:text-[50px] text-black font-bold leading-[1.1] ${className}`}
+    >
       {text}
     </div>
   );
