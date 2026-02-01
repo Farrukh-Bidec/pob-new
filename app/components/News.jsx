@@ -183,7 +183,7 @@ export const SectionHeading = ({ text, className = "" }) => {
     <div
       role="heading"
       aria-level="2"
-      className={`m-0 !font-amaranth mb-14 text-[32px] md:text-[50px] text-black font-bold leading-[1.1] ${className}`}
+      className={`m-0 !font-amaranth mb-14 text-[32px] md:text-[50px] text-black fontbold leading-[1.1] ${className}`}
     >
       {text}
     </div>

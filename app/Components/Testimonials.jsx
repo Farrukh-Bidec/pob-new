@@ -36,7 +36,8 @@ import { SectionHeading, SectionLabel } from "./News";
 
   return (
     // <section className="md:py-12 max-w-6xl mx-auto px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
-    <section className="w-full bg-[#F4F4F4]">
+   <div className="mt-20">
+   <section className="w-full bg-[#F4F4F4]">
       <div className="max-w-6xl mx-auto px4 md:px-8 lg:px20 py-10 md:py-20">
 
         <div className="text-center pt10 md:pt-16 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
@@ -132,6 +133,7 @@ import { SectionHeading, SectionLabel } from "./News";
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
