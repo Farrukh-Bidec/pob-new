@@ -17,7 +17,7 @@ const Stats = () => {
         <div className="flex flex-col lg:flex-row gap-10  items-center">
 
           {/* Left side - Stats */}
-          <div className="flex-1 md:pl-20 2xl:pl-60 text-center sm:text-left">
+          <div className="flex-1 px-4 md:pl-20 2xl:pl-60 text-center sm:text-left">
 
             {/* Heading: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
             <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
@@ -68,7 +68,7 @@ const Stats = () => {
       ${index >= 4 ? "lg:justify-self-start" : ""}
     `}
   >
-    <div className="text-2xl md:text-4xl 2xl:text-[46px] font-antonio font-[550] pt-6 relative">
+    <div className="text-4xl md:text-4xl 2xl:text-[46px] font-antonio font-[550] pt-6 relative">
       <img
         src="circle.png"
         alt="labels"
