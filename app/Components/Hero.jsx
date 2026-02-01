@@ -506,77 +506,81 @@ const Hero = () => {
       {/* Dark overlay (important for text contrast) */}
       {/* <div className="absolute inset-0 bg-black/40" /> */}
 
-      {/* Content */}
-      <div
-        className="
-      relative z-10
-      w-full max-w-[90%] h-full
-      mx-auto
-      px-4 sm:px-0
-      pt-[clamp(4rem,12vh,8rem)]
-      flex flex-col justify-center pb-20 md:pb-72
+     {/* Content */}
+<div
+  className="
+    relative z-10
+    w-full max-w-[90%] h-full
+    mx-auto
+    px-4 sm:px-0
+    pt-[clamp(3rem,8vh,5rem)]
+    pb-14 md:pb-36
+    flex flex-col justify-center
+  "
+>
+  <p
+    className="
+      !font-amaranth
+      text-[12px] sm:text-[15px]
+      tracking-[0.2em]
+      uppercase text-white/80
     "
-      >
-        <p
-          className="
-          !font-amaranth
-        text-[12px] sm:text-[15px]
-        tracking-[0.2em]
-        uppercase text-white/80 
-      "
-        >
-          Welcome to POB Trust – Prevention of Blindness
-        </p>
+  >
+    Welcome to POB Trust – Prevention of Blindness
+  </p>
 
-        <h1
-          className="
-        mt-4
-        font-semibold leading-tight
-        text-[clamp(24px,5vw,71px)]
-        max-w-[600px]
-      "
-        >
-         Donate Now to Light Up a Life
-        </h1>
+  <h1
+    className="
+      mt2
+      font-semibold leading-tight
+      text-[clamp(24px,5vw,71px)]
+      max-w-[600px]
+    "
+  >
+    Donate Now to Light Up a Life
+  </h1>
 
-        <p
-          className="
-        mt-5
-        text-[14px] sm:text-[15px] md:text-[15px] font-inter
-        max-w-[600px]
-        text-white/90
-        leading-relaxed
-      "
-        >
-          Bringing hope and clarity to lives with free eye care,
-          restoring vision with love and compassion in Karachi.
-        </p>
+  <p
+    className="
+      mt-3
+      text-[14px] sm:text-[15px] md:text-[15px]
+      font-inter
+      max-w-[600px]
+      text-white/90
+      leading-relaxed
+    "
+  >
+    Bringing hope and clarity to lives with free eye care,
+    restoring vision with love and compassion in Karachi.
+  </p>
 
-        <div className="mt-8">
-          <button
-            className="
-          inline-flex items-center gap-3
-          pl-5 pr-2 py-2
-          bg-white text-black
-          font-inter font-medium rounded-full text-[14px]
-          shadow-xl
-          hover:bg-gray-100 transition
+  <div className="mt-5">
+    <button
+      className="
+        inline-flex items-center gap-3
+        pl-5 pr-2 py-2
+        bg-white text-black
+        font-inter font-medium
+        rounded-full text-[14px]
+        shadow-xl
+        hover:bg-gray-100 transition
+      "
+    >
+      Donate Now
+      <span
+        className="
+          flex items-center justify-center
+          w-9 h-9
+          bg-black text-white
+          rounded-full text-xl
         "
-          >
-            Donate Now
-            <span
-              className="
-            flex items-center justify-center
-            w-9 h-9
-            bg-black text-white
-            rounded-full text-xl
-          "
-            >
-              <MdKeyboardDoubleArrowRight />
-            </span>
-          </button>
-        </div>
-      </div>
+      >
+        <MdKeyboardDoubleArrowRight />
+      </span>
+    </button>
+  </div>
+</div>
+
 
       {/* Bottom curve (optional – matches your Figma hero) */}
       {/* <svg

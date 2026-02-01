@@ -171,7 +171,7 @@ const Navbar = () => {
                     >
                       <Link
                         href={item.link || "#"}
-                        className={`text-black font-inter flex items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black font-inter flex items-center gap-1 pb2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
                         {item.name} <FaChevronDown size={10} className="mt-1" />
                       </Link>
@@ -180,7 +180,7 @@ const Navbar = () => {
                     <div className="h-full flex items-center">
                       <Link
                         href={item.link || "#"}
-                        className={`text-black flex font-inter items-center gap-1 pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black flex font-inter items-center gap-1 pb2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
                         {item.name} <FaChevronDown size={10} className="mt-1" />
                       </Link>
@@ -290,7 +290,7 @@ const Navbar = () => {
                 <div className="bg-white px-2 py-2 rounded-[50%]">
                   <Image src="/hand.png" alt="" width={24} height={24} className="w-6" />
                 </div>
-                <p className="mx-1 font-inter font-normal text-[13px]">Donation Now</p>
+                <p className="mx-1 font-inter font-medium text-[13px]">Donation Now</p>
               </div>
             </Link>
           </div>
