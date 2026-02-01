@@ -26,11 +26,11 @@ const Commitment = () => {
       text: "Restoring Hope",
       description: "We bring back the joy of sight, helping people reconnect with their loved ones and pursue their dreams.",
     },
-    {
-      image: "/card3.webp",
-      text: "A Vision for Everyone",
-      description: "We believe everyone deserves the chance to see the world clearly, live fully, and experience life to its fullest.",
-    },
+    // {
+    //   image: "/card3.webp",
+    //   text: "A Vision for Everyone",
+    //   description: "We believe everyone deserves the chance to see the world clearly, live fully, and experience life to its fullest.",
+    // },
   ];
 
   const sliderRef = useRef(null);
