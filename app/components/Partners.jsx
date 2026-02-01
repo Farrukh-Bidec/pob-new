@@ -125,8 +125,8 @@ const Partners = ({ middleCarouselImages = [] }) => {
       : middleCarouselImages;
 
   return (
-    <div className="w-full mt-14 md:mt-[25px] h-auto my-8 pb-14 pt-1 md:pt-24">
-      <h2 className="text-3xl md:text-4xl mb-6 text-center mb-20 font-Amaranth text-black">
+    <div className="w-full mt-14 md:mt-[40px] h-auto my-8 pb-14 pt-1 md:pt-24">
+      <h2 className="text3xl text-[30px] mb-4 text-center mb-20 font-Amaranth text-black">
         POB Partners in Projects
       </h2>
 
@@ -152,7 +152,7 @@ const Partners = ({ middleCarouselImages = [] }) => {
             <div className="flex justify-center items-center">
 
               {/* Grey rounded background */}
-              <div className="w-28 h-28 flex items-center justify-center bg-gray-200 rounded-full">
+              <div className="w-[131.23px] h-[131.23px] h28 flex items-center justify-center bg-gray-200 rounded-full">
                 <img
                   src={`${Image_Url}/${review.image}`}
                   alt={
@@ -160,7 +160,7 @@ const Partners = ({ middleCarouselImages = [] }) => {
                     review?.platform ||
                     `Partner ${index + 1}`
                   }
-                  className="w-20 h-20 object-contain" // ✅ same icon size
+                  className="w-[104.29px] h-[104.06px] object-contain" // ✅ same icon size
                 />
               </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+import { SectionHeading, SectionLabel } from "./News";
 
 const LeaderShip = () => {
   const sliderImages = [
@@ -38,7 +39,8 @@ const LeaderShip = () => {
     "Baithak School",
     "School Camps",
     "Orangi Unit Campus",
-    // "Donor Visits",
+
+    "Donor Visits",
   ];
 
   const [activeCategory, setActiveCategory] = useState(categories[0]);
@@ -103,29 +105,36 @@ const LeaderShip = () => {
   useEffect(() => {
     setCurrentIndex(0);
   }, [activeCategory]);
-
+const arrowBtn =
+  "hidden md:flex absolute z-20 w-10 h-10 mac:w-14 mac:h-14 \
+   bg-white border border-black rounded-full shadow-md \
+   items-center justify-center \
+   hover:bg-gray-50 transition-all disabled:opacity-30";
   return (
     <div className="relative max-w-6xl mx-auto mt-14 md:mt-0 flex flex-col items-center justify-center text-center pt10 mac:max-w-[1728px] mac:mx-auto">
       {/* Header */}
       <div className="w-[90%] font-inter items-center text-center mb-4 flex flex-col gap-2">
-        <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
+        {/* <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
           Media Gallery
-        </h4>
-        <h2 className="text-3xl sm:text-5xl mac:text-7xl pb- pt-2 text-black w-full">Capturing Moments, Sharing Stories</h2>
-        <p className="text-black font-bold text-center text-[14px] mac:text-xl pb-5">
+        </h4> */}
+       
+        {/* <h2 className="text-3xl sm:text-5xl mac:text-7xl pb- pt-2 text-black w-full">Capturing Moments, Sharing Stories</h2> */}
+         <SectionLabel text="Media Gallery" />
+                <SectionHeading text="Capturing Moments, Sharing Stories" />
+        <p className="text-black -mt-14 font-bold font-inter text-center text-[15px] mactext-xl pb-2">
           Explore impactful visuals that tell the real stories behind the scenes
         </p>
       </div>
 
       {/* Category Buttons */}
-      <div className="w-full flex justify-center  mb-6 px2">
-        <div className="flex overflow-x-auto whitespace-nowrap gap-2 md:gap-2 mac:gap-8 snap-x snap-mandatory py-1 px-1 md:px4 mac:px10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
+      <div className="flex justify-center  mb-6 px2">
+        <div className="flex overflow-x-auto w-[400px] md:w-auto h-[40.57px]  whitespace-nowrap gap-2 md:gap-1 mac:gap-8 snap-x snap-mandatory py-[2px] px-[2px] md:px4 mac:px10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`flex-shrink-0 cursor-pointer px-2 py-2 text-[13px] mac:text-xl rounded-full transition-colors duration-200 snap-start ${activeCategory === category
-                ? "bg-white text-black font-semibold"
+              className={`flex-shrink-0 h-[35.02px] w-[140.17px] font-inter cursor-pointer px2 py-2 text-[11.36px] mac:text-xl rounded-full transitioncolors duration-200 snap-start ${activeCategory === category
+                ? "bg-white text-black "
                 : "bg-transparent text-white"
                 }`}
             >
@@ -136,16 +145,23 @@ const LeaderShip = () => {
       </div>
 
       {/* Slider Container */}
-      <div className="relative w-full px-4 md:px-16 mac:px-4 flex items-center justify-center">
+      <div className="relative w-full px-4 md:px16 mac:px-4 flex items-center justify-center">
 
         {/* Left Arrow - Hidden on Mobile, Shown on MD+ */}
-        <button
+        {/* <button
           onClick={handlePrev}
           disabled={currentIndex === 0}
           className="hidden md:flex absolute left-4 z-10 p-2 bg-white border border-black rounded-full shadow-md disabled:opacity-30 hover:bg-gray-50 transition-all mac:scale-150 items-center justify-center"
         >
           <MdArrowBackIos className="text-black text-xl ml-1" />
-        </button>
+        </button> */}
+        <button
+  onClick={handlePrev}
+  disabled={currentIndex === 0}
+  className={`${arrowBtn} -left-12`}
+>
+  <MdArrowBackIos className="text-black text-center ml-[6px] text-lg mac:text-2xl mlpx]" />
+</button>
         {/* Slider Viewport with Swipe Events / Mobile Grid */}
         <div
           className="w-full overflow-hidden"
@@ -155,14 +171,14 @@ const LeaderShip = () => {
           onTouchEnd={onTouchEnd}
         >
           {/* Mobile Grid (hidden on md) */}
-          <div className="grid grid-cols-2 gap-3 md:hidden">
+          <div className="grid grid-cols-2 gap-2 md:hidden">
             {filteredImages.length > 0 ? (
               filteredImages.map((item, index) => (
                 <div key={index} className="w-full flex flex-col items-center">
                   <img
                     src={item.src}
                     alt={item.category}
-                    className="w-full h-48 object-cover rounded-xl shadow-sm"
+                    className="w-[263.4px] h-[304.26px] objectcover rounded-[20px] shadow-sm"
                   />
                 </div>
               ))
@@ -173,7 +189,7 @@ const LeaderShip = () => {
 
           {/* Desktop Slider (hidden on mobile) */}
           <div
-            className="hidden ml-6 md:flex gap-1 mac:gap-2 transition-transform duration-500 ease-in-out"
+            className="hidden ml6 md:flex gap-[4px] mac:gap-2 transition-transform duration-500 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * cardWidth}px)`,
             }}
@@ -195,17 +211,24 @@ const LeaderShip = () => {
         </div>
 
         {/* Right Arrow - Hidden on Mobile, Shown on MD+ */}
-        <button
+        {/* <button
           onClick={handleNext}
           disabled={currentIndex >= filteredImages.length - visibleCount}
           className="hidden md:flex absolute right-4 z-10 p-2 bg-white border border-black rounded-full shadow-md disabled:opacity-30 hover:bg-gray-50 transition-all mac:scale-150 items-center justify-center"
         >
           <MdArrowForwardIos className="text-black text-xl" />
-        </button>
+        </button> */}
+        <button
+  onClick={handleNext}
+  disabled={currentIndex >= filteredImages.length - visibleCount}
+  className={`${arrowBtn} -right-10`}
+>
+  <MdArrowForwardIos className="text-black text-lg mac:text-2xl" />
+</button>
       </div>
 
       {/* Pagination Dots */}
-      <div className="pob-dots-container mt-4">
+      {/* <div className="pob-dots-container mt-4">
         {Array.from({ length: totalDots }).map((_, idx) => (
           <div
             key={idx}
@@ -213,7 +236,7 @@ const LeaderShip = () => {
             className={`pob-dot ${currentIndex === idx ? "pob-dot-active" : ""}`}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };
