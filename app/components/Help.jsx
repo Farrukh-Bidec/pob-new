@@ -46,9 +46,9 @@ const Help = () => {
             text: "Inability to work or earn a livelihood, leaving families financially vulnerable. Greater exposure to poverty, as medical needs rise while income declines",
             align: "end"
         }
-        
+
     ];
-const totalCards = cards.length;
+    const totalCards = cards.length;
 
     return (
         <>
@@ -92,134 +92,134 @@ const totalCards = cards.length;
                 <div className="absolute bottom-0 left-0 w-full h-[180px] mac:h-[250px] bg-gray-50 z-0 "></div>
             </div> */}
             <section className="relative w-full bg-white pt-16">
-      {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px4 sm:px6 lg:px8 text-center">
-        <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
-          CURRENT
-        </h4>
+                {/* Content */}
+                <div className="relative z-10 mx-auto max-w-7xl px4 sm:px6 lg:px8 text-center">
+                    <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
+                        CURRENT
+                    </h4>
 
-        <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
-          Situation on Hepatitis in Pakistan
-        </h2>
+                    <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
+                        Situation on Hepatitis in Pakistan
+                    </h2>
 
-        {/* Cards */}
-        <div className="mt-10 md:flex hidden  items-center justify-center gap-6">
+                    {/* Cards */}
+                    <div className="mt-10 md:flex hidden  items-center justify-center gap-6">
 
-  {/* LEFT ARROW */}
-  <ArrowButton
-    direction="left"
-    disabled={currentIndex === 0}
-    onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
-  />
+                        {/* LEFT ARROW */}
+                        <ArrowButton
+                            direction="left"
+                            disabled={currentIndex === 0}
+                            onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
+                        />
 
-  {/* CARDS */}
-  <div className="overflow-hidden maxw6xl">
+                        {/* CARDS */}
+                        <div className="overflow-hidden maxw6xl">
 
-  <div
-    className="
+                            <div
+                                className="
       flex gap-6 transition-transform duration-500
       gap-4 sm:gap-2 lg:gap-4
       
     "
-    style={{
-      transform: `translateX(-${currentIndex * 390}px)`
-    }}
-  >
-    {cards.map((card, index) => (
-      <div
-        key={index}
-        className="
+                                style={{
+                                    transform: `translateX(-${currentIndex * 390}px)`
+                                }}
+                            >
+                                {cards.map((card, index) => (
+                                    <div
+                                        key={index}
+                                        className="
           bg-white rounded-2xl
           transition
           overflow-hidden
           mdh-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
           flex flex-col
         "
-      >
-        {/* TOP ICON */}
-        <div className="relative h-[72px] sm:h-[82px] lg:h-[92px]">
-          <img
-            src={card.image}
-            alt=""
-            className="absolute -left-10 -top-10 w-[167.74px] h-[167.74px] object-contain"
-          />
-        </div>
+                                    >
+                                        {/* TOP ICON */}
+                                        <div className="relative h-[72px] sm:h-[82px] lg:h-[92px]">
+                                            <img
+                                                src={card.image}
+                                                alt=""
+                                                className="absolute -left-10 -top-10 w-[167.74px] h-[167.74px] object-contain"
+                                            />
+                                        </div>
 
-        {/* CONTENT */}
-        <div className="px-5 mt-10 px-2 pt-3 pb-5 text-left flex-1">
-          <div className="min-h-[44px] sm:min-h-[52px]">
-            <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-amaranth text-[#CBCCE4] leading-none">
-              {card.ratio}
-            </h3>
-          </div>
+                                        {/* CONTENT */}
+                                        <div className="px-5 mt-10 px-2 pt-3 pb-5 text-left flex-1">
+                                            <div className="min-h-[44px] sm:min-h-[52px]">
+                                                <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-amaranth text-[#CBCCE4] leading-none">
+                                                    {card.ratio}
+                                                </h3>
+                                            </div>
 
-          <p className="mt-6 text-[18px]  sm:text-[18px] lg:text-[18px] text-[#777777] leading-snug line-clamp-3">
-            {card.text}
-          </p>
-        </div>
-      </div>
-    ))}
-  </div>
-  </div>
+                                            <p className="mt-6 text-[18px]  sm:text-[18px] lg:text-[18px] text-[#777777] leading-snug line-clamp-3">
+                                                {card.text}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
-  {/* RIGHT ARROW */}
-  <ArrowButton
-    direction="right"
-    disabled={currentIndex === totalCards - 1}
-    onClick={() =>
-      setCurrentIndex((prev) => Math.min(prev + 1, totalCards - 1))
-    }
-  />
+                        {/* RIGHT ARROW */}
+                        <ArrowButton
+                            direction="right"
+                            disabled={currentIndex === totalCards - 1}
+                            onClick={() =>
+                                setCurrentIndex((prev) => Math.min(prev + 1, totalCards - 1))
+                            }
+                        />
 
-</div>
+                    </div>
 
 
-{/* ================= MOBILE ONLY ================= */}
-<div className="md:hidden mt-6 px-4">
-  <div className="flex gap-4 overflow-x-auto pb-4">
-    {cards.map((card, index) => (
-      <div
-        key={index}
-        className="
+                    {/* ================= MOBILE ONLY ================= */}
+                    <div className="md:hidden mt-6 px-4">
+                        <div className="flex gap-4 overflow-x-auto pb-4">
+                            {cards.map((card, index) => (
+                                <div
+                                    key={index}
+                                    className="
           relative
           min-w-[260px]
           bg-white rounded-2xl
           overflow-hidden
           flex flex-col
         "
-      >
-        {/* TOP ICON */}
-        <div className="relative h-[72px]">
-          <img
-            src={card.image}
-            alt=""
-            className="absolute -left-8 -top-8 w-[120px] h-[120px] object-contain"
-          />
-        </div>
+                                >
+                                    {/* TOP ICON */}
+                                    <div className="relative h-[72px]">
+                                        <img
+                                            src={card.image}
+                                            alt=""
+                                            className="absolute -left-8 -top-8 w-[120px] h-[120px] object-contain"
+                                        />
+                                    </div>
 
-        {/* CONTENT */}
-        <div className="px-4 pt-6 pb-5 text-left flex-1">
-          {/* RATIO */}
-          <h3 className="text-[42px] font-amaranth text-[#CBCCE4] leading-none">
-            {card.ratio}
-          </h3>
+                                    {/* CONTENT */}
+                                    <div className="px-4 pt-6 pb-5 text-left flex-1">
+                                        {/* RATIO */}
+                                        <h3 className="text-[42px] font-amaranth text-[#CBCCE4] leading-none">
+                                            {card.ratio}
+                                        </h3>
 
-          {/* TEXT */}
-          <p className="mt-4 text-[14px] text-[#777777] leading-snug line-clamp-3">
-            {card.text}
-          </p>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
-{/* ================= MOBILE ONLY END ================= */}
+                                        {/* TEXT */}
+                                        <p className="mt-4 text-[14px] text-[#777777] leading-snug line-clamp-3">
+                                            {card.text}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    {/* ================= MOBILE ONLY END ================= */}
 
-      </div>
+                </div>
 
-      {/* Grey bottom bar like screenshot */}
-      <div className="absolute bottom-0 left-0 w-full h-[120px] sm:h-[140px] lg:h-[160px] bg-gray-50 z-0" />
-    </section>
+                {/* Grey bottom bar like screenshot */}
+                <div className="absolute bottom-0 left-0 w-full h-[120px] sm:h-[140px] lg:h-[160px] bg-gray-50 z-0" />
+            </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
             <div className="text-center bg-gray-50 py-28 mac:py-40 px-4 mac:px-20">
@@ -347,35 +347,34 @@ const totalCards = cards.length;
 export default Help;
 
 const ArrowButton = ({ disabled, direction, onClick }) => {
-  const isDisabled = disabled;
+    const isDisabled = disabled;
 
-  return (
-    <button
-      onClick={onClick}
-      disabled={isDisabled}
-      className={`
+    return (
+        <button
+            onClick={onClick}
+            disabled={isDisabled}
+            className={`
         w-[40px] h-[40px] mt-2  rounded-full  itemscenter justifycenter
         transition-all duration-300
-        ${
-          isDisabled
-            ? "bg-white border border-black"
-            : "bg-[#373895]"
-        }
+        ${isDisabled
+                    ? "bg-white border border-black"
+                    : "bg-[#373895]"
+                }
       `}
-    >
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke={isDisabled ? "black" : "white"}
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className={direction === "left" ? "" : "rotate-180"}
-      >
-        <polyline points="15 18 9 12 15 6" />
-      </svg>
-    </button>
-  );
+        >
+            <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke={isDisabled ? "black" : "white"}
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={direction === "left" ? "" : "rotate-180"}
+            >
+                <polyline points="15 18 9 12 15 6" />
+            </svg>
+        </button>
+    );
 };
