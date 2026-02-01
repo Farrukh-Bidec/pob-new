@@ -200,7 +200,7 @@ const Navbar = () => {
                     <div className="h-full flex items-center">
                       <Link
                         href={item.link || "#"}
-                        className={`text-black font-inter flex items-center pb-2 hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
+                        className={`text-black font-inter flex items-center hover:border-[#C30001] hover:border-b-2 transition duration-200 ${isActive ? "border-b-2 border-[#C30001]" : ""}`}
                       >
                         {item.name}
                       </Link>

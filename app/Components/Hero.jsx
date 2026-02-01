@@ -496,7 +496,7 @@ const Hero = () => {
       className="
     relative text-white
     bg-cover bg-center bg-no-repeat
-    h-[520px] sm:h-[560px] md:h-[640px] lg:h-[900px]
+    h-[520px] sm:h-[560px] md:h-[640px] lg:h-[900px] 2xl:h-[1200px]
     flex items-start
     overflow-hidden w-full
   "
@@ -510,17 +510,19 @@ const Hero = () => {
       <div
         className="
       relative z-10
-      w-full max-w-[90%]
+      w-full max-w-[90%] h-full
       mx-auto
       px-4 sm:px-0
       pt-[clamp(4rem,12vh,8rem)]
+      flex flex-col justify-center pb-72
     "
       >
         <p
           className="
+          !font-amaranth
         text-[12px] sm:text-[15px]
         tracking-[0.2em]
-        uppercase text-white/80 mt-40
+        uppercase text-white/80 
       "
         >
           Welcome to POB Trust – Prevention of Blindness
@@ -530,21 +532,18 @@ const Hero = () => {
           className="
         mt-4
         font-semibold leading-tight
-        text-[clamp(24px,5vw,52px)]
-        max-w-[950px]
+        text-[clamp(24px,5vw,71px)]
+        max-w-[600px]
       "
         >
-          Leading Free Eye Care Hospital in Karachi:
-          <span className="block">
-            Restoring Vision with Compassion
-          </span>
+         Donate Now to Light Up a Life
         </h1>
 
         <p
           className="
         mt-5
-        text-[14px] sm:text-[15px] md:text-[17px]
-        max-w-[700px]
+        text-[14px] sm:text-[15px] md:text-[15px] font-inter
+        max-w-[600px]
         text-white/90
         leading-relaxed
       "
@@ -559,7 +558,7 @@ const Hero = () => {
           inline-flex items-center gap-3
           pl-5 pr-2 py-2
           bg-white text-black
-          font-semibold rounded-full
+          font-inter font-medium rounded-full text-[14px]
           shadow-xl
           hover:bg-gray-100 transition
         "
