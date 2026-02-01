@@ -35,7 +35,7 @@ const Stats = () => {
   grid grid-cols-2 gap-x-6 gap-y-10 mb-10
   sm:grid-cols-2
   lg:flex lg:flex-wrap lg:gap-5 lg:justify-start lg:w-170
-  2xl:gap-20
+  2xl:gap-x-20 2xl:gap-y-6
 ">
               {statsData.map((stat, index) => (
                 // <div key={index} className="flex flex-col md:grid-cols-2 w-40 md:w-40 relative group">

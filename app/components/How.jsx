@@ -13,7 +13,7 @@ const howData = [
         icon: "/hand2.png",
         bg: "/bg.webp",
         desc: "Contribute towards advanced treatments that help correct nearsightedness for those in need.",
-        link: "https://pob-delta.vercel.app/donation",
+        link: "/donation",
         btn: "Donate Now",
         offset: "md:mt-36 mac:mt-48"
     },
@@ -22,7 +22,7 @@ const howData = [
         icon: "/mand.png",
         bg: "/bg2.webp",
         desc: "Make a meaningful impact by supporting vision correction treatments through voluntary charity.",
-        link: "https://pob-delta.vercel.app/sadaqah",
+        link: "/sadaqah",
         btn: "Give Sadaqah",
         offset: ""
     },
@@ -31,7 +31,7 @@ const howData = [
         icon: "/sand.png",
         bg: "/bg3.webp",
         desc: "Fulfill your Zakat obligation by funding LASIK treatments for those who can't afford it.",
-        link: "https://pob-delta.vercel.app/zakat",
+        link: "/zakat",
         btn: "Pay Zakat",
         offset: "md:mt-36 mac:mt-48"
     }
