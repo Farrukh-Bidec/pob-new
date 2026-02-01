@@ -184,7 +184,7 @@ const Commitment = () => {
                 <img
                   src={card.image}
                   alt={card.text}
-                  className="h-60 md:h-[303.51px] md:w-[442px] mac:h-[500px] w-full object-cover rounded-[8px]"
+                  className="h-60 md:h-[303.51px] md:w-[442px] ma[500px] w-full object-cover rounded-[8px]"
                 />
                 <h3 className="text-xl h-10 md:text-[22px] mt-4 text-black py-2 md:py-2 font-inter">
                   {card.text}
@@ -219,11 +219,11 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-<div className="relative maxw6xl mx-auto my-10 md:my-20 overflow-hidden roundedlg">
+<div className="relative maxw6xl md:w-[1,352.22px] md:h-[308.71px] mx-auto my-10 md:my-20 overflow-hidden roundedlg">
 
-  <div className="absolute inset-0 bg-[url('/section4.png')] bg-cover bg-center" />
+  <div className="absolute inset-0  w-[1,352.22px] h-[308.71px] bg-[url('/section4.png')] bg-cover bg-center" />
 
-  <div className="relative z-10 flex justify-end px-6 md:px-24 2xl:px-[250px] py-16 md:py-32">
+  <div className="relative z-10 flex justify-end px-6 md:px-24 2xl:px-[250px] py-12 md:py-20">
     
     {/* Text Block */}
     <div className="max-w-xl text-right">
