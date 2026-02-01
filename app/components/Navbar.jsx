@@ -81,33 +81,21 @@ const Navbar = () => {
       {/* Top Nav */}
       <section className="hidden md:block relative w-[90%] py-1 px-4 rounded-b-[10px] bg-[#C30001] text-white">
         <div className="flex justify-between items-center w-full">
-          <div className="flex items-center justify-center gap-3">
-            <p className="flex gap-[2px] text-[9.07px] py-auto font-semibold">
-              <HiPhone className="mt-[1px] text-[10.3px]" />
-              Karachi :
-              <a href="tel:+9221111762544" className="">
-                {" "}
-                UAN +92-21-111-762-544
-              </a>{" "}
-              :
-              <a href="tel:+922134156597" className="">
-                +92-21-34156597
-              </a>
-            </p>
-            <p className="flex gap-1 text-[9.07px] font-semibold">
-              <IoMdMail className="mt-[1px] text-[10.3px]" />
-              <a
-                href="mailto:info@pobkarachi.org"
-                className=""
-              >
-                info@pobkarachi.org
-              </a>{" "}
-              :
-              <a href="mailto:careers@pobkarachi.org" className="">
-                careers@pobkarachi.org
-              </a>
-            </p>
-          </div>
+         <div className="flex items-center justify-center gap-6">
+  <p className="flex items-center gap-1 text-[9.07px] font-semibold leadingnone">
+    <HiPhone className="text-[10.3px]" />
+    Karachi :
+    <a href="tel:+9221111762544">UAN +92-21-111-762-544</a> :
+    <a href="tel:+922134156597">+92-21-34156597</a>
+  </p>
+
+  <p className="flex items-center gap-1 text-[9.07px] font-semibold leadingnone">
+    <IoMdMail className="text-[10.3px]" />
+    <a href="mailto:info@pobkarachi.org">info@pobkarachi.org</a> :
+    <a href="mailto:careers@pobkarachi.org">careers@pobkarachi.org</a>
+  </p>
+</div>
+
           <div className="flex space-x-4 text-white">
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebookF size={13} />
@@ -288,7 +276,7 @@ const Navbar = () => {
             <Link href="/donation/">
               <div className="w-[160px] cursor-pointer text-white bg-[#373895] px-1 py-1 gap-1 flex items-center justify-start border-2 border-transparent rounded-full">
                 <div className="bg-white px-2 py-2 rounded-[50%]">
-                  <Image src="/hand.png" alt="" width={24} height={24} className="w-6" />
+                  <Image src="/hand.png" alt="" width={22} height={22} className="w-full" />
                 </div>
                 <p className="mx-1 font-inter font-medium text-[13px]">Donation Now</p>
               </div>
