@@ -8,16 +8,18 @@ const Footer = () => {
     <footer className="w-full bg-white pt20">
       <div className="relative">
         {/* Floating Donate Card - Half on white, half on blue */}
-        <div className="max-w-[1200px] mx-auto px-6 relative z-20 -mb-24">
-          <div className="bg-white rounded-[40px] shadow-2xl p-8 md:p-14 flex flex-col md:flex-row gap-12 items-start border border-gray-50">
+        <div className="max-w-6xl mx-auto p6 relative z-20 -mb-24">
+          <div className=
+          "bg-white rounded-b-[20px] rounded-t-none shadow2xl p-8 md:p-14 flex flex-col md:flex-row gap-12 items-start">
 
             {/* Left Content */}
             <div className="md:w-1/2">
-              <h2 className="text-[32px] md:text-[52px] font-bold text-[#00153D] leading-[1.1] mb-6">
+              <h2 className="text-[32px] md:text-[45px] w-[430px] font-bold text-[#00153D] leading-[1.1] mb-6">
                 Together, We Can Bring Smiles to Those in Need.
               </h2>
-              <p className="text-[#555555] text-lg leading-relaxed max-w-[450px]">
-                Your Generosity Fuels Our Mission: Providing Aid, Hope, and Love to Communities in Need.
+              <p className="text-[#000000] font-poppins text-[18px] !font-medium leading-relaxed max-w-[400px]">
+                Your Generosity Fuels Our Mission: Providing   
+                 Aid, Hope, and Love to Communities in Need.
               </p>
             </div>
 
@@ -27,31 +29,41 @@ const Footer = () => {
             <img
               src="./line.png"
               alt="divider"
-              className="hidden md:block h-72 w-auto self-center"
+              className="hidden -ml-24 md:block mt-14 h-44 w-auto selfcenter"
             />
 
 
             {/* Right Form */}
             <div className="md:w-1/2 w-full">
               <div className="mb-6">
-                <h3 className="text-4xl font-bold text-[#00153D]">Donate Online</h3>
-                <p className="text-sm mt-1">Help Us Help Them with Your Zakat/Donations/Sadqah</p>
+                <h3 className="text-[36.78px] -mt-20 font-bold text-[#030A2E]">Donate Online</h3>
+                <p className="text-[16.55px] !font-medium text-[#000000] !font-poppins mt-1">Help Us Help Them with Your Zakat/Donations/Sadqah</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input type="text" placeholder="First Name*" className="w-full border border-black rounded-xl px-4 py-3 bg-[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                <input type="text" placeholder="Last Name*" className="w-full border border-black rounded-xl px-4 py-3 bg-[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                <input type="email" placeholder="Email" className="w-full border border-black rounded-xl px-4 py-3 bg-[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                <select className="w-full border border-black rounded-xl px-4 py-3 bg-[#FCFCFC] text-gray-400 focus:outline-none">
+<div className="grid grid-cols-1 w-[440px] ml-4 md:grid-cols-2 gap-x-12 gap-y-6">                <input type="text" placeholder="First Name*" className="w-[214.78px]  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                <input type="text" placeholder="Last Name*" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                <input type="email" placeholder="Email" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                {/* <select className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] text-gray-400 focus:outline-none">
                   <option>PKR</option>
                 </select>
-                <select className="w-full border border-black rounded-xl px-4 py-3 bg-[#FCFCFC] text-gray-400 focus:outline-none">
+                <select className="w-[214.78px]  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 b[#FCFCFC] text-gray-400 focus:outline-none">
                   <option>Zakat</option>
-                </select>
-                <input type="text" placeholder="(Minimum 50 )" className="w-full border border-black rounded-xl px-4 py-3 bg-[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                </select> */}
+                <select
+  className="w-[214.78px] h-[55px] border border-black rounded-[18px] px-4 pr-10 text-gray-400 bg[#FCFCFC] focus:outline-none"
+>
+  <option>PKR</option>
+</select>
+
+<select
+  className="w-[214.78px] h-[55px] border border-black rounded-[18px] px-4 pr-20 text-gray-400 bg[#FCFCFC] focus:outline-none"
+>
+  <option>Zakat</option>
+</select>
+                <input type="text" placeholder="(Minimum 50 )" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg#FCFCFC] focus:outline-none focus:border-[#373895]" />
               </div>
 
-              <button className="w-full mt-6 bg-[#373895] text-white font-semibold py-4 rounded-full shadow-lg hover:bg-[#2a2b7a] transition-all">
+              <button className="w-[455.07px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#373895] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
                 Donation Now
               </button>
             </div>
@@ -59,7 +71,9 @@ const Footer = () => {
         </div>
 
         {/* Main Blue Footer */}
-        <div className="bg-[#373895] text-white pt-40 pb-8 px-6 md:px-20">
+
+
+        <div className="bg-[#373895] text-white pt-40 pb-8 px-6 md:px20">
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
 
             {/* About us */}
@@ -83,22 +97,38 @@ const Footer = () => {
               >
                 A registered charity focused on preventing avoidable blindness in deprived and marginalized communities.
               </p>
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <p className="text-[27.26px] !font-semibold mb-4" style={{ fontFamily: "Poppins" }}
                 >Scan to Donate</p>
 
+              </div> */}
+              <div className="mt-8 textcenter">
+                <p
+                  className="text-[27.26px] !font-semibold mb-4"
+                  style={{ fontFamily: "Poppins" }}
+                >
+                  Scan to Donate
+                </p>
+
+                <div className="inline-block bg-white p-4 rounded-xl shadow-md">
+                  <img
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=DonateNow"
+                    alt="Scan to Donate QR"
+                    className="w-[180px] h-[180px]"
+                  />
+                </div>
               </div>
             </div>
 
             {/* Quick Links */}
             <div className="space-y-6 md:ml-10">
               {/* <p className="text-2xl !font-bold">Quick Links</p> */}
-               <p
+              <p
                 className="text-[27.26px] !font-semibold"
                 style={{ fontFamily: "Poppins" }}
               >
-                 Quick Links
-              </p>    
+                Quick Links
+              </p>
               <ul className="space-y-2 text-[16.35px] text[#E0E0E0]">
                 {["Home", "Core Values & Strategy", "Vision & Mission", "Brief profile", "Board of trustees", "Philosophy", "About Us", "Partners", "Donate Now", "Contact Us"].map((link) => (
                   <li key={link} className="hover:text-white cursor-pointer transition-colors">{link}</li>
@@ -139,7 +169,7 @@ const Footer = () => {
                 </div>
               </div>
             </div> */}
-  {/* <div className="space-y-6">
+            {/* <div className="space-y-6">
  <p
                 className="text-[27.26px] !font-semibold"
                 style={{ fontFamily: "Poppins" }}
@@ -172,60 +202,60 @@ const Footer = () => {
               </div>
             </div> */}
             <div className="space-y-4">
-  <p
-    className="text-[27.26px] !font-semibold"
-    style={{ fontFamily: "Poppins" }}
-  >
-    Location
-  </p>
+              <p
+                className="text-[27.26px] !font-semibold"
+                style={{ fontFamily: "Poppins" }}
+              >
+                Location
+              </p>
 
-  <div className="space-y-5 text-[15px] text-[#E0E0E0]">
-    <div className="flex gap-3 items-start">
-      <img
-        src="/loc.png"
-        alt="Location"
-        className="w-5 h-5 shrink-0 mt-1"
-      />
-      <p>
-        <span className="!font-medium text-[17px] block text-white"   style={{ fontFamily: "Poppins" }}>
-          Head Office Lahore:
-        </span>
-        {/* <span>
+              <div className="space-y-5 text-[15px] text-[#E0E0E0]">
+                <div className="flex gap-3 items-start">
+                  <img
+                    src="/loc.png"
+                    alt="Location"
+                    className="w-5 h-5 shrink-0 mt-1"
+                  />
+                  <p>
+                    <span className="!font-medium text-[17px] block text-white" style={{ fontFamily: "Poppins" }}>
+                      Head Office Lahore:
+                    </span>
+                    {/* <span>
         720 Kamran Block, Allama Iqbal Town.
         </span> */}
-        <span className="font-poppins mt-2 font-medium text-[17px] leading-[1.92]">
-  720 Kamran Block, Allama Iqbal Town.
-</span>
-      </p>
-    </div>
+                    <span className="font-poppins mt-2 font-medium text-[17px] leading-[1.92]">
+                      720 Kamran Block, Allama Iqbal Town.
+                    </span>
+                  </p>
+                </div>
 
-    <div className="flex gap-3 items-start">
-       <img
-        src="/loc.png"
-        alt="Location"
-        className="w-5 h-5 shrink-0 mt-1"
-      />
-      <p>
-        <span className="!font-medium text-[17px] block text-white"   style={{ fontFamily: "Poppins" }}>
-          Karachi:
-        </span>
-         <span className="font-poppins mt-2 font-medium text-[17px] leading-[1.92]">
-C-15, Block 12, Gulistan e Johar
+                <div className="flex gap-3 items-start">
+                  <img
+                    src="/loc.png"
+                    alt="Location"
+                    className="w-5 h-5 shrink-0 mt-1"
+                  />
+                  <p>
+                    <span className="!font-medium text-[17px] block text-white" style={{ fontFamily: "Poppins" }}>
+                      Karachi:
+                    </span>
+                    <span className="font-poppins mt-2 font-medium text-[17px] leading-[1.92]">
+                      C-15, Block 12, Gulistan e Johar
 
-</span>
-      </p>
-    </div>
-  </div>
+                    </span>
+                  </p>
+                </div>
+              </div>
 
-  <div className="mt-1">
-    {/* <p className="text-2xl font-bold mb-4">Social Links</p> */}
-  <p
-    className="text-[27.26px] !font-semibold"
-    style={{ fontFamily: "Poppins" }}
-  >
-    Social Links
-  </p>
-    {/* <div className="flex gap-3">
+              <div className="mt-1">
+                {/* <p className="text-2xl font-bold mb-4">Social Links</p> */}
+                <p
+                  className="text-[27.26px] !font-semibold"
+                  style={{ fontFamily: "Poppins" }}
+                >
+                  Social Links
+                </p>
+                {/* <div className="flex gap-3">
       {[FaFacebookF, FaWhatsapp, FaInstagram, FaXTwitter].map((Icon, idx) => (
         <div
           key={idx}
@@ -235,56 +265,57 @@ C-15, Block 12, Gulistan e Johar
         </div>
       ))}
     </div> */}
-    <div className="flex gap-3 mt-3">
-    {[
-      { src: "/fac.png", alt: "Facebook" },
-      { src: "/whats.png", alt: "WhatsApp" },
-      { src: "/inst.png", alt: "Instagram" },
-      { src: "/twitt.png", alt: "Twitter" },
-    ].map((item, idx) => (
-      <div
-        key={idx}
-        className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm"
-      >
-        <img
-          src={item.src}
-          alt={item.alt}
-         className="w-[24.2px] h-[24.2px]"
-        />
-      </div>
-    ))}
-  </div>
-  </div>
-</div>
+                <div className="flex gap-3 mt-3">
+                  {[
+                    { src: "/fac.png", alt: "Facebook" },
+                    { src: "/whats.png", alt: "WhatsApp" },
+                    { src: "/inst.png", alt: "Instagram" },
+                    { src: "/twitt.png", alt: "Twitter" },
+                  ].map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm"
+                    >
+                      <img
+                        src={item.src}
+                        alt={item.alt}
+                        className="w-[24.2px] h-[24.2px]"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
             {/* Contact Us */}
-            <div className="space-y-8">
- <p
+            <div className="space-y-6 ml-20">
+              <p
                 className="text-[27.26px] !font-semibold"
                 style={{ fontFamily: "Poppins" }}
               >
                 Contact us
-              </p>                 <div className="space-y-6 text-[15px] text-[#E0E0E0]">
-                <div>
-                  <p className="font-bold text-white mb-2 underline underline-offset-4 decoration-white/20 uppercase tracking-wide">Karachi UAN</p>
-                  <p className="mb-1">• +92-21-111-762-544</p>
-                  <p>• +92-21-34156597</p>
+              </p>                 
+              <div className="space-y-6 text[15px] text-[#E0E0E0]">
+                <div> 
+                  <p className="font-bold font-poppins  !font-medium text-[17px] text-white mb-4   decorationwhite/20  tracking-wide">Karachi UAN</p>
+                  <p className="mb-3 text-[17px]" >• +92-21-111-762-544</p>
+                  <p className="text-[17px]">• +92-21-34156597</p>
                 </div>
                 <div>
-                  <p className="font-bold text-white mb-2 underline underline-offset-4 decoration-white/20 uppercase tracking-wide">Lahore:</p>
-                  <p className="mb-1">• +92 042 354 14 720</p>
-                  <p>• +92 347 999 777 20</p>
+                  <p className="font-bold font-poppins !font-medium text-[17px] text-white mb-4 -offset-4 decorationwhite/20  tracking-wide">Lahore:</p>
+                  <p className="mb-3 text-[17px]">• +92 042 354 14 720</p>
+                  <p className="text-[17px]">• +92 347 999 777 20</p>
                 </div>
                 <div>
-                  <p className="font-bold text-white mb-2 underline underline-offset-4 decoration-white/20 uppercase tracking-wide">Email Address</p>
-                  <p className="mb-1">• info@pobtrust.org</p>
-                  <p>• gs@pobtrust.org</p>
+                  <p className="font-bold font-poppins !font-medium text-[17px] text-white mb-4 offset-4 decorationhite/20  tracking-wide">Email Address</p>
+                  <p className="mb-3 text-[17px]">• info@pobtrust.org</p>
+                  <p className="text-[17px]">• gs@pobtrust.org</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="max-w-[1400px] mx-auto mt-8 flex flex-col md:flex-row justify-between items-center text-[13px] text-[#CCCCCC]">
+          <div className="max-w-6xl mx-auto mt-8 flex flex-col md:flex-row justify-between items-center text-[13px] text-[#CCCCCC]">
             <p>© Copyright 2024 @ POB TRUST</p>
             <div className="mt-4 md:mt-0 flex gap-6">
               <span className="hover:text-white cursor-pointer">Terms & Conditions</span>
