@@ -219,14 +219,14 @@ const Commitment = () => {
       </div>
 
       {/* Impact Section */}
-<div className="relative max-w-6xl mx-auto my-10 md:my-20 overflow-hidden rounded-lg">
+<div className="relative maxw6xl mx-auto my-10 md:my-20 overflow-hidden roundedlg">
 
   {/* Background */}
   <div className="absolute inset-0 bg-[url('/section4.png')] bg-cover bg-center" />
-  <div className="absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/70 via-[#1e3a8a]/50 to-transparent" />
+  {/* <div className="absolute inset-0 bg-gradient-to-l from-[#1e3a8a]/70 via-[#1e3a8a]/50 to-transparent" /> */}
 
   {/* Content */}
-  <div className="relative z-10 flex justify-end px-6 md:px-16 py-16 md:py-24">
+  <div className="relative z-10 flex justify-end px-6 md:px-[250px] py-16 md:py-32">
     
     {/* Text Block */}
     <div className="max-w-xl text-right">
