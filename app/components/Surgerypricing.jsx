@@ -328,23 +328,23 @@ const SurgeryPricing = () => {
 
   return (
     <section className="bg-[#373895] text-white">
-      <div className="mx-auto max-w-[1200px] px-4 sm:px-6 py-14 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-16">
         {/* Headings (same centered spacing) */}
         <div className="text-center">
-          <p className="uppercase text-[11px] tracking-[0.35em] text-white/80">
+          <p className={`m-0 !font-amaranth text-[15px] text-[#FFFFFF] uppercase font-normal leading-none`}>
             HELP US
           </p>
 
-          <h3 className="mt-3 text-[22px] sm:text-[30px] md:text-[36px] font-semibold leading-tight">
+          <h3 className={`m-0 !font-amaranth text-[32px] md:text-[50px] text-[#FFFFFF] font-normal leading-[1.1]`}>
             HELP THEM WITH YOUR ZAKAT/DONATIONS
           </h3>
 
-          <p className="mt-3 text-[12px] sm:text-[13px] text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-inter mt-3 text-[12px] sm:text-[15x] text-white/80 max-w-3xl mx-auto leading-relaxed">
             Through your Zakat and Sadaqah, you can support timely treatment and protect the gift of sight
             for those who cannot afford care.
           </p>
 
-          <p className="mt-2 text-[12px] sm:text-[13px] text-white/80 max-w-4xl mx-auto leading-relaxed">
+          <p className="font-inter mt-2 text-[12px] sm:text-[15px] text-white/80 max-w-4xl mx-auto leading-relaxed">
             In Pakistan, over 40 million people are affected by eye diseases, with cataracts responsible for
             nearly half of all blindness, followed by glaucoma and diabetic retinopathy.
           </p>
@@ -369,9 +369,9 @@ const SurgeryPricing = () => {
             {donationData.map((item, idx) => (
               <SwiperSlide key={idx} className="h-auto">
                 {/* Card: FIXED width + FIXED height => zoom stable */}
-                <div className="mx-auto w-[240px] sm:w-[250px] h-[460px] flex flex-col">
+                <div className="mx-auto w-[240px] sm:w-[273px] h-[460px] flex flex-col">
                   {/* image */}
-                  <div className="relative h-[550px] rounded-[9px] overflow-hidden">
+                  <div className="relative h-[550px] max-h-[550px] rounded-[9px] overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -383,24 +383,24 @@ const SurgeryPricing = () => {
                   {/* content */}
                   <div className="pt-4 flex flex-col flex-grow">
                     {/* Title: same as screenshot (2 lines) */}
-                    <h4 className="text-[13px] font-semibold leading-snug min-h-[36px]">
+                    <h4 className="text-[21px] !font-amaranth font-semibold leading-snug min-h-[48px] line-clamp-2">
                       {item.title.split(" ").slice(0, 4).join(" ")}
                       <br />
                       {item.title.split(" ").slice(4).join(" ")}
                     </h4>
 
-                    <p className="mt-2 text-[10px] text-white/75 leading-relaxed min-h-[44px] line-clamp-3">
+                    <p className="mt-2 text-[11.44px] font-inter text-white/75 leading-relaxed min-h-[44px] line-clamp-3">
                       {item.description}
                     </p>
 
-                    <p className="mt-3 text-[12px] text-white/90">
+                    <p className="mt-3 text-[19px] font-inter text-white/90">
                       {item.price}
                     </p>
 
                     {/* button: pill centered */}
                     <button
                       onClick={handleDonateClick}
-                      className="mt-4 w-[78px] rounded-full bg-white text-black py-[6px] text-[11px] font-medium hover:bg-white/90"
+                      className="mt-4 w-[78px] rounded-full bg-white text-black py-[6px] text-[12px] font-inter hover:bg-white/90"
                     >
                       Donate
                     </button>
