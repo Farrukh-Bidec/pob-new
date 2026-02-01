@@ -269,8 +269,8 @@ const Footer = () => {
                 <div className="flex gap-3 mt-3">
                   {[
                     { src: "/fac.png", alt: "Facebook" },
-                    { src: "/whats.png", alt: "WhatsApp" },
-                    { src: "/inst.png", alt: "Instagram" },
+                    { src: "/chats.png", alt: "WhatsApp" },
+                    { src: "/intaa.png", alt: "Instagram" },
                     { src: "/twitt.png", alt: "Twitter" },
                   ].map((item, idx) => (
                     <div
@@ -417,7 +417,7 @@ const Footer = () => {
   <div className="mb-6">
     <p className="text-[20px] font-semibold font-poppins mb-2">Social Links</p>
     <div className="flex gap-3">
-      {["/fac.png","/whats.png","/inst.png","/twitt.png"].map((icon,i)=>(
+      {["/fac.png","/chats.png","/intaa.png","/twitt.png"].map((icon,i)=>(
         <div key={i} className="bg-white w-[38px] h-[38px] flex items-center justify-center rounded-lg cursor-pointer shadow-sm">
           <img src={icon} className="w-[22px] h-[22px]" />
         </div>
