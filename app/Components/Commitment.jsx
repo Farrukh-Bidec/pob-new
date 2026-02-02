@@ -73,10 +73,13 @@ const Commitment = () => {
     }
   };
 
-  // Swipe Handling Functions
+  // Swipe & Auto-slide Handling
   const minSwipeDistance = 50;
+  const [isPaused, setIsPaused] = useState(false);
 
   const onTouchStart = (e) => {
+    // pause auto-slide while user interacts
+    setIsPaused(true);
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -84,29 +87,53 @@ const Commitment = () => {
   const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
 
   const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
-    const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
+    if (touchStart != null && touchEnd != null) {
+      const distance = touchStart - touchEnd;
+      const isLeftSwipe = distance > minSwipeDistance;
+      const isRightSwipe = distance < -minSwipeDistance;
 
-    if (isLeftSwipe && currentIndex < totalDots - 1) {
-      setCurrentIndex((prev) => prev + 1);
+      if (isLeftSwipe && currentIndex < totalDots - 1) {
+        setCurrentIndex((prev) => prev + 1);
+      } else if (isRightSwipe && currentIndex > 0) {
+        setCurrentIndex((prev) => prev - 1);
+      }
     }
-    if (isRightSwipe && currentIndex > 0) {
-      setCurrentIndex((prev) => prev - 1);
-    }
+
+    // reset touch tracking and resume auto-slide shortly after interaction
+    setTouchStart(null);
+    setTouchEnd(null);
+    setTimeout(() => setIsPaused(false), 500);
   };
+
+  // Auto-advance the slider and loop when reaching the end
+  useEffect(() => {
+    if (totalDots <= 0) return;
+    const interval = setInterval(() => {
+      if (!isPaused) {
+        setCurrentIndex((prev) => (prev + 1 >= totalDots ? 0 : prev + 1));
+      }
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [totalDots, isPaused]);
+
+  // Ensure currentIndex remains valid if totalDots changes
+  useEffect(() => {
+    if (currentIndex > Math.max(0, totalDots - 1)) {
+      setCurrentIndex(0);
+    }
+  }, [totalDots]);
 
   return (
     <>
-      <div className="md:ml10 pt-10 max-w-6xl mx-auto  overflow-hidden mac:max-w-[1600px] mac:px-20 mac:mx-auto">
+      <div className="md:ml-10 pt-10 max-w6xl mx-auto  overflow-hidden mac:max-w-[1600px] mac:px-20 mac:mx-auto">
         {/* Header */}
         <div className="flex justify-between items-end pt-10 px-6 md:px-10">
           <div>
-        <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
+        <h4 className={`m-0 font-amaranth! text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
               Commitment
             </h4>
-            <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
+            <h2 className={`m-0 font-amaranth! text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
               Our Commitment at <br className="hidden md:block" /> POB Trust
             </h2>
           </div>
@@ -168,6 +195,8 @@ const Commitment = () => {
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
         >
           <div
             className="flex gap-6 md:gap-10 transition-transform duration-500 ease-in-out"
@@ -179,12 +208,12 @@ const Commitment = () => {
               <div
                 key={index}
                 ref={index === 0 ? cardRef : null}
-                className="md:min-w-[55%] min-w-[95%] w-[1000px] md:min-w-[410px] mac:min-w-[650px]"
+                className="md:min-w-102.5 min-w-[95%] w-250 mac:min-w-[650px]"
               >
                 <img
                   src={card.image}
                   alt={card.text}
-                  className="h-60 md:h-[303.51px] w-[1000px] md:w-[442px] ma[500px] wfull object-cover rounded-[8px]"
+                  className="h-60 md:h-[303.51px] w-250 md:w-110.5 ma[500px] wfull object-cover rounded-lg"
                 />
                 <h3 className="text-xl h-10 md:text-[22px] mt-4 text-black py-2 md:py-2 font-inter">
                   {card.text}
@@ -223,7 +252,7 @@ const Commitment = () => {
 
   <div className="absolute inset-0  w-[1,352.22px] h-[308.71px] bg-[url('/section4.png')] bg-cover bg-center" />
 
-  <div className="relative z-10 flex justify-end px-6 md:px-24 2xl:px-[250px] py-12 md:py-20">
+  <div className="relative z-10 flex justify-end px-6 md:px-24 2xl:px-62.5 py-12 md:py-20">
     
     {/* Text Block */}
     <div className="max-w-xl text-right">
