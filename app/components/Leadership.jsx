@@ -522,15 +522,18 @@ const LeaderShip = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(288 + 24);
   const [visibleCount, setVisibleCount] = useState(2);
+  const [is1512, setIs1512] = useState(false);
   const sliderRef = useRef(null);
 
   // Responsive card width + visible count
   useEffect(() => {
     const updateSize = () => {
-      if (window.innerWidth >= 1512) {
+      const width = window.innerWidth;
+      setIs1512(width >= 1512);
+      if (width >= 1512) {
         setCardWidth(420 + 16);
         setVisibleCount(4);
-      } else if (window.innerWidth >= 768) {
+      } else if (width >= 768) {
         setCardWidth(288 + 16);
         setVisibleCount(2);
       } else {
@@ -597,8 +600,8 @@ const LeaderShip = () => {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`flex-shrink-0 h-[35.02px] w-[140.17px] font-inter cursor-pointer px-0.5 py-2 text-[11.36px] mac:text-xl rounded-full transition-colors duration-200 snap-start ${activeCategory === category
-                  ? "bg-white text-black"
-                  : "bg-transparent text-white"
+                ? "bg-white text-black"
+                : "bg-transparent text-white"
                 }`}
             >
               {category}
@@ -610,7 +613,7 @@ const LeaderShip = () => {
       {/* Slider */}
       <div className="relative w-full px-4 md:px-16 mac:px-4 flex items-center justify-center">
         {/* Left Arrow */}
-        {canScroll && window.innerWidth >= 1512 && (
+        {canScroll && is1512 && (
           <button
             onClick={handlePrev}
             className={`${arrowBtn} -left-12`}
@@ -643,7 +646,7 @@ const LeaderShip = () => {
         </div>
 
         {/* Right Arrow */}
-        {canScroll && window.innerWidth >= 1512 && (
+        {canScroll && is1512 && (
           <button
             onClick={handleNext}
             className={`${arrowBtn} -right-12`}
