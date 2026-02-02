@@ -273,7 +273,7 @@ const Help = () => {
                 </div>
 
                 {/* Grey bottom bar like screenshot */}
-                <div className="absolute pb-10 bottom-0 left-0 w-full h-[190px] sm:h-[140px] lg:h-[160px] bg-gradient-to-b from-[#F7F8FC] via[#F2F4FA]  bg[#F5F5F5] z-0" />
+                <div className="absolute pb-10 bottom-0 left-0 w-full h-[190px] sm:h-[140px] lg:h-[160px] bg-[#F7F8FC] z-0" />
             </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
@@ -285,7 +285,7 @@ const Help = () => {
 
 
 
-            <div className="text-center bg-gradientbfrom-[#F7F8FC] via-[#F2F4FA] to-[#FFFFFF] py-28 mac:py-40 px-4 mac:px-20">
+            <div className="text-center bg-gradient-to-b from-[#F7F8FC] via[#F2F4FA] py-28 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
                 <h4 className={`m-0 !font-amaranth pb-2 text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
