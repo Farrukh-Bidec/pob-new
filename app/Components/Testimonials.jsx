@@ -19,6 +19,7 @@ const Testimonials = () => {
       description:
         "I came to POB Eye Hospital feeling very nervous about my surgery, but the warmth of the staff immediately put me at ease.",
       videoUrl: "https://www.youtube.com/watch?v=oVt3CFIz6sk",
+      image: "/testimonial1.png",
     },
     {
       id: 2,
@@ -26,6 +27,7 @@ const Testimonials = () => {
       description:
         "Testimonial of the recently treated patient at our POB Eye Hospital Karachi, thanking for the excellent care.",
       videoUrl: "https://www.youtube.com/watch?v=sd3DMgDGw88",
+      image: "/testimonial2.png",
     },
     {
       id: 3,
@@ -33,6 +35,7 @@ const Testimonials = () => {
       description:
         "I am so impressed by the seamless experience at POB. Thank you for restoring my sight.",
       videoUrl: "https://www.youtube.com/watch?v=4hcVpWQZiiE",
+      image: "/testimonial3.png",
     },
   ];
 
@@ -52,7 +55,7 @@ const Testimonials = () => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-10 md:py-0">
 
-          <div className="text-center pt10 md:pt-16 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
+          <div className="text-center pt10 md:pt-24 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
             {/* <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
           Testimonials
         </h4>
@@ -78,12 +81,13 @@ const Testimonials = () => {
                 <SwiperSlide key={card.id}>
                   <div className="bg-white shadow-2xl rounded-[20px] overflow-hidden flex flex-col border border-gray-50 shadow-lg max-w-[400px] mx-auto">
                     <div className="h-60 overflow-hidden">
-                      <iframe
+                      {/* <iframe
                         className="w-full h-full object-cover"
                         src={card.videoUrl.replace("watch?v=", "embed/")}
                         title={card.title}
                         allowFullScreen
-                      />
+                      /> */}
+                      <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
                     </div>
 
                     <div className="p-6 flex flex-col h-[250px]">
@@ -113,15 +117,16 @@ const Testimonials = () => {
             {cards.map((card) => (
               <div
                 key={card.id}
-                className="bg-white w-full max-w-[380px] mac:max-w-[520px] h-fit rounded-[20px] overflow-hidden flex flex-col border border-gray-50 shadow-lg mx-auto"
+                className="bg-white w-full max-w-[345px] mac:max-w-[520px] h-fit rounded-[20px] overflow-hidden flex flex-col shadow-lg mx-auto"
               >
                 <div className="w-full aspect-video overflow-hidden">
-                  <iframe
+                  {/* <iframe
                     className="w-full h-full object-cover"
                     src={card.videoUrl.replace("watch?v=", "embed/")}
                     title={card.title}
                     allowFullScreen
-                  />
+                  /> */}
+                                        <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
                 </div>
 
                 {/* <div className="p-7 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
