@@ -42,7 +42,7 @@ const LeaderShip = () => {
     "Baithak School",
     "School Camps",
     "Orangi Unit Campus",
-    "Donor Visits",
+    // "Donor Visits",
   ];
 
   const [activeCategory, setActiveCategory] = useState(categories[0]);

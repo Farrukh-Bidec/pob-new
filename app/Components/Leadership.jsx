@@ -117,7 +117,7 @@
 //         {/* <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
 //           Media Gallery
 //         </h4> */}
-       
+
 //         {/* <h2 className="text-3xl sm:text-5xl mac:text-7xl pb- pt-2 text-black w-full">Capturing Moments, Sharing Stories</h2> */}
 //          <SectionLabel text="Media Gallery" />
 //                 <SectionHeading text="Capturing Moments, Sharing Stories" />
@@ -515,7 +515,7 @@ const LeaderShip = () => {
     "Baithak School",
     "School Camps",
     "Orangi Unit Campus",
-    "Donor Visits",
+    // "Donor Visits",
   ];
 
   const [activeCategory, setActiveCategory] = useState(categories[0]);
@@ -596,11 +596,10 @@ const LeaderShip = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`flex-shrink-0 h-[35.02px] w-[140.17px] font-inter cursor-pointer px-0.5 py-2 text-[11.36px] mac:text-xl rounded-full transition-colors duration-200 snap-start ${
-                activeCategory === category
+              className={`flex-shrink-0 h-[35.02px] w-[140.17px] font-inter cursor-pointer px-0.5 py-2 text-[11.36px] mac:text-xl rounded-full transition-colors duration-200 snap-start ${activeCategory === category
                   ? "bg-white text-black"
                   : "bg-transparent text-white"
-              }`}
+                }`}
             >
               {category}
             </button>

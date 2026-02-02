@@ -370,7 +370,7 @@ const SurgeryPricing = () => {
             {donationData.map((item, idx) => (
               <SwiperSlide key={idx} className="h-auto">
                 {/* Card: FIXED width + FIXED height => zoom stable */}
-                <div className="mx-auto w-[240px] sm:w-[273px] h-[540px] flex flex-col">
+                <div className="mx-auto w-[340px] sm:w-[273px] h-[540px] flex flex-col">
                   {/* image */}
                   <div className="relative h-[550px] max-h-[550px] rounded-[9px] overflow-hidden">
                     <img

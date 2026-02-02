@@ -139,7 +139,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex w-full max-w-[1300px] mx-auto justify-center items-center gap-8 px-3">
+          <div className="hidden lg:flex w-full max-w-[1300px] mx-auto justify-center items-center gap-4 xl:gap-8 px-3">
             {desktopNavItems.map((item, index) => {
               const normalizePath = (path) => (path || "").replace(/\/$/, "");
               const isActive = item.link ? normalizePath(pathname) === normalizePath(item.link) : false;
