@@ -77,10 +77,10 @@ const Navbar = () => {
   const toggleShowNavbar = () => setShowNav(!showNav);
 
   return (
-    <div className="flex flex-col items-center gap-0 fixed top-0 left-0 w-full z-50 h-[100px] md:h-[110px] bg-white">
+    <div className="flex flex-col items-center gap-0 fixed top-0 left-0 w-full z-50 h-[100px] md:h-[127.29px] bg-white">
       {/* Top Nav */}
-      <section className="hidden md:block relative w-[90%] py-1 px-4 rounded-b-[10px] bg-[#C30001] text-white">
-        <div className="flex justify-between items-center w-full">
+      <section className="hidden md:block  relative w-[90%] py-1 px-4 rounded-b-[10px] bg-[#C30001] text-white">
+        <div className="flex justify-between h-[35px]  items-center w-full">
          <div className="flex items-center justify-center gap-6">
   <p className="flex items-center gap-1 text-[9.07px] font-semibold leadingnone">
     <HiPhone className="text-[10.3px]" />
