@@ -100,39 +100,40 @@ import { SectionHeading, SectionLabel } from "./News";
 
 const Aboutus = () => {
   return (
-    <section className="mx-auto md:max-w-6xl pb-10 px-4 sm:px-6 lg:px-8 md:py16 sm:py20 lg:py24">
+    <section className="mx-auto max-w-7xl pb-10 px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20">
       <div
         className="
           flex flex-col
           md:flex-row
-          gap-10 lg:gap-14
-          items-stretch
+          gap-8 lg:gap-16
+          items-center
         "
       >
         {/* IMAGE */}
-        <div className="w-full md:w-1/2 relative">
-          <div className="relative h-full  md:w-[554px] md:h-[618.87px] min[320px] sm:min[420px] md:min[520px] rounded-2xl overflow-hidden">
-            <img
+        <div className="w-full md:w-1/2">
+          <div className="relative w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+            <Image
               src="/aboutus.webp"
               alt="About Us"
               fill
-              className="object-cover md:w-[554px] md:h-[618.87px]"
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
               priority
             />
           </div>
         </div>
 
         {/* CONTENT */}
-        <div className="w-full mt-10 md:w-1/2 h-full flex flex-col justify-center">
-          <p className={`m-0 mb-2 !font-amaranth text-[15px] text-[#C30001] uppercase fontnormal leading-none`}>
+        <div className="w-full md:w-1/2 flex flex-col justify-center">
+          <p className="m-0 mb-3 !font-amaranth text-[14px] md:text-[16px] text-[#C30001] uppercase font-bold tracking-wider leading-none">
             About Us
           </p>
 
           <h2
-      className={`m !font-amaranth md:w-[600px] mb-3 text-[32px] md:text-[50px] text-black font-normal leading-[1.1]`}
-    >
-      Absolutely Free Eye Care
-    </h2>
+            className="!font-amaranth mb-5 text-[36px] md:text-[44px] lg:text-[54px] text-black font-normal leading-[1.1] max-w-2xl"
+          >
+            Absolutely Free Eye Care
+          </h2>
           {/* <SectionHeading
             text="Absolutely Free Eye Care"
             className="mb-0 mt-1 sm:mt-2 lg:mt-3"
