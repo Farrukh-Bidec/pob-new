@@ -87,7 +87,7 @@ const News = () => {
 
 
   return (
-    <div className='mt-14 pb-20 mb-20 md:max-w-6xl   md:mx-auto md:mt-20 py-10 md:py-10 [1728px] mx-auto macpx-0'>
+    <div className='mt-14 pb-20 mb-10 md:mb-20 mx-auto max-w-7xl py-10 px-4 sm:px-8 lg:px-12'>
       {/* Heading */}
       <div className="text-center pt12 md:pt70 xl:pt-10 px10">
         {/* <h4 className="text-[15px] mt-2 text[14px] mb1 text-[#C30001] uppercase !font-medium">
@@ -114,34 +114,35 @@ const News = () => {
           {/* Cards */}
           <div
             ref={sliderRef}
-            className="flex overflow-auto sm:overflow-hidden gap-6 md:gap-12 macgap-6 scroll-smooth no-scrollbar px-2 mac:px-0"
+            className="flex overflow-auto xl:overflow-hidden  no-scrollbar gap-6 lg:gap-12 scroll-smooth no-scrollbar"
           >
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="flex-shrink-0  sm:w[230px] md:w-[348.28px] mac[800px] p2 flex flex-col"
+                className="flex-shrink-0 w-full max-w-[348px] sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] flex flex-col"
               >
                 {/* Image */}
-                <div className="overflow-hidden w-[348.28px] h-[309.24px] rounded-t-lg h- mdh-60 mach-56">
+                <div className="overflow-hidden w-full aspect-[4/3.5] rounded-t-lg">
                   <img
                     src={card.image}
                     alt={card.title}
-                    className="w-[348.28px] h-[309.24px] objectcover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
 
                 {/* Content */}
-                <div className="flex1 md:p-6 text-black w-[348.27px] md:h-[248.12px] border-[1px] border-black border-t-0 p-4 mac:p-8 rounded-b-[18px] flex flex-col justify-between">                  <div>
-                  <h2 className="text-xl w-[260px] !font-semibold !font-poppins md:text-[24px] mactext-4xl font-black line-clamp-3">
-                    {card.title}
-                  </h2>
+                <div className="flex-1 text-black w-full border border-black border-t-0 p-6 md:p-8 rounded-b-[18px] flex flex-col justify-between">
+                  <div>
+                    <h2 className="text-xl md:text-[22px] mac:text-3xl font-bold font-poppins line-clamp-2">
+                      {card.title}
+                    </h2>
 
-                  <p className="text-sm md:text-[13px] line-clamp-3 !font-poppins mt-2 mactext-2xl line-clamp-3 font-light leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
+                    <p className="text-sm md:text-[14px] font-poppins mt-3 font-light leading-relaxed line-clamp-3">
+                      {card.description}
+                    </p>
+                  </div>
                   <Link href={`/blog/${card.slug}`}>
-                    <button className="mt-3 mb3 macmt-8 font-inter font-light 600 mac:text-2xl flex items-center gap-2 fontmedium">
+                    <button className="mt-6 font-inter font-medium flex items-center gap-2 hover:translate-x-1 transition-transform">
                       Read full article <GoArrowRight />
                     </button>
                   </Link>
