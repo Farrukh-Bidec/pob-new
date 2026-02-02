@@ -355,7 +355,8 @@ const Footer = () => {
       </label>
       <input
         type="text"
-        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+        placeholder="First Name*"
+        className="w-full h-[50px] text-black border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
       />
     </div>
 
@@ -366,7 +367,8 @@ const Footer = () => {
       </label>
       <input
         type="text"
-        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+        placeholder="Last Name*"
+        className="w-full h-[50px] text-black border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
       />
     </div>
 
@@ -377,7 +379,8 @@ const Footer = () => {
       </label>
       <input
         type="email"
-        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+        placeholder="Email"
+        className="w-full h-[50px] text-black border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
       />
     </div>
 
@@ -411,7 +414,8 @@ const Footer = () => {
       </label>
       <input
         type="number"
-        className="w-full h-[50px] border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
+        placeholder="Amount"
+        className="w-full h-[50px] text-black border border-black rounded-[14px] px-4 focus:outline-none focus:border-[#373895]"
       />
     </div>
 
