@@ -50,23 +50,23 @@ const Help = () => {
 
     ];
     const totalCards = cards.length;
-      const loopCards = [...cards, ...cards];
+    const loopCards = [...cards, ...cards];
 
-const showArrows = totalCards > 2;
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => prev + 1);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+    const showArrows = totalCards > 2;
     useEffect(() => {
-    if (currentIndex === totalCards) {
-      setTimeout(() => {
-        setCurrentIndex(0);
-      }, 700); // transition duration ke baad
-    }
-  }, [currentIndex, totalCards]);
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => prev + 1);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, []);
+    useEffect(() => {
+        if (currentIndex === totalCards) {
+            setTimeout(() => {
+                setCurrentIndex(0);
+            }, 700); // transition duration ke baad
+        }
+    }, [currentIndex, totalCards]);
     return (
         <>
             {/* ==================== Hepatitis Statistics Cards ==================== */}
@@ -149,30 +149,30 @@ const showArrows = totalCards > 2;
                                     transform: `translateX(-${currentIndex * 390}px)`
                                 }}
                             > */}
-                            <div className="overflow-x-hidden max-w-6xl mx-auto">
-  <div
-    className="
+                        <div className="overflow-x-hidden max-w-6xl mx-auto">
+                            <div
+                                className="
       flex flex-nowrap gap-6
       transition-transform duration-700 ease-in-out
     "
-    style={{
-      transform: `translateX(-${currentIndex * 320}px)`
-    }}
-  >
+                                style={{
+                                    transform: `translateX(-${currentIndex * 320}px)`
+                                }}
+                            >
                                 {loopCards.map((card, index) => (
-        //                             <div
-        //                                 key={index}
-        //                                 className="
-        //   bg-white rounded-2xl
-        //   transition
-        //   overflow-hidden
-        //   mdh-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
-        //   flex flex-col 
-        // "
-        //                             >
-      <div
-  key={index}
-  className="
+                                    //                             <div
+                                    //                                 key={index}
+                                    //                                 className="
+                                    //   bg-white rounded-2xl
+                                    //   transition
+                                    //   overflow-hidden
+                                    //   mdh-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
+                                    //   flex flex-col 
+                                    // "
+                                    //                             >
+                                    <div
+                                        key={index}
+                                        className="
     bg-white rounded-2xl overflow-hidden flex flex-col
 
     min-w-[260px]          /* md */
@@ -182,7 +182,7 @@ const showArrows = totalCards > 2;
     sm:h-[290px]
     lg:h-[340px]
   "
->
+                                    >
                                         <div className="relative h-[72px] sm:h-[82px] lg:h-[92px]">
                                             <img
                                                 src={card.image}
@@ -276,14 +276,14 @@ const showArrows = totalCards > 2;
             </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
-      
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
             <div className="text-center bg-gray-50 py-28 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
@@ -300,8 +300,8 @@ const showArrows = totalCards > 2;
                     the heartbreak of blindness just because they can't afford treatment.
                 </p>
 
-                {/* ONE MERGED IMAGE */}
-                <div className="hidden md:flex justify-center mb-24">
+                {/* ONE MERGED IMAGE (Large Desktop Only) */}
+                <div className="hidden xl:flex justify-center mb-24">
                     <img
                         src="/merged.png"
                         alt="Impact of Vision Loss"
@@ -309,8 +309,8 @@ const showArrows = totalCards > 2;
                     />
                 </div>
 
-                {/* TEXT BELOW IMAGE */}
-                <div className="hidden md:grid grid-cols-1 lg:grid-cols-3 gap-12 mac:gap-20 max-w-7xl mx-auto">
+                {/* TEXT BELOW IMAGE (Large Desktop Only) */}
+                <div className="hidden xl:grid grid-cols-1 lg:grid-cols-3 gap-12 mac:gap-20 max-w-7xl mx-auto">
 
                     {/* Left */}
                     <div className="-mt-20 ml-28 text-center">
@@ -346,57 +346,57 @@ const showArrows = totalCards > 2;
                     </div>
 
                 </div>
-                {/* MOBILE VERSION */}
-                <div className="block md:hidden px-6 space-y-16">
+                {/* RESPONSIVE CARDS VERSION (XL and Below) */}
+                <div className="block xl:hidden mx-auto max-w-7xl px-4 sm:px-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 lg:gap-16">
+                        {/* Item 1 */}
+                        <div className="text-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                            <img
+                                src="/vector.png"
+                                alt="Loss of independence"
+                                className="w-16 h-16 mb-6 object-contain"
+                            />
+                            <h3 className="text-xl font-amaranth mb-3">
+                                Loss of independence
+                            </h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Mobility, making daily activities like walking, cooking, or self-care difficult
+                                or impossible, and increased isolation and loneliness.
+                            </p>
+                        </div>
 
-                    {/* Item 1 */}
-                    <div className="text-center">
-                        <img
-                            src="./vector.png"
-                            alt="Loss of independence"
-                            className="mx-auto w-24 mb-6"
-                        />
-                        <h3 className="text-xl font-semibold mb-3">
-                            Loss of independence
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            Mobility, making daily activities like walking, cooking, or self-care difficult
-                            or impossible, and increased isolation and loneliness.
-                        </p>
+                        {/* Item 2 */}
+                        <div className="text-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                            <img
+                                src="/vector1.png"
+                                alt="Mental health issues"
+                                className="w-16 h-16 mb-6 object-contain"
+                            />
+                            <h3 className="text-xl font-amaranth mb-3">
+                                Increased mental health issues
+                            </h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Increased risk of depression, isolation, and loss of dignity due to sudden
+                                dependence on others.
+                            </p>
+                        </div>
+
+                        {/* Item 3 */}
+                        <div className="text-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                            <img
+                                src="/vector1.png"
+                                alt="Economical Burden"
+                                className="w-16 h-16 mb-6 object-contain"
+                            />
+                            <h3 className="text-xl font-amaranth mb-3">
+                                Economical Burden
+                            </h3>
+                            <p className="text-gray-600 text-sm leading-relaxed">
+                                Inability to work or earn a livelihood, leaving families financially vulnerable.
+                                Greater exposure to poverty as medical needs rise while income declines.
+                            </p>
+                        </div>
                     </div>
-
-                    {/* Item 2 */}
-                    <div className="text-center">
-                        <img
-                            src="./vector1.png"
-                            alt="Mental health issues"
-                            className="mx-auto w-24 mb-6"
-                        />
-                        <h3 className="text-xl font-semibold mb-3">
-                            Increased mental health issues
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            Increased risk of depression, isolation, and loss of dignity due to sudden
-                            dependence on others.
-                        </p>
-                    </div>
-
-                    {/* Item 3 */}
-                    <div className="text-center">
-                        <img
-                            src="./vector1.png"
-                            alt="Economical Burden"
-                            className="mx-auto w-24 mb-6"
-                        />
-                        <h3 className="text-xl font-semibold mb-3">
-                            Economical Burden
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            Inability to work or earn a livelihood, leaving families financially vulnerable.
-                            Greater exposure to poverty as medical needs rise while income declines.
-                        </p>
-                    </div>
-
                 </div>
 
 
@@ -413,32 +413,32 @@ const ArrowButton = ({ disabled, direction, onClick }) => {
 
     return (
         <div className='md:hidden lg:hidden 2xl:block'>
-        <button
-            onClick={onClick}
-            disabled={isDisabled}
-            className={`
+            <button
+                onClick={onClick}
+                disabled={isDisabled}
+                className={`
         w-[40px] h-[40px] mt-2  rounded-full  itemscenter justifycenter
         transition-all duration-300
         ${isDisabled
-                    ? "bg-white border border-black"
-                    : "bg-[#373895]"
-                }
+                        ? "bg-white border border-black"
+                        : "bg-[#373895]"
+                    }
       `}
-        >
-            <svg
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke={isDisabled ? "black" : "white"}
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className={direction === "left" ? "" : "rotate-180"}
             >
-                <polyline points="15 18 9 12 15 6" />
-            </svg>
-        </button>
+                <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke={isDisabled ? "black" : "white"}
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className={direction === "left" ? "" : "rotate-180"}
+                >
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+            </button>
         </div>
     );
 };
