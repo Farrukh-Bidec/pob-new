@@ -340,7 +340,7 @@ const SurgeryPricing = () => {
             HELP THEM WITH YOUR ZAKAT/DONATIONS
           </h3>
 
-          <p className="font-inter mt-3 text-[12px] sm:text-[15x] text-white/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="font-inter mt-3 text-[12px] sm:text-[15px] text-white/80 max-w-4xl mx-auto leading-relaxed">
             Through your Zakat and Sadaqah, you can support timely treatment and protect the gift of sight
             for those who cannot afford care.
           </p>
