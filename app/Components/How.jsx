@@ -42,13 +42,13 @@ const How = () => {
         <div className='text-center max-w-6xl mx-auto mt-6 text-black py-10 md:mt-14  md:pb-12 md:pt-10 px4 mx-auto -mt-15 m[1728px] m20'>
             {/* <h2 className='uppercase text-[#C30001] text-[14px] mac:text-[32px] mb-2'>donation</h2>
             <h2 className='text-3xl md:text-5xl mac:text-7xl pb-10 text-black font-bold'>How You Can Help & Donate</h2> */}
- <SectionLabel className="mb-2 trackingwidest"
-            text="Donation" />
-          <SectionHeading
-            className="mt-3 mb-0 trackingwidest"
-            text="How You Can Help & Donate" />
+            <SectionLabel className="mb-2 trackingwidest"
+                text="Donation" />
+            <SectionHeading
+                className="mt-3 mb-0 trackingwidest"
+                text="How You Can Help & Donate" />
             {/* Desktop Layout (Static Grid) */}
-            <div className='hidden md:flex justify-center -mt-20 flex-wrap gap-6 md:gap-9 mac:gap-12 items-center max-w-7xl mac:max-w-full mx-auto '>
+            <div className='hidden xl:flex justify-center -mt-20 flex-wrap gap-6 md:gap-9 mac:gap-12 items-center max-w-7xl mac:max-w-full mx-auto '>
                 {howData.map((item, idx) => (
                     <div
                         key={idx}
@@ -73,18 +73,28 @@ const How = () => {
                 ))}
             </div>
 
-            {/* Mobile Layout (Swiper Slider) */}
-            <div className="block md:hidden w-full px-4">
+            {/* Mobile/Tablet/Laptop Layout (Swiper Slider) */}
+            <div className="block xl:hidden w-full mx-auto px-4 -mt-10">
                 <Swiper
                     modules={[Autoplay, Pagination]}
                     slidesPerView={1}
                     spaceBetween={20}
                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                     pagination={{ clickable: true }}
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    }}
                     className="w-full h-[550px] surgery-swiper"
                 >
                     {howData.map((item, idx) => (
-                        <SwiperSlide key={idx} className="pb-10">
+                        <SwiperSlide key={idx} className={`pb-10 ${idx !== 1 ? "mt-0 md:mt-10" : ""}`}>
                             <div
                                 style={{ backgroundImage: `url('${item.bg}')` }}
                                 className="bg-cover bg-no-repeat h-[500px] w-full flex flex-col rounded-xl mx-auto shadow-lg"
