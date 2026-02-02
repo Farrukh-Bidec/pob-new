@@ -8,10 +8,10 @@ import Hero from './components/Hero'
 const page = () => {
   return (
   <>
-  <Navbar/>
+  {/* <Navbar/> */}
     <Hero/>
     <Clientfeedback/>
-    <Footer/>
+    {/* <Footer/> */}
   </>
   )
 }

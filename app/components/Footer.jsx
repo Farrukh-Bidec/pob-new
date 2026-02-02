@@ -488,14 +488,31 @@ const Footer = () => {
   {/* Social Links */}
   <div className="mb-6">
     <p className="text-[20px] font-semibold font-poppins mb-2">Social Links</p>
-    <div className="flex gap-3">
-      {["/fac.png","/chats.png","/intaa.png","/twitt.png"].map((icon,i)=>(
+    {/* <div className="flex gap-3"> */}
+      {/* {["/fac.png","/chats.png","/intaa.png","/twitt.png"].map((icon,i)=>(
         <div key={i} className="bg-white w-[38px] h-[38px] flex items-center justify-center rounded-lg cursor-pointer shadow-sm">
           <img src={icon} className="w-[22px] h-[22px]" />
         </div>
-      ))}
-    </div>
+      ))} */}
+        <div className="flex gap-3 mt-3">
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/fac.png" alt="Facebook" className="w-[15.49px] object-cover h-[27.62px]" />
   </div>
+
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/chats.png" alt="WhatsApp" className="w-[25.76px] object-contain h-[25.76px]" />
+  </div>
+
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/intaa.png" alt="Instagram" className="w-[24px] object-contain h-[24px]" />
+  </div>
+
+  <div className="bg-white w-[38px] h-[43px] p-2.5 rounded-lg hover:scale-110 transition-transform cursor-pointer shadow-sm">
+    <img src="/twitt.png" alt="Twitter" className="w-[24.2px] object-contain h-[24.2px]" />
+  </div>
+</div>
+    </div>
+  {/* </div> */}
 
   {/* Bottom */}
   <div className="border-t border-white/20 pt-4 text-center text-[12px] text-[#CCCCCC]">
