@@ -20,7 +20,7 @@ const Stats = () => {
           <div className="flex-1 px-4 xl:pl-20 2xl:pl-60 text-center xl:text-left">
 
             {/* Heading: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
-            <h2 className={`m-0 !font-amaranth text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
+            <h2 className={`m-0 !font-amaranth mb-3 text-[32px] md:text-[50px] font-normal leading-[1.1]`}>
               Prevention Of Blindness Impact
             </h2>
 
@@ -78,7 +78,7 @@ const Stats = () => {
                     {stat.number}
                   </div>
 
-                  <div className="text-xs md:text-[17px] font-amiko text-gray-700 mt-4">
+                  <div className="text-xs md:text-[17.53px] !font-Amiko text-[#777777] mt-4">
                     {stat.label.split(" ").map((word, i) => (
                       <span key={i}>
                         {word}

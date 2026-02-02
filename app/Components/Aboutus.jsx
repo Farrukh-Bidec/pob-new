@@ -100,7 +100,7 @@ import { SectionHeading, SectionLabel } from "./News";
 
 const Aboutus = () => {
   return (
-    <section className="mx-auto max-w-7xl pb-10 px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-20">
+    <section className="mx-auto max-w-7xl pb-10 px-4 sm:px-6 lg:px-8 py0 md:py6 lg:py20">
       <div
         className="
           flex flex-col
@@ -111,7 +111,7 @@ const Aboutus = () => {
       >
         {/* IMAGE */}
         <div className="w-full md:w-1/2">
-          <div className="relative w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-3xl overflow-hidden shadow2xl">
             <Image
               src="/aboutus.webp"
               alt="About Us"
@@ -139,7 +139,7 @@ const Aboutus = () => {
             className="mb-0 mt-1 sm:mt-2 lg:mt-3"
           /> */}
 
-          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+          <p className="mt-4 text-sm !font-inter  sm:text-[16px] text-[#777777] leading-relaxed">
             Prevention of Blindness (POB) Trust was established in 2007 with a
             singular mission: to eliminate preventable blindness by providing
             free, quality eye care to those in need. Operating under the
@@ -148,13 +148,13 @@ const Aboutus = () => {
             compassion and excellence.
           </p>
 
-          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+          <p className="mt-4 text-[16px] !font-inter sm:text-[16px] text-[#777777] leading-relaxed">
             Through our flagship POB Eye Hospital in Gulistan-e-Johar and four
             campuses across Karachi, we deliver comprehensive eye care services
             completely free of cost.
           </p>
 
-          <p className="mt-4 text-sm sm:text-base text-gray-600 leading-relaxed">
+          <p className="mt-4 text-[16px] !font-inter text-[#777777] leading-relaxed">
             What began as a small cataract initiative has grown into a
             state-of-the-art charitable tertiary eye care center, offering
             advanced treatments including corneal transplants, vitreoretinal

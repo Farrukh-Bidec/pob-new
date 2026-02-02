@@ -401,7 +401,7 @@ const SurgeryPricing = () => {
                     {/* button: pill centered */}
                     <Link
   href="/donation/"
-  className="mt-4 w-[128.07px] h-[34.85px] rounded-full bg-white text-black py-[6px] text-[12px] font-inter hover:bg-white/90 flex items-center justify-center"
+  className="mt-4 w-[128.07px] h-[34.85px] rounded-full bg-white text-black py-[6px] text-[12.91px] !font-inter hover:bg-white/90 flex items-center justify-center"
 >
   Donate
 </Link>
