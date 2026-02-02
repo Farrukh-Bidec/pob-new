@@ -521,9 +521,9 @@ const Hero = () => {
   <p
     className="
       !font-amaranth
-      text-[12px] sm:text-[15px]
-      tracking-[0.2em]
-      uppercase text-white/80
+      text-[15px] sm:text-[15px]
+      !fontbold
+      uppercase 
     "
   >
     Welcome to POB Trust – Prevention of Blindness
