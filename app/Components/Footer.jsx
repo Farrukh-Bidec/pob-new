@@ -8,12 +8,10 @@ const Footer = () => {
     <>
     <footer className="md:block hidden w-full bg-white pt20">
       <div className="relative">
-        {/* Floating Donate Card - Half on white, half on blue */}
         <div className="md:max-w-6xl w-full mx-auto p6 relative z-20 -mb-24">
           <div className=
-          "bg-white rounded-b-[20px] h rounded-t-none shadow2xl p-8 md:p-14 flex flex-col md:flex-row gap-12 items-start">
+          "bg-white rounded-b-[20px] h rounded-t-none shadow2xl p-8 md:p-14 flex flex-col lg:flex-row gap-12 items-start">
 
-            {/* Left Content */}
             <div className="hidden md:block md:w-1/2">
               <h2 className="text-[32px] md:text-[45px] w-[430px] font-bold text-[#00153D] leading-[1.1] mb-6">
                 Together, We Can Bring Smiles to Those in Need.
@@ -24,18 +22,15 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Vertical Divider */}
-            {/* <div className="hidden md:block w-[1px] bg-black h-36 self-center"></div> */}
-
+           
             <img
               src="./line.png"
               alt="divider"
-              className="hidden -ml-24 md:block mt-14 h-44 w-auto selfcenter"
+              className="hidden -ml-24 md:hidden lg:block xl:block 2xl:block mt-14 h-44 w-auto selfcenter"
             />
 
 
-            {/* Right Form */}
-            <div className="hidden md:block md:w-1/2 w-full">
+            <div className="hidden md:mt-10  md:block lg:block lg:w-1/2 w-full">
               <div className="mb-6">
                 <h3 className="text-[36.78px] -mt-20 font-bold text-[#030A2E]">Donate Online</h3>
                 <p className="text-[16.55px] !font-medium text-[#000000] !font-poppins mt-1">Help Us Help Them with Your Zakat/Donations/Sadqah</p>
@@ -44,12 +39,7 @@ const Footer = () => {
 <div className="grid grid-cols-2 md:w-[440px] ml-4 md:grid-cols-2 gap-x-12 gap-y-6">                <input type="text" placeholder="First Name*" className="w-[214.78px]  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
                 <input type="text" placeholder="Last Name*" className="md:w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
                 <input type="email" placeholder="Email" className="md:w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                {/* <select className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] text-gray-400 focus:outline-none">
-                  <option>PKR</option>
-                </select>
-                <select className="w-[214.78px]  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 b[#FCFCFC] text-gray-400 focus:outline-none">
-                  <option>Zakat</option>
-                </select> */}
+             
                 <select
   className="w-[214.78px] h-[55px] border border-black rounded-[18px] px-4 pr-10 text-gray-400 bg[#FCFCFC] focus:outline-none"
 >
@@ -305,7 +295,7 @@ const Footer = () => {
               </div>
             </div>
             {/* Contact Us */}
-            <div className="space-y-6 ml-20">
+            <div className="space-y-6 md:ml-10 lg:ml-3 xl:ml-18 2xl:ml-20">
               <p
                 className="text-[27.26px] !font-semibold"
                 style={{ fontFamily: "Poppins" }}
