@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-
+import { useEffect } from "react";
 const Help = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -25,7 +25,7 @@ const Help = () => {
             text: "More than 100,000 new cases annually in Pakistan",
             ratio: "100,000"
         },
-        
+
     ];
 
     const impactBlocks = [
@@ -50,7 +50,23 @@ const Help = () => {
 
     ];
     const totalCards = cards.length;
-const showArrows = totalCards > 4;
+      const loopCards = [...cards, ...cards];
+
+const showArrows = totalCards > 2;
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => prev + 1);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+    useEffect(() => {
+    if (currentIndex === totalCards) {
+      setTimeout(() => {
+        setCurrentIndex(0);
+      }, 700); // transition duration ke baad
+    }
+  }, [currentIndex, totalCards]);
     return (
         <>
             {/* ==================== Hepatitis Statistics Cards ==================== */}
@@ -92,7 +108,7 @@ const showArrows = totalCards > 4;
 
                 <div className="absolute bottom-0 left-0 w-full h-[180px] mac:h-[250px] bg-gray-50 z-0 "></div>
             </div> */}
-            <section className="relative w-full bg-white pt-16">
+            <section className="relative overflow-x-hidden  w-full bg-white pt-16">
                 {/* Content */}
                 <div className="relative z-10 mx-auto max-w-7xl px4 sm:px6 lg:px8 text-center">
                     <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
@@ -113,38 +129,60 @@ const showArrows = totalCards > 4;
                             onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
                         /> */}
                         {showArrows && (
-  <ArrowButton
-    direction="left"
-    disabled={currentIndex === 0}
-    onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
-  />
-)}
+                            <ArrowButton
+                                direction="left"
+                                disabled={currentIndex === 0}
+                                onClick={() => setCurrentIndex((prev) => Math.max(prev - 1, 0))}
+                            />
+                        )}
 
                         {/* CARDS */}
-                        <div className="overflow-hidden maxw6xl">
+                        {/* <div className="overflow-hidden maxw6xl">
 
                             <div
                                 className="
       flex gap-6 transition-transform duration-500
-      gap-4 sm:gap-2 lg:gap-4
+      gap-4 sm:gap-2 lg:gap-4 flex flex-wrap
       
     "
                                 style={{
                                     transform: `translateX(-${currentIndex * 390}px)`
                                 }}
-                            >
-                                {cards.map((card, index) => (
-                                    <div
-                                        key={index}
-                                        className="
-          bg-white rounded-2xl
-          transition
-          overflow-hidden
-          mdh-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
-          flex flex-col
-        "
-                                    >
-                                        {/* TOP ICON */}
+                            > */}
+                            <div className="overflow-x-hidden max-w-6xl mx-auto">
+  <div
+    className="
+      flex flex-nowrap gap-6
+      transition-transform duration-700 ease-in-out
+    "
+    style={{
+      transform: `translateX(-${currentIndex * 320}px)`
+    }}
+  >
+                                {loopCards.map((card, index) => (
+        //                             <div
+        //                                 key={index}
+        //                                 className="
+        //   bg-white rounded-2xl
+        //   transition
+        //   overflow-hidden
+        //   mdh-[510px] md:w-[269.59px] sm:h-[290px] lg:h-[340.64px]
+        //   flex flex-col 
+        // "
+        //                             >
+      <div
+  key={index}
+  className="
+    bg-white rounded-2xl overflow-hidden flex flex-col
+
+    min-w-[260px]          /* md */
+    lg:min-w-[320px]      /* lg → 2 cards */
+    xl:min-w-[269px]      /* xl → 3 cards */
+
+    sm:h-[290px]
+    lg:h-[340px]
+  "
+>
                                         <div className="relative h-[72px] sm:h-[82px] lg:h-[92px]">
                                             <img
                                                 src={card.image}
@@ -153,7 +191,6 @@ const showArrows = totalCards > 4;
                                             />
                                         </div>
 
-                                        {/* CONTENT */}
                                         <div className="px-5 mt-10 px-2 pt-3 pb-5 text-left flex-1">
                                             <div className="min-h-[44px] sm:min-h-[52px]">
                                                 <h3 className="text-[64px] sm:text-[40px] lg:text-[64px] font-amaranth text-[#CBCCE4] leading-none">
@@ -179,14 +216,14 @@ const showArrows = totalCards > 4;
                             }
                         /> */}
                         {showArrows && (
-  <ArrowButton
-    direction="right"
-    disabled={currentIndex === totalCards - 1}
-    onClick={() =>
-      setCurrentIndex((prev) => Math.min(prev + 1, totalCards - 1))
-    }
-  />
-)}
+                            <ArrowButton
+                                direction="right"
+                                disabled={currentIndex === totalCards - 1}
+                                onClick={() =>
+                                    setCurrentIndex((prev) => Math.min(prev + 1, totalCards - 1))
+                                }
+                            />
+                        )}
 
                     </div>
 
@@ -239,6 +276,14 @@ const showArrows = totalCards > 4;
             </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
+      
+      
+      
+      
+      
+      
+      
+      
             <div className="text-center bg-gray-50 py-28 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
@@ -367,6 +412,7 @@ const ArrowButton = ({ disabled, direction, onClick }) => {
     const isDisabled = disabled;
 
     return (
+        <div className='md:hidden lg:hidden 2xl:block'>
         <button
             onClick={onClick}
             disabled={isDisabled}
@@ -393,5 +439,6 @@ const ArrowButton = ({ disabled, direction, onClick }) => {
                 <polyline points="15 18 9 12 15 6" />
             </svg>
         </button>
+        </div>
     );
 };

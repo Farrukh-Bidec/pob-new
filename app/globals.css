@@ -7,7 +7,9 @@
   --font-amaranth: "Amaranth", ui-sans-serif, system-ui, sans-serif;
   --font-newsLetter: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
