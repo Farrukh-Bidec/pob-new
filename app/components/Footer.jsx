@@ -26,7 +26,7 @@ const Footer = () => {
             <img
               src="./line.png"
               alt="divider"
-              className="hidden -ml-24 md:hidden lg:block xl:block 2xl:block mt-14 h-44 w-auto selfcenter"
+              className="hidden -ml-24 md:hidden lg:hidden xl:block 2xl:block mt-14 h-44 w-auto selfcenter"
             />
 
 
