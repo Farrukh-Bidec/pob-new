@@ -228,11 +228,11 @@ const Commitment = () => {
     {/* Text Block */}
     <div className="max-w-xl text-right">
       
-      <h3 className="text-white font-amaranth text-4xl md:text-[60px] leading-tight">
+      <h3 className="text-white font-amaranth text-4xl md:text-[60px] leading-tight text-center md:text-left">
         Rs. 2 Billion Disbursed
       </h3>
 
-      <p className="mt-3 text-white text-base md:text-[17px] text-left">
+      <p className="mt-3 text-white text-base md:text-[17px]  text-center md:text-left">
         POB Helped Create PKR 10B Worth of Impact
       </p>
 

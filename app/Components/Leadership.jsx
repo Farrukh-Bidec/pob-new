@@ -519,6 +519,7 @@ const LeaderShip = () => {
   ];
 
   const [activeCategory, setActiveCategory] = useState(categories[0]);
+  const [isLoading, setIsLoading] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(288 + 24);
   const [visibleCount, setVisibleCount] = useState(2);
@@ -563,8 +564,23 @@ const LeaderShip = () => {
     return () => clearInterval(timer);
   }, [filteredImages.length]);
 
-  // Reset slider on category change
-  useEffect(() => setCurrentIndex(0), [activeCategory]);
+  // Reset slider on category change and trigger loading
+  useEffect(() => {
+    setCurrentIndex(0);
+    if (!isLoading && activeCategory) {
+      setIsLoading(true);
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 600);
+      return () => clearTimeout(timer);
+    }
+  }, [activeCategory]);
+
+  const handleCategoryChange = (category) => {
+    if (category !== activeCategory) {
+      setActiveCategory(category);
+    }
+  };
 
   // Navigation
   const handlePrev = () => {
@@ -594,14 +610,14 @@ const LeaderShip = () => {
 
       {/* Category Buttons */}
       <div className="flex justify-center mb-6 px-2">
-        <div className="flex overflow-x-auto w-[390px] mb-6 md:w-auto h-[40.57px] whitespace-nowrap gap-2 md:gap-1 mac:gap-8 snap-x snap-mandatory py-[2.5px] px-[0.5px] md:px-1 mac:px-10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
+        <div className="flex overflow-x-auto w-[340px] mb-6 md:w-auto h-[40.57px] whitespace-nowrap gap-2 md:gap-1 mac:gap-8 snap-x snap-mandatory py-[2.5px] px-[0.5px] md:px-1 mac:px-10 bg-[#373895] rounded-2xl md:rounded-full scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => handleCategoryChange(category)}
               className={`flex-shrink-0 h-[35.02px] w-[140.17px] font-inter cursor-pointer px-0.5 py-2 text-[11.36px] mac:text-xl rounded-full transition-colors duration-200 snap-start ${activeCategory === category
-                ? "bg-white text-black"
-                : "bg-transparent text-white"
+                  ? "bg-white text-black"
+                  : "bg-transparent text-white"
                 }`}
             >
               {category}
@@ -630,18 +646,31 @@ const LeaderShip = () => {
               transform: `translateX(-${currentIndex * cardWidth}px)`,
             }}
           >
-            {loopedImages.map((item, index) => (
-              <div
-                key={index}
-                className="shrink-0 w-[274px] mac:w-[390px] flex flex-col items-center px-1"
-              >
-                <img
-                  src={item.src}
-                  alt={item.category}
-                  className="w-[90%] h-78 mac:h-[410px] object-cover rounded-lg mac:rounded-2xl shadow-sm"
-                />
-              </div>
-            ))}
+            {isLoading
+              ? // Skeleton Logic
+              Array.from({ length: visibleCount + 2 }).map((_, idx) => (
+                <div
+                  key={`skeleton-${idx}`}
+                  className="shrink-0 w-[274px] mac:w-[390px] flex flex-col items-center px-1"
+                >
+                  <div className="w-[90%] h-78 mac:h-[410px] bg-gray-200 animate-pulse rounded-lg mac:rounded-2xl shadow-sm overflow-hidden relative">
+                    {/* Shimmer effect */}
+                    <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+                  </div>
+                </div>
+              ))
+              : loopedImages.map((item, index) => (
+                <div
+                  key={index}
+                  className="shrink-0 w-[274px] mac:w-[390px] flex flex-col items-center px-1"
+                >
+                  <img
+                    src={item.src}
+                    alt={item.category}
+                    className="w-[90%] h-78 mac:h-[410px] object-cover rounded-lg mac:rounded-2xl shadow-sm"
+                  />
+                </div>
+              ))}
           </div>
         </div>
 

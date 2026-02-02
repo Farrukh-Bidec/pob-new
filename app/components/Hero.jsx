@@ -554,7 +554,7 @@ const Hero = () => {
     restoring vision with love and compassion in Karachi.
   </p>
 
-  <div className="mt-5 mb-20">
+  <div className="mt-5 mb-10 md:mb-20">
    <Link href="/donation/"
       className="
         inline-flex items-center gap-3

@@ -7,7 +7,9 @@
   --font-amaranth: "Amaranth", ui-sans-serif, system-ui, sans-serif;
   --font-newsLetter: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }
-html, body {
+
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -17,8 +19,10 @@ html, body {
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* :root {
@@ -74,11 +78,13 @@ html, body {
 .font-antonio {
   font-family: 'Antonio', sans-serif;
 }
+
 .font-amaranth {
   font-family: 'Amaranth', sans-serif;
-    font-weight: 400;
+  font-weight: 400;
 
 }
+
 h1,
 h2,
 h3,
@@ -133,6 +139,7 @@ p,
 .remove-scroll {
   scrollbar-width: none;
 }
+
 /* Generic POB Dots for Custom Sliders */
 .pob-dots-container {
   display: flex;
@@ -161,4 +168,14 @@ p,
   padding: 3px;
   border: 1.5px solid #373895;
   opacity: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
