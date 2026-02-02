@@ -430,7 +430,7 @@ const Footer = () => {
       Donate Now
     </button>
   </div>
-</div>
+</div>    
 
   {/* About Us */}
   <div className="mb-6">
