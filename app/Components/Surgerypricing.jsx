@@ -332,7 +332,7 @@ const SurgeryPricing = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-14 sm:py-16">
         {/* Headings (same centered spacing) */}
         <div className="text-center">
-          <p className={`m-0 !font-amaranth text-[15px] text-[#FFFFFF] uppercase font-normal leading-none`}>
+          <p className={`m-0 !font-amaranth mb-4 text-[15px] text-[#FFFFFF] uppercase font-normal leading-none`}>
             HELP US
           </p>
 
