@@ -273,7 +273,7 @@ const Help = () => {
                 </div>
 
                 {/* Grey bottom bar like screenshot */}
-                {/* <div className="absolute pb-10 bottom-0 left-0 w-full h-[190px] sm:h-[140px] lg:h-[160px] bg-gradient-to-b from-[#F7F8FC] via[#F2F4FA]  bg[#F5F5F5] z-0" /> */}
+                <div className="absolute pb-10 bottom-0 left-0 w-full h-[190px] sm:h-[140px] lg:h-[160px] bg-gradient-to-b from-[#F7F8FC] via[#F2F4FA]  bg[#F5F5F5] z-0" />
             </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
