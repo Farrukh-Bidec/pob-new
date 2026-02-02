@@ -25,7 +25,7 @@ const Stats = () => {
             </h2>
 
             {/* Paragraph: Added md:mb-16 for MacBook, lg:mb-8 to RESET for Laptop */}
-            <p className="text-gray-600 mb-8 md:mb16 lg:mb8 text-sm md:text-[16px] font-inter leading-relaxed">
+            <p className="text-[#777777] mb-8 md:mb16 lg:mb8 text-sm md:text-[16px] font-inter leading-relaxed">
               POB’s legacy of charitable eye care in Karachi continues to grow, bringing hope and sight <br className="hidden md:block" />
               to communities across Sindh through its outreach programs.
             </p>
