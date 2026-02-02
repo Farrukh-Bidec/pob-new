@@ -158,7 +158,7 @@ const Testimonials = () => {
 
                   <button
                     onClick={() => router.push(`/feedback/${card.id}`)}
-                    className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 mac:py-4 mac:px-10 rounded-full font-medium text-sm mac:text-xl transition-colors duration-300"
+                    className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 mac:py-4 mac:px-10 rounded-full !font-inter text-[16px] matext-xl transition-colors duration-300"
                   >
                     Read More
                   </button>

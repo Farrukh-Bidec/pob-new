@@ -133,7 +133,7 @@ const News = () => {
                 {/* Content */}
                 <div className="flex-1 text-black w-full border border-black border-t-0 p-6 md:p-8 rounded-b-[18px] flex flex-col justify-between">
                   <div>
-                    <h2 className="text-xl md:text-[22px] mac:text-3xl font-bold font-poppins line-clamp-2">
+                    <h2 className="text-xl md:text-[22px] mac:text-3xl !font-bold font-poppins line-clamp-2">
                       {card.title}
                     </h2>
 
@@ -142,7 +142,7 @@ const News = () => {
                     </p>
                   </div>
                   <Link href={`/blog/${card.slug}`}>
-                    <button className="mt-6 font-inter font-medium flex items-center gap-2 hover:translate-x-1 transition-transform">
+                  <button className="mt-6 text-[12.13px] !font-inter font-medium flex items-center gap-2 hover:translate-x-1 transition-transform">
                       Read full article <GoArrowRight />
                     </button>
                   </Link>

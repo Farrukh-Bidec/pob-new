@@ -587,14 +587,14 @@ const LeaderShip = () => {
       <div className="w-[90%] font-inter text-center mb-4 flex flex-col gap-2">
         <SectionLabel text="Media Gallery" />
         <SectionHeading text="Capturing Moments, Sharing Stories" />
-        <p className="text-black -mt-14 font-bold font-inter text-center text-[15px] mac:text-xl pb-2">
+        <p className="text-black -mt-14 mb-3 font-bold font-inter text-center text-[15px] mac:text-xl pb-2">
           Explore impactful visuals that tell the real stories behind the scenes
         </p>
       </div>
 
       {/* Category Buttons */}
       <div className="flex justify-center mb-6 px-2">
-        <div className="flex overflow-x-auto w-[390px] md:w-auto h-[40.57px] whitespace-nowrap gap-2 md:gap-1 mac:gap-8 snap-x snap-mandatory py-[2px] px-[0.5px] md:px-1 mac:px-10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
+        <div className="flex overflow-x-auto w-[390px] mb-6 md:w-auto h-[40.57px] whitespace-nowrap gap-2 md:gap-1 mac:gap-8 snap-x snap-mandatory py-[2.5px] px-[0.5px] md:px-1 mac:px-10 bg-[#373895] rounded-md md:rounded-full scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category}

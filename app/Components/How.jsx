@@ -59,12 +59,12 @@ const How = () => {
                             <img src={item.icon} alt={item.name} className=' w-[42.74px] h-[42.74px] p-2 mac:p-4 object-contain' />
                         </div>
                         <h3 className='text-left pl-6 text-3xl md:text-4xl mac:text-5xl text-white font-bold'>{item.name}</h3>
-                        <p className='text-left pl-6 py-5 text-white w-[350px] text-[16.72px] base mac:text-xl leading-relaxed'>
+                        <p className='text-left !font-inter pl-6 py-5 text-white w-[350px] text-[16.72px] base mac:text-xl leading-relaxed'>
                             {item.desc}
                         </p>
                         <Link href={item.link}>
                             <div className='flex items-start pl-6'>
-                                <button className='bg-white py-2 px-6 mac:py-3 mac:px-10 rounded-full font-medium mac:text-xl hover:bg-gray-100 transition-colors'>
+                                <button className='bg-white py-2 px-6 mac:py-3 mac:px-10 rounded-full fontmedium !font-inter text-[11.08px] hover:bg-gray-100 transition-colors'>
                                     {item.btn}
                                 </button>
                             </div>

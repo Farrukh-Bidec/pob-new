@@ -64,7 +64,7 @@ const Footer = () => {
         {/* Main Blue Footer */}
 
 
-        <div className="bg-[#373895] text-white pt-40 pb-8 px-6 md:px20">
+        <div className="bg-[#373895] text-white pt-35 pb-8 px-6 md:px20">
           <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-3">
 
             {/* About us */}
