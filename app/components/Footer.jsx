@@ -65,7 +65,7 @@ const Footer = () => {
 
 
         <div className="bg-[#373895] text-white pt-35 pb-8 px-6 md:px20">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-3">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/50 mt-6 pb-3">
 
             {/* About us */}
             <div className="space-y-6">
@@ -515,7 +515,7 @@ const Footer = () => {
   {/* </div> */}
 
   {/* Bottom */}
-  <div className="border-t border-white/20 pt-4 text-center text-[12px] text-[#CCCCCC]">
+  <div className="border-t border-white/70 pt-4 text-center text-[12px] text-[#CCCCCC]">
     <p>© Copyright 2026 @ POB TRUST</p>
     <div className="flex justify-center gap-4 mt-2">
       <span>Terms & Conditions</span>
