@@ -390,7 +390,7 @@ const SurgeryPricing = () => {
                       {item.title.split(" ").slice(4).join(" ")}
                     </h4>
 
-                    <p className="mt-2 text-[11.44px] font-inter text-white/75 leading-relaxed min-h-[44px] line-clamp-3">
+                    <p className="mt-2 text-[11.44px] !font-inter text-white/75 leading-relaxed min-h-[44px] line-clamp-3">
                       {item.description}
                     </p>
 

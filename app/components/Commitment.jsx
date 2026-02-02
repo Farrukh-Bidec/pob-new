@@ -179,12 +179,12 @@ const Commitment = () => {
               <div
                 key={index}
                 ref={index === 0 ? cardRef : null}
-                className="min-w-[55%] md:min-w-[410px] mac:min-w-[650px]"
+                className="md:min-w-[55%] min-w-[95%] w-[1000px] md:min-w-[410px] mac:min-w-[650px]"
               >
                 <img
                   src={card.image}
                   alt={card.text}
-                  className="h-60 md:h-[303.51px] md:w-[442px] ma[500px] w-full object-cover rounded-[8px]"
+                  className="h-60 md:h-[303.51px] w-[1000px] md:w-[442px] ma[500px] wfull object-cover rounded-[8px]"
                 />
                 <h3 className="text-xl h-10 md:text-[22px] mt-4 text-black py-2 md:py-2 font-inter">
                   {card.text}
