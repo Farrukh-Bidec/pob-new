@@ -54,7 +54,7 @@ const Footer = () => {
                 <input type="text" placeholder="(Minimum 50 )" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg#FCFCFC] focus:outline-none focus:border-[#373895]" />
               </div>
 
-              <button className="md:w-[455.07px] w-[214.78px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#373895] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
+              <button className="md:w-[455.07px] w-[214.78px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#2658A5] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
                 Donation Now
               </button>
             </div>
@@ -105,7 +105,7 @@ const Footer = () => {
                   <img
                     src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=DonateNow"
                     alt="Scan to Donate QR"
-                    className="w-[180px] h-[180px]"
+                    className="w-[120px] h-[120px]"
                   />
                 </div>
               </div>
@@ -325,7 +325,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="max-w-6xl mx-auto mt-8 flex flex-col md:flex-row justify-between items-center text-[13px] text-[#CCCCCC]">
             <p>© Copyright 2026 @ POB TRUST</p>
-            <div className="mt-4 md:mt-0 flex gap-6">
+            <div className="mt-4 md:mt-0 flex gap-2">
               <span className="hover:text-white cursor-pointer">Terms & Conditions</span>
               <span className="hover:text-white cursor-pointer">Privacy Policy</span>
             </div>
@@ -420,7 +420,7 @@ const Footer = () => {
     </div>
 
     {/* Button */}
-    <button className="w-full h-[45px] rounded-full bg-[#373895] text-white mt-4">
+    <button className="w-full h-[45px] rounded-full bg-[#2658A5] text-white mt-4">
       Donate Now
     </button>
   </div>

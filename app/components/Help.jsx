@@ -108,10 +108,11 @@ const Help = () => {
 
                 <div className="absolute bottom-0 left-0 w-full h-[180px] mac:h-[250px] bg-gray-50 z-0 "></div>
             </div> */}
-            <section className="relative overflow-x-hidden  w-full bg-white pt-16">
+<div className="">           
+     <section className="relative overflow-x-hidden  w-full bgwhite pt-16">
                 {/* Content */}
                 <div className="relative z-10 mx-auto max-w-7xl px4 sm:px6 lg:px8 text-center">
-                    <h4 className={`m-0 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
+                    <h4 className={`m-0 mt-10 !font-amaranth text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
                         CURRENT
                     </h4>
 
@@ -149,7 +150,7 @@ const Help = () => {
                                     transform: `translateX(-${currentIndex * 390}px)`
                                 }}
                             > */}
-                        <div className="overflow-x-hidden max-w-6xl mx-auto">
+                        <div className="overflow-x-hidden  max-w-6xl mx-auto">
                             <div
                                 className="
       flex flex-nowrap gap-6
@@ -272,7 +273,7 @@ const Help = () => {
                 </div>
 
                 {/* Grey bottom bar like screenshot */}
-                <div className="absolute bottom-0 left-0 w-full h-[120px] sm:h-[140px] lg:h-[160px] bg-[#F5F5F5] z-0" />
+                {/* <div className="absolute pb-10 bottom-0 left-0 w-full h-[190px] sm:h-[140px] lg:h-[160px] bg-gradient-to-b from-[#F7F8FC] via[#F2F4FA]  bg[#F5F5F5] z-0" /> */}
             </section>
 
             {/* ==================== Impact Blocks Section ==================== */}
@@ -284,7 +285,7 @@ const Help = () => {
 
 
 
-            <div className="text-center bg-gray-50 py-28 mac:py-40 px-4 mac:px-20">
+            <div className="text-center bg-gradientbfrom-[#F7F8FC] via-[#F2F4FA] to-[#FFFFFF] py-28 mac:py-40 px-4 mac:px-20">
 
                 {/* Headings */}
                 <h4 className={`m-0 !font-amaranth pb-2 text-[15px]  text-[#C30001] uppercase font-normal leading-none`}>
@@ -401,7 +402,7 @@ const Help = () => {
 
 
             </div>
-
+</div>
         </>
     );
 };
@@ -412,12 +413,12 @@ const ArrowButton = ({ disabled, direction, onClick }) => {
     const isDisabled = disabled;
 
     return (
-        <div className='md:hidden lg:hidden 2xl:block'>
+        <div className='md:hidden lg:block xl:block 2xl:block'>
             <button
                 onClick={onClick}
                 disabled={isDisabled}
                 className={`
-        w-[40px] h-[40px] mt-2  rounded-full  itemscenter justifycenter
+        w-[40px] h-[40px] mt-10  rounded-full  itemscenter justifycenter
         transition-all duration-300
         ${isDisabled
                         ? "bg-white border border-black"

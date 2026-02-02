@@ -525,28 +525,50 @@ const LeaderShip = () => {
   const [visibleCount, setVisibleCount] = useState(2);
   const [is1512, setIs1512] = useState(false);
   const sliderRef = useRef(null);
-
+const [isMobile, setIsMobile] = useState(false);
   // Responsive card width + visible count
-  useEffect(() => {
-    const updateSize = () => {
-      const width = window.innerWidth;
-      setIs1512(width >= 1512);
-      if (width >= 1512) {
-        setCardWidth(420 + 16);
-        setVisibleCount(4);
-      } else if (width >= 768) {
-        setCardWidth(288 + 16);
-        setVisibleCount(2);
-      } else {
-        setCardWidth(288 + 16);
-        setVisibleCount(2);
-      }
-    };
-    updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
+  // useEffect(() => {
+  //   const updateSize = () => {
+  //     const width = window.innerWidth;
+  //     setIs1512(width >= 1512);
+  //     if (width >= 1512) {
+  //       setCardWidth(420 + 16);
+  //       setVisibleCount(4);
+  //     } else if (width >= 768) {
+  //       setCardWidth(288 + 16);
+  //       setVisibleCount(2);
+  //     } else {
+  //       setCardWidth(288 + 16);
+  //       setVisibleCount(2);
+  //     }
+  //   };
+  //   updateSize();
+  //   window.addEventListener("resize", updateSize);
+  //   return () => window.removeEventListener("resize", updateSize);
+  // }, []);
+useEffect(() => {
+  const updateSize = () => {
+    const width = window.innerWidth;
 
+    setIsMobile(width < 768); // 👈 MOBILE CHECK
+
+    setIs1512(width >= 1512);
+    if (width >= 1512) {
+      setCardWidth(420 + 16);
+      setVisibleCount(4);
+    } else if (width >= 768) {
+      setCardWidth(288 + 16);
+      setVisibleCount(2);
+    } else {
+      setCardWidth(288 + 16);
+      setVisibleCount(2);
+    }
+  };
+
+  updateSize();
+  window.addEventListener("resize", updateSize);
+  return () => window.removeEventListener("resize", updateSize);
+}, []);
   // Filter images
   const filteredImages = sliderImages.filter(
     (image) => image.category === activeCategory
@@ -556,15 +578,28 @@ const LeaderShip = () => {
   const loopedImages = [...filteredImages, ...filteredImages];
 
   // Auto-scroll infinite
-  useEffect(() => {
-    const interval = () => {
-      setCurrentIndex((prev) => (prev + 1) % filteredImages.length);
-    };
-    const timer = setInterval(interval, 3000);
-    return () => clearInterval(timer);
-  }, [filteredImages.length]);
+  // useEffect(() => {
+  //   const interval = () => {
+  //     setCurrentIndex((prev) => (prev + 1) % filteredImages.length);
+  //   };
+  //   const timer = setInterval(interval, 3000);
+  //   return () => clearInterval(timer);
+  // }, [filteredImages.length]);
+  
 
   // Reset slider on category change and trigger loading
+
+useEffect(() => {
+  if (isMobile) return; // ❌ MOBILE PAR AUTO OFF
+
+  const timer = setInterval(() => {
+    setCurrentIndex((prev) => (prev + 1) % filteredImages.length);
+  }, 3000);
+
+  return () => clearInterval(timer);
+}, [filteredImages.length, isMobile]);
+
+
   useEffect(() => {
     setCurrentIndex(0);
     if (!isLoading && activeCategory) {
@@ -640,12 +675,25 @@ const LeaderShip = () => {
 
         {/* Slider Viewport */}
         <div className="w-full overflow-hidden flex">
-          <div
+          {/* <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * cardWidth}px)`,
             }}
-          >
+          > */}
+          <div
+  ref={sliderRef}
+  className={`flex gap-2 ${
+    isMobile
+      ? "overflow-x-auto snap-x snap-mandatory scroll-smooth"
+      : "transition-transform duration-500 ease-in-out"
+  }`}
+  style={
+    isMobile
+      ? {}
+      : { transform: `translateX(-${currentIndex * cardWidth}px)` }
+  }
+>
             {isLoading
               ? // Skeleton Logic
               Array.from({ length: visibleCount + 2 }).map((_, idx) => (
@@ -660,14 +708,18 @@ const LeaderShip = () => {
                 </div>
               ))
               : loopedImages.map((item, index) => (
+                // <div
+                //   key={index}
+                //   className="shrink-0 w-[274px] mac:w-[390px] flex flex-col items-center px-1"
+                // >
                 <div
-                  key={index}
-                  className="shrink-0 w-[274px] mac:w-[390px] flex flex-col items-center px-1"
-                >
+  key={index}
+  className="shrink-0 w-[274px] w-[263.4px] h-[304.26px] w[390px] flex flex-col items-center px-1 snap-start"
+>
                   <img
                     src={item.src}
                     alt={item.category}
-                    className="w-[90%] h-78 mac:h-[410px] object-cover rounded-lg mac:rounded-2xl shadow-sm"
+                    className="w-[263.4px] h-[304.26px] mac:h[410px] object-cover rounded-lg mac:rounded-2xl shadow-sm"
                   />
                 </div>
               ))}
