@@ -36,25 +36,25 @@ const Footer = () => {
                 <p className="text-[16.55px] !font-medium text-[#000000] !font-poppins mt-1">Help Us Help Them with Your Zakat/Donations/Sadqah</p>
               </div>
 
-<div className="grid grid-cols-2 md:w-[440px] ml-4 md:grid-cols-2 gap-x-12 gap-y-6">                <input type="text" placeholder="First Name*" className="w-[214.78px]  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                <input type="text" placeholder="Last Name*" className="md:w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
-                <input type="email" placeholder="Email" className="md:w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+<div className="grid grid-cols-2  md:w[440px] ml-4 md:grid-cols-2 gap-x-10 gap-y-6">                <input type="text" placeholder="First Name*" className="w-full  h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                <input type="text" placeholder="Last Name*" className="md:w-full h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                <input type="email" placeholder="Email" className="md:w-full h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg[#FCFCFC] focus:outline-none focus:border-[#373895]" />
              
                 <select
-  className="w-[214.78px] h-[55px] border border-black rounded-[18px] px-4 pr-10 text-gray-400 bg[#FCFCFC] focus:outline-none"
+  className="w-full h-[55px] border border-black rounded-[18px] px-4 pr-10 text-gray-400 bg[#FCFCFC] focus:outline-none"
 >
   <option>PKR</option>
 </select>
 
 <select
-  className="w-[214.78px] h-[55px] border border-black rounded-[18px] px-4 pr-20 text-gray-400 bg[#FCFCFC] focus:outline-none"
+  className="w-full h-[55px] border border-black rounded-[18px] px-4 pr-20 text-gray-400 bg[#FCFCFC] focus:outline-none"
 >
   <option>Zakat</option>
 </select>
-                <input type="text" placeholder="(Minimum 50 )" className="w-[214.78px] h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg#FCFCFC] focus:outline-none focus:border-[#373895]" />
+                <input type="text" placeholder="(Minimum 50 )" className="w-full h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg#FCFCFC] focus:outline-none focus:border-[#373895]" />
               </div>
 
-              <button className="md:w-[455.07px] w-[214.78px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#2658A5] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
+              <button className="md:w-[530.07px] w-[214.78px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#373895] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
                 Donation Now
               </button>
             </div>
