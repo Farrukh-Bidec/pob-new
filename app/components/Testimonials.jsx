@@ -2,106 +2,126 @@
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css"; // Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, Autoplay } from "swiper/modules";
 import { useRouter } from "next/navigation";
 import { SectionHeading, SectionLabel } from "./News";
-import Scrol from "./Scrol";
 
 const Testimonials = () => {
   const router = useRouter();
-  const [swiperRef, setSwiperRef] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const cards = [
     {
       id: 1,
-      title: "Patient Hira Lal",
+      title: "General zakat & Sadqa Fund",
       description:
-        "I came to POB Eye Hospital feeling very nervous about my surgery, but the warmth of the staff immediately put me at ease.",
-      videoUrl: "https://www.youtube.com/watch?v=oVt3CFIz6sk",
+        "Zakat is one of the five pillars of Islam. when you Zakat to the Patients Behbud Society (PBS) for The Age Khan University Hospital (AKUH), we guarantee your Zakat is used to tread",
       image: "/testimonial1.png",
     },
     {
       id: 2,
-      title: "Patient Ayesha",
+      title: "Breast Cancer",
       description:
-        "Testimonial of the recently treated patient at our POB Eye Hospital Karachi, thanking for the excellent care.",
-      videoUrl: "https://www.youtube.com/watch?v=sd3DMgDGw88",
+        "Breast cancer is responsible for over 24% of all cancer-related deaths among women in Pakistan. The disease affects women of all socio-economic classes. At The Aga Khan University Hospital",
       image: "/testimonial2.png",
     },
     {
       id: 3,
-      title: "Patient Saniya",
+      title: "Hepatitis C",
       description:
-        "I am so impressed by the seamless experience at POB. Thank you for restoring my sight.",
-      videoUrl: "https://www.youtube.com/watch?v=4hcVpWQZiiE",
+        "The national figures for Pakistan for the prevalence of Hepatitis B virus and Hepatitis C virus (HCV) are 2.5% and 4.9. % respectively. With a population of 200 million, this translates to a health.....",
       image: "/testimonial3.png",
+    },
+    {
+      id: 4,
+      title: "General zakat & Sadqa Fund",
+      description:
+        "Zakat is one of the five pillars of Islam. when you Zakat to the Patients Behbud Society (PBS) for The Age Khan University Hospital (AKUH), we guarantee your Zakat is used to tread",
+      image: "/testimonial1.png",
+    },
+    {
+      id: 5,
+      title: "Breast Cancer",
+      description:
+        "Breast cancer is responsible for over 24% of all cancer-related deaths among women in Pakistan. The disease affects women of all socio-economic classes. At The Aga Khan University Hospital",
+      image: "/testimonial2.png",
     },
   ];
 
   return (
-    // <section className="md:py-12 max-w-6xl mx-auto px-4 md:pt-10 pb-10 md:px-8 md:pb-20 lg:px-20 mb-10 md:mb-0 mt-5 md:mt-10 bg-[#F4F4F4]">
     <div className="mt-20">
-      {/* <section className="w-full bg-[#F4F4F4]"> */}
-      <section
-        className="
-    w-full
-    bg-gradient-to-b
-    from-[#F7F8FC]
-    via-[#F2F4FA]
-    to-[#FFFFFF]
-  "
-      >
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-10 md:py-0">
-
-          <div className="text-center pt10 md:pt-24 mb-12 mac:max-w-[1728px] mx-auto mac:px-0">
-            {/* <h4 className="text-[12px]  sm:text-[14px] mb1 text-[#C30001] uppercase font-semibold">
-          Testimonials
-        </h4>
-        <h2 className="text-xl md:text-5xl mac:text-7xl pb- pt-2 text-black font-bold">
-          From Darkness to Light
-        </h2> */}
-            <SectionLabel className="mb-2 trackingwidest"
-              text="Testimonials" />
+      <section className="w-full bg-[#FFFFFF] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <SectionLabel
+              className="mb-2 tracking-[0.2em] font-bold"
+              text="TESTIMONIAL"
+            />
             <SectionHeading
-              className="mt-3 trackingwidest"
-              text="From Darkness to Light" />
+              className="mt-3 !mb-0 font-bold"
+              text="From Darkness to Light: Patient Stories"
+            />
           </div>
 
-          {/* Mobile Slider */}
-          <div className="md:hidden mt-5">
+          {/* Slider for both Desktop and Mobile */}
+          <div className="testimonials-slider relative">
             <Swiper
-              onSwiper={setSwiperRef}
-              spaceBetween={16}
-              slidesPerView={1.1} // Slight peek for next slide
-              className="mt-5"
+              modules={[Pagination, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={1}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              pagination={{
+                clickable: true,
+                el: ".testimonials-pagination",
+                bulletClass: "pob-dot",
+                bulletActiveClass: "pob-dot-active",
+              }}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1.5,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 40,
+                },
+              }}
+              onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
+              className="pb-16"
             >
               {cards.map((card) => (
                 <SwiperSlide key={card.id}>
-                  <div className="bg-white shadow-2xl rounded-[20px] overflow-hidden flex flex-col border border-gray-50 shadow-lg max-w-[400px] mx-auto">
-                    <div className="h-60 overflow-hidden">
-                      {/* <iframe
-                        className="w-full h-full object-cover"
-                        src={card.videoUrl.replace("watch?v=", "embed/")}
-                        title={card.title}
-                        allowFullScreen
-                      /> */}
-                      <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
+                  <div className="bg-white rounded-[30px] overflow-hidden flex flex-col shadow-[0_10px_40px_rgba(0,0,0,0.08)] h-full border border-gray-100/50">
+                    <div className="h-64 sm:h-72 w-full overflow-hidden">
+                      <img
+                        src={card.image}
+                        alt={card.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
                     </div>
 
-                    <div className="p-6 flex flex-col h-[250px]">
-                      <h3 className="text-[#333333] text-lg font-bold mb-3 font-sans">
+                    <div className="p-8 flex flex-col flex-grow">
+                      <h3 className="text-[#333333] text-2xl font-bold mb-4 font-sans line-clamp-1">
                         {card.title}
                       </h3>
 
-                      <p className="text-gray-500 text-sm leading-snug mb-6 overflow-hidden">
+                      <p className="text-[#777777] font-inter text-base leading-relaxed mb-8 flex-grow line-clamp-4">
                         {card.description}
                       </p>
 
                       <button
                         onClick={() => router.push(`/feedback/${card.id}`)}
-                        className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 rounded-full font-medium text-sm transition-colors duration-300"
+                        className="w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-4 px-6 rounded-full font-bold text-base transition-all duration-300 transform active:scale-[0.98] shadow-md hover:shadow-lg"
                       >
                         Read More
                       </button>
@@ -110,73 +130,19 @@ const Testimonials = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
+
+            {/* Custom Pagination Container */}
+            <div className="testimonials-pagination pob-dots-container mt-12 flex justify-center items-center gap-2"></div>
+
+            {/* Custom Styles for Red Dots */}
+            <style dangerouslySetInnerHTML={{
+              __html: `
+              .testimonials-pagination .pob-dot-active {
+                background-color: #C30001 !important;
+                border-color: #C30001 !important;
+              }
+            `}} />
           </div>
-
-          {/* Desktop Grid */}
-          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-16 mac:gap-12 mx-auto">
-            {cards.map((card) => (
-              <div
-                key={card.id}
-                className="bg-white w-full max-w-[345px] mac:max-w-[520px] h-fit rounded-[20px] overflow-hidden flex flex-col shadow-lg mx-auto"
-              >
-                <div className="w-full aspect-video overflow-hidden">
-                  {/* <iframe
-                    className="w-full h-full object-cover"
-                    src={card.videoUrl.replace("watch?v=", "embed/")}
-                    title={card.title}
-                    allowFullScreen
-                  /> */}
-                                        <img src={card.image} alt={card.title} className="w-full h-full object-cover" />
-                </div>
-
-                {/* <div className="p-7 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
-                <h3 className="text[#333333] text-[22px] mactext-3xl font-bold mb-3 font-sans">
-                  {card.title}
-                </h3>
-
-                <p className="text-[#777777] !font-Inter w-[300px] text-sm mac:text-xl leading-snug mb-6 overflow-hidden">
-                  {card.description}
-                </p>
-
-                <button
-                  onClick={() => router.push(`/feedback/${card.id}`)}
-                  className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 mac:py-4 mac:px-10 rounded-full font-medium text-sm mac:text-xl transition-colors duration-300"
-                >
-                  Read More
-                </button>
-              </div> */}
-                <div className="relative p-7 mac:p-10 flex flex-col h-[250px] mac:h-[350px]">
-
-                  {/* soft background effect */}
-                  <div className="absolute inset-0 rounded-[20px]
-    bg-gradient-to-br from-[#F2F3F7] via-[#ECEEF6] to-[#E6E9F5]
-    blur-[2px] -z-10">
-                  </div>
-
-                  <h3 className="text-[#333333] text-[22px] mac:text-3xl font-bold mb-3 font-sans">
-                    {card.title}
-                  </h3>
-
-                  <p className="text-[#777777] font-Inter w-full text-sm mac:text-xl leading-snug mb-6 overflow-hidden">
-                    {card.description}
-                  </p>
-
-                  <button
-                    onClick={() => router.push(`/feedback/${card.id}`)}
-                    className="mt-auto w-full bg-[#3F4095] hover:bg-[#2F3075] text-white py-2.5 px-6 mac:py-4 mac:px-10 rounded-full !font-inter text-[16px] matext-xl transition-colors duration-300"
-                  >
-                    Read More
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-          {/* <Scrol/> */}
-          {/* <Scrol
-              total={cards.length}
-              current={currentSlide}
-              setCurrent={setCurrentSlide}
-            /> */}
         </div>
       </section>
     </div>
