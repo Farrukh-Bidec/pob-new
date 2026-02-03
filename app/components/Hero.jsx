@@ -496,7 +496,7 @@ const Hero = () => {
       className="
     relative text-white
     bg-cover bg-center bg-no-repeat
-    h-[520px] sm:h-[560px] md:h-[640px] lg:h-[900px] 2xl:h-[1200px]
+    h-[520px] sm:h-[560px] md:h-[640px] lg:h-[900px] 2xl:h-[1300px]
     flex items-start
     overflow-hidden w-full
   "
@@ -506,9 +506,9 @@ const Hero = () => {
       {/* Dark overlay (important for text contrast) */}
       {/* <div className="absolute inset-0 bg-black/40" /> */}
 
-     {/* Content */}
-<div
-  className="
+      {/* Content */}
+      <div
+        className="
     relative z-10
     w-full max-w-[90%] h-full
     mx-auto
@@ -517,31 +517,31 @@ const Hero = () => {
     pb-14 md:pb-36
     flex flex-col justify-center
   "
->
-  <p
-    className="
+      >
+        <p
+          className="
       !font-amaranth
       text-[15px] sm:text-[15px]
       !fontbold
       uppercase 
     "
-  >
-    Welcome to POB Trust – Prevention of Blindness
-  </p>
+        >
+          Welcome to POB Trust – Prevention of Blindness
+        </p>
 
-  <h1
-    className="
+        <h1
+          className="
       mt2
       font-semibold leading-tight
       text-[clamp(24px,5vw,71px)]
       max-w-[600px]
     "
-  >
-    Donate Now to Light Up a Life
-  </h1>
+        >
+          Donate Now to Light Up a Life
+        </h1>
 
-  <p
-    className="
+        <p
+          className="
       mt-3
       text-[14px] sm:text-[15px] md:text-[15px]
       font-inter
@@ -549,14 +549,14 @@ const Hero = () => {
       text-white/90
       leading-relaxed
     "
-  >
-    Bringing hope and clarity to lives with free eye care,
-    restoring vision with love and compassion in Karachi.
-  </p>
+        >
+          Bringing hope and clarity to lives with free eye care,
+          restoring vision with love and compassion in Karachi.
+        </p>
 
-  <div className="mt-5 mb-10 md:mb-20">
-   <Link href="/donation/"
-      className="
+        <div className="mt-5 mb-10 md:mb-20">
+          <Link href="/donation/"
+            className="
         inline-flex items-center gap-3
         pl-5 pr-2 py-2
         bg-white text-black
@@ -565,21 +565,21 @@ const Hero = () => {
         shadow-xl
         hover:bg-gray-100 transition
       "
-    >
-      Donate Now
-      <span
-        className="
+          >
+            Donate Now
+            <span
+              className="
           flex items-center justify-center
           w-9 h-9
           bg-black text-white
           rounded-full text-xl
         "
-      >
-        <MdKeyboardDoubleArrowRight />
-      </span>
-    </Link>
-  </div>
-</div>
+            >
+              <MdKeyboardDoubleArrowRight />
+            </span>
+          </Link>
+        </div>
+      </div>
 
 
       {/* Bottom curve (optional – matches your Figma hero) */}
