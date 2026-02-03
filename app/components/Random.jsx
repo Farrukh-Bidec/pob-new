@@ -12,10 +12,10 @@ const Random = () => {
         <div className="flex flex-col-reverse md:flex-row pb-20 items-center justify-center gap-20 max-w-7xl macmax[1728px] mx-auto px10 md24 mac:px0 pt-16 md:pt-8 xl:pt-35 mac:pt-48 2xl:pb-20 mac:pb-40">
             {/* Text Section */}
             <div className="w-full lg:w-1/2 px-4 md:px-8 lg:px-0 text-center lg:text-left">
-                <h4 className="text-[15px]  sm:text-[15px] mb1 text-[#C30001] uppercase font-semibold">
+                <h4 className="text-[15px] mb1 text-[#C30001] uppercase font-semibold">
                     Donation now
                 </h4>
-                <h2 className="text-xl md:text-5xl mac:text-7xl pb-4 md:pb-7 mac:pb-14 text-black font-bold">
+                <h2 className="text-[32px] md:text-[50px] pb-4 md:pb-7 mac:pb-14 text-black font-bold">
                     Make a Difference <br />with Your Donation
                 </h2>
                 <p className="text-[#777777] lg:w-[550px] text-md md:text-[15px] mactext-2xl leading-relaxed">
