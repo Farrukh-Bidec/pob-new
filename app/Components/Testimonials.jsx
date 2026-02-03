@@ -52,7 +52,16 @@ const Testimonials = () => {
 
   return (
     <div className="mt-20">
-      <section className="w-full bg-[#FFFFFF] py-16">
+      <section
+        className="
+          w-full
+          bg-gradient-to-b
+          from-[#F7F8FC]
+          via-[#F2F4FA]
+          to-[#FFFFFF]
+          py-16
+        "
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           {/* Header */}
           <div className="text-center mb-16">
@@ -101,7 +110,7 @@ const Testimonials = () => {
             >
               {cards.map((card) => (
                 <SwiperSlide key={card.id}>
-                  <div className="bg-white rounded-[30px] overflow-hidden flex flex-col shadow-[0_10px_40px_rgba(0,0,0,0.08)] h-full border border-gray-100/50">
+                  <div className="bg-white rounded-[30px] overflow-hidden flex flex-col h-full border border-gray-100/50">
                     <div className="h-64 sm:h-72 w-full overflow-hidden">
                       <img
                         src={card.image}
