@@ -12,11 +12,11 @@ const Footer = () => {
           <div className=
           "bg-white rounded-b-[20px] h rounded-t-none shadow2xl p-8 md:p14 flex flex-col lg:flex-row gap-12 items-start">
 
-            <div className="hidden md:block md:w-1/2">
-              <h2 className="text-[32px] md:text-[45px] w-[430px] font-bold text-[#00153D] leading-[1.1] mb-6">
+            <div className="hidden md:block md:w-full lg:w-1/2">
+              <h2 className="text-[32px] md:text-[45px] md:w-full lg:w-[430px] font-bold text-[#00153D] leading-[1.1] mb-6">
                 Together, We Can Bring Smiles to Those in Need.
               </h2>
-              <p className="text-[#000000] font-poppins text-[18px] !font-medium leading-relaxed md:max-w-[400px]">
+              <p className="text-[#000000] font-poppins text-[18px] !font-medium leading-relaxed lg:max-w-[400px]">
                 Your Generosity Fuels Our Mission: Providing   
                  Aid, Hope, and Love to Communities in Need.
               </p>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <input type="text" placeholder="(Minimum 50 )" className="w-full h-[55.09px] border border-black rounded-[18.39px] px-4 py-3 bg#FCFCFC] focus:outline-none focus:border-[#373895]" />
               </div>
 
-              <button className="md:w-[530.07px] w-[214.78px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#373895] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
+              <button className="md:w-full w-[214.78px] mt-12 h-[39.41px] rounded-[66.2px]  ml-4 mt-6 bg-[#373895] text-[#FFFFFF] !font-light py4 rounded-full shadowlg hover:bg-[#2a2b7a] transition-all">
                 Donation Now
               </button>
             </div>

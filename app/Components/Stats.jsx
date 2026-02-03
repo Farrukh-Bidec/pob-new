@@ -63,31 +63,47 @@ const Stats = () => {
                 // </div>
                 // {statsData.map((stat, index) => (
                 <div
-                  key={index}
-                  className={`
-      flex flex-col w-40 relative group
-      ${index >= 4 ? "lg:justify-self-start" : ""}
-    `}
-                >
-                  <div className="text-4xl md:text-4xl 2xl:text-[46px] font-antonio font-[550] pt-6 relative">
-                    <img
-                      src="circle.png"
-                      alt="labels"
-                      className="absolute hidden md:block md:ml-8 xl:-ml-4 2xl:-ml-6 2xl:mt-2 w-[45.1px] h-[45.1px]"
-                    />
-                    {stat.number}
-                  </div>
+  key={index}
+  className={`
+    flex flex-col w-40 relative group
+    ${index >= 4 ? "lg:justify-self-start" : ""}
+  `}
+>
+  {/* Number */}
+  <div className="mt-6 text-4xl md:text-4xl 2xl:text-[46px] font-antonio font-[550] flex items-center">
+    
+    {/* Circle + first digit */}
+    <span className="relative left-2 inline-flex items-center justify-center w-[45.1px] h-[45.1px]">
+      <img
+        src="circle.png"
+        alt="circle"
+        className="absolute inset-0 hidden -right-10 md:block w-full h-full"
+      />
 
-                  <div className="text-xs md:text-[17.53px] !font-Amiko text-[#777777] mt-4">
-                    {stat.label.split(" ").map((word, i) => (
-                      <span key={i}>
-                        {word}
-                        {i === 0 && <br />}
-                        {i !== 0 && " "}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+      {/* First digit on top */}
+      <span className="relative left-2 z-10">
+        {stat.number.toString()[0]}
+      </span>
+    </span>
+
+    {/* Remaining digits */}
+    <span className="ml-[2px]">
+      {stat.number.toString().slice(1)}
+    </span>
+  </div>
+
+  {/* Label */}
+  <div className="text-xs md:text-[17.53px] !font-Amiko text-[#777777] mt-4 text-center">
+    {stat.label.split(" ").map((word, i) => (
+      <span key={i}>
+        {word}
+        {i === 0 && <br />}
+        {i !== 0 && " "}
+      </span>
+    ))}
+  </div>
+</div>
+
               ))}
 
             </div>
