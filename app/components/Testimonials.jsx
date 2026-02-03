@@ -66,11 +66,11 @@ const Testimonials = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <SectionLabel
-              className="mb-2 tracking-[0.2em] font-bold"
+              className="mb-2 tracking-[0.2em] fontbold"
               text="TESTIMONIAL"
             />
             <SectionHeading
-              className="mt-3 !mb-0 font-bold"
+              className="mt-3 !mb-0 fontbold"
               text="From Darkness to Light: Patient Stories"
             />
           </div>
