@@ -295,7 +295,7 @@ const Footer = () => {
               </div>
             </div>
             {/* Contact Us */}
-            <div className="space-y-6 md:ml-10 lg:ml-3 xl:ml-18 2xl:ml-20">
+            <div className="space-y-6 ml10 lg:ml-3 xl:ml-18 2xl:ml-20">
               <p
                 className="text-[27.26px] !font-semibold"
                 style={{ fontFamily: "Poppins" }}
