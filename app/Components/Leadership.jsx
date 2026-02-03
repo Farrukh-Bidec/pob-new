@@ -645,7 +645,7 @@ useEffect(() => {
 
       {/* Category Buttons */}
       <div className="flex justify-center mb-6 px-2">
-        <div className="flex overflow-x-auto w-[340px] mb-6 md:w-auto h-[40.57px] whitespace-nowrap gap-2 md:gap-1 mac:gap-8 snap-x snap-mandatory py-[2.5px] px-[0.5px] md:px-1 mac:px-10 bg-[#373895] rounded-2xl md:rounded-full scrollbar-hide">
+        <div className="flex overflow-x-auto w-[320px] mb-6 md:w-auto h-[40.57px] whitespace-nowrap gap-2 md:gap-1 mac:gap-8 snap-x snap-mandatory py-[2.5px] px-[0.5px] md:px-1 mac:px-10 bg-[#373895] rounded-2xl md:rounded-full scrollbar-hide">
           {categories.map((category) => (
             <button
               key={category}

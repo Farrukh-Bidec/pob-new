@@ -77,7 +77,7 @@ const Stats = () => {
       <img
         src="circle.png"
         alt="circle"
-        className="absolute inset-0 hidden -right-10 md:block w-full h-full"
+        className="absolute inset-0 hdden top-2 -right-10 mdblock w-full h-full"
       />
 
       {/* First digit on top */}

@@ -26,6 +26,66 @@ const Commitment = () => {
       text: "Restoring Hope",
       description: "We bring back the joy of sight, helping people reconnect with their loved ones and pursue their dreams.",
     },
+    {
+      image: "/card1.webp",
+      text: "Free Treatment for All",
+      description: "No one should suffer blindness due to financial constraints. We provide world-class eye care completely free of cost.",
+    },
+    {
+      image: "/card2.webp",
+      text: "Dignified Care",
+      description: "Every patient is treated with respect, compassion, and humanity because vision is priceless.",
+    },
+    {
+      image: "/card5.webp",
+      text: "Impactful Change",
+      description: "From preventing blindness to performing life-changing surgeries, our work transforms lives and communities.",
+    },
+    {
+      image: "/card4.webp",
+      text: "Restoring Hope",
+      description: "We bring back the joy of sight, helping people reconnect with their loved ones and pursue their dreams.",
+    },
+    {
+      image: "/card1.webp",
+      text: "Free Treatment for All",
+      description: "No one should suffer blindness due to financial constraints. We provide world-class eye care completely free of cost.",
+    },
+    {
+      image: "/card2.webp",
+      text: "Dignified Care",
+      description: "Every patient is treated with respect, compassion, and humanity because vision is priceless.",
+    },
+    {
+      image: "/card5.webp",
+      text: "Impactful Change",
+      description: "From preventing blindness to performing life-changing surgeries, our work transforms lives and communities.",
+    },
+    {
+      image: "/card4.webp",
+      text: "Restoring Hope",
+      description: "We bring back the joy of sight, helping people reconnect with their loved ones and pursue their dreams.",
+    },
+    {
+      image: "/card1.webp",
+      text: "Free Treatment for All",
+      description: "No one should suffer blindness due to financial constraints. We provide world-class eye care completely free of cost.",
+    },
+    {
+      image: "/card2.webp",
+      text: "Dignified Care",
+      description: "Every patient is treated with respect, compassion, and humanity because vision is priceless.",
+    },
+    {
+      image: "/card5.webp",
+      text: "Impactful Change",
+      description: "From preventing blindness to performing life-changing surgeries, our work transforms lives and communities.",
+    },
+    {
+      image: "/card4.webp",
+      text: "Restoring Hope",
+      description: "We bring back the joy of sight, helping people reconnect with their loved ones and pursue their dreams.",
+    },
     // {
     //   image: "/card3.webp",
     //   text: "A Vision for Everyone",
