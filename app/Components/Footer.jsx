@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="relative">
         <div className="md:max-w-6xl w-full mx-auto p6 relative z-20 -mb-24">
           <div className=
-          "bg-white rounded-b-[20px] h rounded-t-none shadow2xl p-8 md:p-14 flex flex-col lg:flex-row gap-12 items-start">
+          "bg-white rounded-b-[20px] h rounded-t-none shadow2xl p-8 md:p14 flex flex-col lg:flex-row gap-12 items-start">
 
             <div className="hidden md:block md:w-1/2">
               <h2 className="text-[32px] md:text-[45px] w-[430px] font-bold text-[#00153D] leading-[1.1] mb-6">
@@ -65,7 +65,7 @@ const Footer = () => {
 
 
         <div className="bg-[#373895] text-white pt-35 pb-8 px-6 md:px20">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/50 mt-6 pb-3">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-b border-white/50 mt-6 pb-3">
 
             {/* About us */}
             <div className="space-y-6">
@@ -78,7 +78,7 @@ const Footer = () => {
                 A registered charity focused on preventing avoidable blindness in deprived and marginalized communities.
               </p> */}
               <p
-                className="text-white font-normal w-[310px]"
+                className="text-white font-normal w[310px]"
                 style={{
                   fontFamily: "Poppins",
                   fontSize: "16.35px",
@@ -112,7 +112,7 @@ const Footer = () => {
             </div>
 
             {/* Quick Links */}
-            <div className="space-y-6 md:ml-10">
+            <div className="space-y-6 l:ml-0:ml-10">
               {/* <p className="text-2xl !font-bold">Quick Links</p> */}
               <p
                 className="text-[27.26px] !font-semibold"
