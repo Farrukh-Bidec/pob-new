@@ -352,7 +352,7 @@ const SurgeryPricing = () => {
         </div>
 
         {/* Swiper */}
-        <div className="mt-12 px-10">
+        <div className="mt-12 md:px-10">
           <Swiper
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
@@ -368,15 +368,15 @@ const SurgeryPricing = () => {
             className="!pb-12 surgery-swiper"
           >
             {donationData.map((item, idx) => (
-              <SwiperSlide key={idx} className="h-auto">
+              <SwiperSlide key={idx} className="h-auto rounded-[9px]">
                 {/* Card: FIXED width + FIXED height => zoom stable */}
-                <div className="mx-auto w-[340px] sm:w-[273px] h-[540px] flex flex-col">
+                <div className="mx-auto w-[320px] sm:w-[273px] h-[540px] rounded-[9px] flex flex-col">
                   {/* image */}
                   <div className="relative h-[550px] max-h-[550px] rounded-[9px] overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="absolute inset-0 h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover rounded-[9px]"
                       loading="lazy"
                     />
                   </div>
