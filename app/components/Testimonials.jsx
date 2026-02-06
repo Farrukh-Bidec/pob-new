@@ -15,37 +15,36 @@ const Testimonials = () => {
   const cards = [
     {
       id: 1,
-      title: "General zakat & Sadqa Fund",
+      title: "Sadia Bibi",
       description:
-        "Zakat is one of the five pillars of Islam. when you Zakat to the Patients Behbud Society (PBS) for The Age Khan University Hospital (AKUH), we guarantee your Zakat is used to tread",
+        " After five years of blindness, Sadia Bibi can see again. A homemaker and mother of two, her life was transformed as she returned to light, independence, and hope…",
       image: "/testimonial1.png",
     },
     {
       id: 2,
-      title: "Breast Cancer",
+      title: "Shahid Hussain & His Daughter",
       description:
-        "Breast cancer is responsible for over 24% of all cancer-related deaths among women in Pakistan. The disease affects women of all socio-economic classes. At The Aga Khan University Hospital",
+        " Shahid Hussain traveled from Quetta with his daughter Sameera, suffering from severe vision loss. At POB Eye Hospital, both received free treatment and timely surgery…",
       image: "/testimonial2.png",
     },
     {
       id: 3,
-      title: "Hepatitis C",
+      title: "Muhammad Akhtar Arain",
       description:
-        "The national figures for Pakistan for the prevalence of Hepatitis B virus and Hepatitis C virus (HCV) are 2.5% and 4.9. % respectively. With a population of 200 million, this translates to a health.....",
-      image: "/testimonial3.png",
+" A retired chemical engineer facing near-total blindness, Muhammad Akhtar lost his independence. Timely vitreoretinal treatment at POB Eye Hospital helped restore his quality of life…",      image: "/testimonial3.png",
     },
     {
       id: 4,
-      title: "General zakat & Sadqa Fund",
+     title: "Sadia Bibi",
       description:
-        "Zakat is one of the five pillars of Islam. when you Zakat to the Patients Behbud Society (PBS) for The Age Khan University Hospital (AKUH), we guarantee your Zakat is used to tread",
+        " After five years of blindness, Sadia Bibi can see again. A homemaker and mother of two, her life was transformed as she returned to light, independence, and hope…",
       image: "/testimonial1.png",
     },
     {
       id: 5,
-      title: "Breast Cancer",
+     title: "Shahid Hussain & His Daughter",
       description:
-        "Breast cancer is responsible for over 24% of all cancer-related deaths among women in Pakistan. The disease affects women of all socio-economic classes. At The Aga Khan University Hospital",
+        " Shahid Hussain traveled from Quetta with his daughter Sameera, suffering from severe vision loss. At POB Eye Hospital, both received free treatment and timely surgery…",
       image: "/testimonial2.png",
     },
   ];

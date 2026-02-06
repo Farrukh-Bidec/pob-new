@@ -278,7 +278,7 @@ const Navbar = () => {
                 <div className="bg-white px-2 py-2 rounded-[50%]">
                   <Image src="/hand.png" alt="" width={22} height={22} className="w-full" />
                 </div>
-                <p className="mx-1 font-inter font-medium text-[13px]">Donation Now</p>
+                <p className="mx-1 font-inter font-medium text-[13px]">Donate Now </p>
               </div>
             </Link>
           </div>

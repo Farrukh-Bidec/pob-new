@@ -1,46 +1,48 @@
 import React from 'react';
 
 const Help = () => {
-    const cards = [
+     const cards = [
         {
             image: "Secondcard.png",
-            text: "Pakistan's global ranking in hepatitis prevalence and infections",
-            ratio: "01"
+            text: "Services Delivered",
+            ratio: "PKR 13.5B "
         },
         {
             image: "Secondcard2.png",
-            text: "10 million people suffering from hepatitis",
-            ratio: "10M"
+            text: "Funds to Patient Care",
+            ratio: "90% "
         },
         {
             image: "Secondcard3.png",
-            text: "7.5% Prevalence of Hepatitis in Pakistan",
-            ratio: "7.5%"
+            text: "Patients Served",
+            ratio: "1.8M+"
         },
         {
             image: "Secondcard4.png",
-            text: "More than 100,000 new cases annually in Pakistan",
-            ratio: "100,000"
-        }
+            text: "Plus 1 Expanding",
+            ratio: "4 Hospitals "
+        },
+
     ];
+
 
     const impactBlocks = [
         {
             image: "/3section.png",
-            title: "Loss of independence",
-            text: "Mobility, making daily activities like walking, cooking, or self-care difficult or impossible, and increased isolation and loneliness",
+            title: "Patient-First Approach",
+            text: "Patient care comes first delivered with empathy, respect, and an unwavering commitment to restoring sight.",
             align: "end"   // self-end
         },
         {
             image: "/3section2.png",
-            title: "Increased mental health issues",
-            text: "Increased risk of depression, isolation, and loss of dignity due to sudden dependence on others",
+            title: "Care Without Barriers",
+            text: "No referrals, no delays, just compassionate eye care delivered seamlessly to those who need it most.",
             align: "start" // self-start
         },
         {
             image: "/3section3.png",
-            title: "Economical Burden",
-            text: "Inability to work or earn a livelihood, leaving families financially vulnerable. Greater exposure to poverty, as medical needs rise while income declines",
+            title: "Protecting Visions",
+            text: "Every treatment safeguards sight and dignity, because losing vision should never mean losing respect or self-worth.",
             align: "end"
         }
     ];
@@ -108,8 +110,8 @@ const Help = () => {
                         <source media="(min-width: 768px)" srcSet="/33section.png" />
                         <img src="/3sectionResponsive.png" alt="help" className='mx-auto w-25 xl:w-40' />
                     </picture>
-                    <h3 className='text-2xl sm:text-xl leading-tight text-center'>Loss of independence</h3>
-                    <p className='text-gray-600'>Mobility, making daily activities like walking, cooking, or self-care difficult or impossible, and increased isolation and loneliness</p>
+                    <h3 className='text-2xl sm:text-xl leading-tight text-center'>Patient-First Approach</h3>
+                    <p className='text-gray-600'>Patient care comes first delivered with empathy, respect, and an unwavering commitment to restoring sight.</p>
                 </div>
 
                 <div className='lg:w-[40%] w-full text-black py-10 sm:pt-0'>
@@ -117,14 +119,14 @@ const Help = () => {
                         <source media="(min-width: 768px)" srcSet="/3section2.png" />
                         <img src="/3sectionResponsive2.png" alt="help" className='mx-auto pl-0 md:pl-10 w-25 xl:w-48' />
                     </picture>
-                    <h3 className='text-2xl sm:text-xl leading-tight'>Increased mental health issues</h3>
-                    <p className='text-gray-600'>Increased risk of depression, isolation, and loss of dignity due to sudden dependence on others</p>
+                    <h3 className='text-2xl sm:text-xl leading-tight'>Care Without Barriers</h3>
+                    <p className='text-gray-600'>No referrals, no delays, just compassionate eye care delivered seamlessly to those who need it most.</p>
                 </div>
 
                 <div className='lg:w-[30%] w-full text-black pt-4 md:pt-42'>
                     <img src="/3section3.png" alt="help" className='mx-auto w-25 sm:w-20' />
-                    <h3 className='text-2xl sm:text-xl leading-tight'>Economical Burden</h3>
-                    <p className='text-gray-600'>Inability to work or earn a livelihood, leaving families financially vulnerable. Greater exposure to poverty, as medical needs rise while income declines</p>
+                    <h3 className='text-2xl sm:text-xl leading-tight'>Protecting Visions</h3>
+                    <p className='text-gray-600'>Every treatment safeguards sight and dignity, because losing vision should never mean losing respect or self-worth.</p>
                 </div>
             </div>
 

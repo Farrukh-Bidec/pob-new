@@ -13,21 +13,17 @@ const Random = () => {
             {/* Text Section */}
             <div className="w-full lg:w-1/2 px-4 md:px-8 lg:px-0 text-center lg:text-left">
                 <h4 className="text-[15px] mb1 text-[#C30001] uppercase font-semibold">
-                    Donation now
-                </h4>
+Donate Now                </h4>
                 <h2 className="text-[32px] md:text-[50px] pb-4 md:pb-7 mac:pb-14 text-black font-bold">
-                    Make a Difference <br />with Your Donation
+                    Your Donation Restores  <br />Sight and Hope
                 </h2>
                 <p className="text-[#777777] lg:w-[550px] text-md md:text-[15px] mactext-2xl leading-relaxed">
-                    Each day, many children, adults, and elderly individuals live with vision loss that is
-                    preventable or treatable but remains unaddressed due to financial hardship. Basic eye care,
-                    timely diagnosis, and simple treatments can change lives, yet access is often out of reach for
-                    those who need it most. Your donation helps bridge this gap by providing eye examinations,
-                    medical care, corrective lenses, and sight-restoring procedures. Restoring vision does more
-                    than improve health—it brings
+                    Every day, children, adults, and the elderly struggle in silence with vision loss that could have been prevented or treated. Not because help doesn’t exist but because they cannot afford it. A simple eye check, timely diagnosis, or basic treatment can change a life, yet for many, these remain beyond reach.
                     <span className="inline-block mt-3">
-                        independence, confidence, and opportunity. Children can learn, adults can work, and families can look forward to a brighter future. Together, we can reduce avoidable blindness, uplift communities, and turn hope into lasting change through the gift of sight.
-                    </span>
+Your donation becomes a lifeline. It brings eye examinations, essential treatment, corrective lenses, and sight-restoring care to those who need it most. When vision is restored, dignity returns. Children can read and dream again, adults can work with confidence, and families regain hope for a better tomorrow. </span>
+              
+              <span className="inline-block mt-3">Together, we can end avoidable blindness and replace darkness with possibility one life, one family, one future at a time.</span>
+              
                 </p>
 
                 <Link

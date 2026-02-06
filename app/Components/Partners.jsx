@@ -160,7 +160,7 @@ const Partners = ({ middleCarouselImages = [] }) => {
                     review?.platform ||
                     `Partner ${index + 1}`
                   }
-                  className="w-[104.29px] h-[104.06px] object-contain" // ✅ same icon size
+                  className="w-[100.29px] h-[100.06px] object-contain" // ✅ same icon size
                 />
               </div>
 

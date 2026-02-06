@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 const Stats = () => {
   const statsData = [
-    { number: '1.7 M+', label: 'OPD consultations delivered' },
-    { number: '156,257', label: 'Life-Changing Eye Surgeries ' },
-    { number: '9,652 ', label: 'Vitreo-Retinal (VR) surgeries' },
-    { number: '1040', label: 'Cornea procedures' },
-    { number: '31,495 ', label: 'Laser treatments' },
-    { number: '161,858', label: 'Diagnostic services' },
+    { number: '1.8 M+', label: 'Free OPD Consultations' },
+    { number: '15,722', label: 'Diabetic OPD' },
+    { number: '9,832 ', label: 'Vitreo Retina Surgeries' },
+    { number: '166,087', label: 'Cataract Surgeries' },
+    { number: '32,634 ', label: 'Laser Treatments' },
+    { number: '170,458', label: 'Diagnostics' },
   ]
 
   return (
